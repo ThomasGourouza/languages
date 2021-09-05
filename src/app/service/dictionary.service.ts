@@ -85,7 +85,7 @@ export class DictionaryService {
         { expression: "beobachten", translation: "observer" },
         { expression: "stattfinden", translation: "occur / take place" },
         { expression: "auslösen", translation: "déclencher" },
-        { expression: "jemanden auslachen", translation: "jemanden auslachen" },
+        { expression: "jemanden auslachen", translation: "se moquer de quelqu'un" },
         { expression: "zunehmen", translation: "prendre du poids" },
         { expression: "abnehmen", translation: "perdre du poids" },
         { expression: "wegdrücken", translation: "push away" },
