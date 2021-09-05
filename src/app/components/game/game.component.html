@@ -39,3 +39,7 @@
 </div>
 <br>
 <app-score></app-score>
+<br>
+<div *ngIf="!!answer" class="d-flex justify-content-center" [ngClass]="{'green': isCorrect, 'red': !isCorrect}">
+    {{ answer.expression }} = {{ answer.translation }}
+</div>

@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Item, DictionaryService, Category } from 'src/app/service/dictionary.service';
 import { ScoreService } from 'src/app/service/score.service';
+export interface Answer {
+  expression: string;
+  translation: string;
+}
 
 @Component({
   selector: 'app-game',
@@ -15,8 +19,9 @@ export class GameComponent implements OnInit {
   public randomItem!: Item;
   public gameForm!: FormGroup;
   public randomTranslations!: Array<string>;
-
   public categories: Array<string>;
+  public answer!: Answer;
+  public isCorrect!: boolean;
 
   constructor(
     private dictionaryService: DictionaryService,
@@ -65,13 +70,19 @@ export class GameComponent implements OnInit {
   }
 
   public onSubmit(): void {
+    this.isCorrect = false;
     const formValue = this.gameForm.value;
+    this.answer = {
+      expression: formValue['expression'],
+      translation: this.randomItem.translation
+    }
     const translation = formValue['translation'];
     if (this.randomItem.translation === translation && !!this.category) {
       this.scoreService.points++;
-      this.initGame(this.category);
+      this.isCorrect = true;
     }
     this.scoreService.total++;
+    this.initGame(this.category);
   }
 
   private setRandomTranslations(randomItem: Item, category: string): void {
