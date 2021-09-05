@@ -13,7 +13,7 @@
 <br>
 <br>
 <div *ngIf="!!category">
-    <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="gameForm">
         <div class="row">
             <div class="col">
                 <div class="form-group">
@@ -24,15 +24,12 @@
             <div class="col">
                 <div class="form-group">
                     <label for="translation">Traduction</label>
-                    <select class="form-control" formControlName="translation">
+                    <select class="form-control" formControlName="translation" (change)="onSubmit()">
                         <option *ngFor="let translation of randomTranslations" [value]="translation">
                             {{ translation }}
                         </option>
                     </select>
                 </div>
-            </div>
-            <div class="col d-flex align-items-end">
-                <button type="submit" [disabled]="gameForm.invalid" class="btn btn-light">Valider</button>
             </div>
         </div>
     </form>
