@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DictionaryService, Item } from 'src/app/service/dictionary.service';
+import { Category, DictionaryService } from 'src/app/service/dictionary.service';
 
 @Component({
   selector: 'app-dictionary',
@@ -8,11 +8,17 @@ import { DictionaryService, Item } from 'src/app/service/dictionary.service';
 })
 export class DictionaryComponent {
 
-  public dictionary: Array<Item>;
+  public dictionary: Array<Category>;
+  public categories: Array<string>;
 
   constructor(
     private dictionaryService: DictionaryService
   ) {
+    const verbs = this.dictionaryService.verbsCategoryName;
+    const nouns = this.dictionaryService.nounsCategoryName;
+    const adjectives = this.dictionaryService.adjectivesCategoryName;
+    const expressions = this.dictionaryService.expressionsCategoryName;
+    this.categories = [verbs, nouns, adjectives, expressions];
     this.dictionary = this.dictionaryService.dictionary;
   }
 

@@ -1,11 +1,20 @@
-<div *ngFor="let item of dictionary; let i = index">
-    <div class="row">
-        <div class="col">
-            {{ i }}. {{ item.expression }}
-        </div>
-        <div class="col">
-            {{ item.translation }}
-        </div>
+<div class="row">
+    <div class="col" *ngFor="let category of dictionary">
+        <strong>{{ category.name }}</strong>
+        <br>
+        <table>
+            <tr *ngFor="let item of category.content; let i = index">
+                <td>
+                    &nbsp;{{ i }}
+                </td>
+                <td>
+                    &nbsp;{{ item.expression }}
+                </td>
+                <td>
+                    &nbsp;{{ item.translation }}
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 <br>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Item, DictionaryService } from 'src/app/service/dictionary.service';
+import { Item, DictionaryService, Category } from 'src/app/service/dictionary.service';
 import { ScoreService } from 'src/app/service/score.service';
 
 @Component({
@@ -10,30 +10,40 @@ import { ScoreService } from 'src/app/service/score.service';
 })
 export class GameComponent implements OnInit {
 
-  public dictionary: Array<Item>;
+  public dictionary: Array<Category>;
+  public category!: string;
   public randomItem!: Item;
   public gameForm!: FormGroup;
   public randomTranslations!: Array<string>;
+
+  public categories: Array<string>;
 
   constructor(
     private dictionaryService: DictionaryService,
     private scoreService: ScoreService,
     private formBuilder: FormBuilder
   ) {
+    const verbs = this.dictionaryService.verbsCategoryName;
+    const nouns = this.dictionaryService.nounsCategoryName;
+    const adjectives = this.dictionaryService.adjectivesCategoryName;
+    const expressions = this.dictionaryService.expressionsCategoryName;
+    this.categories = [verbs, nouns, adjectives, expressions];
     this.dictionary = this.dictionaryService.dictionary;
     this.randomTranslations = [];
   }
 
   public ngOnInit(): void {
     this.initForm();
-    this.initGame();
   }
 
-  private initGame(): void {
-    const randomIndex = this.getRandomInt(this.dictionary.length);
-    this.randomItem = this.dictionary[randomIndex];
-    this.setRandomTranslations(this.randomItem);
-    this.gameForm.controls['expression'].setValue(this.randomItem.expression);
+  private initGame(category: string): void {
+    const randomCategoryIndex = this.getRandomInt(this.dictionary.length);
+    const dictionnaryCategory = this.dictionary.find((cat) => cat.name === category);
+    if (!!dictionnaryCategory) {
+      this.randomItem = dictionnaryCategory.content[randomCategoryIndex];
+      this.setRandomTranslations(this.randomItem, category);
+      this.gameForm.controls['expression'].setValue(this.randomItem.expression);
+    }
   }
 
   private initForm(): void {
@@ -45,34 +55,46 @@ export class GameComponent implements OnInit {
     );
   }
 
+  public test(event: any): void {
+    console.log(event);
+  }
+
+  public selectCategory(category: string): void {
+    this.category = category;
+    this.initGame(this.category);
+  }
+
   public onSubmit(): void {
     const formValue = this.gameForm.value;
     const translation = formValue['translation'];
-    if (this.randomItem.translation === translation) {
+    if (this.randomItem.translation === translation && !!this.category) {
       this.scoreService.points++;
-      this.initGame();
-    } 
+      this.initGame(this.category);
+    }
     this.scoreService.total++;
   }
 
-  private setRandomTranslations(randomItem: Item): void {
-    const randomTranslations: Array<string> = [];
-    let index = 0;
-    const rightAnswerIndex = this.getRandomInt(10);
-    const usedIndexList: Array<number> = [];
-    while (index < 10) {
-      const randomIndex = this.getRandomInt(this.dictionary.length);
-      if (!usedIndexList.includes(randomIndex)) {
-        usedIndexList.push(randomIndex);
-        if (usedIndexList.length === rightAnswerIndex + 1) {
-          randomTranslations.push(randomItem.translation);
-        } else {
-          randomTranslations.push(this.dictionary[randomIndex].translation);
+  private setRandomTranslations(randomItem: Item, category: string): void {
+    const dictionaryCategory = this.dictionary.find((cat) => cat.name === category);
+    if (!!dictionaryCategory) {
+      const randomTranslations: Array<string> = [];
+      let index = 0;
+      const rightAnswerIndex = this.getRandomInt(10);
+      const usedIndexList: Array<number> = [];
+      while (index < 10) {
+        const randomIndex = this.getRandomInt(dictionaryCategory.content.length);
+        if (!usedIndexList.includes(randomIndex)) {
+          usedIndexList.push(randomIndex);
+          if (usedIndexList.length === rightAnswerIndex + 1) {
+            randomTranslations.push(randomItem.translation);
+          } else {
+            randomTranslations.push(dictionaryCategory.content[randomIndex].translation);
+          }
+          index++;
         }
-        index++;
       }
+      this.randomTranslations = randomTranslations;
     }
-    this.randomTranslations = randomTranslations;
   }
 
   public getRandomInt(max: number): number {
