@@ -1,0 +1,25 @@
+<form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="expression">Expression</label>
+                <input type="text" class="form-control" id="expression" formControlName="expression" readonly />
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="translation">Traduction</label>
+                <select class="form-control" formControlName="translation">
+                    <option *ngFor="let translation of randomTranslations" [value]="translation">
+                        {{ translation }}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col d-flex align-items-end">
+            <button type="submit" [disabled]="gameForm.invalid" class="btn btn-light">Valider</button>
+        </div>
+    </div>
+</form>
+<br>
+<app-score></app-score>
