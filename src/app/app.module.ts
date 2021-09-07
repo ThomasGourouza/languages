@@ -9,6 +9,7 @@ import { GameComponent } from './components/game/game.component';
 import { DictionaryService } from './service/dictionary.service';
 import { ScoreService } from './service/score.service';
 import { ScoreComponent } from './components/score/score.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ScoreComponent } from './components/score/score.component';
     NavigationComponent,
     DictionaryComponent,
     GameComponent,
-    ScoreComponent
+    ScoreComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
