@@ -10,6 +10,9 @@ import { DictionaryService } from './service/dictionary.service';
 import { ScoreService } from './service/score.service';
 import { ScoreComponent } from './components/score/score.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { FilterPipe } from './pipes/filter.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase, 'deutsch'),
+    AngularFirestoreModule
   ],
   providers: [
     DictionaryService,

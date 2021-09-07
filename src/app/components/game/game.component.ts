@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { DictionaryService, Word } from 'src/app/service/dictionary.service';
+import { DictionaryService } from 'src/app/service/dictionary.service';
 import { ScoreService } from 'src/app/service/score.service';
 export interface Answer {
   expression: string;
@@ -14,9 +14,9 @@ export interface Answer {
 })
 export class GameComponent implements OnInit {
 
-  public dictionary: Array<Word>;
+  public dictionary!: Array<any>;
   public category!: string;
-  public randomItem!: Word;
+  public randomItem!: any;
   public gameForm!: FormGroup;
   public randomTranslations!: Array<string>;
   public answer!: Answer | undefined;
@@ -29,23 +29,25 @@ export class GameComponent implements OnInit {
     private scoreService: ScoreService,
     private formBuilder: FormBuilder
   ) {
-    this.dictionary = this.dictionaryService.dictionary;
     this.categories = [];
-    this.dictionary.forEach((word) => {
-      if (!this.categories.includes(word.category)) {
-        this.categories.push(word.category);
-      }
-    });
     this.randomTranslations = [];
     this.memory = [];
   }
 
   public ngOnInit(): void {
     this.initForm();
+    this.dictionaryService.words.subscribe((words) => {
+      this.dictionary = words;
+      this.dictionary.forEach((word) => {
+        if (!this.categories.includes(word.category)) {
+          this.categories.push(word.category);
+        }
+      });
+    });
   }
 
   private initGame(category: string): void {
-    const dictionnaryCategory = this.dictionary.filter((word) => word.category === category);
+    const dictionnaryCategory = this.dictionary.filter((any) => any.category === category);
     if (!!dictionnaryCategory) {
       if (this.memory.length === dictionnaryCategory.length) {
         this.memory = [];
@@ -95,7 +97,7 @@ export class GameComponent implements OnInit {
   }
 
   private setRandomTranslations(translation: string, category: string): void {
-    const dictionaryCategory = this.dictionary.filter((word) => word.category === category);
+    const dictionaryCategory = this.dictionary.filter((any) => any.category === category);
     if (!!dictionaryCategory) {
       const randomTranslations: Array<string> = [];
       const otherTranslations = dictionaryCategory.filter((t) => t.translation != translation);

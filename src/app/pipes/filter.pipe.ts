@@ -1,11 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Word } from '../service/dictionary.service';
 
 @Pipe({
   name: 'filter',
 })
 export class FilterPipe implements PipeTransform {
-  transform(array: Array<Word>, category: string): Array<Word> {
+  transform(array: Array<any>, category: string): Array<any> {
     if (!array) {
       return [];
     }

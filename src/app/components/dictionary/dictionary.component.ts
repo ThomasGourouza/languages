@@ -1,26 +1,36 @@
-import { Component } from '@angular/core';
-import { Word, DictionaryService } from 'src/app/service/dictionary.service';
+import { Component, OnInit } from '@angular/core';
+import { DocumentReference } from '@angular/fire/compat/firestore';
+import { DictionaryService } from 'src/app/service/dictionary.service';
 
 @Component({
   selector: 'app-dictionary',
   templateUrl: './dictionary.component.html',
   styleUrls: ['./dictionary.component.scss']
 })
-export class DictionaryComponent {
+export class DictionaryComponent implements OnInit {
 
-  public dictionary: Array<Word>;
+  public dictionary!: Array<any>;
   public categories: Array<string>;
 
   constructor(
     private dictionaryService: DictionaryService
   ) {
-    this.dictionary = this.dictionaryService.dictionary;
     this.categories = [];
-    this.dictionary.forEach((word) => {
-      if (!this.categories.includes(word.category)) {
-        this.categories.push(word.category);
-      }
+  }
+
+  ngOnInit(): void {
+    this.dictionaryService.words.subscribe((words) => {
+      this.dictionary = words;
+      this.dictionary.forEach((word) => {
+        if (!this.categories.includes(word.category)) {
+          this.categories.push(word.category);
+        }
+      });
     });
+  }
+
+  public addWord(word: any): void {
+    this.dictionaryService.addWord(word);
   }
 
 }
