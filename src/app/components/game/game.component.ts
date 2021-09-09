@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Item, DictionaryService, Category } from 'src/app/service/dictionary.service';
+import { DictionaryService } from 'src/app/service/dictionary.service';
 import { ScoreService } from 'src/app/service/score.service';
 export interface Answer {
   expression: string;
@@ -14,44 +14,47 @@ export interface Answer {
 })
 export class GameComponent implements OnInit {
 
-  public dictionary: Array<Category>;
+  public dictionary!: Array<any>;
   public category!: string;
-  public randomItem!: Item;
+  public randomItem!: any;
   public gameForm!: FormGroup;
   public randomTranslations!: Array<string>;
-  public categories: Array<string>;
   public answer!: Answer | undefined;
   public isCorrect!: boolean;
   public memory: Array<string>;
+  public categories: Array<string>;
 
   constructor(
     private dictionaryService: DictionaryService,
     private scoreService: ScoreService,
     private formBuilder: FormBuilder
   ) {
-    const verbs = this.dictionaryService.verbsCategoryName;
-    const nouns = this.dictionaryService.nounsCategoryName;
-    const adjectives = this.dictionaryService.adjectivesCategoryName;
-    const expressions = this.dictionaryService.expressionsCategoryName;
-    this.categories = [verbs, nouns, adjectives, expressions];
-    this.dictionary = this.dictionaryService.dictionary;
+    this.categories = [];
     this.randomTranslations = [];
     this.memory = [];
   }
 
   public ngOnInit(): void {
     this.initForm();
+    this.dictionaryService.words.subscribe((words) => {
+      this.dictionary = words;
+      this.dictionary.forEach((word) => {
+        if (!this.categories.includes(word.category)) {
+          this.categories.push(word.category);
+        }
+      });
+    });
   }
 
   private initGame(category: string): void {
-    const dictionnaryCategory = this.dictionary.find((cat) => cat.name === category);
+    const dictionnaryCategory = this.dictionary.filter((any) => any.category === category);
     if (!!dictionnaryCategory) {
-      if (this.memory.length === dictionnaryCategory.content.length) {
+      if (this.memory.length === dictionnaryCategory.length) {
         this.memory = [];
       }
       do {
-        const randomCategoryIndex = this.getRandomInt(dictionnaryCategory.content.length);
-        this.randomItem = dictionnaryCategory.content[randomCategoryIndex];
+        const randomCategoryIndex = this.getRandomInt(dictionnaryCategory.length);
+        this.randomItem = dictionnaryCategory[randomCategoryIndex];
       } while (this.memory.includes(this.randomItem.expression));
       this.memory.push(this.randomItem.expression);
       this.setRandomTranslations(this.randomItem.translation, category);
@@ -94,13 +97,13 @@ export class GameComponent implements OnInit {
   }
 
   private setRandomTranslations(translation: string, category: string): void {
-    const dictionaryCategory = this.dictionary.find((cat) => cat.name === category);
+    const dictionaryCategory = this.dictionary.filter((any) => any.category === category);
     if (!!dictionaryCategory) {
       const randomTranslations: Array<string> = [];
-      const otherTranslations = dictionaryCategory.content.filter((t) => t.translation != translation);
+      const otherTranslations = dictionaryCategory.filter((t) => t.translation != translation);
 
       let index = 0;
-      const limit = (dictionaryCategory.content.length < 10) ? dictionaryCategory.content.length : 10;
+      const limit = (dictionaryCategory.length < 10) ? dictionaryCategory.length : 10;
       const rightAnswerIndex = this.getRandomInt(limit);
 
       while (index < limit) {
