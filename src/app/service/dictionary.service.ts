@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {
-  AngularFirestore, 
+  AngularFirestore,
   DocumentReference,
-  AngularFirestoreCollection, 
-  AngularFirestoreDocument 
+  AngularFirestoreCollection,
+  AngularFirestoreDocument
 } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 // import { Word } from '../models/word';
@@ -30,7 +30,7 @@ export class DictionaryService {
     // private afd: AngularFirestoreDocument
   ) {
     this._wordsCollection = this.afs.collection('words');
-    this._words = this._wordsCollection.valueChanges();
+    this._words = this._wordsCollection.valueChanges({idField: 'id'});
   }
 
   get words(): Observable<Array<any>> {
@@ -38,12 +38,32 @@ export class DictionaryService {
   }
 
   public addWord(word: any): void {
-    this.afs.collection('words').add(word)
-      .then((word) => {
-        console.log(word);
+    this.afs.collection('words')
+      .add(word).then(() => {
+        console.log('add success');
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        console.log('add error');
+      });
+  }
+
+  public deleteWord(): void {
+    this.afs.collection('words').doc('005mlzXYmWNUPsOrORBg')
+      .delete().then(() => {
+        console.log('delete success');
+      }).catch(() => {
+        console.log('delete error');
+      });
+  }
+
+  public update(): void {
+    this.afs.collection('words').doc('005mlzXYmWNUPsOrORBg')
+      .update({
+        translation: 'in view of / considering'
+      }).then(() => {
+        console.log('update success');
+      }).catch(() => {
+        console.log('update error');
       });
   }
 

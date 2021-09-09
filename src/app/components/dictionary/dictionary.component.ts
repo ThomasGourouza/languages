@@ -20,6 +20,7 @@ export class DictionaryComponent implements OnInit {
 
   ngOnInit(): void {
     this.dictionaryService.words.subscribe((words) => {
+      console.log(words);
       this.dictionary = words;
       this.dictionary.forEach((word) => {
         if (!this.categories.includes(word.category)) {
@@ -31,6 +32,10 @@ export class DictionaryComponent implements OnInit {
 
   public addWord(word: any): void {
     this.dictionaryService.addWord(word);
+  }
+
+  public deleteWord(): void {
+    this.dictionaryService.update();
   }
 
 }
