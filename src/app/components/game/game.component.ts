@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Word } from 'src/app/models/word';
 import { DictionaryService } from 'src/app/service/dictionary.service';
 import { ScoreService } from 'src/app/service/score.service';
 export interface Answer {
@@ -14,9 +15,9 @@ export interface Answer {
 })
 export class GameComponent implements OnInit {
 
-  public dictionary!: Array<any>;
+  public dictionary!: Array<Word>;
   public category!: string;
-  public randomItem!: any;
+  public randomItem!: Word;
   public gameForm!: FormGroup;
   public randomTranslations!: Array<string>;
   public answer!: Answer | undefined;
@@ -47,7 +48,7 @@ export class GameComponent implements OnInit {
   }
 
   private initGame(category: string): void {
-    const dictionnaryCategory = this.dictionary.filter((any) => any.category === category);
+    const dictionnaryCategory = this.dictionary.filter((word) => word.category === category);
     if (!!dictionnaryCategory) {
       if (this.memory.length === dictionnaryCategory.length) {
         this.memory = [];
@@ -97,7 +98,7 @@ export class GameComponent implements OnInit {
   }
 
   private setRandomTranslations(translation: string, category: string): void {
-    const dictionaryCategory = this.dictionary.filter((any) => any.category === category);
+    const dictionaryCategory = this.dictionary.filter((word) => word.category === category);
     if (!!dictionaryCategory) {
       const randomTranslations: Array<string> = [];
       const otherTranslations = dictionaryCategory.filter((t) => t.translation != translation);

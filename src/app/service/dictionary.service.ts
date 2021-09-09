@@ -1,23 +1,16 @@
 import { Injectable } from '@angular/core';
-import {
-  AngularFirestore,
-  DocumentReference,
-  AngularFirestoreCollection,
-  AngularFirestoreDocument
-} from '@angular/fire/compat/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
-// import { Word } from '../models/word';
+import { Word } from '../models/word';
+import { WordUpdate } from '../models/word-update';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DictionaryService {
 
-  private _wordsCollection!: AngularFirestoreCollection<any>;
-  private _wordsDocument!: AngularFirestoreDocument<any>;
-  private _words!: Observable<Array<any>>;
-
-  // private _dictionary!: Array<Word>;
+  private _wordsCollection!: AngularFirestoreCollection<Word>;
+  private _words!: Observable<Array<Word>>;
 
   private _verbsCategoryName: string = "Verbes";
   private _nounsCategoryName: string = "Noms";
@@ -25,19 +18,17 @@ export class DictionaryService {
   private _expressionsCategoryName: string = "Expressions";
 
   constructor(
-    private afs: AngularFirestore,
-    // private afc: AngularFirestoreCollection,
-    // private afd: AngularFirestoreDocument
+    private afs: AngularFirestore
   ) {
     this._wordsCollection = this.afs.collection('words');
-    this._words = this._wordsCollection.valueChanges({idField: 'id'});
+    this._words = this._wordsCollection.valueChanges({ idField: 'id' });
   }
 
-  get words(): Observable<Array<any>> {
+  get words(): Observable<Array<Word>> {
     return this._words;
   }
 
-  public addWord(word: any): void {
+  public addWord(word: Word): void {
     this.afs.collection('words')
       .add(word).then(() => {
         console.log('add success');
@@ -47,8 +38,8 @@ export class DictionaryService {
       });
   }
 
-  public deleteWord(): void {
-    this.afs.collection('words').doc('005mlzXYmWNUPsOrORBg')
+  public deleteWord(id: string): void {
+    this.afs.collection('words').doc(id)
       .delete().then(() => {
         console.log('delete success');
       }).catch(() => {
@@ -56,11 +47,9 @@ export class DictionaryService {
       });
   }
 
-  public update(): void {
-    this.afs.collection('words').doc('005mlzXYmWNUPsOrORBg')
-      .update({
-        translation: 'in view of / considering'
-      }).then(() => {
+  public update(id: string, wordupdate: WordUpdate): void {
+    this.afs.collection('words').doc(id)
+      .update(wordupdate).then(() => {
         console.log('update success');
       }).catch(() => {
         console.log('update error');

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DocumentReference } from '@angular/fire/compat/firestore';
+import { Word } from 'src/app/models/word';
+import { WordUpdate } from 'src/app/models/word-update';
 import { DictionaryService } from 'src/app/service/dictionary.service';
 
 @Component({
@@ -9,7 +11,7 @@ import { DictionaryService } from 'src/app/service/dictionary.service';
 })
 export class DictionaryComponent implements OnInit {
 
-  public dictionary!: Array<any>;
+  public dictionary!: Array<Word>;
   public categories: Array<string>;
 
   constructor(
@@ -30,12 +32,16 @@ export class DictionaryComponent implements OnInit {
     });
   }
 
-  public addWord(word: any): void {
+  public add(word: Word): void {
     this.dictionaryService.addWord(word);
   }
 
-  public deleteWord(): void {
-    this.dictionaryService.update();
+  public update(id: string, wordupdate: WordUpdate): void {
+    this.dictionaryService.update(id, wordupdate);
+  }
+
+  public delete(id: string): void {
+    this.dictionaryService.deleteWord(id);
   }
 
 }

@@ -4,19 +4,21 @@
         <strong>{{ category }}</strong>
         <br>
         <table>
-            <tr *ngFor="let item of dictionary | filter:category; let i = index">
+            <tr *ngFor="let word of dictionary | filter:category; let i = index">
                 <td>
                     &nbsp;{{ i + 1 }}
                 </td>
                 <td>
-                    &nbsp;{{ item.expression }}
+                    &nbsp;{{ word.expression }}
                 </td>
                 <td>
-                    &nbsp;{{ item.translation }}
+                    &nbsp;{{ word.translation }}
+                </td>
+                <td>
+                    &nbsp;<button class="btn btn-danger" (click)="delete(word.id)">Supprimer</button>
                 </td>
             </tr>
         </table>
     </div>
 </div>
 <br>
-<button class="btn btn-danger" (click)="deleteWord()">delete</button>
