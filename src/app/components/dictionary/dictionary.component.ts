@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DocumentReference } from '@angular/fire/compat/firestore';
 import { Word } from 'src/app/models/word';
 import { WordUpdate } from 'src/app/models/word-update';
 import { DictionaryService } from 'src/app/service/dictionary.service';
@@ -22,7 +21,6 @@ export class DictionaryComponent implements OnInit {
 
   ngOnInit(): void {
     this.dictionaryService.words.subscribe((words) => {
-      console.log(words);
       this.dictionary = words;
       this.dictionary.forEach((word) => {
         if (!this.categories.includes(word.category)) {

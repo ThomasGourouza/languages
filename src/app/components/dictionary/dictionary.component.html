@@ -3,22 +3,9 @@
     <div class="col" *ngFor="let category of categories">
         <strong>{{ category }}</strong>
         <br>
-        <table>
-            <tr *ngFor="let word of dictionary | filter:category; let i = index">
-                <td>
-                    &nbsp;{{ i + 1 }}
-                </td>
-                <td>
-                    &nbsp;{{ word.expression }}
-                </td>
-                <td>
-                    &nbsp;{{ word.translation }}
-                </td>
-                <td>
-                    &nbsp;<button class="btn btn-danger" (click)="delete(word.id)">Supprimer</button>
-                </td>
-            </tr>
-        </table>
+        <div *ngFor="let word of dictionary | filter:category; let i = index">
+            <app-word-form [index]="i + 1" [word]="word"></app-word-form>
+        </div>
     </div>
 </div>
 <br>
