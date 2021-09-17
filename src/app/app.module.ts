@@ -17,7 +17,6 @@ import { WordFormComponent } from './components/word-form/word-form.component';
 import { CrudComponent } from './components/crud/crud.component';
 import { TableModule } from 'primeng/table';
 
-import {DockModule} from 'primeng/dock';
 
 
 
@@ -66,7 +65,6 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     AngularFirestoreModule,
     TableModule,
 
-    DockModule,
     BrowserAnimationsModule,
     CalendarModule,
     SliderModule,
