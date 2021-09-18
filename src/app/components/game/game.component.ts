@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Word } from 'src/app/models/word';
 import { DictionaryService } from 'src/app/service/dictionary.service';
 import { ScoreService } from 'src/app/service/score.service';
@@ -27,8 +27,7 @@ export class GameComponent implements OnInit {
 
   constructor(
     private dictionaryService: DictionaryService,
-    private scoreService: ScoreService,
-    private formBuilder: FormBuilder
+    private scoreService: ScoreService
   ) {
     this.categories = [];
     this.randomTranslations = [];
@@ -64,12 +63,10 @@ export class GameComponent implements OnInit {
   }
 
   private initForm(): void {
-    this.gameForm = this.formBuilder.group(
-      {
-        expression: ['', Validators.required],
-        translation: ['', Validators.required]
-      }
-    );
+    this.gameForm = new FormGroup({
+      expression: new FormControl('', Validators.required),
+      translation: new FormControl('', Validators.required)
+    });
   }
 
   public selectCategory(category: string): void {

@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Word } from 'src/app/models/word';
 import { WordUpdate } from 'src/app/models/word-update';
@@ -24,7 +24,6 @@ export class WordFormComponent implements OnInit, OnDestroy {
   private subscription!: Subscription;
 
   constructor(
-    private formBuilder: FormBuilder,
     private dictionaryService: DictionaryService
   ) {
     this.initForm();
@@ -40,12 +39,10 @@ export class WordFormComponent implements OnInit, OnDestroy {
   }
 
   private initForm(): void {
-    this.wordForm = this.formBuilder.group(
-      {
-        expression: ['', Validators.required],
-        translation: ['', Validators.required]
-      }
-    );
+    this.wordForm = new FormGroup({
+      expression: new FormControl('', Validators.required),
+      translation: new FormControl('', Validators.required)
+    });
   }
 
   private initValues(): void {
