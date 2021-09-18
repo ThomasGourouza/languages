@@ -1,24 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { Product } from 'src/app/models/product';
+import { Word } from 'src/app/models/word';
+import { DicoService } from 'src/app/service/dico.service';
 import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-crud',
   templateUrl: './crud.component.html',
-  styles: [`
-        :host ::ng-deep .p-dialog .product-image {
-            width: 150px;
-            margin: 0 auto 2rem auto;
-            display: block;
-        }
-    `],
   styleUrls: ['./crud.component.scss']
 })
 export class CrudComponent implements OnInit {
 
   productDialog!: boolean;
   products!: Product[];
+
+  words!: Word[];
+
   product!: Product;
   selectedProducts!: Product[] | null;
   submitted!: boolean;
@@ -26,12 +24,14 @@ export class CrudComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
+    private dicoService: DicoService,
     private messageService: MessageService,
     private confirmationService: ConfirmationService
   ) { }
 
   ngOnInit() {
-    this.productService.getProducts().then(data => this.products = data);
+    this.productService.getProducts().then((data) => this.products = data);
+    this.dicoService.getWords().then((data) => this.words = data);  
 
     this.statuses = [
       { label: 'INSTOCK', value: 'instock' },

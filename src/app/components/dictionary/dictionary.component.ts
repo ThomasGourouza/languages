@@ -22,6 +22,7 @@ export class DictionaryComponent implements OnInit {
   ngOnInit(): void {
     this.dictionaryService.words.subscribe((words) => {
       this.dictionary = words;
+      console.log(this.dictionary);
       this.dictionary.forEach((word) => {
         if (!this.categories.includes(word.category)) {
           this.categories.push(word.category);

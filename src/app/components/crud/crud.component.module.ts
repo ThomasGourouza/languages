@@ -25,6 +25,7 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { MessageService, ConfirmationService } from 'primeng/api';
 import { ProductService } from 'src/app/service/product.service';
 import { TableModule } from 'primeng/table';
+import { DicoService } from 'src/app/service/dico.service';
 
 @NgModule({
     declarations: [
@@ -57,6 +58,7 @@ import { TableModule } from 'primeng/table';
     ],
     providers: [
         ProductService,
+        DicoService,
         MessageService,
         ConfirmationService
     ],

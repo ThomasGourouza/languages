@@ -42,13 +42,6 @@ export class ProductService {
 
     constructor(private http: HttpClient) { }
 
-    getProductsSmall() {
-        return this.http.get<any>('assets/products-small.json')
-        .toPromise()
-        .then(res => <Product[]>res.data)
-        .then(data => { return data; });
-    }
-
     getProducts() {
         return this.http.get<any>('assets/products.json')
         .toPromise()
@@ -56,15 +49,8 @@ export class ProductService {
         .then(data => { return data; });
     }
 
-    getProductsWithOrdersSmall() {
-        return this.http.get<any>('assets/products-orders-small.json')
-        .toPromise()
-        .then(res => <Product[]>res.data)
-        .then(data => { return data; });
-    }
-
     generatePrduct(): Product {
-        const product: Product =  {
+        return  {
             id: this.generateId(),
             name: this.generateName(),
             description: "Product Description",
@@ -74,9 +60,6 @@ export class ProductService {
             inventoryStatus: this.generateStatus(),
             rating: this.generateRating()
         };
-
-        product.image = product?.name?.toLocaleLowerCase().split(/[ ,]+/).join('-')+".jpg";
-        return product;
     }
 
     generateId() {

@@ -3,4 +3,5 @@ export interface Word {
     category: string;
     expression: string;
     translation: string;
+    rating?: number;
 }

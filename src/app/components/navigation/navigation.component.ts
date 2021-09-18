@@ -3,8 +3,7 @@ import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  templateUrl: './navigation.component.html'
 })
 export class NavigationComponent {
 
@@ -12,10 +11,9 @@ export class NavigationComponent {
 
   constructor() {
     this.items = [
-      { label: 'Home', icon: 'pi pi-fw pi-home' },
-      { label: 'Calendar', icon: 'pi pi-fw pi-calendar' },
-      { label: 'Edit', icon: 'pi pi-fw pi-pencil' },
-      { label: 'Documentation', icon: 'pi pi-fw pi-file' },
+      { label: 'Home', icon: 'pi pi-fw pi-home', routerLink: '/dictionary' },
+      { label: 'Dictionary', icon: 'pi pi-fw pi-book', routerLink: '/crud' },
+      { label: 'Play', icon: 'pi pi-fw pi-play', routerLink: '/game' },
       { label: 'Settings', icon: 'pi pi-fw pi-cog' }
     ];
   }

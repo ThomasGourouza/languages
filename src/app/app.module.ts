@@ -13,7 +13,6 @@ import { CrudModule } from './components/crud/crud.component.module';
 import { DictionaryModule } from './components/dictionary/dictionary.component.module';
 import { GameModule } from './components/game/game.component.module';
 import { ScoreModule } from './components/score/score.component.module';
-import { WordFormModule } from './components/word-form/word-form.component.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,6 @@ import { WordFormModule } from './components/word-form/word-form.component.modul
     CrudModule,
     DictionaryModule,
     GameModule,
-    WordFormModule,
     ScoreModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent }
