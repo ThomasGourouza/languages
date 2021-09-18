@@ -3,5 +3,7 @@ export interface Word {
     category: string;
     expression: string;
     translation: string;
+    numberOfViews: number;
+    numberOfSuccess: number;
     rating?: number;
 }

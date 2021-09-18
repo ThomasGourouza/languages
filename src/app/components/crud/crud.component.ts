@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmationService, MessageService } from 'primeng/api';
-import { Product } from 'src/app/models/product';
 import { Word } from 'src/app/models/word';
-import { DicoService } from 'src/app/service/dico.service';
-import { ProductService } from 'src/app/service/product.service';
+import { DictionaryService } from 'src/app/service/dictionary.service';
 
 @Component({
   selector: 'app-crud',
@@ -12,101 +10,115 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class CrudComponent implements OnInit {
 
-  productDialog!: boolean;
-  products!: Product[];
+  wordDialog!: boolean;
 
   words!: Word[];
 
-  product!: Product;
-  selectedProducts!: Product[] | null;
+  word!: Word;
+  selectedWord!: Word[] | null;
   submitted!: boolean;
-  statuses!: any[];
+  categories!: any[];
 
   constructor(
-    private productService: ProductService,
-    private dicoService: DicoService,
+    private dictionaryService: DictionaryService,
     private messageService: MessageService,
     private confirmationService: ConfirmationService
   ) { }
 
   ngOnInit() {
-    this.productService.getProducts().then((data) => this.products = data);
-    this.dicoService.getWords().then((data) => this.words = data);  
+    this.dictionaryService.words.subscribe((words) => {
+      this.words = words;
+      this.words.forEach((word) => {
+        word.rating = (word.numberOfViews !== 0) ? 
+          Math.round(5 * (word.numberOfSuccess/word.numberOfViews)) : 0;
+      });
+    });
 
-    this.statuses = [
-      { label: 'INSTOCK', value: 'instock' },
-      { label: 'LOWSTOCK', value: 'lowstock' },
-      { label: 'OUTOFSTOCK', value: 'outofstock' }
+    this.categories = [
+      { label: 'Verb', value: 'verb' },
+      { label: 'Adjective', value: 'adjective' },
+      { label: 'Noun', value: 'noun' },
+      { label: 'Phrase', value: 'phrase' }
     ];
+
+  }
+
+  private initWord(): void {
+    this.word = {
+      category: '',
+      expression: '',
+      translation: '',
+      numberOfViews: 0,
+      numberOfSuccess: 0
+    };
   }
 
   openNew() {
-    this.product = {};
+    this.initWord();
     this.submitted = false;
-    this.productDialog = true;
+    this.wordDialog = true;
   }
 
-  deleteSelectedProducts() {
+  deleteSelectedWords() {
     this.confirmationService.confirm({
-      message: 'Are you sure you want to delete the selected products?',
+      message: 'Are you sure you want to delete the selected words?',
       header: 'Confirm',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.products = this.products.filter(val => !this.selectedProducts?.includes(val));
-        this.selectedProducts = null;
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Products Deleted', life: 3000 });
+        this.words = this.words.filter(val => !this.selectedWord?.includes(val));
+        this.selectedWord = null;
+        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Words Deleted', life: 3000 });
       }
     });
   }
 
-  editProduct(product: Product) {
-    this.product = { ...product };
-    this.productDialog = true;
+  editWord(word: Word) {
+    this.word = { ...word };
+    this.wordDialog = true;
   }
 
-  deleteProduct(product: Product) {
+  deleteWord(word: Word) {
     this.confirmationService.confirm({
-      message: 'Are you sure you want to delete ' + product.name + '?',
+      message: 'Are you sure you want to delete ' + word.expression + '?',
       header: 'Confirm',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.products = this.products.filter(val => val.id !== product.id);
-        this.product = {};
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Deleted', life: 3000 });
+        this.words = this.words.filter(val => val.id !== word.id);
+        this.initWord();
+        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Deleted', life: 3000 });
       }
     });
   }
 
   hideDialog() {
-    this.productDialog = false;
+    this.wordDialog = false;
     this.submitted = false;
   }
 
-  saveProduct() {
+  saveWord() {
     this.submitted = true;
 
-    if (this.product?.name?.trim()) {
-      if (this.product.id) {
-        this.products[this.findIndexById(this.product.id)] = this.product;
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Updated', life: 3000 });
+    if (this.word.expression.trim()) {
+      if (this.word.id) {
+        this.words[this.findIndexById(this.word.id)] = this.word;
+        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Updated', life: 3000 });
       }
       else {
-        this.product.id = this.createId();
-        this.product.image = 'product-placeholder.svg';
-        this.products.push(this.product);
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Created', life: 3000 });
+        this.word.id = this.createId();
+        this.words.push(this.word);
+        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Created', life: 3000 });
       }
 
-      this.products = [...this.products];
-      this.productDialog = false;
-      this.product = {};
+      this.words = [...this.words];
+      this.wordDialog = false;
+      this.initWord();
     }
   }
 
   findIndexById(id: string): number {
     let index = -1;
-    for (let i = 0; i < this.products.length; i++) {
-      if (this.products[i].id === id) {
+    for (let i = 0; i < this.words.length; i++) {
+      if (this.words[i].id === id) {
         index = i;
         break;
       }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
@@ -18,10 +19,18 @@ export class DictionaryService {
   private _expressionsCategoryName: string = "Expressions";
 
   constructor(
-    private afs: AngularFirestore
+    private afs: AngularFirestore,
+    private http: HttpClient
   ) {
     this._wordsCollection = this.afs.collection('words');
     this._words = this._wordsCollection.valueChanges({ idField: 'id' });
+  }
+
+  public getData(): Promise<Array<Word>> {
+    return this.http.get<any>('app/data/dictionary.json')
+      .toPromise()
+      .then(res => <Word[]>res.data)
+      .then(data => { return data; });
   }
 
   get words(): Observable<Array<Word>> {
