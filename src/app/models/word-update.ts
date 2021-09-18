@@ -1,5 +1,6 @@
 export interface WordUpdate {
     category?: string;
-    expression?: string;
-    translation?: string;
+    german?: string;
+    french?: string;
+    english?: string;
 }

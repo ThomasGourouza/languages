@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { CrudComponent } from './crud.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
@@ -31,6 +31,8 @@ import { TableModule } from 'primeng/table';
     ],
     imports: [
         CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
         TabMenuModule,
         BrowserAnimationsModule,
         CalendarModule,

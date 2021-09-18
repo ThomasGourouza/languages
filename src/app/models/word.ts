@@ -1,8 +1,9 @@
 export interface Word {
     id?: string;
     category: string;
-    expression: string;
-    translation: string;
+    german: string;
+    french: string;
+    english: string;
     numberOfViews: number;
     numberOfSuccess: number;
     rating?: number;

@@ -40,19 +40,19 @@ export class WordFormComponent implements OnInit, OnDestroy {
 
   private initForm(): void {
     this.wordForm = new FormGroup({
-      expression: new FormControl('', Validators.required),
+      german: new FormControl('', Validators.required),
       translation: new FormControl('', Validators.required)
     });
   }
 
   private initValues(): void {
-    this.wordForm.get('expression')?.setValue(this.word.expression);
-    this.wordForm.get('translation')?.setValue(this.word.translation);
+    this.wordForm.get('german')?.setValue(this.word.german);
+    this.wordForm.get('translation')?.setValue(this.word.french);
   }
 
   private onValueChange(): void {
     this.subscription = this.wordForm.valueChanges.subscribe((form) => {
-      this.expressionUpdate = form['expression'];
+      this.expressionUpdate = form['german'];
       this.translationUpdate = form['translation'];
     });
   }
@@ -60,8 +60,8 @@ export class WordFormComponent implements OnInit, OnDestroy {
   public update(): void {
     if (!!this.word.id && this.wordForm.valid) {
       const wordUpdate: WordUpdate = {
-        expression: this.expressionUpdate,
-        translation: this.translationUpdate
+        german: this.expressionUpdate,
+        french: this.translationUpdate
       }
       this.dictionaryService.update(this.word.id, wordUpdate);
     }

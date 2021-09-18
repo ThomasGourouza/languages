@@ -17,14 +17,14 @@
         <div class="row">
             <div class="col">
                 <div class="form-group">
-                    <label for="expression">Expression</label>
-                    <input type="text" class="form-control" id="expression" formControlName="expression" readonly />
+                    <label for="german">German</label>
+                    <input type="text" class="form-control" id="german" formControlName="german" readonly />
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label for="translation">Traduction</label>
-                    <select class="form-control" formControlName="translation" (change)="onSubmit()">
+                    <select class="form-control" formControlName="french" (change)="onSubmit()">
                         <option *ngFor="let translation of randomTranslations" [value]="translation">
                             {{ translation }}
                         </option>
@@ -38,5 +38,5 @@
 <app-score></app-score>
 <br>
 <div *ngIf="!!answer" class="d-flex justify-content-center" [ngClass]="{'green': isCorrect, 'red': !isCorrect}">
-    {{ answer.expression }} = {{ answer.translation }}
+    {{ answer.german }} = {{ answer.translation }}
 </div>

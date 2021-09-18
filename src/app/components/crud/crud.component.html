@@ -13,16 +13,37 @@
         </ng-template>
     </p-toolbar>
 
-    <p-table #dt [value]="words" [rows]="10" [paginator]="true" [globalFilterFields]="['name','country.name','representative.name','status']" responsiveLayout="scroll"
+    <p-table #dt [value]="wordsFiltered" [rows]="10" [paginator]="true" [globalFilterFields]="['german','translation','category','rating']" responsiveLayout="scroll"
         [(selection)]="selectedWord" [rowHover]="true" dataKey="id"
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [showCurrentPageReport]="true">
         <ng-template pTemplate="caption">
             <div class="p-d-flex p-ai-center p-jc-between">
-                <h5 class="p-m-0">Manage Words</h5>
-                <span class="p-input-icon-left">
-                    <i class="pi pi-search"></i>
-                    <input pInputText type="text" (input)="dt.filterGlobal($event.target, 'contains')" placeholder="Search..." />
-                </span>
+                <div class="d-flex justify-content-center">
+                    <div class="col-6">
+                        <form [formGroup]="formFilter" class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="p-input-icon-left">
+                                        <i class="pi pi-search"></i>
+                                        <input pInputText type="text" formControlName="category" placeholder="Category" />
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <span class="p-input-icon-left">
+                                        <i class="pi pi-search"></i>
+                                        <input pInputText type="number" min="0" [max]="getMaxForFilterRatingFrom()" formControlName="ratingFrom" placeholder="Rating from" />
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <span class="p-input-icon-left">
+                                        <i class="pi pi-search"></i>
+                                        <input pInputText type="number" [min]="getMinForFilterRatingTo()" max="5" formControlName="ratingTo" placeholder="Rating to" />
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </ng-template>
         <ng-template pTemplate="header">
@@ -30,10 +51,10 @@
                 <th style="width: 3rem">
                     <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
                 </th>
-                <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
-                <th pSortableColumn="price">Price <p-sortIcon field="price"></p-sortIcon></th>
+                <th pSortableColumn="german">German <p-sortIcon field="german"></p-sortIcon></th>
+                <th pSortableColumn="translation">Translation <p-sortIcon field="translation"></p-sortIcon></th>
                 <th pSortableColumn="category">Category <p-sortIcon field="category"></p-sortIcon></th>
-                <th pSortableColumn="rating">Reviews <p-sortIcon field="rating"></p-sortIcon></th>
+                <th pSortableColumn="rating">Rating <p-sortIcon field="rating"></p-sortIcon></th>
                 <th></th>
             </tr>
         </ng-template>
@@ -42,8 +63,8 @@
                 <td>
                     <p-tableCheckbox [value]="word"></p-tableCheckbox>
                 </td>
-                <td>{{word.expression}}</td>
-                <td>{{word.translation}}</td>
+                <td>{{word.german}}</td>
+                <td>{{word.french}}</td>
                 <td>{{word.category}}</td>
                 <td><p-rating [ngModel]="word.rating" [readonly]="true" [cancel]="false"></p-rating></td>
                 <td>
@@ -54,7 +75,7 @@
         </ng-template>
         <ng-template pTemplate="summary">
             <div class="p-d-flex p-ai-center p-jc-between">
-                In total there are {{words ? words.length : 0 }} words.
+                In total, there are {{wordsFiltered ? wordsFiltered.length : 0 }} words.
             </div>
         </ng-template>
     </p-table>
@@ -63,14 +84,14 @@
 <p-dialog [(visible)]="wordDialog" [style]="{width: '450px'}" header="Word Details" [modal]="true" styleClass="p-fluid">
     <ng-template pTemplate="content">
         <div class="p-field">
-            <label for="expression">Expression</label>
-            <input type="text" pInputText id="expression" [(ngModel)]="word.expression" required autofocus />
-            <small class="p-error" *ngIf="submitted && !word.expression">Expression is required.</small>
+            <label for="german">German</label>
+            <input type="text" pInputText id="german" [(ngModel)]="word.german" required autofocus />
+            <small class="p-error" *ngIf="submitted && !word.german">This field is required.</small>
         </div>
         <div class="p-field">
             <label for="translation">Translation</label>
-            <input type="text" pInputText id="translation" [(ngModel)]="word.translation" required />
-            <small class="p-error" *ngIf="submitted && !word.translation">Translation is required.</small>
+            <input type="text" pInputText id="translation" [(ngModel)]="word.french" required />
+            <small class="p-error" *ngIf="submitted && !word.french">This field is required.</small>
         </div>
         <div class="p-field">
             <label for="category">Category</label>

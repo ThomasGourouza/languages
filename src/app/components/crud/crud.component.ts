@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { Word } from 'src/app/models/word';
 import { DictionaryService } from 'src/app/service/dictionary.service';
+export interface FormFilter {
+  category: string;
+  ratingFrom: string;
+  ratingTo: string;
+}
 
 @Component({
   selector: 'app-crud',
@@ -13,6 +19,11 @@ export class CrudComponent implements OnInit {
   wordDialog!: boolean;
 
   words!: Word[];
+  wordsFiltered!: Word[];
+
+  public categorySearch: string;
+  public ratingSearch: string;
+  public formFilter!: FormGroup;
 
   word!: Word;
   selectedWord!: Word[] | null;
@@ -23,15 +34,26 @@ export class CrudComponent implements OnInit {
     private dictionaryService: DictionaryService,
     private messageService: MessageService,
     private confirmationService: ConfirmationService
-  ) { }
+  ) {
+    this.categorySearch = '';
+    this.ratingSearch = '';
+  }
 
   ngOnInit() {
+    this.initFormFilter();
     this.dictionaryService.words.subscribe((words) => {
       this.words = words;
       this.words.forEach((word) => {
-        word.rating = (word.numberOfViews !== 0) ? 
-          Math.round(5 * (word.numberOfSuccess/word.numberOfViews)) : 0;
+        word.rating = (word.numberOfViews > 0) ?
+          Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
       });
+      const category = this.formFilter.get('category')?.value;
+      const ratingFrom = this.formFilter.get('ratingFrom')?.value;
+      const ratingTo = this.formFilter.get('ratingTo')?.value;
+      this.onFilter(category, ratingFrom, ratingTo);
+    });
+    this.formFilter.valueChanges.subscribe((form: FormFilter) => {
+      this.onFilter(form.category, form.ratingFrom, form.ratingTo);
     });
 
     this.categories = [
@@ -40,17 +62,45 @@ export class CrudComponent implements OnInit {
       { label: 'Noun', value: 'noun' },
       { label: 'Phrase', value: 'phrase' }
     ];
-
   }
 
   private initWord(): void {
     this.word = {
       category: '',
-      expression: '',
-      translation: '',
+      german: '',
+      french: '',
+      english: '',
       numberOfViews: 0,
       numberOfSuccess: 0
     };
+  }
+
+  // TODO: add query parms from url
+  private initFormFilter(): void {
+    this.formFilter = new FormGroup({
+      category: new FormControl(''),
+      ratingFrom: new FormControl(''),
+      ratingTo: new FormControl('')
+    });
+  }
+
+  private onFilter(category: string, ratingFrom: string, ratingTo: string): void {
+    this.wordsFiltered = this.words.filter((word) => {
+      const categoryFilter = (!!category) ? word.category.includes(category) : true;
+      const ratingFromFilter = (!!ratingFrom) ? (word.rating != undefined && word.rating >= +ratingFrom) : true;
+      const ratingToFilter = (!!ratingTo) ? (word.rating != undefined && word.rating <= +ratingTo) : true;
+      return categoryFilter && ratingFromFilter && ratingToFilter;
+    });
+  }
+
+  public getMaxForFilterRatingFrom(): number {
+    const ratingTo = this.formFilter.get('ratingTo')?.value
+    return (ratingTo !== '') ? ratingTo : 5;
+  }
+
+  public getMinForFilterRatingTo(): number {
+    const ratingFrom = this.formFilter.get('ratingFrom')?.value
+    return (ratingFrom !== '') ? ratingFrom : 0;
   }
 
   openNew() {
@@ -79,7 +129,7 @@ export class CrudComponent implements OnInit {
 
   deleteWord(word: Word) {
     this.confirmationService.confirm({
-      message: 'Are you sure you want to delete ' + word.expression + '?',
+      message: 'Are you sure you want to delete ' + word.german + '?',
       header: 'Confirm',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
@@ -98,13 +148,12 @@ export class CrudComponent implements OnInit {
   saveWord() {
     this.submitted = true;
 
-    if (this.word.expression.trim()) {
+    if (this.word.german.trim()) {
       if (this.word.id) {
         this.words[this.findIndexById(this.word.id)] = this.word;
         this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Updated', life: 3000 });
       }
       else {
-        this.word.id = this.createId();
         this.words.push(this.word);
         this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Created', life: 3000 });
       }
@@ -125,15 +174,6 @@ export class CrudComponent implements OnInit {
     }
 
     return index;
-  }
-
-  createId(): string {
-    let id = '';
-    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    for (var i = 0; i < 5; i++) {
-      id += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    return id;
   }
 
 }
