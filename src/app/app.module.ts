@@ -12,6 +12,7 @@ import { DictionaryModule } from './components/dictionary/dictionary.component.m
 import { GameModule } from './components/game/game.component.module';
 import { NavigationModule } from './components/navigation/navigation.component.module';
 import { MessageService } from 'primeng/api';
+import { HomeModule } from './components/home/home.component.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MessageService } from 'primeng/api';
     NavigationModule,
     DictionaryModule,
     GameModule,
+    HomeModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent }
 

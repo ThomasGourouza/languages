@@ -28,11 +28,13 @@ export class DictionaryService {
     this._words = this._wordsCollection.valueChanges({ idField: 'id' });
   }
 
-  public getData(): Promise<Array<Word>> {
-    return this.http.get<any>('app/data/dictionary.json')
+  public getData(): Promise<Array<WordUpdate>> {
+    return this.http.get<any>('assets/data/dictionary.json')
       .toPromise()
-      .then(res => <Word[]>res.data)
-      .then(data => { return data; });
+      .then(res => <WordUpdate[]>res.data)
+      .then(data => {
+        return data;
+      });
   }
 
   get words(): Observable<Array<Word>> {

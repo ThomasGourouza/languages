@@ -1,0 +1,5964 @@
+{
+    "data": [
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "verwalten",
+            "french": "manage"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "einfügen",
+            "french": "insert"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "beibringen",
+            "french": "to teach"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "umsetzen",
+            "french": "implement"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "erfassen",
+            "french": "capture"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "abstimmen",
+            "french": "vote"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "schätzen",
+            "french": "estimate"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "sich beklagen/sich beschweren",
+            "french": "se plaindre"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "erstellen",
+            "french": "create"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "eingeben",
+            "french": "enter"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "erzeugen",
+            "french": "générer"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "entfernen",
+            "french": "remove"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "anstehen",
+            "french": "stand in line/queue"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "benötigen",
+            "french": "require"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "bevorzugen",
+            "french": "to prefer"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "erkunden",
+            "french": "explore"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "heben",
+            "french": "soulever"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "zurückziehen",
+            "french": "retirer"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "abgeben",
+            "french": "rendre"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "halten für",
+            "french": "consider"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "weiterleiten (weitergeleitet)",
+            "french": "forward"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "aufnehmen",
+            "french": "enregistrer/record"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "betrachten",
+            "french": "consider"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "berücksichtigen (berücksichtigt)",
+            "french": "prendre en compte"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "verwandeln",
+            "french": "transform"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "umwandeln",
+            "french": "convert"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "beobachten",
+            "french": "observer"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "stattfinden",
+            "french": "occur / take place"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "auslösen",
+            "french": "déclencher"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "jemanden auslachen",
+            "french": "se moquer de quelqu'un"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "zunehmen",
+            "french": "prendre du poids"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "abnehmen",
+            "french": "perdre du poids"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "wegdrücken",
+            "french": "push away"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "anziehen",
+            "french": "put on"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "ausziehen",
+            "french": "take off"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "nachfragen",
+            "french": "demander"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "auskennen",
+            "french": "to know about"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "rumfragen",
+            "french": "ask around"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "aufklappen",
+            "french": "ouvrir"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "überreden",
+            "french": "persuader"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "überzeugen",
+            "french": "convaincre"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "sich verhalten/sich benehmen",
+            "french": "behave"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "vorgeben",
+            "french": "pretend"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "sich beziehen auf",
+            "french": "se référer à"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "bewerten",
+            "french": "assess"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "ablaufen",
+            "french": "expire"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "übernehmen",
+            "french": "to take over"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "beißen (gebißen)",
+            "french": "mordre"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "ablösen",
+            "french": "détacher"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "besorgen",
+            "french": "take care of"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "beibehalten",
+            "french": "maintenir"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "beibelassen",
+            "french": "leave at it is"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "vorbeikommen",
+            "french": "come over"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "vorbeibringen",
+            "french": "bring over"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "ausschlafen",
+            "french": "faire la grace matinée"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "abbrechen",
+            "french": "abort"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "nachsehen",
+            "french": "check"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "darauf achten",
+            "french": "be careful"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "mitgeben",
+            "french": "révéler"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "herausfinden",
+            "french": "find out"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "einspielen",
+            "french": "donner un signal"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "feststellen",
+            "french": "se rendre compte"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "zurückkehren",
+            "french": "to come back"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "jemanden munter machen",
+            "french": "rendre qqun joyeux"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "jemanden aufheitern",
+            "french": "to cheer up someone"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "ermutigen",
+            "french": "encourage"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "verb",
+            "german": "trösten",
+            "french": "consoler"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Eigenschaft",
+            "french": "property"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "Die Fehlermeldung",
+            "french": "message d'erreur"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Schuld",
+            "french": "faute"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "das verständnis",
+            "french": "understanding"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die anwesenheit",
+            "french": "la présence"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Zustand",
+            "french": "state"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Schublade",
+            "french": "tiroir"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Schablone",
+            "french": "template"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Abwechslung / die Vielfalt",
+            "french": "la variété"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Anforderung",
+            "french": "requirement"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "Ausnahme",
+            "french": "exception"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "das Erzeugnis",
+            "french": "product"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Strich",
+            "french": "trait"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Notwendigkeit",
+            "french": "nécessité"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Rückmeldung",
+            "french": "feedback"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Oberfläche",
+            "french": "surface"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Anzahl",
+            "french": "numéro/nombre"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "das Werkzeug",
+            "french": "tool"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Mehrzahl",
+            "french": "plural"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Umgebung / die Umwelt",
+            "french": "environement"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Ansatz",
+            "french": "une approche"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Hinweis",
+            "french": "une note / indice"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Ausflug",
+            "french": "excursion"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Satz",
+            "french": "la phrase"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "das Pech",
+            "french": "bad luck"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Tastatur",
+            "french": "clavier"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Oberste",
+            "french": "the top one"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Reihenfolge",
+            "french": "the order"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Unterschied",
+            "french": "la différence"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Notfall",
+            "french": "urgence"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Wecker",
+            "french": "alarm clock"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Vorgängner",
+            "french": "predecessor"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Nachgängner",
+            "french": "successor"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Maßnahme",
+            "french": "measure"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "die Vermutung",
+            "french": "la supposition"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "das Leerzeichen",
+            "french": "espace"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "das Ausrufezeichen",
+            "french": "exclamation mark"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "das Fragezeichen",
+            "french": "Question mark"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "das Vergnügen",
+            "french": "plaisir"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "noun",
+            "german": "der Abstand",
+            "french": "distance"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "zugriff verweigert",
+            "french": "access denied"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "zusätzlich",
+            "french": "en plus"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "überzeugt (von)",
+            "french": "convaincu (de)"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "bescheiden",
+            "french": "modeste"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "verschiebbar",
+            "french": "movable"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "scheinbar",
+            "french": "apparently"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "überrascht",
+            "french": "surprised"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "regelmäßig",
+            "french": "regularly"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "wesentlich",
+            "french": "considérablement"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "bezüglich + datif",
+            "french": "regarding"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "ggfs.",
+            "french": "gegebenenfalls"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "bzw.",
+            "french": "beziehungsweise"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "abwesend",
+            "french": "absent"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "verantwortlich, zuständig",
+            "french": "responsable"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "wertvoll",
+            "french": "valuable"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "letztendlich",
+            "french": "in the end"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "veraltet",
+            "french": "out of date"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "Notwendig",
+            "french": "nécessaire"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "oberflächlich",
+            "french": "superficial"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "vollkommen / vollständig",
+            "french": "completely"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "erforderlich",
+            "french": "obligatoire"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "auswendig lernen",
+            "french": "apprendre par cœur"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "zurecht",
+            "french": "à juste titre"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "spätestens",
+            "french": "au plus tard"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "mindestens",
+            "french": "au moins"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "übel / böse",
+            "french": "evil"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "förderlich",
+            "french": "bénéfique"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "gemütlich",
+            "french": "confortable"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "regelmäßig",
+            "french": "regularly"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "grundsätzlich",
+            "french": "essentiellement"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "bezüglicherweise",
+            "french": "relatif à"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "besorgt",
+            "french": "concerned"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "frühestens",
+            "french": "at earliest"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "kontraproduktiv",
+            "french": "contre productif"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "im Voraus",
+            "french": "in advance"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "teilweise",
+            "french": "partially/sometimes"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "ursprünglich",
+            "french": "originally"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "verfault",
+            "french": "rotten"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "ausgezeichnet",
+            "french": "excellent"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "adjective",
+            "german": "nirgends, nirgendwo",
+            "french": "nowhere"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "In dieser Woche habe ich an einer Lösung gearbeitet",
+            "french": "this week I've been working on a solution"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "er mischte zum guten etwas schlechtes und umgekehrt",
+            "french": "he mixed something bad for good and vice versa"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "Kein Thema",
+            "french": "no problem"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "soweit ich weiß",
+            "french": "as far as I know"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "soviel ich weiß",
+            "french": "as much as I know"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "das ganze Thema",
+            "french": "the whole subject"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "soweit ich das verstanden habe",
+            "french": "pour autant que j'ai compris"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "in letzter zeit",
+            "french": "ces dernier temps"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "Ich bin daran gewöhnt",
+            "french": "j'y suis habitué"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "ich verabschiede mich",
+            "french": "I say goodbye"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "er hat beschlossen",
+            "french": "il a décidé"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "Von meiner Seite aus",
+            "french": "from my side"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "wo fahren sie hin",
+            "french": "where are you going"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "an sich",
+            "french": "en soi"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "warum auch immer",
+            "french": "for whatever reason"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "es lag dran",
+            "french": "c'est parceque"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "mir ist aufgefallen",
+            "french": "i noticed"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "mir fällt nichts ein",
+            "french": "I can't think of anything"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "es fällt mir leicht",
+            "french": "It is easy for me"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "in anbetracht",
+            "french": "in view of / considering"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "ich gebe dir recht",
+            "french": "je te donne raison"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "schweigen ist zustimmung",
+            "french": "qui ne dit mot consent"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "2/8",
+            "french": "2 von 8 – 2 durch 8"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "mit jemandem rechnen",
+            "french": "expect someone"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "auf jemanden zählen",
+            "french": "compter sur qqun"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "hiermit",
+            "french": "ci-joint"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "ich halte die anderen für veraltet",
+            "french": "I consider the others are out of date"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "irgendwie sowas",
+            "french": "something like that"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "es ist sowas wie ...",
+            "french": "it is like ..."
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "irgendwie sowas lustiges",
+            "french": "somehow something funny"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "würdest du testen wollen?",
+            "french": "would you want to test?"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "wir haben beschlossen",
+            "french": "on a décidé"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "in dem Fall",
+            "french": "dans ce cas"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "ich bin nicht damit vertraut",
+            "french": "I am not familiar with it"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "achten sie bitte",
+            "french": "votre attention svp"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "mit eigenen Augen",
+            "french": "de mes propres yeux"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "bist du unter uns ?",
+            "french": "are you among us ?"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "wenn ich mich nicht irre",
+            "french": "si je ne me trompe pas"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "sie hat mich ausgelacht",
+            "french": "she laughed at me"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "sagt dir das etwas?",
+            "french": "does that ring a bell?"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "wo ich groß geworden bin",
+            "french": "où j'ai grandi"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "habe ich nie gemocht",
+            "french": "I never liked"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "wie hieß es schon?",
+            "french": "comment ça s'appellait déjà?"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "was hältst du davon?",
+            "french": "What do you think about?"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "fleißig am machen",
+            "french": "occupé à faire"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "Ich formuliere nochmals um",
+            "french": "je reformule de nouveau"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "grundsätzliches Problem",
+            "french": "problème fondamental"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "sowas - so ähnlich",
+            "french": "comme ça"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "wer hat worüber Wissen",
+            "french": "who has knowledge of what"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "bis dahin",
+            "french": "until then"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "bis nachher",
+            "french": "see you later"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "die Spannung steigt",
+            "french": "the suspens rises"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "je nachdem",
+            "french": "depending on"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "Ich gehe davon aus",
+            "french": "I assume"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "und so weiter und so fort",
+            "french": "and so on and so forth"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "dazu zu holen",
+            "french": "to bring in"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "ich hätte das nicht machen sollen",
+            "french": "I shouldn't have done this"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "sie hängt in Frankreich fest",
+            "french": "she's stuck in France"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "ich gucke mal nach",
+            "french": "I'll have a look"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "stell dir kurz vor",
+            "french": "imagine toi"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "hört sich gut an",
+            "french": "sounds good"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "im vergleich zu",
+            "french": "compared to"
+        },
+        {
+            "english": "",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0,
+            "category": "expression",
+            "german": "im Verlauf (+ datif)",
+            "french": "au cours de"
+        },
+        {
+            "category": "phrase",
+            "german": "die untere (Sache)",
+            "french": "(le truc) du bas",
+            "english": "(le truc) du bas",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "two out of eight",
+            "french": "zwei von acht",
+            "english": "zwei von acht",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "neunzig Grad",
+            "french": "90 degrés",
+            "english": "90 degrés",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zurecht",
+            "french": "à juste titre",
+            "english": "à juste titre",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "rechtzeitig",
+            "french": "à temps",
+            "english": "à temps",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abbrechen",
+            "french": "abort",
+            "english": "abort",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abwesend",
+            "french": "absent",
+            "english": "absent",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zugriff verweigert",
+            "french": "access denied",
+            "english": "access denied",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abgesprochen",
+            "french": "agreed",
+            "english": "agreed",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "woanders",
+            "french": "ailleurs",
+            "english": "ailleurs",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Wecker",
+            "french": "alarm clock",
+            "english": "alarm clock",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "und so weiter und so fort",
+            "french": "and so on and so forth",
+            "english": "and so on and so forth",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "scheinbar",
+            "french": "apparently",
+            "english": "apparently",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erscheinen",
+            "french": "appear",
+            "english": "appear",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "auswendig lernen",
+            "french": "apprendre par cœur",
+            "english": "apprendre par cœur",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nachmittags",
+            "french": "après-midi",
+            "english": "après-midi",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bist du unter uns ?",
+            "french": "are you among us ?",
+            "english": "are you among us ?",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "soweit ich weiß",
+            "french": "as far as I know",
+            "english": "as far as I know",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "soviel ich weiß",
+            "french": "as much as I know",
+            "english": "as much as I know",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "rumfragen",
+            "french": "ask around",
+            "english": "ask around",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bewerten",
+            "french": "assess",
+            "english": "assess",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "frühestens",
+            "french": "at earliest",
+            "english": "at earliest",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "fristig",
+            "french": "au bon moment",
+            "english": "au bon moment",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mindestens",
+            "french": "au moins",
+            "english": "au moins",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "spätestens",
+            "french": "au plus tard",
+            "english": "au plus tard",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erlauben",
+            "french": "autoriser",
+            "english": "autoriser",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "rechteckig",
+            "french": "avec un angle droit",
+            "english": "avec un angle droit",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "pech",
+            "french": "bad luck",
+            "english": "bad luck",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Grundlage",
+            "french": "basis",
+            "english": "basis",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "darauf achten",
+            "french": "be careful",
+            "english": "be careful",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zusammenhängen",
+            "french": "be connected",
+            "english": "be connected",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "hinter dir",
+            "french": "behind you",
+            "english": "behind you",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "förderlich",
+            "french": "bénéfique",
+            "english": "bénéfique",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bzw.",
+            "french": "beziehungsweise",
+            "english": "beziehungsweise",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "reinbringen",
+            "french": "bring in",
+            "english": "bring in",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vorbeibringen",
+            "french": "bring it over",
+            "english": "bring it over",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es lag dran",
+            "french": "c'est parceque",
+            "english": "c'est parceque",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Rahmen",
+            "french": "cadre",
+            "english": "cadre",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erfassen",
+            "french": "capture",
+            "english": "capture",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "in letzter zeit",
+            "french": "ces dernier temps",
+            "english": "ces dernier temps",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nachsehen",
+            "french": "check",
+            "english": "check",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "hiermit",
+            "french": "ci-joint",
+            "english": "ci-joint",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Tastatur",
+            "french": "clavier",
+            "english": "clavier",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "sowas - so ähnlich",
+            "french": "comme ça",
+            "english": "comme ça",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wie hieß es schon?",
+            "french": "comment ça s'appellait déjà?",
+            "english": "comment ça s'appellait déjà?",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beschweren, beklagen",
+            "french": "complain",
+            "english": "complain",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vollständig",
+            "french": "complete",
+            "english": "complete",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "fertiggestellt",
+            "french": "completed",
+            "english": "completed",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vollkommen",
+            "french": "completely",
+            "english": "completely",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vollzogen",
+            "french": "completed",
+            "english": "completed",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "auf jemanden zählen",
+            "french": "compter sur qqun",
+            "english": "compter sur qqun",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "betreffen",
+            "french": "concern / affect",
+            "english": "concern / affect",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bezüglich + datif",
+            "french": "concernant",
+            "english": "concernant",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "besorgt",
+            "french": "concerned",
+            "english": "concerned",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verwechseln",
+            "french": "confondre",
+            "english": "confondre",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "gemütlich",
+            "french": "confortable",
+            "english": "confortable",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verwirrt",
+            "french": "confused",
+            "english": "confused",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verbunden",
+            "french": "connected",
+            "english": "connected",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "halten für",
+            "french": "consider",
+            "english": "consider",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "betrachten",
+            "french": "consider",
+            "english": "consider",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wesentlich",
+            "french": "considérablement",
+            "english": "considérablement",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "kontraproduktiv",
+            "french": "contre productif",
+            "english": "contre productif",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "überzeugen",
+            "french": "convaincre",
+            "english": "convaincre",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "überzeugt (von)",
+            "french": "convaincu (de)",
+            "english": "convaincu (de)",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "umwandeln",
+            "french": "to convert",
+            "english": "to convert",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erstellen",
+            "french": "to create",
+            "english": "to create",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "in dem Fall",
+            "french": "dans ce cas",
+            "english": "dans ce cas",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "in dem mir mitgeteilt wurde",
+            "french": "dans lequel j'ai été informé",
+            "english": "dans lequel j'ai été informé",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "über gott und die Welt reden",
+            "french": "de la pluie et du bon temps",
+            "english": "de la pluie et du bon temps",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mit eigenen Augen",
+            "french": "de mes propres yeux",
+            "english": "de mes propres yeux",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "auslösen",
+            "french": "déclencher",
+            "english": "déclencher",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abnahmen",
+            "french": "decrease",
+            "english": "decrease",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "tief",
+            "french": "deep",
+            "english": "deep",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nachfragen",
+            "french": "demander",
+            "english": "demander",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "je nachdem",
+            "french": "depending on",
+            "english": "depending on",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "dran­hän­gen",
+            "french": "dépendre",
+            "english": "dépendre",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ablösen",
+            "french": "détacher",
+            "english": "détacher",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "festlegen",
+            "french": "determinate",
+            "english": "determinate",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "feststellen",
+            "french": "determine",
+            "english": "determine",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ermitteln",
+            "french": "determine",
+            "english": "determine",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "das Wörterbuch",
+            "french": "dictionnaire",
+            "english": "dictionnaire",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ekelhaft, widerlich, eklig",
+            "french": "disgusting",
+            "english": "disgusting",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Anzeige / die Auslage",
+            "french": "display",
+            "english": "display",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "sagt dir das etwas?",
+            "french": "does that ring a bell?",
+            "english": "does that ring a bell?",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "einspielen",
+            "french": "donner un signal",
+            "english": "donner un signal",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "/",
+            "french": "durch",
+            "english": "durch",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vertauschen",
+            "french": "échanger",
+            "english": "échanger",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Notfall",
+            "french": "emergency",
+            "english": "emergency",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "im Voraus",
+            "french": "en avance",
+            "english": "en avance",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "startend mit",
+            "french": "en commençant par",
+            "english": "en commençant par",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mit anderen Worten",
+            "french": "en d'autres termes",
+            "english": "en d'autres termes",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "fit",
+            "french": "en forme",
+            "english": "en forme",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zusätzlich",
+            "french": "en plus",
+            "english": "en plus",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "an sich",
+            "french": "en soi",
+            "english": "en soi",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "aufnehmen",
+            "french": "enregistrer/record",
+            "english": "enregistrer/record",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "eingeben",
+            "french": "enter",
+            "english": "enter",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Eingang, Eintritt",
+            "french": "entrance",
+            "english": "entrance",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Umgebung / die Umwelt",
+            "french": "environement",
+            "english": "environement",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Umgebung",
+            "french": "environment",
+            "english": "environment",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Leerzeichen",
+            "french": "espace",
+            "english": "espace",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "grundsätzlich",
+            "french": "essentiellement",
+            "english": "essentiellement",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "schätzen",
+            "french": "estimer",
+            "english": "estimer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "schätzen",
+            "french": "estimer",
+            "english": "estimer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "übel / böse",
+            "french": "evil",
+            "english": "evil",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ausgezeichnet",
+            "french": "excellent",
+            "english": "excellent",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Ausnahme",
+            "french": "exception",
+            "english": "exception",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Ausnahme",
+            "french": "exception",
+            "english": "exception",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Ausrufezeichen",
+            "french": "exclamation mark",
+            "english": "exclamation mark",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Ausflug",
+            "french": "excursion",
+            "english": "excursion",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Ausrede",
+            "french": "excuse",
+            "english": "excuse",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ausführen",
+            "french": "execute",
+            "english": "execute",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Anforderung",
+            "french": "exigence",
+            "english": "exigence",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mit jemandem rechnen",
+            "french": "expect someone",
+            "english": "expect someone",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ablaufen",
+            "french": "expire",
+            "english": "expire",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ablaufen",
+            "french": "expirer",
+            "english": "expirer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erkunden",
+            "french": "explore",
+            "english": "explore",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Ausdruck",
+            "french": "expression",
+            "english": "expression",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "fehlgeschlagenen",
+            "french": "failed (MR)",
+            "english": "failed (MR)",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ausschlafen",
+            "french": "faire la grace matinée",
+            "english": "faire la grace matinée",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "schmerzen",
+            "french": "faire mal",
+            "english": "faire mal",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "weh tun",
+            "french": "faire mal",
+            "english": "faire mal",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "rückmeldung",
+            "french": "feedback",
+            "english": "feedback",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "herausfinden",
+            "french": "find out",
+            "english": "find out",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "unscharf",
+            "french": "flou",
+            "english": "flou",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "allgemein",
+            "french": "for everything",
+            "english": "for everything",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "warum auch immer",
+            "french": "for whatever reason",
+            "english": "for whatever reason",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "weiterleiten (weitergeleitet)",
+            "french": "forward",
+            "english": "forward",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Von meiner Seite aus",
+            "french": "from my side",
+            "english": "from my side",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verschwenden",
+            "french": "gaspiller",
+            "english": "gaspiller",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ggfs.",
+            "french": "gegebenenfalls",
+            "english": "gegebenenfalls",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erzeugen",
+            "french": "générer",
+            "english": "générer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "schief gehen",
+            "french": "go wrong",
+            "english": "go wrong",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "er ist vorübergehend dem Chat beigetreten",
+            "french": "he has temporarily joined the chat",
+            "english": "he has temporarily joined the chat",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "er mischte zum guten etwas schlechtes und umgekehrt",
+            "french": "he mixed something bad for good and vice versa",
+            "english": "he mixed something bad for good and vice versa",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Annahme",
+            "french": "hypothèse",
+            "english": "hypothèse",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich bin nicht damit vertraut",
+            "french": "I am not familiar with it",
+            "english": "I am not familiar with it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mich wundert, dass",
+            "french": "I am surprised that",
+            "english": "I am surprised that",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Ich gehe davon aus",
+            "french": "I assume",
+            "english": "I assume",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich komme damit klar",
+            "french": "I can deal with it",
+            "english": "I can deal with it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es fällt mir nichts ein",
+            "french": "I can't think of anything",
+            "english": "I can't think of anything",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich halte die anderen für veraltet",
+            "french": "I consider the others are out of date",
+            "english": "I consider the others are out of date",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Ich stehe vor Schwierigkeiten",
+            "french": "I face difficulty",
+            "english": "I face difficulty",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nehme ich an",
+            "french": "I guess",
+            "english": "I guess",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich habe erwähnt",
+            "french": "I mentioned",
+            "english": "I mentioned",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "habe ich nie gemocht",
+            "french": "I never liked",
+            "english": "I never liked",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mir ist aufgefallen",
+            "french": "i noticed",
+            "english": "i noticed",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich verabschiede mich",
+            "french": "I say goodbye",
+            "english": "I say goodbye",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Ich hätte es nicht tun sollen",
+            "french": "I shouldn't have done it",
+            "english": "I shouldn't have done it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "halte ich für ungünstig",
+            "french": "I think it's unfavorable",
+            "english": "I think it's unfavorable",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich gucke mal nach",
+            "french": "I'll have a look",
+            "english": "I'll have a look",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich fürchte",
+            "french": "I'm afraid",
+            "english": "I'm afraid",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich bin an der Story",
+            "french": "I'm on the story",
+            "english": "I'm on the story",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich hätte das nicht machen sollen",
+            "french": "ich hätte das nicht machen sollen",
+            "english": "ich hätte das nicht machen sollen",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "notfalls",
+            "french": "if necessary",
+            "english": "if necessary",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "er hat beschlossen",
+            "french": "il a décidé",
+            "english": "il a décidé",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ausdenken",
+            "french": "imagine",
+            "english": "imagine",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "stell dir kurz vor",
+            "french": "imagine toi",
+            "english": "imagine toi",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "umgesetzt",
+            "french": "implemented",
+            "english": "implemented",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "im Voraus",
+            "french": "in advance",
+            "english": "in advance",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "falls er kommt",
+            "french": "in case if he comes",
+            "english": "in case if he comes",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "letztendlich",
+            "french": "in the end",
+            "english": "in the end",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mittendrin",
+            "french": "in the middle",
+            "english": "in the middle",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "in anbetracht + gen",
+            "french": "in view of / considering",
+            "english": "in view of / considering",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "unbekannt",
+            "french": "inconnu",
+            "english": "inconnu",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erhöhen",
+            "french": "increase",
+            "english": "increase",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beeinflussen",
+            "french": "influence",
+            "english": "influence",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mitteilen",
+            "french": "informer",
+            "english": "informer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "einfügen",
+            "french": "insert",
+            "english": "insert",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vorhaben",
+            "french": "intend",
+            "english": "intend",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es ist sowas wie ...",
+            "french": "it is like ...",
+            "english": "it is like ...",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es war halt",
+            "french": "it was just",
+            "english": "it was just",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es ist verschief gegangen",
+            "french": "it went wrong",
+            "english": "it went wrong",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es geht um",
+            "french": "it's about",
+            "english": "it's about",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich habe es festgestellt",
+            "french": "j'ai determiné",
+            "english": "j'ai determiné",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Ich bin daran gewöhnt",
+            "french": "j'y suis habitué",
+            "english": "j'y suis habitué",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Ich formuliere nochmals um",
+            "french": "je reformule de nouveau",
+            "english": "je reformule de nouveau",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich gebe dir recht",
+            "french": "je te donne raison",
+            "english": "je te donne raison",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "halt",
+            "french": "juste (il suffit)",
+            "english": "juste (il suffit)",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "auskennen",
+            "french": "know about",
+            "english": "know about",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Mühe",
+            "french": "l'effort",
+            "english": "l'effort",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Ursprungsidee",
+            "french": "l'idée d'origine",
+            "english": "l'idée d'origine",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Notfall",
+            "french": "l'urgence",
+            "english": "l'urgence",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Rand",
+            "french": "la bordure",
+            "english": "la bordure",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Aufwand",
+            "french": "la dépense (énergie, effort)",
+            "english": "la dépense (énergie, effort)",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Gedanke",
+            "french": "la pensée",
+            "english": "la pensée",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Satz",
+            "french": "la phrase",
+            "english": "la phrase",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die anwesenheit",
+            "french": "la présence",
+            "english": "la présence",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Wirklichkeit",
+            "french": "la réalité",
+            "english": "la réalité",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Verantwortung",
+            "french": "la responsabilité",
+            "english": "la responsabilité",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die vermutung",
+            "french": "la supposition",
+            "english": "la supposition",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "aufwendig",
+            "french": "laborieux",
+            "english": "laborieux",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zuletzt",
+            "french": "last time",
+            "english": "last time",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "in letzter Zeit / letztens",
+            "french": "lately",
+            "english": "lately",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Verschwendung",
+            "french": "le gaspillage",
+            "english": "le gaspillage",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Fachbegriff",
+            "french": "le terme technique",
+            "english": "le terme technique",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beibelassen",
+            "french": "leave at it is",
+            "english": "leave at it is",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verknüpft",
+            "french": "lié",
+            "english": "lié",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "logisch",
+            "french": "logic",
+            "english": "logic",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Logik",
+            "french": "logic",
+            "english": "logic",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "anschauen",
+            "french": "look at",
+            "english": "look at",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "gespannt auf",
+            "french": "looking forward to",
+            "english": "looking forward to",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "sieht aus als wäre es ...",
+            "french": "looks like it's ...",
+            "english": "looks like it's ...",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "geringer Ehrgeiz",
+            "french": "low ambition",
+            "english": "low ambition",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "geringe Ambition",
+            "french": "low ambition",
+            "english": "low ambition",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "meine Schuld",
+            "french": "ma faute",
+            "english": "ma faute",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beibehalten",
+            "french": "maintenir",
+            "english": "maintenir",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nachziehen",
+            "french": "make the next move",
+            "english": "make the next move",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "machbar",
+            "french": "makeable",
+            "english": "makeable",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verwalten",
+            "french": "manage",
+            "english": "manage",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "sinnvoll",
+            "french": "meaningful",
+            "english": "meaningful",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Maßnahme",
+            "french": "measure",
+            "english": "measure",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "fehlermeldung",
+            "french": "message d'erreur",
+            "english": "message d'erreur",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "(ver)messen",
+            "french": "mesurer",
+            "english": "mesurer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bescheiden",
+            "french": "modeste",
+            "english": "modeste",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beißen (gebißen)",
+            "french": "mordre",
+            "english": "mordre",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verschiebbar",
+            "french": "movable",
+            "english": "movable",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beziehen",
+            "french": "move into",
+            "english": "move into",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Notwendig",
+            "french": "nécessaire",
+            "english": "nécessaire",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "notwendig",
+            "french": "necessary",
+            "english": "necessary",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Notwendigkeit",
+            "french": "nécessité",
+            "english": "nécessité",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "benötigt",
+            "french": "needed",
+            "english": "needed",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Kein Thema",
+            "french": "no problem",
+            "english": "no problem",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "benennen",
+            "french": "nommer",
+            "english": "nommer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "benachrichtigen",
+            "french": "notifier",
+            "english": "notifier",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nirgends, nirgendwo",
+            "french": "nowhere",
+            "english": "nowhere",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Anzahl",
+            "french": "numéro/nombre",
+            "english": "numéro/nombre",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erforderlich",
+            "french": "obligatoire",
+            "english": "obligatoire",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beobachten",
+            "french": "observer",
+            "english": "observer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "fleißig am machen",
+            "french": "occupé à faire",
+            "english": "occupé à faire",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "stattfinden",
+            "french": "occur / take place",
+            "english": "occur / take place",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wir haben beschlossen",
+            "french": "on a décidé",
+            "english": "on a décidé",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Betrieb",
+            "french": "opération",
+            "english": "opération",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beziehungsweise",
+            "french": "or rather",
+            "english": "or rather",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Herkunft / der Ursprung",
+            "french": "origin",
+            "english": "origin",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ursprünglich",
+            "french": "originally",
+            "english": "originally",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ursprünglich",
+            "french": "originally",
+            "english": "originally",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wo ich groß geworden bin",
+            "french": "où j'ai grandi",
+            "english": "où j'ai grandi",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "veraltet",
+            "french": "out of date",
+            "english": "out of date",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "aufklappen",
+            "french": "ouvrir",
+            "english": "ouvrir",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "teilweise",
+            "french": "partially/sometimes",
+            "english": "partially/sometimes",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abnehmen",
+            "french": "perdre du poids",
+            "english": "perdre du poids",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zulässig",
+            "french": "permis",
+            "english": "permis",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "überreden",
+            "french": "persuader",
+            "english": "persuader",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Vergnügen",
+            "french": "plaisir",
+            "english": "plaisir",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Mehrzahl",
+            "french": "plural",
+            "english": "plural",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vorzeitig",
+            "french": "plus tôt que prévu",
+            "english": "plus tôt que prévu",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mehrere Unterschiede",
+            "french": "plusieurs différences",
+            "english": "plusieurs différences",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Standpunkt / die Perspektive",
+            "french": "point of view",
+            "english": "point of view",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "soweit ich das verstanden habe",
+            "french": "pour autant que j'ai compris",
+            "english": "pour autant que j'ai compris",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "umsonst",
+            "french": "pour rien",
+            "english": "pour rien",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vorgängner",
+            "french": "predecessor",
+            "english": "predecessor",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zunehmen",
+            "french": "prendre du poids",
+            "english": "prendre du poids",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "berücksichtigen (berücksichtigt)",
+            "french": "prendre en compte",
+            "english": "prendre en compte",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vorgeben",
+            "french": "pretend",
+            "english": "pretend",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "grundsätzliches Problem",
+            "french": "problème fondamental",
+            "english": "problème fondamental",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erzeugnis",
+            "french": "product",
+            "english": "product",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "eigenschaften",
+            "french": "properties",
+            "english": "properties",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "reinsziehen",
+            "french": "pull in",
+            "english": "pull in",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "rausziehen",
+            "french": "pull out",
+            "english": "pull out",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wegdrücken",
+            "french": "push away",
+            "english": "push away",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "durchschieben",
+            "french": "push through",
+            "english": "push through",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "anziehen",
+            "french": "put on",
+            "english": "put on",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Fragezeichen",
+            "french": "Question mark",
+            "english": "Question mark",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "schweigen ist zustimmung",
+            "french": "qui ne dit mot consent",
+            "english": "qui ne dit mot consent",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "lesbar",
+            "french": "readable",
+            "english": "readable",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vor kurzem",
+            "french": "recently",
+            "english": "recently",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "absagen",
+            "french": "refuse",
+            "english": "refuse",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bezüglich",
+            "french": "regarding",
+            "english": "regarding",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "regelmäßig",
+            "french": "regularly",
+            "english": "regularly",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "regelmäßig",
+            "french": "regularly",
+            "english": "regularly",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bezüglicherweise",
+            "french": "relatif à",
+            "english": "relatif à",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verwandte",
+            "french": "relative",
+            "english": "relative",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "entfernen",
+            "french": "remove",
+            "english": "remove",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "benötigen",
+            "french": "require",
+            "english": "require",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "benötigen",
+            "french": "require",
+            "english": "require",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "anforderung",
+            "french": "requirement",
+            "english": "requirement",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verantwortlich, zuständig",
+            "french": "responsable",
+            "english": "responsable",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mitgeben",
+            "french": "révéler",
+            "english": "révéler",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verfault",
+            "french": "rotten",
+            "english": "rotten",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "gute heimfahrt nach Karlsruhe",
+            "french": "safe trip home to Karlsruhe",
+            "english": "safe trip home to Karlsruhe",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "sich beklagen/sich beschweren",
+            "french": "se plaindre",
+            "english": "se plaindre",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "feststellen",
+            "french": "se rendre compte",
+            "english": "se rendre compte",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bis nachher",
+            "french": "see you later",
+            "english": "see you later",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "hausgemacht",
+            "french": "self-made",
+            "english": "self-made",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "sie hat mich ausgelacht",
+            "french": "she laughed at me",
+            "english": "she laughed at me",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "sie hängt in Frankreich fest",
+            "french": "she's stuck in France ",
+            "english": "she's stuck in France ",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Falls Bedarf ist",
+            "french": "si besoin",
+            "english": "si besoin",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wenn ich mich nicht irre",
+            "french": "si je ne me trompe pas",
+            "english": "si je ne me trompe pas",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "irgendwie sowas lustiges",
+            "french": "somehow something funny",
+            "english": "somehow something funny",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "etwas geht schief",
+            "french": "something goes wrong",
+            "english": "something goes wrong",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "irgendwie sowas",
+            "french": "something like that ",
+            "english": "something like that ",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "hört sich gut an",
+            "french": "sounds good",
+            "english": "sounds good",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "leerzeichen",
+            "french": "space",
+            "english": "space",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "angeben",
+            "french": "spécifier",
+            "english": "spécifier",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "anstehen",
+            "french": "stand in line/queue",
+            "english": "stand in line/queue",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Zustand",
+            "french": "state",
+            "english": "state",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Aussage",
+            "french": "statement",
+            "english": "statement",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nachgängner",
+            "french": "successor",
+            "english": "successor",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "oberflächlich",
+            "french": "superficial",
+            "english": "superficial",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "überflüssig",
+            "french": "superflu",
+            "english": "superflu",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Oberfläche",
+            "french": "surface",
+            "english": "surface",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "überrascht",
+            "french": "surprised",
+            "english": "surprised",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "besorgen",
+            "french": "take care of",
+            "english": "take care of",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ausziehen",
+            "french": "take off",
+            "english": "take off",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Schablone",
+            "french": "template",
+            "english": "template",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vorübergehend",
+            "french": "temporarily",
+            "english": "temporarily",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Zugang, der Zugriff, der Zutritt",
+            "french": "the access",
+            "english": "the access",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Verwaltung",
+            "french": "the administration",
+            "english": "the administration",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Knochen",
+            "french": "the bone",
+            "english": "the bone",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Verbindung",
+            "french": "the connection",
+            "english": "the connection",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Abhängigkeit",
+            "french": "the dependency",
+            "english": "the dependency",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "das Gefühl",
+            "french": "the feeling",
+            "english": "the feeling",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Datei",
+            "french": "the file",
+            "english": "the file",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "das Ziel",
+            "french": "the goal",
+            "english": "the goal",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Stimmung / die Laune",
+            "french": "the mood",
+            "english": "the mood",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Reihenfolge",
+            "french": "the order",
+            "english": "the order",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Abfrage",
+            "french": "the query",
+            "english": "the query",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Spannung steigt",
+            "french": "the suspens rises",
+            "english": "the suspens rises",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der oberste",
+            "french": "the top one",
+            "english": "the top one",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "das ganze Thema",
+            "french": "the whole subject",
+            "english": "the whole subject",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "von daher / daher",
+            "french": "therefore",
+            "english": "therefore",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "In dieser Woche habe ich an einer Lösung gearbeitet",
+            "french": "this week I've been working on a solution",
+            "english": "this week I've been working on a solution",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wegwerfen (weggeworfen)",
+            "french": "throw away",
+            "english": "throw away",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "reinwerfen",
+            "french": "throw in",
+            "english": "throw in",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Schublade",
+            "french": "tiroir",
+            "english": "tiroir",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "absprechen",
+            "french": "to arrange",
+            "english": "to arrange",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "fürchten",
+            "french": "to be afraid of",
+            "english": "to be afraid of",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "dazu zu holen",
+            "french": "to bring in",
+            "english": "to bring in",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nachsehen",
+            "french": "to check",
+            "english": "to check",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "überprüfen",
+            "french": "to check",
+            "english": "to check",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "aufräumen",
+            "french": "to clean up",
+            "english": "to clean up",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zurückkehren",
+            "french": "to come back",
+            "english": "to come back",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "berücksichtigen",
+            "french": "to consider",
+            "english": "to consider",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "fluchen",
+            "french": "to curse",
+            "english": "to curse",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abhängen",
+            "french": "to depend",
+            "english": "to depend",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ausklingen",
+            "french": "to end a phone call",
+            "english": "to end a phone call",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beitreten",
+            "french": "to join",
+            "english": "to join",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "auskennen",
+            "french": "to know about",
+            "english": "to know about",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abschließen",
+            "french": "to lock",
+            "english": "to lock",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zu erwähnen",
+            "french": "to mention",
+            "english": "to mention",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "anbieten",
+            "french": "to offer",
+            "english": "to offer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bevorzugen",
+            "french": "to prefer",
+            "english": "to prefer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "reinstecken",
+            "french": "to put in",
+            "english": "to put in",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "einrichten",
+            "french": "to set up",
+            "english": "to set up",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "übernehmen",
+            "french": "to take over",
+            "english": "to take over",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beibringen",
+            "french": "to teach",
+            "english": "to teach",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verwandeln",
+            "french": "to transform",
+            "english": "to transform",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verwenden",
+            "french": "to use",
+            "english": "to use",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Werkzeug",
+            "french": "tool",
+            "english": "tool",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "gesamt",
+            "french": "total",
+            "english": "total",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Strich",
+            "french": "trait",
+            "english": "trait",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Weiterleiten",
+            "french": "transférer",
+            "english": "transférer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verwandeln",
+            "french": "to transform",
+            "english": "to transform",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verwandelt",
+            "french": "transformed",
+            "english": "transformed",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "unbehaglich",
+            "french": "uncomfortable",
+            "english": "uncomfortable",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "unbehagliches Schweigen",
+            "french": "uncomfortable silence",
+            "english": "uncomfortable silence",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "das verständnis",
+            "french": "understanding",
+            "english": "understanding",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Ansatz",
+            "french": "une approche",
+            "english": "une approche",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Hinweis",
+            "french": "une note / indice",
+            "english": "une note / indice",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "unnötig",
+            "french": "unnecessary",
+            "english": "unnecessary",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bis dahin",
+            "french": "until then",
+            "english": "until then",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "auf dem neusten Stand",
+            "french": "up to date",
+            "english": "up to date",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "dringend",
+            "french": "urgent",
+            "english": "urgent",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nützlich",
+            "french": "useful",
+            "english": "useful",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "besiegen",
+            "french": "vaincre",
+            "english": "vaincre",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wertvoll",
+            "french": "valuable",
+            "english": "valuable",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Zustand",
+            "french": "version ?",
+            "english": "version ?",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abwechslung",
+            "french": "Vielfalt",
+            "english": "Vielfalt",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Ansicht",
+            "french": "view",
+            "english": "view",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "kurz",
+            "french": "vite fait",
+            "english": "vite fait",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abstimmen",
+            "french": "vote",
+            "english": "vote",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abstimmen/wählen",
+            "french": "vote",
+            "english": "vote",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "achten sie bitte",
+            "french": "votre attention svp",
+            "english": "votre attention svp",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "was hältst du davon?",
+            "french": "What do you think about?",
+            "english": "What do you think about?",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "was mich gewundert hat",
+            "french": "what surprised me",
+            "english": "what surprised me",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wer hat worüber Wissen",
+            "french": "who has knowledge of what",
+            "english": "who has knowledge of what",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "warum habe ich das machen wollen?",
+            "french": "why did I want to do that?",
+            "english": "why did I want to do that?",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "würdest du testen wollen?",
+            "french": "would you want to test?",
+            "english": "would you want to test?",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "du schaffst das schon",
+            "french": "you can do it",
+            "english": "you can do it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "du kriegst das hin",
+            "french": "you can do it",
+            "english": "you can do it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abheben",
+            "french": "zurückziehen",
+            "english": "zurückziehen",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "je mehr desto besser",
+            "french": "the more the better",
+            "english": "the more the better",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Anmeldung",
+            "french": "the registration",
+            "english": "the registration",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "rübergehen",
+            "french": "go over",
+            "english": "go over",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zuletzt",
+            "french": "last",
+            "english": "last",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich möchte es aus der UI entfernen",
+            "french": "I want to remove it from the UI",
+            "english": "I want to remove it from the UI",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verwenden",
+            "french": "to use",
+            "english": "to use",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vermissen",
+            "french": "to miss",
+            "english": "to miss",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "enttäuschen",
+            "french": "to disappoint",
+            "english": "to disappoint",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "empfehlen",
+            "french": "to recommend",
+            "english": "to recommend",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verschieben",
+            "french": "to postpone",
+            "english": "to postpone",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "großes Drama um nichts",
+            "french": "great drama about nothing",
+            "english": "great drama about nothing",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "trennen",
+            "french": "to separate",
+            "english": "to separate",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich gebe mir Mühe",
+            "french": "I try hard",
+            "english": "I try hard",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "rausgeflogen / weggeflogen",
+            "french": "flown out / flown away",
+            "english": "flown out / flown away",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "rausgeschmiessen",
+            "french": "kicked out",
+            "english": "kicked out",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "rausschmeissen",
+            "french": "to kick out",
+            "english": "to kick out",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "dafür",
+            "french": "for it",
+            "english": "for it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "dagegen",
+            "french": "against it",
+            "english": "against it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es klingt nach",
+            "french": "it sounds like",
+            "english": "it sounds like",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es riecht nach",
+            "french": "it smells like",
+            "english": "it smells like",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "so gut wie fertig",
+            "french": "as good as done",
+            "english": "as good as done",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wir haben beschlossen",
+            "french": "we have decided",
+            "english": "we have decided",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Glückwunsch",
+            "french": "congratulation",
+            "english": "congratulation",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erzeugen",
+            "french": "generate",
+            "english": "generate",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erzeugt",
+            "french": "generated",
+            "english": "generated",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nützlich",
+            "french": "useful",
+            "english": "useful",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "sowas lustiges",
+            "french": "something funny",
+            "english": "something funny",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "befestigen",
+            "french": "to attach",
+            "english": "to attach",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Eigentümer",
+            "french": "the owner",
+            "english": "the owner",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Zaun",
+            "french": "the fence",
+            "english": "the fence",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "angreifen",
+            "french": "to attack",
+            "english": "to attack",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beinflussen",
+            "french": "to influence",
+            "english": "to influence",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Quelle",
+            "french": "the source",
+            "english": "the source",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "auskennen",
+            "french": "to know about",
+            "english": "to know about",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ersetzen",
+            "french": "to substitute",
+            "english": "to substitute",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "markieren",
+            "french": "to mark",
+            "english": "to mark",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "einstellen",
+            "french": "to set",
+            "english": "to set",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "eingestellt",
+            "french": "set",
+            "english": "set",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "rausziehen",
+            "french": "to pull out",
+            "english": "to pull out",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nachdenken",
+            "french": "ponder",
+            "english": "ponder",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "reinkommen",
+            "french": "come in",
+            "english": "come in",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es wird verwandet",
+            "french": "it is used",
+            "english": "it is used",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich wünsche mir",
+            "french": "I wish",
+            "english": "I wish",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es ist keine unbekannte Zahl",
+            "french": "it is not an unknown number",
+            "english": "it is not an unknown number",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die idee dahinter",
+            "french": "The idea behind it",
+            "english": "The idea behind it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es lief",
+            "french": "it ran",
+            "english": "it ran",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "reintun",
+            "french": "to put in",
+            "english": "to put in",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich gebe dir vollkommen recht",
+            "french": "I fully agree with you",
+            "english": "I fully agree with you",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "iche stimme auch zu",
+            "french": "I also agree",
+            "english": "I also agree",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Hauptanzeige",
+            "french": "Main display",
+            "english": "Main display",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beibehalten",
+            "french": "to maintain",
+            "english": "to maintain",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ohne Witz",
+            "french": "no joke",
+            "english": "no joke",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es riecht gut",
+            "french": "it smells good",
+            "english": "it smells good",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "leiden",
+            "french": "to suffer",
+            "english": "to suffer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich wurde wieder gestört",
+            "french": "I was disturbed again",
+            "english": "I was disturbed again",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "falls du etwas sagst",
+            "french": "if you say something",
+            "english": "if you say something",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wo sind die grenze?",
+            "french": "where are the limit?",
+            "english": "where are the limit?",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "richtigerweise",
+            "french": "right",
+            "english": "right",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die Aussage",
+            "french": "the expression",
+            "english": "the expression",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Ausdruck ",
+            "french": "the expression",
+            "english": "the expression",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der Notfall",
+            "french": "emergency",
+            "english": "emergency",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zusagen",
+            "french": "to accept",
+            "english": "to accept",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nehme ich an",
+            "french": "I guess",
+            "english": "I guess",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "freigeschaltet",
+            "french": "unlocked",
+            "english": "unlocked",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "grundsätzlich",
+            "french": "basically",
+            "english": "basically",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "festlegen",
+            "french": "to determine",
+            "english": "to determine",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "festgelegt",
+            "french": "established",
+            "english": "established",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "angewiesen",
+            "french": "dépendant",
+            "english": "dépendant",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "so gennante 'blabla'",
+            "french": "so called 'blabla'",
+            "english": "so called 'blabla'",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "anstellen",
+            "french": "to set up",
+            "english": "to set up",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "da hinten",
+            "french": "back there",
+            "english": "back there",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "da drüben",
+            "french": "over there",
+            "english": "over there",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "umgebung",
+            "french": "Surroundings",
+            "english": "Surroundings",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ursprung",
+            "french": "origin",
+            "english": "origin",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erweitern",
+            "french": "expand",
+            "english": "expand",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "kapieren",
+            "french": "get it",
+            "english": "get it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ergeben",
+            "french": "result",
+            "english": "result",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wirken",
+            "french": "works",
+            "english": "works",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "loslegen",
+            "french": "getting started",
+            "english": "getting started",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "angerissen",
+            "french": "déchiré",
+            "english": "déchiré",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "(an)reißen",
+            "french": "déchirer",
+            "english": "déchirer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beobachten",
+            "french": "to watch",
+            "english": "to watch",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "aufklappen",
+            "french": "ouvrir",
+            "english": "ouvrir",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "reingehen",
+            "french": "to go in",
+            "english": "to go in",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "abgelehnt",
+            "french": "declined",
+            "english": "declined",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ablehnen",
+            "french": "declined",
+            "english": "declined",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nirgenwo",
+            "french": "nowhere",
+            "english": "nowhere",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es dauert ewig",
+            "french": "it takes forever",
+            "english": "it takes forever",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "hinholen",
+            "french": "to fetch",
+            "english": "to fetch",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zurechtkommen",
+            "french": "se débrouiller",
+            "english": "se débrouiller",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "nervig",
+            "french": "annoying",
+            "english": "annoying",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich komme zurecht damit ",
+            "french": "I can handle it",
+            "english": "I can handle it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "die kommende Woche",
+            "french": "next week",
+            "english": "next week",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "kommende woche",
+            "french": "next week",
+            "english": "next week",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bezüglich gen",
+            "french": "regarding gen",
+            "english": "regarding gen",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zu dem was ich dir sagen möchte",
+            "french": "regarding what i want to tell you",
+            "english": "regarding what i want to tell you",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Ich habe dazu eine Frage an dich",
+            "french": "I have a question for you about it",
+            "english": "I have a question for you about it",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erforderlich",
+            "french": "required",
+            "english": "required",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "sich verabschieden",
+            "french": "say goodbye",
+            "english": "say goodbye",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "validate",
+            "french": "bestätigen",
+            "english": "bestätigen",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "valid",
+            "french": "gültig",
+            "english": "gültig",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "eingerechnet",
+            "french": "included",
+            "english": "included",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "submit",
+            "french": "einreichen",
+            "english": "einreichen",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "eingereicht",
+            "french": "submitted",
+            "english": "submitted",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "eingerichtet",
+            "french": "set up",
+            "english": "set up",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "betrachten",
+            "french": "regard",
+            "english": "regard",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "berücksichtigen",
+            "french": "consider",
+            "english": "consider",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "beherrschen",
+            "french": "dominate",
+            "english": "dominate",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verständigen sich",
+            "french": "communicate",
+            "english": "communicate",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wo fahren sie hin",
+            "french": "where are you going",
+            "english": "where are you going",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "vor ort",
+            "french": "sur site",
+            "english": "sur site",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "jetzt weißt du worauf du dich freuen kannst",
+            "french": "now you know what you can look forward to",
+            "english": "now you know what you can look forward to",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erfüllen",
+            "french": "fulfill",
+            "english": "fulfill",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "offensichtlich",
+            "french": "obviously",
+            "english": "obviously",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erzwingen",
+            "french": "enforce",
+            "english": "enforce",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erzwingen",
+            "french": "force",
+            "english": "force",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "behandeln",
+            "french": "to treat",
+            "english": "to treat",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "er weigerte sich",
+            "french": "He refused",
+            "english": "He refused",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "erstaunt",
+            "french": "astonished",
+            "english": "astonished",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "widerspruch",
+            "french": "contradiction",
+            "english": "contradiction",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "jede Person ist auf die ein oder andere Weise betroffen",
+            "french": "everyone is affected in one way or another",
+            "english": "everyone is affected in one way or another",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Umgebung",
+            "french": "Surroundings",
+            "english": "Surroundings",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Umkreis",
+            "french": "Radius",
+            "english": "Radius",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "wogegen",
+            "french": "against what",
+            "english": "against what",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "einstellung",
+            "french": "attitude",
+            "english": "attitude",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bis dahin",
+            "french": "until then",
+            "english": "until then",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich bin stolz auf dich",
+            "french": "I'm proud of you",
+            "english": "I'm proud of you",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "der unfall gibt Rätsel auf",
+            "french": "l'incidente è un mistero",
+            "english": "l'incidente è un mistero",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich schätze",
+            "french": "I guess",
+            "english": "I guess",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "viel Erfolg weiterhin etwas zu tun",
+            "french": "good luck continue to do something",
+            "english": "good luck continue to do something",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "hört sich gut an",
+            "french": "sounds good",
+            "english": "sounds good",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Hört sich alles voll gut an",
+            "french": "Everything sounds good",
+            "english": "Everything sounds good",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Je nachdem unter",
+            "french": "Depending on",
+            "english": "Depending on",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "eilig haben",
+            "french": "in a hurry",
+            "english": "in a hurry",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "mitteilen",
+            "french": "notify",
+            "english": "notify",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ich fürchte schon",
+            "french": "I'm afraid so",
+            "english": "I'm afraid so",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "gedächtnis",
+            "french": "memory",
+            "english": "memory",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "höflich",
+            "french": "polite",
+            "english": "polite",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "plötzlich",
+            "french": "вдруг, внезапно",
+            "english": "вдруг, внезапно",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "herausforderung",
+            "french": "Challenge",
+            "english": "Challenge",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "Begegnung",
+            "french": "encounter",
+            "english": "encounter",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "bedient",
+            "french": "served",
+            "english": "served",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "ungünstig",
+            "french": "défavorable",
+            "english": "défavorable",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "allerdings",
+            "french": "En effet",
+            "english": "En effet",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "unheimlich",
+            "french": "creepy",
+            "english": "creepy",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "reingelegt",
+            "french": "tricked",
+            "english": "tricked",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "daher",
+            "french": "therefore",
+            "english": "therefore",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "es geht dich nichts an",
+            "french": "It is none of your business",
+            "english": "It is none of your business",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "stattdessen",
+            "french": "au lieu",
+            "english": "au lieu",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "verteidigen",
+            "french": "defend",
+            "english": "defend",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zeit abgelaufen",
+            "french": "time's up",
+            "english": "time's up",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "zulassen",
+            "french": "Autoriser",
+            "english": "Autoriser",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "versperren",
+            "french": "bloquer",
+            "english": "bloquer",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        },
+        {
+            "category": "phrase",
+            "german": "das liegt daran dass",
+            "french": "that's because",
+            "english": "that's because",
+            "numberOfViews": 0,
+            "numberOfSuccess": 0
+        }
+    ]
+}
