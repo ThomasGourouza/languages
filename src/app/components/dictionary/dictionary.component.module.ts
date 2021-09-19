@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TabMenuModule } from 'primeng/tabmenu';
-import { CrudComponent } from './crud.component';
+import { DictionaryComponent } from './dictionary.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,7 +28,7 @@ import { DictionaryService } from 'src/app/service/dictionary.service';
 
 @NgModule({
     declarations: [
-        CrudComponent
+        DictionaryComponent
     ],
     imports: [
         CommonModule,
@@ -62,10 +62,10 @@ import { DictionaryService } from 'src/app/service/dictionary.service';
         DictionaryService
     ],
     exports: [
-        CrudComponent
+        DictionaryComponent
     ],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA
     ]
 })
-export class CrudModule { }
+export class DictionaryModule { }

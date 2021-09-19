@@ -23,11 +23,11 @@ export interface Item {
 }
 
 @Component({
-  selector: 'app-crud',
-  templateUrl: './crud.component.html',
-  styleUrls: ['./crud.component.scss']
+  selector: 'app-dictionary',
+  templateUrl: './dictionary.component.html',
+  styleUrls: ['./dictionary.component.scss']
 })
-export class CrudComponent implements OnInit {
+export class DictionaryComponent implements OnInit {
 
   private words!: Array<Word>;
   public wordsFiltered!: Array<Word>;
@@ -100,7 +100,7 @@ export class CrudComponent implements OnInit {
       // if (form.ratings.length > 0) {
       //   formQueryParam.ratings = form.ratings.join(',');
       // }
-      // this.router.navigate(['/crud'], { queryParams: formQueryParam });
+      // this.router.navigate(['/dictionary'], { queryParams: formQueryParam });
     });
   }
 

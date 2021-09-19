@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { RouterModule } from '@angular/router';
-import { CrudModule } from './components/crud/crud.component.module';
+import { DictionaryModule } from './components/dictionary/dictionary.component.module';
 import { GameModule } from './components/game/game.component.module';
 import { NavigationModule } from './components/navigation/navigation.component.module';
 import { MessageService } from 'primeng/api';
@@ -26,7 +26,7 @@ import { MessageService } from 'primeng/api';
     AngularFireModule.initializeApp(environment.firebase, 'deutsch'),
     AngularFirestoreModule,
     NavigationModule,
-    CrudModule,
+    DictionaryModule,
     GameModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent }
