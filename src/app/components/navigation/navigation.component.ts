@@ -11,8 +11,8 @@ export class NavigationComponent {
 
   constructor() {
     this.items = [
-      { label: 'Home', icon: 'pi pi-fw pi-home', routerLink: '/dictionary' },
-      { label: 'Dictionary', icon: 'pi pi-fw pi-book', routerLink: '/crud' },
+      { label: 'Home', icon: 'pi pi-fw pi-home' },
+      { label: 'Dictionary', icon: 'pi pi-fw pi-book', routerLink: '/dictionary' },
       { label: 'Play', icon: 'pi pi-fw pi-play', routerLink: '/game' },
       { label: 'Settings', icon: 'pi pi-fw pi-cog' }
     ];

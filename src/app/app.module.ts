@@ -8,11 +8,10 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { RouterModule } from '@angular/router';
-import { NavigationModule } from './components/navigation/Navigation.component.module';
 import { CrudModule } from './components/crud/crud.component.module';
-import { DictionaryModule } from './components/dictionary/dictionary.component.module';
 import { GameModule } from './components/game/game.component.module';
-import { ScoreModule } from './components/score/score.component.module';
+import { NavigationModule } from './components/navigation/navigation.component.module';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -28,13 +27,14 @@ import { ScoreModule } from './components/score/score.component.module';
     AngularFirestoreModule,
     NavigationModule,
     CrudModule,
-    DictionaryModule,
     GameModule,
-    ScoreModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent }
 
     ])
+  ],
+  providers: [
+    MessageService
   ],
   bootstrap: [AppComponent]
 })

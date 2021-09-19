@@ -1,12 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ConfirmationService, MessageService } from 'primeng/api';
+import { ConfirmationService } from 'primeng/api';
 import { Word } from 'src/app/models/word';
 import { DictionaryService } from 'src/app/service/dictionary.service';
+import { ActivatedRoute } from '@angular/router';
+import { WordUpdate } from 'src/app/models/word-update';
+// export interface FormQueryParam {
+//   german?: string;
+//   translation?: string;
+//   categories?: string;
+//   ratings?: string;
+// }
 export interface FormFilter {
-  category: string;
-  ratingFrom: string;
-  ratingTo: string;
+  german: string;
+  translation: string;
+  categories: Array<string>;
+  ratings: Array<number>;
+}
+export interface Item {
+  label: string;
+  value: string | number;
 }
 
 @Component({
@@ -16,52 +29,79 @@ export interface FormFilter {
 })
 export class CrudComponent implements OnInit {
 
-  wordDialog!: boolean;
+  private words!: Array<Word>;
+  public wordsFiltered!: Array<Word>;
 
-  words!: Word[];
-  wordsFiltered!: Word[];
+  public categories: Array<Item>
+  public ratings: Array<Item>
 
-  public categorySearch: string;
-  public ratingSearch: string;
   public formFilter!: FormGroup;
 
-  word!: Word;
-  selectedWord!: Word[] | null;
-  submitted!: boolean;
-  categories!: any[];
+  public wordDialog!: boolean;
+
+  public word!: Word;
+  public selectedWords!: Array<Word> | null;
+  public submitted!: boolean;
 
   constructor(
     private dictionaryService: DictionaryService,
-    private messageService: MessageService,
-    private confirmationService: ConfirmationService
+    private confirmationService: ConfirmationService,
+    // private router: Router,
+    private route: ActivatedRoute
   ) {
-    this.categorySearch = '';
-    this.ratingSearch = '';
-  }
-
-  ngOnInit() {
-    this.initFormFilter();
-    this.dictionaryService.words.subscribe((words) => {
-      this.words = words;
-      this.words.forEach((word) => {
-        word.rating = (word.numberOfViews > 0) ?
-          Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
-      });
-      const category = this.formFilter.get('category')?.value;
-      const ratingFrom = this.formFilter.get('ratingFrom')?.value;
-      const ratingTo = this.formFilter.get('ratingTo')?.value;
-      this.onFilter(category, ratingFrom, ratingTo);
-    });
-    this.formFilter.valueChanges.subscribe((form: FormFilter) => {
-      this.onFilter(form.category, form.ratingFrom, form.ratingTo);
-    });
-
     this.categories = [
       { label: 'Verb', value: 'verb' },
       { label: 'Adjective', value: 'adjective' },
       { label: 'Noun', value: 'noun' },
       { label: 'Phrase', value: 'phrase' }
     ];
+    this.ratings = [
+      { label: '0', value: 0 },
+      { label: '1', value: 1 },
+      { label: '2', value: 2 },
+      { label: '3', value: 3 },
+      { label: '4', value: 4 },
+      { label: '5', value: 5 }
+    ];
+  }
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      const german = params.german;
+      const translation = params.translation;
+      const categories = params.categories;
+      const ratings = params.ratings;
+      this.initFormFilter(german, translation, categories, ratings);
+    });
+    this.dictionaryService.words.subscribe((words) => {
+      this.words = words;
+      this.words.forEach((word) => {
+        word.rating = (word.numberOfViews > 0) ?
+          Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
+      });
+      const german = this.formFilter.get('german')?.value;
+      const translation = this.formFilter.get('translation')?.value;
+      const categories = this.formFilter.get('categories')?.value;
+      const ratings = this.formFilter.get('ratings')?.value;
+      this.onFilter(german, translation, categories, ratings);
+    });
+    this.formFilter.valueChanges.subscribe((form: FormFilter) => {
+      this.onFilter(form.german, form.translation, form.categories, form.ratings);
+      // let formQueryParam: FormQueryParam = {};
+      // if (!!form.german) {
+      //   formQueryParam.german = form.german;
+      // }
+      // if (!!form.translation) {
+      //   formQueryParam.translation = form.translation;
+      // }
+      // if (form.categories.length > 0) {
+      //   formQueryParam.categories = form.categories.join(',');
+      // }
+      // if (form.ratings.length > 0) {
+      //   formQueryParam.ratings = form.ratings.join(',');
+      // }
+      // this.router.navigate(['/crud'], { queryParams: formQueryParam });
+    });
   }
 
   private initWord(): void {
@@ -75,105 +115,92 @@ export class CrudComponent implements OnInit {
     };
   }
 
-  // TODO: add query parms from url
-  private initFormFilter(): void {
+  private initFormFilter(german: string, translation: string, categories: string, ratings: string): void {
+    const categoryList = !!categories ? categories.split(',').map((r) => +r) : [];
+    const ratingList = !!ratings ? ratings.split(',').map((r) => +r) : [];
     this.formFilter = new FormGroup({
-      category: new FormControl(''),
-      ratingFrom: new FormControl(''),
-      ratingTo: new FormControl('')
+      german: new FormControl(!!german ? german : ''),
+      translation: new FormControl(!!translation ? translation : ''),
+      categories: new FormControl(categoryList),
+      ratings: new FormControl(ratingList)
     });
   }
 
-  private onFilter(category: string, ratingFrom: string, ratingTo: string): void {
+  private onFilter(german: string, translation: string, categories: Array<string>, ratings: Array<number>): void {
     this.wordsFiltered = this.words.filter((word) => {
-      const categoryFilter = (!!category) ? word.category.includes(category) : true;
-      const ratingFromFilter = (!!ratingFrom) ? (word.rating != undefined && word.rating >= +ratingFrom) : true;
-      const ratingToFilter = (!!ratingTo) ? (word.rating != undefined && word.rating <= +ratingTo) : true;
-      return categoryFilter && ratingFromFilter && ratingToFilter;
+      const germanFilter = (!!german) ? word.german.includes(german) : true;
+      const translationFilter = (!!translation) ? word.french.includes(translation) : true;
+      const categoriesFilter = (categories.length > 0) ? categories.includes(word.category) : true;
+      const ratingsFilter = (ratings.length > 0) ? (word.rating != undefined && ratings.includes(word.rating)) : true;
+      return germanFilter && translationFilter && categoriesFilter && ratingsFilter;
     });
   }
 
-  public getMaxForFilterRatingFrom(): number {
-    const ratingTo = this.formFilter.get('ratingTo')?.value
-    return (ratingTo !== '') ? ratingTo : 5;
-  }
-
-  public getMinForFilterRatingTo(): number {
-    const ratingFrom = this.formFilter.get('ratingFrom')?.value
-    return (ratingFrom !== '') ? ratingFrom : 0;
-  }
-
-  openNew() {
+  public openNew() {
     this.initWord();
     this.submitted = false;
     this.wordDialog = true;
   }
 
-  deleteSelectedWords() {
+  public deleteSelectedWords() {
     this.confirmationService.confirm({
       message: 'Are you sure you want to delete the selected words?',
       header: 'Confirm',
       icon: 'pi pi-exclamation-triangle',
+      acceptButtonStyleClass: 'btn btn-success',
       accept: () => {
-        this.words = this.words.filter(val => !this.selectedWord?.includes(val));
-        this.selectedWord = null;
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Words Deleted', life: 3000 });
+        if (!!this.selectedWords) {
+          const wordIds = this.selectedWords.map((word) => word.id)
+          this.dictionaryService.deleteWords(wordIds);
+          this.selectedWords = null;
+        }
       }
     });
   }
 
-  editWord(word: Word) {
-    this.word = { ...word };
-    this.wordDialog = true;
-  }
-
-  deleteWord(word: Word) {
+  public deleteWord(word: Word) {
     this.confirmationService.confirm({
       message: 'Are you sure you want to delete ' + word.german + '?',
       header: 'Confirm',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.words = this.words.filter(val => val.id !== word.id);
-        this.initWord();
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Deleted', life: 3000 });
+        const wordId = word.id;
+        if (!!wordId) {
+          this.dictionaryService.deleteWord(wordId);
+          this.initWord();
+        }
       }
     });
   }
 
-  hideDialog() {
+  public hideDialog() {
     this.wordDialog = false;
     this.submitted = false;
   }
 
-  saveWord() {
-    this.submitted = true;
-
-    if (this.word.german.trim()) {
-      if (this.word.id) {
-        this.words[this.findIndexById(this.word.id)] = this.word;
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Updated', life: 3000 });
-      }
-      else {
-        this.words.push(this.word);
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Created', life: 3000 });
-      }
-
-      this.words = [...this.words];
-      this.wordDialog = false;
-      this.initWord();
-    }
+  public updateWord(word: Word) {
+    this.word = { ...word };
+    this.wordDialog = true;
   }
 
-  findIndexById(id: string): number {
-    let index = -1;
-    for (let i = 0; i < this.words.length; i++) {
-      if (this.words[i].id === id) {
-        index = i;
-        break;
-      }
+  public saveWord() {
+    this.submitted = true;
+    const word: WordUpdate = {
+      category: this.word.category,
+      german: this.word.german,
+      french: this.word.french,
+      english: this.word.english,
+      numberOfViews: this.word.numberOfViews,
+      numberOfSuccess: this.word.numberOfSuccess
     }
-
-    return index;
+    if (!!this.word.id) {
+      this.dictionaryService.update(this.word.id, word);
+    }
+    else {
+      this.dictionaryService.addWord(word);
+    }
+    this.wordDialog = false;
+    this.initWord();
   }
 
 }

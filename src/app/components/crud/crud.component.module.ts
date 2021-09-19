@@ -22,8 +22,9 @@ import { RatingModule } from 'primeng/rating';
 import { SliderModule } from 'primeng/slider';
 import { ToastModule } from 'primeng/toast';
 import { ToolbarModule } from 'primeng/toolbar';
-import { MessageService, ConfirmationService } from 'primeng/api';
+import { ConfirmationService } from 'primeng/api';
 import { TableModule } from 'primeng/table';
+import { DictionaryService } from 'src/app/service/dictionary.service';
 
 @NgModule({
     declarations: [
@@ -57,8 +58,8 @@ import { TableModule } from 'primeng/table';
         InputTextareaModule
     ],
     providers: [
-        MessageService,
-        ConfirmationService
+        ConfirmationService,
+        DictionaryService
     ],
     exports: [
         CrudComponent
