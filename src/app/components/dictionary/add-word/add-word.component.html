@@ -1,0 +1,27 @@
+<p-dialog [(visible)]="wordDialog" [style]="{width: '450px'}" header="Word Details" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        <div class="p-field">
+            <label for="german">German</label>
+            <input type="text" pInputText id="german" [(ngModel)]="word.german" required />
+            <small *ngIf="submitted && !word.german">This field is required.</small>
+        </div>
+        <div class="p-field">
+            <label for="translation">Translation</label>
+            <input type="text" pInputText id="translation" [(ngModel)]="word.french" required />
+            <small *ngIf="submitted && !word.french">This field is required.</small>
+        </div>
+        <div class="p-field">
+            <label for="category">Category</label>
+            <p-dropdown [(ngModel)]="word.category" inputId="category" [options]="categories" placeholder="Select">
+                <ng-template let-option pTemplate="item">
+                    <span>{{option.label}}</span>
+                </ng-template>
+            </p-dropdown>
+        </div>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+        <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveWord()" [disabled]="!word.german || !word.french || !word.category"></button>
+    </ng-template>
+</p-dialog>
