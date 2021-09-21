@@ -17,6 +17,7 @@ import { TableModule } from 'primeng/table';
 import { DictionaryService } from 'src/app/service/dictionary.service';
 import { AddWordService } from 'src/app/service/add-word.service';
 import { AddWordModule } from './add-word/add-word.component.module';
+import { ExcelService } from 'src/app/service/excel.service';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import { AddWordModule } from './add-word/add-word.component.module';
     providers: [
         ConfirmationService,
         DictionaryService,
-        AddWordService
+        AddWordService,
+        ExcelService
     ],
     exports: [
         DictionaryComponent

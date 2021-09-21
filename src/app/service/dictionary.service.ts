@@ -31,8 +31,8 @@ export class DictionaryService {
   public getData(): Promise<Array<WordUpdate>> {
     return this.http.get<any>('assets/data/dictionary.json')
       .toPromise()
-      .then(res => <WordUpdate[]>res.data)
-      .then(data => {
+      .then((res) => <WordUpdate[]>res.data)
+      .then((data) => {
         return data;
       });
   }

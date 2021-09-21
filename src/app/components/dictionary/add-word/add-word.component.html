@@ -5,11 +5,13 @@
             <input type="text" pInputText id="german" [(ngModel)]="word.german" required />
             <small *ngIf="submitted && !word.german">This field is required.</small>
         </div>
+        <br>
         <div class="p-field">
             <label for="translation">Translation</label>
             <input type="text" pInputText id="translation" [(ngModel)]="word.french" required />
             <small *ngIf="submitted && !word.french">This field is required.</small>
         </div>
+        <br>
         <div class="p-field">
             <label for="category">Category</label>
             <p-dropdown [(ngModel)]="word.category" inputId="category" [options]="categories" placeholder="Select">

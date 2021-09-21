@@ -6,6 +6,7 @@ import { DictionaryService } from 'src/app/service/dictionary.service';
 import { ActivatedRoute } from '@angular/router';
 import { AddWordService } from 'src/app/service/add-word.service';
 import { CommonService, Item } from 'src/app/service/common.service';
+import { ExcelService } from 'src/app/service/excel.service';
 
 export interface FormFilter {
   german: string;
@@ -32,7 +33,8 @@ export class DictionaryComponent implements OnInit {
     private confirmationService: ConfirmationService,
     private route: ActivatedRoute,
     private addWordService: AddWordService,
-    private commonService: CommonService
+    private commonService: CommonService,
+    private excelService: ExcelService
   ) {
     this.categories = this.commonService.categories;
     this.ratings = this.commonService.ratings;
@@ -63,6 +65,10 @@ export class DictionaryComponent implements OnInit {
     this.formFilter.valueChanges.subscribe((form: FormFilter) => {
       this.onFilter(form.german, form.translation, form.categories, form.ratings);
     });
+  }
+
+  public exportAsXLSX(): void {
+    this.excelService.exportAsExcelFile(this.wordsFiltered, 'export-to-excel');
   }
 
   private initFormFilter(german: string, translation: string, categories: string, ratings: string): void {

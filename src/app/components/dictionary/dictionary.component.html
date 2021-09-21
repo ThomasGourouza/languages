@@ -3,19 +3,24 @@
 <div class="card">
     <p-toolbar styleClass="p-mb-4">
         <ng-template pTemplate="left">
-            <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-primary p-button-outlined form-control"
-                (click)="openNew()"></button>
+            <button pButton pRipple label="New" icon="pi pi-plus"
+                class="p-button-primary p-button-outlined form-control" (click)="openNew()"></button>
             &nbsp;&nbsp;&nbsp;
-            <button pButton pRipple [label]="'Delete'" icon="pi pi-trash" class="p-button-danger p-button-outlined form-control"
-                (click)="deleteSelectedWords()" [disabled]="!selectedWords || !selectedWords.length"></button>
+            <button pButton pRipple [label]="'Delete'" icon="pi pi-trash"
+                class="p-button-danger p-button-outlined form-control" (click)="deleteSelectedWords()"
+                [disabled]="!selectedWords || !selectedWords.length"></button>
+        </ng-template>
+        <ng-template pTemplate="right">
+            <button pButton pRipple label="Download" icon="pi pi-file-excel"
+                class="p-button-success p-button-outlined form-control" (click)="exportAsXLSX()"></button>
         </ng-template>
     </p-toolbar>
 
     <p-table [value]="wordsFiltered" [rows]="10" [paginator]="true"
         [globalFilterFields]="['german','translation','category','rating']" responsiveLayout="scroll"
         [(selection)]="selectedWords" [rowHover]="true" dataKey="id"
-        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[5,10,15,20,50,100]" 
-        [showCurrentPageReport]="true">
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[5,10,15,20,50,100]" [showCurrentPageReport]="true">
         <ng-template pTemplate="caption">
             <form [formGroup]="formFilter" class="form-group">
                 <div class="row">
@@ -75,10 +80,12 @@
                     <p-rating [ngModel]="word.rating" [readonly]="true" [cancel]="false"></p-rating>
                 </td>
                 <td>
-                    <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-primary p-button-outlined form-control"
+                    <button pButton pRipple icon="pi pi-pencil"
+                        class="p-button-rounded p-button-primary p-button-outlined form-control"
                         (click)="updateWord(word)"></button>
                     &nbsp;
-                    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-outlined form-control"
+                    <button pButton pRipple icon="pi pi-trash"
+                        class="p-button-rounded p-button-danger p-button-outlined form-control"
                         (click)="deleteWord(word)"></button>
                 </td>
             </tr>
@@ -94,3 +101,5 @@
 <app-add-word></app-add-word>
 
 <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
+
+<br>
