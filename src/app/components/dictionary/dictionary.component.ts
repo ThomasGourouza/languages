@@ -68,7 +68,7 @@ export class DictionaryComponent implements OnInit {
   }
 
   public exportAsXLSX(): void {
-    this.excelService.exportAsExcelFile(this.wordsFiltered, 'export-to-excel');
+    this.excelService.exportAsExcelFile(this.wordsFiltered, 'dictionary');
   }
 
   private initFormFilter(german: string, translation: string, categories: string, ratings: string): void {
