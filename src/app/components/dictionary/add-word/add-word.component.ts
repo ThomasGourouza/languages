@@ -46,8 +46,7 @@ export class AddWordComponent implements OnInit {
     const word: WordUpdate = {
       category: this.word.category,
       german: this.word.german,
-      french: this.word.french,
-      english: this.word.english,
+      translation: this.word.translation,
       numberOfViews: this.word.numberOfViews,
       numberOfSuccess: this.word.numberOfSuccess
     }

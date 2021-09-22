@@ -57,7 +57,7 @@ export class GameComponent implements OnInit {
         this.randomItem = dictionnaryCategory[randomCategoryIndex];
       } while (this.memory.includes(this.randomItem.german));
       this.memory.push(this.randomItem.german);
-      this.setRandomTranslations(this.randomItem.french, category);
+      this.setRandomTranslations(this.randomItem.translation, category);
       this.gameForm.controls['german'].setValue(this.randomItem.german);
     }
   }
@@ -83,10 +83,10 @@ export class GameComponent implements OnInit {
     const formValue = this.gameForm.value;
     this.answer = {
       german: formValue['german'],
-      translation: this.randomItem.french
+      translation: this.randomItem.translation
     }
     const translation = formValue['translation'];
-    if (this.randomItem.french === translation && !!this.category) {
+    if (this.randomItem.translation === translation && !!this.category) {
       this.scoreService.points++;
       this.isCorrect = true;
     }
@@ -98,7 +98,7 @@ export class GameComponent implements OnInit {
     const dictionaryCategory = this.dictionary.filter((word) => word.category === category);
     if (!!dictionaryCategory) {
       const randomTranslations: Array<string> = [];
-      const otherTranslations = dictionaryCategory.filter((t) => t.french != translation);
+      const otherTranslations = dictionaryCategory.filter((t) => t.translation != translation);
 
       let index = 0;
       const limit = (dictionaryCategory.length < 10) ? dictionaryCategory.length : 10;
@@ -111,7 +111,7 @@ export class GameComponent implements OnInit {
           let randomTranslation: string;
           do {
             const randomIndex = this.getRandomInt(otherTranslations.length);
-            randomTranslation = otherTranslations[randomIndex].french;
+            randomTranslation = otherTranslations[randomIndex].translation;
           } while (randomTranslations.includes(randomTranslation));
           randomTranslations.push(randomTranslation);
         }

@@ -14,10 +14,11 @@ export class CommonService {
 
   constructor() {
     this._categories = [
-      { label: 'Verb', value: 'verb' },
-      { label: 'Adjective', value: 'adjective' },
-      { label: 'Noun', value: 'noun' },
-      { label: 'Phrase', value: 'phrase' }
+      { label: 'Verbs', value: 'verb' },
+      { label: 'Adjectives', value: 'adjective' },
+      { label: 'Nouns', value: 'noun' },
+      { label: 'Phrases', value: 'phrase' },
+      { label: 'Conjonctions', value: 'conjonction' },
     ];
     this._ratings = [
       { label: '0', value: 0 },

@@ -41,8 +41,7 @@ export class AddWordService {
     this.setWord$({
       category: '',
       german: '',
-      french: '',
-      english: '',
+      translation: '',
       numberOfViews: 0,
       numberOfSuccess: 0
     });

@@ -24,7 +24,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="translation">Traduction</label>
-                    <select class="form-control" formControlName="french" (change)="onSubmit()">
+                    <select class="form-control" formControlName="translation" (change)="onSubmit()">
                         <option *ngFor="let translation of randomTranslations" [value]="translation">
                             {{ translation }}
                         </option>

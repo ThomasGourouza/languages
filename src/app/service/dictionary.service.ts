@@ -14,27 +14,19 @@ export class DictionaryService {
   private _wordsCollection!: AngularFirestoreCollection<Word>;
   private _words!: Observable<Array<Word>>;
 
-  private _verbsCategoryName: string = "Verbes";
-  private _nounsCategoryName: string = "Noms";
-  private _adjectivesCategoryName: string = "Adjectifs";
-  private _expressionsCategoryName: string = "Expressions";
+  private COLLECTION_NAME: string = 'german';
 
   constructor(
     private afs: AngularFirestore,
     private http: HttpClient,
     private messageService: MessageService
   ) {
-    this._wordsCollection = this.afs.collection('words');
+    this._wordsCollection = this.afs.collection(this.COLLECTION_NAME);
     this._words = this._wordsCollection.valueChanges({ idField: 'id' });
   }
 
-  public getData(): Promise<Array<WordUpdate>> {
-    return this.http.get<any>('assets/data/dictionary.json')
-      .toPromise()
-      .then((res) => <WordUpdate[]>res.data)
-      .then((data) => {
-        return data;
-      });
+  public async getData(): Promise<Array<WordUpdate>> {
+    return this.http.get<WordUpdate[]>('assets/data/dictionary.json').toPromise();
   }
 
   get words(): Observable<Array<Word>> {
@@ -42,7 +34,7 @@ export class DictionaryService {
   }
 
   public addWord(word: WordUpdate): void {
-    this.afs.collection('words')
+    this.afs.collection(this.COLLECTION_NAME)
       .add(word).then(() => {
         this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Saved', life: 3000 });
       }).catch(() => {
@@ -51,7 +43,7 @@ export class DictionaryService {
   }
 
   public deleteWord(id: string): void {
-    this.afs.collection('words').doc(id)
+    this.afs.collection(this.COLLECTION_NAME).doc(id)
       .delete().then(() => {
         this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Deleted', life: 3000 });
       }).catch(() => {
@@ -68,25 +60,12 @@ export class DictionaryService {
   }
 
   public update(id: string, wordupdate: WordUpdate): void {
-    this.afs.collection('words').doc(id)
+    this.afs.collection(this.COLLECTION_NAME).doc(id)
       .update(wordupdate).then(() => {
         this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Updated', life: 3000 });
       }).catch(() => {
         this.messageService.add({ severity: 'danger', summary: 'Error', detail: 'Update failure', life: 3000 });
       });
-  }
-
-  get verbsCategoryName(): string {
-    return this._verbsCategoryName;
-  }
-  get nounsCategoryName(): string {
-    return this._nounsCategoryName;
-  }
-  get adjectivesCategoryName(): string {
-    return this._adjectivesCategoryName;
-  }
-  get expressionsCategoryName(): string {
-    return this._expressionsCategoryName;
   }
 
 }
