@@ -17,32 +17,33 @@
     </p-toolbar>
 
     <p-table [value]="wordsFiltered" [rows]="10" [paginator]="true"
-        [globalFilterFields]="['german','translation','category','rating']" responsiveLayout="scroll"
+        [globalFilterFields]="['german','translation','category','rating','success']" responsiveLayout="scroll"
         [(selection)]="selectedWords" [rowHover]="true" dataKey="id"
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
         [rowsPerPageOptions]="[5,10,15,20,50,100]" [showCurrentPageReport]="true">
         <ng-template pTemplate="caption">
-            <form [formGroup]="formFilter" class="form-group">
+            <form [formGroup]="formFilter">
                 <div class="row">
-                    <div class="col d-flex justify-content-center">
+                    <div style="width: 3rem"></div>
+                    <div class="col">
                         <span class="p-input-icon-left">
                             <i class="pi pi-search"></i>
                             <input pInputText type="text" formControlName="german" placeholder="German" />
                         </span>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col">
                         <span class="p-input-icon-left">
                             <i class="pi pi-search"></i>
                             <input pInputText type="text" formControlName="translation" placeholder="Translation" />
                         </span>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col">
                         <span>
                             <p-multiSelect defaultLabel="Categories" display="chip" [options]="categories"
                                 formControlName="categories" optionLabel="label" optionValue="value"></p-multiSelect>
                         </span>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col">
                         <span>
                             <p-multiSelect defaultLabel="Ratings" display="chip" [options]="ratings"
                                 formControlName="ratings" optionLabel="label" optionValue="value"></p-multiSelect>
@@ -57,13 +58,20 @@
                 <th style="width: 3rem">
                     <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
                 </th>
-                <th pSortableColumn="german">German <p-sortIcon field="german"></p-sortIcon>
+                <th pSortableColumn="german">
+                    German <p-sortIcon field="german"></p-sortIcon>
                 </th>
-                <th pSortableColumn="translation">Translation <p-sortIcon field="translation"></p-sortIcon>
+                <th pSortableColumn="translation">
+                    Translation <p-sortIcon field="translation"></p-sortIcon>
                 </th>
-                <th pSortableColumn="category">Category <p-sortIcon field="category"></p-sortIcon>
+                <th pSortableColumn="category">
+                    Category <p-sortIcon field="category"></p-sortIcon>
                 </th>
-                <th pSortableColumn="rating">Rating <p-sortIcon field="rating"></p-sortIcon>
+                <th pSortableColumn="rating">
+                    Rating <p-sortIcon field="rating"></p-sortIcon>
+                </th>
+                <th pSortableColumn="success">
+                    Success <p-sortIcon field="success"></p-sortIcon>
                 </th>
                 <th></th>
             </tr>
@@ -78,6 +86,9 @@
                 <td>{{word.category}}</td>
                 <td>
                     <p-rating [ngModel]="word.rating" [readonly]="true" [cancel]="false"></p-rating>
+                </td>
+                <td>
+                    <p-progressBar [value]="word.numberOfSuccess"></p-progressBar>
                 </td>
                 <td>
                     <button pButton pRipple icon="pi pi-pencil"

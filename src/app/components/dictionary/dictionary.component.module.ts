@@ -17,6 +17,7 @@ import { TableModule } from 'primeng/table';
 import { DictionaryService } from 'src/app/service/dictionary.service';
 import { AddWordService } from 'src/app/service/add-word.service';
 import { AddWordModule } from './add-word/add-word.component.module';
+import { ProgressBarModule } from 'primeng/progressbar';
 import { ExcelService } from 'src/app/service/excel.service';
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ExcelService } from 'src/app/service/excel.service';
         RatingModule,
         HttpClientModule,
         MultiSelectModule,
+        ProgressBarModule,
         AddWordModule
     ],
     providers: [
