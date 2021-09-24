@@ -43,7 +43,8 @@ export class AddWordService {
       german: '',
       translation: '',
       numberOfViews: 0,
-      numberOfSuccess: 0
+      numberOfSuccess: 0,
+      isActive: true
     });
   }
 

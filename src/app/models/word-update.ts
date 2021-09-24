@@ -4,4 +4,5 @@ export interface WordUpdate {
     translation?: string;
     numberOfViews?: number;
     numberOfSuccess?: number;
+    isActive?: boolean;
 }

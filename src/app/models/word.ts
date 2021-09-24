@@ -5,5 +5,6 @@ export interface Word {
     translation: string;
     numberOfViews: number;
     numberOfSuccess: number;
+    isActive: boolean;
     rating?: number;
 }
