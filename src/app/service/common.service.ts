@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 export interface Item {
   label: string;
   value: string | number;
 }
-
+export interface Mode {
+  icon: string,
+  activated: boolean
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +15,8 @@ export class CommonService {
 
   private _categories: Array<Item>;
   private _ratings: Array<Item>;
+  private _modes: Array<Mode>;
+  private _activated$ = new Subject<boolean>();
 
   constructor() {
     this._categories = [
@@ -28,6 +34,10 @@ export class CommonService {
       { label: '4', value: 4 },
       { label: '5', value: 5 }
     ];
+    this._modes = [
+      { icon: 'pi pi-sun', activated: true },
+      { icon: 'pi pi-moon', activated: false }
+    ];
   }
 
   public get categories(): Array<Item> {
@@ -36,6 +46,18 @@ export class CommonService {
 
   public get ratings(): Array<Item> {
     return this._ratings;
+  }
+
+  public get modes(): Array<Mode> {
+    return this._modes;
+  }
+
+  public get activated$(): Observable<boolean> {
+    return this._activated$.asObservable();
+  }
+
+  public setModeActive$(activated: boolean): void {
+    this._activated$.next(activated);
   }
 
 }

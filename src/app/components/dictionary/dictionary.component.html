@@ -3,19 +3,49 @@
 <div class="card">
     <p-toolbar styleClass="p-mb-4">
         <ng-template pTemplate="left">
-            <button pButton pRipple label="New" icon="pi pi-plus"
-                class="p-button-primary p-button-outlined form-control" (click)="openNew()"></button>
-            &nbsp;&nbsp;&nbsp;
-            <button pButton pRipple [label]="'Delete'" icon="pi pi-trash"
-                class="p-button-danger p-button-outlined form-control" (click)="deleteSelectedWords()"
-                [disabled]="!selectedWords || !selectedWords.length"></button>
+            <div class="row">
+                <div *ngIf="activated" class="col">
+                    <button pButton pRipple label="New" icon="pi pi-plus"
+                        class="p-button-primary p-button-outlined form-control" (click)="openNew()"></button>
+                </div>
+                <div class="col">
+                    <div *ngIf="activated; else deactivated">
+                        <button pButton [label]="'Deactivate'" icon="pi pi-moon"
+                            class="p-button-secondary p-button-outlined form-control"
+                            (click)="deactivateSelectedWords()"
+                            [disabled]="!selectedWords || !selectedWords.length"></button>
+                    </div>
+                    <ng-template #deactivated>
+                        <button pButton [label]="'Activate'" icon="pi pi-sun"
+                            class="p-button-secondary p-button-outlined form-control"
+                            (click)="activateSelectedWords()"
+                            [disabled]="!selectedWords || !selectedWords.length"></button>
+                    </ng-template>
+                </div>
+                <div class="col">
+                    <button pButton pRipple [label]="'Delete'" icon="pi pi-trash"
+                        class="p-button-danger p-button-outlined form-control" (click)="deleteSelectedWords()"
+                        [disabled]="!selectedWords || !selectedWords.length"></button>
+                </div>
+            </div>
         </ng-template>
         <ng-template pTemplate="right">
-            <button pButton pRipple label="Download" icon="pi pi-file-excel"
-                class="p-button-success p-button-outlined form-control" (click)="exportAsXLSX()"></button>
+            <div class="row">
+                <div class="col">
+                    <p-selectButton [options]="modes" [(ngModel)]="mode" (ngModelChange)="onModeChange()"
+                        optionLabel="icon">
+                        <ng-template let-item>
+                            <i [class]="item.icon"></i>
+                        </ng-template>
+                    </p-selectButton>
+                </div>
+                <div class="col">
+                    <button pButton pRipple label="Download" icon="pi pi-file-excel"
+                        class="p-button-success p-button-outlined form-control" (click)="exportAsXLSX()"></button>
+                </div>
+            </div>
         </ng-template>
     </p-toolbar>
-
     <p-table [value]="wordsFiltered" [rows]="10" [paginator]="true"
         [globalFilterFields]="['german','translation','category','rating','success']" responsiveLayout="scroll"
         [(selection)]="selectedWords" [rowHover]="true" dataKey="id"
@@ -91,9 +121,22 @@
                     <p-progressBar [value]="word.numberOfSuccess"></p-progressBar>
                 </td>
                 <td>
-                    <button pButton pRipple icon="pi pi-pencil"
-                        class="p-button-rounded p-button-primary p-button-outlined form-control"
-                        (click)="updateWord(word)"></button>
+                    <span *ngIf="activated">
+                        <button pButton pRipple icon="pi pi-pencil"
+                            class="p-button-rounded p-button-primary p-button-outlined form-control"
+                            (click)="updateWord(word)"></button>
+                        &nbsp;
+                    </span>
+                    <span *ngIf="activated; else deactivated_one">
+                        <button pButton pRipple icon="pi pi-moon"
+                            class="p-button-rounded p-button-secondary p-button-outlined form-control"
+                            (click)="deactivateWord(word)"></button>
+                    </span>
+                    <ng-template #deactivated_one>
+                        <button pButton pRipple icon="pi pi-sun"
+                            class="p-button-rounded p-button-secondary p-button-outlined form-control"
+                            (click)="activateWord(word)"></button>
+                    </ng-template>
                     &nbsp;
                     <button pButton pRipple icon="pi pi-trash"
                         class="p-button-rounded p-button-danger p-button-outlined form-control"

@@ -36,7 +36,7 @@ export class DictionaryService {
   public addWord(word: WordUpdate): void {
     this.afs.collection(this.COLLECTION_NAME)
       .add(word).then(() => {
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Saved', life: 3000 });
+        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word saved', life: 3000 });
       }).catch(() => {
         this.messageService.add({ severity: 'danger', summary: 'Error', detail: 'Save failure', life: 3000 });
       });
@@ -45,7 +45,7 @@ export class DictionaryService {
   public deleteWord(id: string): void {
     this.afs.collection(this.COLLECTION_NAME).doc(id)
       .delete().then(() => {
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Deleted', life: 3000 });
+        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word deleted', life: 3000 });
       }).catch(() => {
         this.messageService.add({ severity: 'danger', summary: 'Error', detail: 'Delete failure', life: 3000 });
       });
@@ -59,10 +59,46 @@ export class DictionaryService {
     });
   }
 
+  public activateWords(ids: Array<string | undefined>): void {
+    ids.forEach((id) => {
+      if (!!id) {
+        this.activateWord(id);
+      }
+    });
+  }
+
+  public deactivateWords(ids: Array<string | undefined>): void {
+    ids.forEach((id) => {
+      if (!!id) {
+        this.deactivateWord(id);
+      }
+    });
+  }
+
+  public activateWord(id: string): void {
+    this.wordActivationControl(id, true);
+  }
+
+  public deactivateWord(id: string): void {
+    this.wordActivationControl(id, false);
+  }
+
+  private wordActivationControl(id: string, isActiveValue: boolean): void {
+    const wordupdate: WordUpdate = { isActive: isActiveValue };
+    this.afs.collection(this.COLLECTION_NAME).doc(id)
+      .update(wordupdate).then(() => {
+        const detailMessage = isActiveValue ? 'Word activated' : 'Word deactivated';
+        this.messageService.add({ severity: 'success', summary: 'Successful', detail: detailMessage, life: 3000 });
+      }).catch(() => {
+        const detailMessage = isActiveValue ? 'Activation failure' : 'Deactivation failure';
+        this.messageService.add({ severity: 'danger', summary: 'Error', detail: detailMessage, life: 3000 });
+      });
+  }
+
   public update(id: string, wordupdate: WordUpdate): void {
     this.afs.collection(this.COLLECTION_NAME).doc(id)
       .update(wordupdate).then(() => {
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word Updated', life: 3000 });
+        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word updated', life: 3000 });
       }).catch(() => {
         this.messageService.add({ severity: 'danger', summary: 'Error', detail: 'Update failure', life: 3000 });
       });

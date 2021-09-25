@@ -5,7 +5,7 @@ import { Word } from 'src/app/models/word';
 import { DictionaryService } from 'src/app/service/dictionary.service';
 import { ActivatedRoute } from '@angular/router';
 import { AddWordService } from 'src/app/service/add-word.service';
-import { CommonService, Item } from 'src/app/service/common.service';
+import { CommonService, Item, Mode } from 'src/app/service/common.service';
 import { ExcelService } from 'src/app/service/excel.service';
 
 export interface FormFilter {
@@ -27,6 +27,9 @@ export class DictionaryComponent implements OnInit {
   public ratings: Array<Item>;
   public formFilter!: FormGroup;
   public selectedWords!: Array<Word> | null;
+  public modes: Array<Mode>;
+  public mode: Mode;
+  public activated: boolean;
 
   constructor(
     private dictionaryService: DictionaryService,
@@ -38,6 +41,9 @@ export class DictionaryComponent implements OnInit {
   ) {
     this.categories = this.commonService.categories;
     this.ratings = this.commonService.ratings;
+    this.modes = this.commonService.modes;
+    this.mode = this.modes[0];
+    this.activated = true;
   }
 
   ngOnInit() {
@@ -56,21 +62,40 @@ export class DictionaryComponent implements OnInit {
     //     this.dictionaryService.addWord(word);
     //   });
     // });
-    this.dictionaryService.words.subscribe((words) => {
-      this.words = words;
-      this.words.forEach((word) => {
-        word.rating = (word.numberOfViews > 0) ?
-          Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
+
+    this.commonService.setModeActive$(true);
+    this.commonService.activated$.subscribe((activated) => {
+      this.activated = activated;
+      this.dictionaryService.words.subscribe((words) => {
+        this.initWords(words);
       });
-      const german = this.formFilter.get('german')?.value;
-      const translation = this.formFilter.get('translation')?.value;
-      const categories = this.formFilter.get('categories')?.value;
-      const ratings = this.formFilter.get('ratings')?.value;
-      this.onFilter(german, translation, categories, ratings);
     });
+
+    this.dictionaryService.words.subscribe((words) => {
+      this.initWords(words);
+    });
+
     this.formFilter.valueChanges.subscribe((form: FormFilter) => {
       this.onFilter(form.german, form.translation, form.categories, form.ratings);
     });
+  }
+
+  private initWords(words: Array<Word>): void {
+    this.words = words.filter((word) => word.isActive === this.activated);
+    this.words.forEach((word) => {
+      word.rating = (word.numberOfViews > 0) ?
+        Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
+    });
+    const german = this.formFilter.get('german')?.value;
+    const translation = this.formFilter.get('translation')?.value;
+    const categories = this.formFilter.get('categories')?.value;
+    const ratings = this.formFilter.get('ratings')?.value;
+    this.onFilter(german, translation, categories, ratings);
+  }
+
+  public onModeChange(): void {
+    this.selectedWords = null;
+    this.commonService.setModeActive$(this.mode.activated);
   }
 
   public exportAsXLSX(): void {
@@ -131,6 +156,50 @@ export class DictionaryComponent implements OnInit {
         }
       }
     });
+  }
+
+  public deactivateSelectedWords(): void {
+    this.confirmationService.confirm({
+      message: 'Are you sure you want to deactivate the selected words?',
+      header: 'Confirm',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+        if (!!this.selectedWords) {
+          const wordIds = this.selectedWords.map((word) => word.id)
+          this.dictionaryService.deactivateWords(wordIds);
+          this.selectedWords = null;
+        }
+      }
+    });
+  }
+
+  public deactivateWord(word: Word): void {
+    this.confirmationService.confirm({
+      message: 'Are you sure you want to deactivate ' + word.german + '?',
+      header: 'Confirm',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+        const wordId = word.id;
+        if (!!wordId) {
+          this.dictionaryService.deactivateWord(wordId);
+        }
+      }
+    });
+  }
+
+  public activateSelectedWords(): void {
+    if (!!this.selectedWords) {
+      const wordIds = this.selectedWords.map((word) => word.id)
+      this.dictionaryService.activateWords(wordIds);
+      this.selectedWords = null;
+    }
+  }
+
+  public activateWord(word: Word): void {
+    const wordId = word.id;
+    if (!!wordId) {
+      this.dictionaryService.activateWord(wordId);
+    }
   }
 
   public updateWord(word: Word): void {
