@@ -19,6 +19,7 @@ import { AddWordService } from 'src/app/service/add-word.service';
 import { AddWordModule } from './add-word/add-word.component.module';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { AccordionModule } from 'primeng/accordion';
 import { ExcelService } from 'src/app/service/excel.service';
 
 @NgModule({
@@ -42,6 +43,7 @@ import { ExcelService } from 'src/app/service/excel.service';
         MultiSelectModule,
         ProgressBarModule,
         SelectButtonModule,
+        AccordionModule,
         AddWordModule
     ],
     providers: [

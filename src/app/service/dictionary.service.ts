@@ -51,30 +51,6 @@ export class DictionaryService {
       });
   }
 
-  public deleteWords(ids: Array<string | undefined>): void {
-    ids.forEach((id) => {
-      if (!!id) {
-        this.deleteWord(id);
-      }
-    });
-  }
-
-  public activateWords(ids: Array<string | undefined>): void {
-    ids.forEach((id) => {
-      if (!!id) {
-        this.activateWord(id);
-      }
-    });
-  }
-
-  public deactivateWords(ids: Array<string | undefined>): void {
-    ids.forEach((id) => {
-      if (!!id) {
-        this.deactivateWord(id);
-      }
-    });
-  }
-
   public activateWord(id: string): void {
     this.wordActivationControl(id, true);
   }

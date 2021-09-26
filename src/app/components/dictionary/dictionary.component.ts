@@ -26,7 +26,7 @@ export class DictionaryComponent implements OnInit {
   public categories: Array<Item>;
   public ratings: Array<Item>;
   public formFilter!: FormGroup;
-  public selectedWords!: Array<Word> | null;
+  public filterSelected: boolean;
   public modes: Array<Mode>;
   public mode: Mode;
   public activated: boolean;
@@ -44,6 +44,7 @@ export class DictionaryComponent implements OnInit {
     this.modes = this.commonService.modes;
     this.mode = this.modes[0];
     this.activated = true;
+    this.filterSelected = false;
   }
 
   ngOnInit() {
@@ -54,6 +55,7 @@ export class DictionaryComponent implements OnInit {
       const translation = params.translation;
       const categories = params.categories;
       const ratings = params.ratings;
+      this.filterSelected = !!german || !!translation || !!categories || !!ratings;
       this.initFormFilter(german, translation, categories, ratings);
     });
     /** To fill the database with local data file the first time */
@@ -94,7 +96,6 @@ export class DictionaryComponent implements OnInit {
   }
 
   public onModeChange(): void {
-    this.selectedWords = null;
     this.commonService.setModeActive$(this.mode.activated);
   }
 
@@ -129,21 +130,6 @@ export class DictionaryComponent implements OnInit {
     this.addWordService.setWordDialog$(true);
   }
 
-  public deleteSelectedWords(): void {
-    this.confirmationService.confirm({
-      message: 'Are you sure you want to delete the selected words?',
-      header: 'Confirm',
-      icon: 'pi pi-exclamation-triangle',
-      accept: () => {
-        if (!!this.selectedWords) {
-          const wordIds = this.selectedWords.map((word) => word.id)
-          this.dictionaryService.deleteWords(wordIds);
-          this.selectedWords = null;
-        }
-      }
-    });
-  }
-
   public deleteWord(word: Word): void {
     this.confirmationService.confirm({
       message: 'Are you sure you want to delete ' + word.german + '?',
@@ -153,21 +139,6 @@ export class DictionaryComponent implements OnInit {
         const wordId = word.id;
         if (!!wordId) {
           this.dictionaryService.deleteWord(wordId);
-        }
-      }
-    });
-  }
-
-  public deactivateSelectedWords(): void {
-    this.confirmationService.confirm({
-      message: 'Are you sure you want to deactivate the selected words?',
-      header: 'Confirm',
-      icon: 'pi pi-exclamation-triangle',
-      accept: () => {
-        if (!!this.selectedWords) {
-          const wordIds = this.selectedWords.map((word) => word.id)
-          this.dictionaryService.deactivateWords(wordIds);
-          this.selectedWords = null;
         }
       }
     });
@@ -187,14 +158,6 @@ export class DictionaryComponent implements OnInit {
     });
   }
 
-  public activateSelectedWords(): void {
-    if (!!this.selectedWords) {
-      const wordIds = this.selectedWords.map((word) => word.id)
-      this.dictionaryService.activateWords(wordIds);
-      this.selectedWords = null;
-    }
-  }
-
   public activateWord(word: Word): void {
     const wordId = word.id;
     if (!!wordId) {
@@ -207,4 +170,11 @@ export class DictionaryComponent implements OnInit {
     this.addWordService.setWordDialog$(true);
   }
 
+  public resetFilter(): void {
+    this.initFormFilter('', '', '', '');
+    this.onFilter('', '', [], []);
+    this.formFilter.valueChanges.subscribe((form: FormFilter) => {
+      this.onFilter(form.german, form.translation, form.categories, form.ratings);
+    });
+  }
 }

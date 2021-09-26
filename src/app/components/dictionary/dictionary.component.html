@@ -4,90 +4,81 @@
     <p-toolbar styleClass="p-mb-4">
         <ng-template pTemplate="left">
             <div class="row">
-                <div *ngIf="activated" class="col">
-                    <button pButton pRipple label="New" icon="pi pi-plus"
-                        class="p-button-primary p-button-outlined form-control" (click)="openNew()"></button>
-                </div>
-                <div class="col">
-                    <div *ngIf="activated; else deactivated">
-                        <button pButton [label]="'Deactivate'" icon="pi pi-moon"
-                            class="p-button-secondary p-button-outlined form-control"
-                            (click)="deactivateSelectedWords()"
-                            [disabled]="!selectedWords || !selectedWords.length"></button>
-                    </div>
-                    <ng-template #deactivated>
-                        <button pButton [label]="'Activate'" icon="pi pi-sun"
-                            class="p-button-secondary p-button-outlined form-control"
-                            (click)="activateSelectedWords()"
-                            [disabled]="!selectedWords || !selectedWords.length"></button>
-                    </ng-template>
-                </div>
-                <div class="col">
-                    <button pButton pRipple [label]="'Delete'" icon="pi pi-trash"
-                        class="p-button-danger p-button-outlined form-control" (click)="deleteSelectedWords()"
-                        [disabled]="!selectedWords || !selectedWords.length"></button>
-                </div>
-            </div>
-        </ng-template>
-        <ng-template pTemplate="right">
-            <div class="row">
-                <div class="col">
-                    <p-selectButton [options]="modes" [(ngModel)]="mode" (ngModelChange)="onModeChange()"
-                        optionLabel="icon">
-                        <ng-template let-item>
-                            <i [class]="item.icon"></i>
-                        </ng-template>
-                    </p-selectButton>
-                </div>
                 <div class="col">
                     <button pButton pRipple label="Download" icon="pi pi-file-excel"
                         class="p-button-success p-button-outlined form-control" (click)="exportAsXLSX()"></button>
                 </div>
+                <div class="col" *ngIf="activated">
+                    <button pButton pRipple label="New" icon="pi pi-plus"
+                        class="p-button-primary p-button-outlined form-control" (click)="openNew()"></button>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="right">
+            <div class="col">
+                <p-selectButton [options]="modes" [(ngModel)]="mode" (ngModelChange)="onModeChange()"
+                    optionLabel="icon">
+                    <ng-template let-item>
+                        <i [class]="item.icon"></i>
+                    </ng-template>
+                </p-selectButton>
             </div>
         </ng-template>
     </p-toolbar>
-    <p-table [value]="wordsFiltered" [rows]="10" [paginator]="true"
-        [globalFilterFields]="['german','translation','category','rating','success']" responsiveLayout="scroll"
-        [(selection)]="selectedWords" [rowHover]="true" dataKey="id"
-        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-        [rowsPerPageOptions]="[5,10,15,20,50,100]" [showCurrentPageReport]="true">
-        <ng-template pTemplate="caption">
-            <form [formGroup]="formFilter">
+    <p-accordion>
+        <p-accordionTab header="Filter" [selected]="filterSelected">
+            <form [formGroup]="formFilter" class="form-group" (ngSubmit)="resetFilter()">
                 <div class="row">
-                    <div style="width: 3rem"></div>
-                    <div class="col">
-                        <span class="p-input-icon-left">
-                            <i class="pi pi-search"></i>
-                            <input pInputText type="text" formControlName="german" placeholder="German" />
-                        </span>
+                    <div class="col d-flex justify-content-center">
+                        <tr>
+                            <td>
+                                <span class="p-input-icon-left">
+                                    <i class="pi pi-search"></i>
+                                    <input pInputText type="text" formControlName="german" placeholder="German" />
+                                </span>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <span class="p-input-icon-left">
+                                    <i class="pi pi-search"></i>
+                                    <input pInputText type="text" formControlName="translation"
+                                        placeholder="Translation" />
+                                </span>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <span>
+                                    <p-multiSelect defaultLabel="Categories" display="chip" [options]="categories"
+                                        formControlName="categories" optionLabel="label" optionValue="value">
+                                    </p-multiSelect>
+                                </span>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <span>
+                                    <p-multiSelect defaultLabel="Ratings" display="chip" [options]="ratings"
+                                        formControlName="ratings" optionLabel="label" optionValue="value"></p-multiSelect>
+                                </span>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <span class="d-flex align-items-end">
+                                    <button pButton pRipple label="Reset" icon="pi pi-trash" type="submit"
+                                        class="p-button-primary p-button-outlined form-control"></button>
+                                </span>
+                            </td>
+                        </tr>
                     </div>
-                    <div class="col">
-                        <span class="p-input-icon-left">
-                            <i class="pi pi-search"></i>
-                            <input pInputText type="text" formControlName="translation" placeholder="Translation" />
-                        </span>
-                    </div>
-                    <div class="col">
-                        <span>
-                            <p-multiSelect defaultLabel="Categories" display="chip" [options]="categories"
-                                formControlName="categories" optionLabel="label" optionValue="value"></p-multiSelect>
-                        </span>
-                    </div>
-                    <div class="col">
-                        <span>
-                            <p-multiSelect defaultLabel="Ratings" display="chip" [options]="ratings"
-                                formControlName="ratings" optionLabel="label" optionValue="value"></p-multiSelect>
-                        </span>
-                    </div>
-                    <div class="col-3"></div>
                 </div>
             </form>
-        </ng-template>
+        </p-accordionTab>
+    </p-accordion>
+    <p-table [value]="wordsFiltered" [rows]="10" [paginator]="true"
+        [globalFilterFields]="['german','translation','category','rating','success']" responsiveLayout="scroll"
+        [rowHover]="true" dataKey="id" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[5,10,15,20,50,100]" [showCurrentPageReport]="true">
         <ng-template pTemplate="header">
             <tr>
-                <th style="width: 3rem">
-                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-                </th>
                 <th pSortableColumn="german">
                     German <p-sortIcon field="german"></p-sortIcon>
                 </th>
@@ -108,9 +99,6 @@
         </ng-template>
         <ng-template pTemplate="body" let-word>
             <tr>
-                <td>
-                    <p-tableCheckbox [value]="word"></p-tableCheckbox>
-                </td>
                 <td>{{word.german}}</td>
                 <td>{{word.translation}}</td>
                 <td>{{word.category}}</td>
