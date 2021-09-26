@@ -58,12 +58,6 @@ export class DictionaryComponent implements OnInit {
       this.filterSelected = !!german || !!translation || !!categories || !!ratings;
       this.initFormFilter(german, translation, categories, ratings);
     });
-    /** To fill the database with local data file the first time */
-    // this.dictionaryService.getData().then((data) => {
-    //   data.forEach((word) => {
-    //     this.dictionaryService.addWord(word);
-    //   });
-    // });
 
     this.commonService.setModeActive$(true);
     this.commonService.activated$.subscribe((activated) => {
@@ -116,8 +110,8 @@ export class DictionaryComponent implements OnInit {
 
   private onFilter(german: string, translation: string, categories: Array<string>, ratings: Array<number>): void {
     this.wordsFiltered = this.words.filter((word) => {
-      const germanFilter = (!!german) ? word.german.includes(german) : true;
-      const translationFilter = (!!translation) ? word.translation.includes(translation) : true;
+      const germanFilter = (!!german) ? word.german.toLowerCase().includes(german.toLowerCase()) : true;
+      const translationFilter = (!!translation) ? word.translation.toLowerCase().includes(translation.toLowerCase()) : true;
       const categoriesFilter = (categories.length > 0) ? categories.includes(word.category) : true;
       const ratingsFilter = (ratings.length > 0) ? (word.rating != undefined && ratings.includes(word.rating)) : true;
       return germanFilter && translationFilter && categoriesFilter && ratingsFilter;

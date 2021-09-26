@@ -16,7 +16,11 @@ export class ExcelService {
       return {
         category: word.category,
         german: word.german,
-        translation: word.translation
+        translation: word.translation,
+        // remove later:
+        numberOfViews: word.numberOfViews,
+        numberOfSuccess: word.numberOfSuccess,
+        isActive: word.isActive,
       };
     });    
     const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(wordsExcel);

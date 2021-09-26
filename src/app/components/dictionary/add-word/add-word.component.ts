@@ -14,6 +14,7 @@ export class AddWordComponent implements OnInit {
   public wordDialog!: boolean;
   public submitted!: boolean;
   public word!: Word;
+  private words!: Array<Word>;
   public categories: Array<Item>;
 
   constructor(
@@ -25,6 +26,9 @@ export class AddWordComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.dictionaryService.words.subscribe((words) => {
+      this.words = words;
+    });
     this.addWordService.wordDialog$.subscribe((wordDialog) => {
       this.wordDialog = wordDialog;
     });
@@ -43,7 +47,7 @@ export class AddWordComponent implements OnInit {
 
   public saveWord() {
     this.addWordService.setSubmitted$(true);
-    const word: WordUpdate = {
+    const newWord: WordUpdate = {
       category: this.word.category,
       german: this.word.german,
       translation: this.word.translation,
@@ -52,10 +56,10 @@ export class AddWordComponent implements OnInit {
       isActive: this.word.isActive
     }
     if (!!this.word.id) {
-      this.dictionaryService.update(this.word.id, word);
-    }
-    else {
-      this.dictionaryService.addWord(word);
+      this.dictionaryService.update(this.word.id, newWord);
+    } else {
+      const wordExists = this.words.map((word) => word.german).includes(this.word.german);
+      this.dictionaryService.addWord(newWord, wordExists);
     }
     this.addWordService.setWordDialog$(false);
     this.addWordService.initWord$();

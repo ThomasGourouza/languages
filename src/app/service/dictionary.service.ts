@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { MessageService } from 'primeng/api';
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { Word } from '../models/word';
 import { WordUpdate } from '../models/word-update';
 
@@ -22,24 +22,32 @@ export class DictionaryService {
     private messageService: MessageService
   ) {
     this._wordsCollection = this.afs.collection(this.COLLECTION_NAME);
-    this._words = this._wordsCollection.valueChanges({ idField: 'id' });
+    // Comment when no access to firebase:
+    // this._words = this._wordsCollection.valueChanges({ idField: 'id' });
+    // Uncomment when no access to firebase:
+    this._words = from(this.getData());
   }
 
-  public async getData(): Promise<Array<WordUpdate>> {
-    return this.http.get<WordUpdate[]>('assets/data/dictionary.json').toPromise();
+  public async getData(): Promise<Array<Word>> {
+    return this.http.get<Word[]>('assets/data/dictionary.json').toPromise();
   }
 
   get words(): Observable<Array<Word>> {
     return this._words;
   }
 
-  public addWord(word: WordUpdate): void {
-    this.afs.collection(this.COLLECTION_NAME)
-      .add(word).then(() => {
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word saved', life: 3000 });
-      }).catch(() => {
-        this.messageService.add({ severity: 'danger', summary: 'Error', detail: 'Save failure', life: 3000 });
-      });
+  public addWord(word: WordUpdate, wordExists: boolean): void {
+    if (wordExists) {
+      const detailMessage = 'Word ' + word.german + ' already exists';
+      this.messageService.add({ severity: 'danger', summary: 'Error', detail: detailMessage, life: 3000 });
+    } else {
+      this.afs.collection(this.COLLECTION_NAME)
+        .add(word).then(() => {
+          this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word saved', life: 3000 });
+        }).catch(() => {
+          this.messageService.add({ severity: 'danger', summary: 'Error', detail: 'Save failure', life: 3000 });
+        });
+    }
   }
 
   public deleteWord(id: string): void {

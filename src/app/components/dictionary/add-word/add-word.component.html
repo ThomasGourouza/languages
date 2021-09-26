@@ -2,7 +2,7 @@
     <ng-template pTemplate="content">
         <div class="p-field">
             <label for="german">German</label>
-            <input type="text" pInputText id="german" [(ngModel)]="word.german" required />
+            <input type="text" pInputText id="german" [(ngModel)]="word.german" autofocus required />
             <small *ngIf="submitted && !word.german">This field is required.</small>
         </div>
         <br>
