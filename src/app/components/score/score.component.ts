@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ScoreService } from 'src/app/service/score.service';
+import { GameService } from 'src/app/service/game.service';
 
 @Component({
   selector: 'app-score',
@@ -8,17 +8,17 @@ import { ScoreService } from 'src/app/service/score.service';
 })
 export class ScoreComponent implements OnInit {
 
-  constructor(private scoreService: ScoreService) { }
+  constructor(private gameService: GameService) { }
 
   ngOnInit(): void {
   }
 
   public getPoints(): number {
-    return this.scoreService.points;
+    return this.gameService.points;
   }
 
   public getTotal(): number {
-    return this.scoreService.total;
+    return this.gameService.total;
   }
 
 }

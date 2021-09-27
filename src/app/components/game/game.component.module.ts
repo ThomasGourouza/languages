@@ -2,7 +2,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DictionaryService } from 'src/app/service/dictionary.service';
-import { ScoreService } from 'src/app/service/score.service';
+import { GameService } from 'src/app/service/game.service';
+import { ButtonModule } from 'primeng/button';
+import { AccordionModule } from 'primeng/accordion';
 import { GameComponent } from './game.component';
 
 @NgModule({
@@ -11,11 +13,13 @@ import { GameComponent } from './game.component';
     ],
     providers: [
         DictionaryService,
-        ScoreService
+        GameService
     ],
     imports: [
         CommonModule,
         FormsModule,
+        ButtonModule,
+        AccordionModule,
         ReactiveFormsModule
     ],
     exports: [

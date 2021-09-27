@@ -1,5 +1,5 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ScoreService } from 'src/app/service/score.service';
+import { GameService } from 'src/app/service/game.service';
 import { ScoreComponent } from './score.component';
 
 @NgModule({
@@ -7,7 +7,7 @@ import { ScoreComponent } from './score.component';
         ScoreComponent
     ],
     providers: [
-        ScoreService
+        GameService
     ],
     exports: [
         ScoreComponent

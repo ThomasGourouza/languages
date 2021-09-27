@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
+import { Subject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ScoreService {
+export class GameService {
 
+  private _start$ = new Subject<boolean>();
   private _points: number;
   private _total: number;
 
-  constructor() { 
+  constructor() {
     this._points = 0;
     this._total = 0;
   }
@@ -27,6 +29,14 @@ export class ScoreService {
 
   set total(total: number) {
     this._total = total;
+  }
+
+  public get start$(): Observable<boolean> {
+    return this._start$.asObservable();
+  }
+
+  public setStart$(start: boolean): void {
+    this._start$.next(start);
   }
 
 }

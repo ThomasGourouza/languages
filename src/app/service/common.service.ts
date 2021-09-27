@@ -14,6 +14,7 @@ export interface Mode {
 export class CommonService {
 
   private _categories: Array<Item>;
+  private _numbersOfWords: Array<number>;
   private _ratings: Array<Item>;
   private _modes: Array<Mode>;
   private _activated$ = new Subject<boolean>();
@@ -25,6 +26,9 @@ export class CommonService {
       { label: 'Noun', value: 'noun' },
       { label: 'Phrase', value: 'phrase' },
       { label: 'Conjonction', value: 'conjonction' },
+    ];
+    this._numbersOfWords = [
+      10, 20, 30, 50, 100
     ];
     this._ratings = [
       { label: '0', value: 0 },
@@ -42,6 +46,10 @@ export class CommonService {
 
   public get categories(): Array<Item> {
     return this._categories;
+  }
+
+  public get numbersOfWords(): Array<number> {
+    return this._numbersOfWords;
   }
 
   public get ratings(): Array<Item> {

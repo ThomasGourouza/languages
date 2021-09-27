@@ -1,19 +1,53 @@
+<p-accordion>
+    <p-accordionTab header="Options" [selected]="!start">
+        <form [formGroup]="settingsForm" class="form-group" (ngSubmit)="onSettingsSubmit()">
+            <table>
+                <tr>
+                    <td>
+                        Category
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        Number of words
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                    </td><td>&nbsp;&nbsp;&nbsp;</td><td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-select" formControlName="category">
+                            <option *ngFor="let cat of categories" [value]="cat.value">
+                                {{ cat.label }}
+                            </option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td>
+                        <select class="form-select" formControlName="numberOfWords">
+                            <option *ngFor="let number of numbersOfWords" [value]="number">
+                                {{ number }}
+                            </option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td class="d-flex align-items-start">
+                        <button pButton pRipple label="Start" icon="pi pi-play" type="submit"
+                            [disabled]="settingsForm.invalid || start" class="p-button-success form-control"></button>
+                    </td>
+                    <td></td>
+                    <td class="d-flex align-items-start">
+                        <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()"
+                            [disabled]="!start" class="p-button-danger form-control"></button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </p-accordionTab>
+</p-accordion>
 <br>
-<div class="row fixed-size">
-    <div class="col" *ngFor="let category of categories">
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="category" (change)="selectCategory(category)">
-            <label class="form-check-label">
-                {{ category }}
-            </label>
-        </div>
-    </div>
-</div>
-<br>
-<br>
-<br>
-<div *ngIf="!!category">
-    <form [formGroup]="gameForm">
+<div *ngIf="start">
+    <form [formGroup]="gameForm" class="form-group">
         <div class="row">
             <div class="col">
                 <div class="form-group">
@@ -24,7 +58,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="translation">Traduction</label>
-                    <select class="form-control" formControlName="translation" (change)="onSubmit()">
+                    <select class="form-control" formControlName="translation" (change)="onGameSubmit()">
                         <option *ngFor="let translation of randomTranslations" [value]="translation">
                             {{ translation }}
                         </option>
@@ -34,6 +68,8 @@
         </div>
     </form>
 </div>
+
+
 <br>
 <app-score></app-score>
 <br>

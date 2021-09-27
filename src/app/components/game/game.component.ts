@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Word } from 'src/app/models/word';
+import { CommonService, Item } from 'src/app/service/common.service';
 import { DictionaryService } from 'src/app/service/dictionary.service';
-import { ScoreService } from 'src/app/service/score.service';
+import { GameService } from 'src/app/service/game.service';
 export interface Answer {
   german: string;
   translation: string;
@@ -15,39 +16,94 @@ export interface Answer {
 })
 export class GameComponent implements OnInit {
 
-  public dictionary!: Array<Word>;
-  public category!: string;
+  private words!: Array<Word>;
   public randomItem!: Word;
   public gameForm!: FormGroup;
+  
+  public settingsForm!: FormGroup;
+  public start!: boolean;
+  public category!: string;
+  public numberOfWords!: number;
+  public categories!: Array<Item>;
+  public numbersOfWords!: Array<number>;
+
   public randomTranslations!: Array<string>;
   public answer!: Answer | undefined;
   public isCorrect!: boolean;
   public memory: Array<string>;
-  public categories: Array<string>;
 
   constructor(
     private dictionaryService: DictionaryService,
-    private scoreService: ScoreService
+    private commonService: CommonService,
+    private gameService: GameService
   ) {
-    this.categories = [];
     this.randomTranslations = [];
     this.memory = [];
   }
 
   public ngOnInit(): void {
-    this.initForm();
+    this.initSettingsForm();
+    this.initGameForm();
+    this.categories = this.commonService.categories;
+    this.numbersOfWords = this.commonService.numbersOfWords;
     this.dictionaryService.words.subscribe((words) => {
-      this.dictionary = words;
-      this.dictionary.forEach((word) => {
-        if (!this.categories.includes(word.category)) {
-          this.categories.push(word.category);
-        }
-      });
+      this.words = words;
+    });
+    this.gameService.setStart$(false);
+    this.gameService.start$.subscribe((start) => {
+      this.start = start;
     });
   }
 
-  private initGame(category: string): void {
-    const dictionnaryCategory = this.dictionary.filter((word) => word.category === category);
+  private initSettingsForm(): void {
+    this.settingsForm = new FormGroup({
+      category: new FormControl('', Validators.required),
+      numberOfWords: new FormControl('', Validators.required)
+    });
+  }
+
+  public onSettingsSubmit(): void {
+    const formValue = this.settingsForm.value;
+    this.category = formValue.category;
+    this.numberOfWords = +formValue.numberOfWords;
+    
+    this.gameService.setStart$(true);
+    this.memory = [];
+    this.gameService.points = 0;
+    this.gameService.total = 0;
+    this.answer = undefined;
+    this.initGame(this.category);
+  }
+
+  private initGameForm(): void {
+    this.gameForm = new FormGroup({
+      german: new FormControl('', Validators.required),
+      translation: new FormControl('', Validators.required)
+    });
+  }
+
+  public onGameSubmit(): void {
+    this.isCorrect = false;
+    const formValue = this.gameForm.value;
+    this.answer = {
+      german: formValue.german,
+      translation: this.randomItem.translation
+    }
+    const translation = formValue.translation;
+    if (this.randomItem.translation === translation && !!this.category) {
+      this.gameService.points++;
+      this.isCorrect = true;
+    }
+    this.gameService.total++;
+    this.initGame(this.category);
+  }
+
+  public onStop(): void {
+    this.gameService.setStart$(false);
+  }
+
+  private initGame(category: string | number): void {
+    const dictionnaryCategory = this.words.filter((word) => word.category === category);
     if (!!dictionnaryCategory) {
       if (this.memory.length === dictionnaryCategory.length) {
         this.memory = [];
@@ -62,40 +118,8 @@ export class GameComponent implements OnInit {
     }
   }
 
-  private initForm(): void {
-    this.gameForm = new FormGroup({
-      german: new FormControl('', Validators.required),
-      translation: new FormControl('', Validators.required)
-    });
-  }
-
-  public selectCategory(category: string): void {
-    this.memory = [];
-    this.scoreService.points = 0;
-    this.scoreService.total = 0;
-    this.answer = undefined;
-    this.category = category;
-    this.initGame(this.category);
-  }
-
-  public onSubmit(): void {
-    this.isCorrect = false;
-    const formValue = this.gameForm.value;
-    this.answer = {
-      german: formValue['german'],
-      translation: this.randomItem.translation
-    }
-    const translation = formValue['translation'];
-    if (this.randomItem.translation === translation && !!this.category) {
-      this.scoreService.points++;
-      this.isCorrect = true;
-    }
-    this.scoreService.total++;
-    this.initGame(this.category);
-  }
-
-  private setRandomTranslations(translation: string, category: string): void {
-    const dictionaryCategory = this.dictionary.filter((word) => word.category === category);
+  private setRandomTranslations(translation: string, category: string | number): void {
+    const dictionaryCategory = this.words.filter((word) => word.category === category);
     if (!!dictionaryCategory) {
       const randomTranslations: Array<string> = [];
       const otherTranslations = dictionaryCategory.filter((t) => t.translation != translation);
