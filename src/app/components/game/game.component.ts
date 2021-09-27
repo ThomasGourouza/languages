@@ -16,21 +16,21 @@ export interface Answer {
 })
 export class GameComponent implements OnInit {
 
-  private words!: Array<Word>;
   public randomItem!: Word;
   public gameForm!: FormGroup;
-  
-  public settingsForm!: FormGroup;
-  public start!: boolean;
-  public category!: string;
-  public numberOfWords!: number;
-  public categories!: Array<Item>;
-  public numbersOfWords!: Array<number>;
-
   public randomTranslations!: Array<string>;
   public answer!: Answer | undefined;
   public isCorrect!: boolean;
   public memory: Array<string>;
+
+  private words!: Array<Word>;
+  public start!: boolean;
+  public settingsForm!: FormGroup;
+  public category!: string;
+  public numberOfWords!: number;
+  public revision: boolean;
+  public categories!: Array<Item>;
+  public numbersOfWords!: Array<number>;
 
   constructor(
     private dictionaryService: DictionaryService,
@@ -39,6 +39,7 @@ export class GameComponent implements OnInit {
   ) {
     this.randomTranslations = [];
     this.memory = [];
+    this.revision = false;
   }
 
   public ngOnInit(): void {
@@ -58,7 +59,8 @@ export class GameComponent implements OnInit {
   private initSettingsForm(): void {
     this.settingsForm = new FormGroup({
       category: new FormControl('', Validators.required),
-      numberOfWords: new FormControl('', Validators.required)
+      numberOfWords: new FormControl('', Validators.required),
+      revision: new FormControl('', Validators.required)
     });
   }
 
@@ -66,7 +68,9 @@ export class GameComponent implements OnInit {
     const formValue = this.settingsForm.value;
     this.category = formValue.category;
     this.numberOfWords = +formValue.numberOfWords;
-    
+    console.log(formValue.revision);
+    this.revision = formValue.revision;
+
     this.gameService.setStart$(true);
     this.memory = [];
     this.gameService.points = 0;
