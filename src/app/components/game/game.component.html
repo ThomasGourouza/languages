@@ -1,4 +1,4 @@
-<p-accordion>
+<p-accordion [multiple]="true">
     <p-accordionTab header="Options" [selected]="!start">
         <form [formGroup]="settingsForm" class="form-group" (ngSubmit)="onSettingsSubmit()">
             <table>
@@ -10,6 +10,8 @@
                     <td>
                         Number of words
                     </td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
                     <td>
                     </td><td>&nbsp;&nbsp;&nbsp;</td><td></td>
@@ -31,6 +33,8 @@
                         </select>
                     </td>
                     <td></td>
+                    <td></td>
+                    <td></td>
                     <td class="d-flex align-items-start">
                         <button pButton pRipple label="Start" icon="pi pi-play" type="submit"
                             [disabled]="settingsForm.invalid || start" class="p-button-success form-control"></button>
@@ -43,6 +47,9 @@
                 </tr>
             </table>
         </form>
+    </p-accordionTab>
+    <p-accordionTab header="Game" [selected]="start" [disabled]="!start">
+        Game
     </p-accordionTab>
 </p-accordion>
 <br>
