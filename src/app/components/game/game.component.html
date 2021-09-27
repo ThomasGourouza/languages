@@ -29,7 +29,10 @@
                         </select>
                     </td>
                     <td></td>
-                    <td>checkbox</td>
+                    <td>
+                        <p-treeSelect [(ngModel)]="selectedNode" [options]="nodes" placeholder="Select Item"></p-treeSelect>
+                        <p-checkbox formControlName="revision" [binary]="true"></p-checkbox>
+                    </td>
                     <td></td>
                     <td>
                         <select class="form-select" formControlName="numberOfWords">

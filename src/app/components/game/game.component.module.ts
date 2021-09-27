@@ -5,6 +5,8 @@ import { DictionaryService } from 'src/app/service/dictionary.service';
 import { GameService } from 'src/app/service/game.service';
 import { ButtonModule } from 'primeng/button';
 import { AccordionModule } from 'primeng/accordion';
+import { TreeSelectModule } from 'primeng/treeselect';
+import { CheckboxModule } from 'primeng/checkbox';
 import { GameComponent } from './game.component';
 
 @NgModule({
@@ -20,7 +22,9 @@ import { GameComponent } from './game.component';
         FormsModule,
         ButtonModule,
         AccordionModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        CheckboxModule,
+        TreeSelectModule
     ],
     exports: [
         GameComponent
