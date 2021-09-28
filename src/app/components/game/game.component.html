@@ -4,7 +4,7 @@
             <table>
                 <tr>
                     <td>
-                        Category
+                        Categories
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
                     <td>
@@ -18,20 +18,15 @@
                     <td>&nbsp;&nbsp;&nbsp;</td>
                     <td>&nbsp;&nbsp;&nbsp;</td>
                     <td>
-                    </td><td>&nbsp;&nbsp;&nbsp;</td><td></td>
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>
-                        <select class="form-select" formControlName="category">
-                            <option *ngFor="let cat of categories" [value]="cat.value">
-                                {{ cat.label }}
-                            </option>
-                        </select>
-                    </td>
-                    <td></td>
-                    <td>
-                        <p-treeSelect [(ngModel)]="selectedNode" [options]="nodes" placeholder="Select Item"></p-treeSelect>
-                        <p-checkbox formControlName="revision" [binary]="true"></p-checkbox>
+                        <p-multiSelect defaultLabel="Categories" display="chip" [options]="categories"
+                            formControlName="categories" optionLabel="label" optionValue="value">
+                        </p-multiSelect>
                     </td>
                     <td></td>
                     <td>
@@ -42,6 +37,10 @@
                         </select>
                     </td>
                     <td></td>
+                    <td>
+                        <p-checkbox formControlName="revision" [binary]="true"></p-checkbox>
+                    </td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td class="d-flex align-items-start">
@@ -50,14 +49,17 @@
                     </td>
                     <td></td>
                     <td class="d-flex align-items-start">
-                        <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()"
-                            [disabled]="!start" class="p-button-danger form-control"></button>
+                        <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
+                            class="p-button-danger form-control"></button>
                     </td>
                 </tr>
             </table>
         </form>
     </p-accordionTab>
-    <p-accordionTab header="Game" [selected]="start" [disabled]="!start">
+    <p-accordionTab header="Revision" [selected]="start && revision" [disabled]="!start || !revision">
+        Revision
+    </p-accordionTab>
+    <p-accordionTab header="Game" [selected]="start && !revision" [disabled]="!start || revision">
         Game
     </p-accordionTab>
 </p-accordion>

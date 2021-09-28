@@ -7,6 +7,7 @@ import { Subject, Observable } from 'rxjs';
 export class GameService {
 
   private _start$ = new Subject<boolean>();
+  private _revision$ = new Subject<boolean>();
   private _points: number;
   private _total: number;
 
@@ -37,6 +38,14 @@ export class GameService {
 
   public setStart$(start: boolean): void {
     this._start$.next(start);
+  }
+
+  public get revision$(): Observable<boolean> {
+    return this._revision$.asObservable();
+  }
+
+  public setRevision$(revision: boolean): void {
+    this._revision$.next(revision);
   }
 
 }

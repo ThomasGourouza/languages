@@ -5,7 +5,7 @@ import { DictionaryService } from 'src/app/service/dictionary.service';
 import { GameService } from 'src/app/service/game.service';
 import { ButtonModule } from 'primeng/button';
 import { AccordionModule } from 'primeng/accordion';
-import { TreeSelectModule } from 'primeng/treeselect';
+import { MultiSelectModule } from 'primeng/multiselect';
 import { CheckboxModule } from 'primeng/checkbox';
 import { GameComponent } from './game.component';
 
@@ -24,7 +24,7 @@ import { GameComponent } from './game.component';
         AccordionModule,
         ReactiveFormsModule,
         CheckboxModule,
-        TreeSelectModule
+        MultiSelectModule
     ],
     exports: [
         GameComponent
