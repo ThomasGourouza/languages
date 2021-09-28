@@ -1,66 +1,59 @@
 <p-accordion [multiple]="true">
     <p-accordionTab header="Options" [selected]="!start">
-        <form [formGroup]="settingsForm" class="form-group" (ngSubmit)="onSettingsSubmit()">
-            <table>
-                <tr>
-                    <td>
-                        Categories
-                    </td>
-                    <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td>
-                        Number of words
-                    </td>
-                    <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td>
-                        Revision
-                    </td>
-                    <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td>
-                    </td>
-                    <td>&nbsp;&nbsp;&nbsp;</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <p-multiSelect defaultLabel="Categories" display="chip" [options]="categories"
-                            formControlName="categories" optionLabel="label" optionValue="value">
-                        </p-multiSelect>
-                    </td>
-                    <td></td>
-                    <td>
-                        <select class="form-select" formControlName="numberOfWords">
-                            <option *ngFor="let number of numbersOfWords" [value]="number">
-                                {{ number }}
-                            </option>
-                        </select>
-                    </td>
-                    <td></td>
-                    <td>
-                        <p-checkbox formControlName="revision" [binary]="true"></p-checkbox>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="d-flex align-items-start">
-                        <button pButton pRipple label="Start" icon="pi pi-play" type="submit"
-                            [disabled]="settingsForm.invalid || start" class="p-button-success form-control"></button>
-                    </td>
-                    <td></td>
-                    <td class="d-flex align-items-start">
-                        <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
-                            class="p-button-danger form-control"></button>
-                    </td>
-                </tr>
-            </table>
-        </form>
+        <div class="d-flex justify-content-center">
+            <p-card>
+                <form [formGroup]="settingsForm" class="form-group" (ngSubmit)="onSettingsSubmit()">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col">
+                            Categories
+                            <br><br>
+                            <p-listbox [options]="categories" [multiple]="true" optionLabel="label" optionValue="value"
+                                formControlName="categories"></p-listbox>
+                        </div>
+                        <div class="col">
+                            Number
+                            <br><br>
+                            <p-listbox [options]="numbersOfWords" formControlName="numberOfWords">
+                            </p-listbox>
+                        </div>
+                        <div class="col">
+                            Revision
+                            <br><br>
+                            <span class=" d-flex justify-content-center">
+                                <p-checkbox formControlName="revision" [binary]="true"></p-checkbox>
+                            </span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col">
+                            <button pButton pRipple label="Start" icon="pi pi-play" type="submit"
+                                [disabled]="settingsForm.invalid || start"
+                                class="p-button-success form-control"></button>
+                        </div>
+                        <div class="col">
+                            <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
+                                class="p-button-danger form-control"></button>
+                        </div>
+                        <br>
+                    </div>
+                </form>
+            </p-card>
+        </div>
     </p-accordionTab>
     <p-accordionTab header="Revision" [selected]="start && revision" [disabled]="!start || !revision">
-        Revision
+        <div class="d-flex justify-content-center">
+            <p-card>
+                Revision
+            </p-card>
+        </div>
     </p-accordionTab>
     <p-accordionTab header="Game" [selected]="start && !revision" [disabled]="!start || revision">
-        Game
+        <div class="d-flex justify-content-center">
+            <p-card>
+                Game
+            </p-card>
+        </div>
     </p-accordionTab>
 </p-accordion>
 <br>

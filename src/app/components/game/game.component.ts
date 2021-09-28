@@ -42,10 +42,10 @@ export class GameComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.initSettingsForm();
-    this.initGameForm();
     this.categories = this.commonService.categories;
     this.numbersOfWords = this.commonService.numbersOfWords;
+    this.initSettingsForm();
+    this.initGameForm();
     this.dictionaryService.words.subscribe((words) => {
       this.words = words;
     });
@@ -60,24 +60,31 @@ export class GameComponent implements OnInit {
   }
 
   private initSettingsForm(): void {
+    const initCategoriesSetting = this.categories.map((category) => category.value)
     this.settingsForm = new FormGroup({
-      categories: new FormControl([], Validators.required),
-      numberOfWords: new FormControl('', Validators.required),
+      categories: new FormControl(initCategoriesSetting, Validators.required),
+      numberOfWords: new FormControl(20, Validators.required),
       revision: new FormControl(true)
     });
   }
 
   public onSettingsSubmit(): void {
-    const formValue = this.settingsForm.value;
-    const categories: Array<string> = formValue.categories;
-    const numberOfWords: number = +formValue.numberOfWords;
-    const revision: boolean = formValue.revision;
+    const categoriesControl = this.settingsForm.get('categories');
+    const numberOfWordsControl = this.settingsForm.get('numberOfWords');
+    const revisionControl = this.settingsForm.get('revision');
+
+    categoriesControl?.disable();
+    numberOfWordsControl?.disable();
+    revisionControl?.disable();
+
+    const categories: Array<string> = categoriesControl?.value;
+    const numberOfWords: number = +numberOfWordsControl?.value;
+    const revision: boolean = revisionControl?.value;
 
     this.gameService.setRevision$(revision);
 
     console.log(categories);
     console.log(numberOfWords);
-    console.log(revision);
 
     this.gameService.setStart$(true);
     this.memory = [];
@@ -112,6 +119,14 @@ export class GameComponent implements OnInit {
 
   public onStop(): void {
     this.gameService.setStart$(false);
+
+    const categoriesControl = this.settingsForm.get('categories');
+    const numberOfWordsControl = this.settingsForm.get('numberOfWords');
+    const revisionControl = this.settingsForm.get('revision');
+
+    categoriesControl?.enable();
+    numberOfWordsControl?.enable();
+    revisionControl?.enable();
   }
 
   private initGame(category: string | number): void {

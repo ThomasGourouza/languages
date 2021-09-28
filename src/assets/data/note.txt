@@ -1,0 +1,74 @@
+zufällig
+Zufall
+es gibt ohne Ende Plätz
+die Einleitung = the introduction
+bezüglich
+es ist ein gutes Zeichen
+im Nachhinein = in retrospect
+greifbar = concret
+mächtig = powerful
+zurückgreifen = se replier sur
+verlassen sich auf = to rely on
+mir ist klar geworden = it became clear to me
+grundsätzlich = basically
+innerhalb + gen = within
+der Durchschnitt = the average
+der Mittelwert = the average
+
+primär = primary
+aufräumen = to clean up
+erstellen = to create
+ersetzen = to replace
+darüber hinaus = beyond
+(ab)speichern = to save
+abschätzen
+entsprechende
+aufendig
+zukunftige
+greifbar
+verfugung
+kein rolle spielen
+es ist geklärt = c'est réglé
+genehmigt = approved
+
+landersweise
+einrichten
+Verhalten
+abgleichen
+
+trotz alledem = in spite of all
+übergreifen
+
+übersichtlich = clear
+
+übergreifen = entre-croiser
+das Kreuz = la croix
+abhängig von = depending on
+der Fall = the case
+unser Fall = our case
+was auch immer
+insgesammt = dans l'ensemble
+als letztes = finally
+ich schreibe mal gerade einen Satz zu Ende. = I'm just finishing a sentence.
+zusätzlich = additionally
+unterbrechen = to interrupt
+auftauchen = to pop up
+es auftaucht = it pops up
+ohne Ende = beaucoup
+wiederum = à son tour
+angucken = to look at
+aufschreiben = to write down
+(ab)tauchen = plonger
+die Vermutung = the supposition
+auftreten = to occur
+es tritt auf = it occurs
+die Ansicht = the view
+hier steht = il est écrit ici
+er liest = he reads
+es dauert eine Weile = it takes a while
+
+_________
+
+- recherche sans les ()
+- afficher les catégories avec une majuscule
+- si on change d'onglet pendant qu'on joue (start=true) faire apparaître une fenetre de dialogue (confirm)
