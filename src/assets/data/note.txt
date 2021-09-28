@@ -66,9 +66,3 @@ die Ansicht = the view
 hier steht = il est écrit ici
 er liest = he reads
 es dauert eine Weile = it takes a while
-
-_________
-
-- recherche sans les ()
-- afficher les catégories avec une majuscule
-- si on change d'onglet pendant qu'on joue (start=true) faire apparaître une fenetre de dialogue (confirm)

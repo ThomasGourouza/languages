@@ -101,7 +101,7 @@
             <tr>
                 <td>{{word.german}}</td>
                 <td>{{word.translation}}</td>
-                <td>{{word.category}}</td>
+                <td>{{word.category | label}}</td>
                 <td>
                     <p-rating [ngModel]="word.rating" [readonly]="true" [cancel]="false"></p-rating>
                 </td>
@@ -141,7 +141,4 @@
 </div>
 
 <app-add-word></app-add-word>
-
-<p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
-
 <br>

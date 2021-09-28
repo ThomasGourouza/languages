@@ -110,12 +110,16 @@ export class DictionaryComponent implements OnInit {
 
   private onFilter(german: string, translation: string, categories: Array<string>, ratings: Array<number>): void {
     this.wordsFiltered = this.words.filter((word) => {
-      const germanFilter = (!!german) ? word.german.toLowerCase().includes(german.toLowerCase()) : true;
-      const translationFilter = (!!translation) ? word.translation.toLowerCase().includes(translation.toLowerCase()) : true;
+      const germanFilter = (!!german) ? this.removeBrackets(word.german).toLowerCase().includes(german.toLowerCase()) : true;
+      const translationFilter = (!!translation) ? this.removeBrackets(word.translation).toLowerCase().includes(translation.toLowerCase()) : true;
       const categoriesFilter = (categories.length > 0) ? categories.includes(word.category) : true;
       const ratingsFilter = (ratings.length > 0) ? (word.rating != undefined && ratings.includes(word.rating)) : true;
       return germanFilter && translationFilter && categoriesFilter && ratingsFilter;
     });
+  }
+
+  private removeBrackets(text: string): string {
+    return text.replace('(', '').replace(')', '');
   }
 
   public openNew(): void {

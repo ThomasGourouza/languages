@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { RatingModule } from 'primeng/rating';
@@ -21,18 +19,18 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { AccordionModule } from 'primeng/accordion';
 import { ExcelService } from 'src/app/service/excel.service';
+import { CategoryLabelPipe } from './pipes/category-label.pipe';
 
 @NgModule({
     declarations: [
-        DictionaryComponent
+        DictionaryComponent,
+        CategoryLabelPipe
     ],
     imports: [
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
-        DialogModule,
-        ConfirmDialogModule,
         TableModule,
         ButtonModule,
         ToastModule,
