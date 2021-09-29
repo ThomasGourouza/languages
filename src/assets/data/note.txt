@@ -66,3 +66,13 @@ die Ansicht = the view
 hier steht = il est écrit ici
 er liest = he reads
 es dauert eine Weile = it takes a while
+
+mittlerweile
+mittlerweise ?
+
+vollgas
+
+versorgen
+freigegeben = released
+freigeben = to release
+loslassen = to release

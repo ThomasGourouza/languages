@@ -46,7 +46,6 @@ export class NavigationComponent implements OnInit {
     } else {
       this.router.navigateByUrl(path);
     }
-
   }
 
 }

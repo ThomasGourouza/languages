@@ -24,9 +24,11 @@ export class GameComponent implements OnInit {
   public memory: Array<string>;
 
   private words!: Array<Word>;
-  public start!: boolean;
-  public revision!: boolean;
   public settingsForm!: FormGroup;
+  public start!: boolean;
+  public points: number;
+  public total: number;
+  public revision: boolean;
   // public category!: string;
   // public numberOfWords!: number;
   public categories!: Array<Item>;
@@ -39,6 +41,9 @@ export class GameComponent implements OnInit {
   ) {
     this.randomTranslations = [];
     this.memory = [];
+    this.revision = false;
+    this.points = 0;
+    this.total = 0;
   }
 
   public ngOnInit(): void {
@@ -52,10 +57,6 @@ export class GameComponent implements OnInit {
     this.gameService.setStart$(false);
     this.gameService.start$.subscribe((start) => {
       this.start = start;
-    });
-    this.gameService.setRevision$(false);
-    this.gameService.revision$.subscribe((revision) => {
-      this.revision = revision;
     });
   }
 
@@ -79,17 +80,13 @@ export class GameComponent implements OnInit {
 
     const categories: Array<string> = categoriesControl?.value;
     const numberOfWords: number = +numberOfWordsControl?.value;
-    const revision: boolean = revisionControl?.value;
-
-    this.gameService.setRevision$(revision);
+    this.revision = revisionControl?.value;
 
     console.log(categories);
     console.log(numberOfWords);
 
     this.gameService.setStart$(true);
     this.memory = [];
-    this.gameService.points = 0;
-    this.gameService.total = 0;
     this.answer = undefined;
     // this.initGame(formValue.categories);
   }
@@ -110,10 +107,10 @@ export class GameComponent implements OnInit {
     }
     const translation = formValue.translation;
     if (this.randomItem.translation === translation) {
-      this.gameService.points++;
+      this.points++;
       this.isCorrect = true;
     }
-    this.gameService.total++;
+    this.total++;
     // this.initGame(this.category);
   }
 
