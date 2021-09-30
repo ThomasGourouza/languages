@@ -92,4 +92,33 @@ unabhangig davon
 
 betreffen
 
+berechtigt = justifié
+
+gerechtfertigt = justifié
+
+erforderlich = required
+
+vorschreiben = préscrire
+vorgeschrieben = prescrit
+
+die Sitzung = the meeting
+
+schmal = étroit
+
+eingedrängt = crowded
+
+überfüllt = crowded
+
+beispielsweise = for exemple
+
+möglicherweise = possibly
+
+verlängern = to extend
+
+sie halten sich nicht an die regeln = they don't obey the rules
+
+sich daran halten = to stick to it
+
+zugeben = to admit
+
 Tt74159638520

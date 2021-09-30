@@ -21,7 +21,6 @@ export class GameComponent implements OnInit {
   public randomTranslations!: Array<string>;
   public answer!: Answer | undefined;
   public isCorrect!: boolean;
-  public memory: Array<string>;
 
   private words!: Array<Word>;
   public settingsForm!: FormGroup;
@@ -40,7 +39,6 @@ export class GameComponent implements OnInit {
     private gameService: GameService
   ) {
     this.randomTranslations = [];
-    this.memory = [];
     this.revision = false;
     this.points = 0;
     this.total = 0;
@@ -80,15 +78,15 @@ export class GameComponent implements OnInit {
 
     const categories: Array<string> = categoriesControl?.value;
     const numberOfWords: number = +numberOfWordsControl?.value;
-    this.revision = revisionControl?.value;
 
     console.log(categories);
     console.log(numberOfWords);
 
     this.gameService.setStart$(true);
-    this.memory = [];
+    this.revision = revisionControl?.value;
+
     this.answer = undefined;
-    // this.initGame(formValue.categories);
+    this.initGame(categories, numberOfWords);
   }
 
   private initGameForm(): void {
@@ -126,18 +124,14 @@ export class GameComponent implements OnInit {
     revisionControl?.enable();
   }
 
-  private initGame(category: string | number): void {
-    const dictionnaryCategory = this.words.filter((word) => word.category === category);
+  private initGame(categories: Array<string>, numberOfWords: number): void {
+    const dictionnaryCategory = this.words.filter((word) => categories.includes(word.category));
     if (!!dictionnaryCategory) {
-      if (this.memory.length === dictionnaryCategory.length) {
-        this.memory = [];
-      }
-      do {
-        const randomCategoryIndex = this.getRandomInt(dictionnaryCategory.length);
-        this.randomItem = dictionnaryCategory[randomCategoryIndex];
-      } while (this.memory.includes(this.randomItem.german));
-      this.memory.push(this.randomItem.german);
-      this.setRandomTranslations(this.randomItem.translation, category);
+
+      const randomCategoryIndex = this.getRandomInt(dictionnaryCategory.length);
+      this.randomItem = dictionnaryCategory[randomCategoryIndex];
+
+      this.setRandomTranslations(this.randomItem.translation, 'category');
       this.gameForm.controls['german'].setValue(this.randomItem.german);
     }
   }
