@@ -58,7 +58,8 @@
 </p-accordion>
 <br>
 <div *ngIf="start">
-    <form [formGroup]="gameForm" class="form-group">
+    <form (keyup.enter)="onGameSubmit()"
+    (ngSubmit)="onGameSubmit()" [formGroup]="gameForm" class="form-group">
         <div class="row">
             <div class="col">
                 <div class="form-group">
@@ -69,12 +70,22 @@
             <div class="col">
                 <div class="form-group">
                     <label for="translation">Traduction</label>
-                    <select class="form-control" formControlName="translation" (change)="onGameSubmit()">
-                        <option *ngFor="let translation of randomTranslations" [value]="translation">
+                    <select class="form-control" formControlName="translation">
+                        <option *ngFor="let translation of getTranslations()" [value]="translation">
                             {{ translation }}
                         </option>
                     </select>
                 </div>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" type="submit">
+                    Submit
+                </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" (click)="runGame()">
+                    Next
+                </button>
             </div>
         </div>
     </form>
@@ -84,6 +95,6 @@
 <br>
 <app-score></app-score>
 <br>
-<div *ngIf="!!answer" class="d-flex justify-content-center" [ngClass]="{'green': isCorrect, 'red': !isCorrect}">
-    {{ answer.german }} = {{ answer.translation }}
+<div *ngIf="!!randomItem && submited" class="d-flex justify-content-center" [ngClass]="{'green': isCorrect, 'red': !isCorrect}">
+    {{ randomItem.german }} = {{ randomItem.translation }}
 </div>
