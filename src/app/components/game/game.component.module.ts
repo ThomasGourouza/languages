@@ -9,10 +9,14 @@ import { ListboxModule } from 'primeng/listbox';
 import { CheckboxModule } from 'primeng/checkbox';
 import { CardModule } from 'primeng/card';
 import { GameComponent } from './game.component';
+import { MapPipe } from './pipes/map.pipe';
+import { SelectTranslationPipe } from './pipes/select-translation.pipe';
 
 @NgModule({
     declarations: [
-        GameComponent
+        GameComponent,
+        MapPipe,
+        SelectTranslationPipe
     ],
     providers: [
         DictionaryService,

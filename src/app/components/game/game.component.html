@@ -25,16 +25,9 @@
                         </div>
                     </div>
                     <br>
-                    <div class="row d-flex justify-content-center">
-                        <div class="col">
-                            <button pButton pRipple label="Start" icon="pi pi-play" type="submit"
-                                [disabled]="settingsForm.invalid || start"
-                                class="p-button-success form-control"></button>
-                        </div>
-                        <div class="col">
-                            <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
-                                class="p-button-danger form-control"></button>
-                        </div>
+                    <div class="d-flex justify-content-center">
+                        <button pButton pRipple label="Start" icon="pi pi-play" type="submit"
+                            [disabled]="settingsForm.invalid || start" class="p-button-success form-control"></button>
                         <br>
                     </div>
                 </form>
@@ -44,57 +37,75 @@
     <p-accordionTab header="Revision" [selected]="start && revision" [disabled]="!start || !revision">
         <div class="d-flex justify-content-center">
             <p-card>
-                Revision
+                <div>
+                    <p *ngFor="let word of dictionaryCategoryLimited">
+                        {{ word.german }} = {{ word.translation }}
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button pButton pRipple label="Ready" icon="pi pi-play" (click)="onReady()"
+                            class="p-button-success form-control"></button>
+                    </div>
+                    <div class="col">
+                        <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
+                            class="p-button-danger form-control"></button>
+                    </div>
+                </div>
             </p-card>
         </div>
     </p-accordionTab>
     <p-accordionTab header="Game" [selected]="start && !revision" [disabled]="!start || revision">
         <div class="d-flex justify-content-center">
             <p-card>
-                Game
+                <form (keyup.enter)="onGameSubmit()" (ngSubmit)="onGameSubmit()" [formGroup]="gameForm"
+                    class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="german">German</label>
+                                <input type="text" class="form-control" id="german" formControlName="german" readonly />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="translation">Traduction</label>
+                                <select *ngIf="!!randomWord" class="form-control" formControlName="translation">
+                                    <option
+                                        *ngFor="let translation of dictionaryCategoryLimited | select_translation: 5 : randomWord | map: 'translation'"
+                                        [value]="translation">
+                                        {{ translation }}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <span *ngIf="!submited; else continue">
+                                <button pButton pRipple label="Check" icon="pi pi-check" type="submit"
+                                    [disabled]="gameForm.invalid" class="p-button-success form-control"></button>
+                            </span>
+                            <ng-template #continue>
+                                <button pButton pRipple label="Continue" icon="pi pi-play" (click)="onContinue()"
+                                    class="p-button-primary form-control"></button>
+                            </ng-template>
+                        </div>
+                        <div class="col">
+                            <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
+                                class="p-button-danger form-control"></button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <div class="score d-flex justify-content-center">
+                    {{ points }} / {{ total }}
+                </div>
+                <br>
+                <div *ngIf="!!randomWord && submited" class="d-flex justify-content-center"
+                    [ngClass]="{'green': isCorrect, 'red': !isCorrect}">
+                    {{ randomWord.german }} = {{ randomWord.translation }}
+                </div>
             </p-card>
         </div>
     </p-accordionTab>
 </p-accordion>
 <br>
-<div *ngIf="start">
-    <form (keyup.enter)="onGameSubmit()"
-    (ngSubmit)="onGameSubmit()" [formGroup]="gameForm" class="form-group">
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="german">German</label>
-                    <input type="text" class="form-control" id="german" formControlName="german" readonly />
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="translation">Traduction</label>
-                    <select class="form-control" formControlName="translation">
-                        <option *ngFor="let translation of getTranslations()" [value]="translation">
-                            {{ translation }}
-                        </option>
-                    </select>
-                </div>
-            </div>
-            <div class="col">
-                <button class="btn btn-primary" type="submit">
-                    Submit
-                </button>
-            </div>
-            <div class="col">
-                <button class="btn btn-primary" (click)="runGame()">
-                    Next
-                </button>
-            </div>
-        </div>
-    </form>
-</div>
-
-
-<br>
-<app-score></app-score>
-<br>
-<div *ngIf="!!randomItem && submited" class="d-flex justify-content-center" [ngClass]="{'green': isCorrect, 'red': !isCorrect}">
-    {{ randomItem.german }} = {{ randomItem.translation }}
-</div>

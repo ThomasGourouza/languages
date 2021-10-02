@@ -19,18 +19,18 @@ export class GameComponent implements OnInit {
   public gameForm!: FormGroup;
   public isCorrect: boolean;
   public submited: boolean;
-
-  public randomItem!: Word;
-  public randomWords!: Array<Word>;
+  public randomWord!: Word;
+  public randomWordsMemory!: Array<Word>;
   private words!: Array<Word>;
-  private dictionaryCategoryLimited: Array<Word>;
+  public dictionaryCategoryLimited: Array<Word>;
   public settingsForm!: FormGroup;
   public start!: boolean;
   public points: number;
   public total: number;
+  public revisionSelected: boolean;
   public revision: boolean;
-  // public category!: string;
-  // public numberOfWords!: number;
+  private categoriesSelected!: Array<string>;
+  private numberOfWords!: number;
   public categories!: Array<Item>;
   public numbersOfWords!: Array<number>;
 
@@ -39,7 +39,8 @@ export class GameComponent implements OnInit {
     private commonService: CommonService,
     private gameService: GameService
   ) {
-    this.randomWords = [];
+    this.randomWordsMemory = [];
+    this.revisionSelected = false;
     this.revision = false;
     this.isCorrect = false;
     this.submited = false;
@@ -82,19 +83,16 @@ export class GameComponent implements OnInit {
     const categoriesControl = this.settingsForm.get('categories');
     const numberOfWordsControl = this.settingsForm.get('numberOfWords');
     const revisionControl = this.settingsForm.get('revision');
-
-    const categories: Array<string> = categoriesControl?.value;
-    const numberOfWords: number = +numberOfWordsControl?.value;
-
-    if (categories.length > 0 && numberOfWords > 0) {
+    this.categoriesSelected = categoriesControl?.value;
+    this.numberOfWords = +numberOfWordsControl?.value;
+    if (this.categoriesSelected.length > 0 && this.numberOfWords > 0) {
       categoriesControl?.disable();
       numberOfWordsControl?.disable();
       revisionControl?.disable();
-
       this.gameService.setStart$(true);
-      this.revision = revisionControl?.value;
-
-      this.initGame(categories, numberOfWords);
+      this.revisionSelected = revisionControl?.value;
+      this.revision = this.revisionSelected;
+      this.initGame(this.categoriesSelected, this.numberOfWords);
     }
   }
 
@@ -102,42 +100,33 @@ export class GameComponent implements OnInit {
     const dictionaryCategory = this.words.filter((word) => categories.includes(word.category));
     if (!!dictionaryCategory && dictionaryCategory.length >= limit) {
       this.dictionaryCategoryLimited = [];
-      while (this.dictionaryCategoryLimited.length < limit) {
-        const randomIndex = this.getRandomInt(dictionaryCategory.length);
-        const randomWord = dictionaryCategory[randomIndex];
-        if (!this.dictionaryCategoryLimited.map((word) => word.german).includes(randomWord.german)) {
-          this.dictionaryCategoryLimited.push(randomWord);
-        }
-      }
+      this.buildDictionaryCategoryLimited(dictionaryCategory, limit);
       this.runGame();
     } else {
       console.log('the limit is too high!');
     }
   }
 
-  public runGame(): void {
-    this.submited = false;
-    const index = this.getRandomInt(this.dictionaryCategoryLimited.length);
-    this.randomItem = this.dictionaryCategoryLimited[index];
-
-    // TODO: german -> french or french -> german
-    this.gameForm.controls['german'].setValue(this.randomItem.german);
-  }
-
-  public getRandomInt(max: number): number {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
-
   public onGameSubmit(): void {
     this.submited = true;
     this.isCorrect = false;
     const translation = this.gameForm.value.translation;
-    if (this.randomItem.translation === translation) {
+    if (this.randomWord.translation === translation) {
       this.points++;
       this.isCorrect = true;
     }
     this.total++;
-    // this.runGame();
+  }
+
+  public onContinue(): void {
+    this.submited = false;
+    this.revision = this.revisionSelected;
+    this.initGame(this.categoriesSelected, this.numberOfWords);
+    this.gameForm.controls['translation'].setValue('');
+  }
+
+  public onReady(): void {
+    this.revision = false;
   }
 
   public onStop(): void {
@@ -145,13 +134,48 @@ export class GameComponent implements OnInit {
     this.initGameForm();
     this.points = 0;
     this.total = 0;
-
+    this.randomWordsMemory = [];
     this.settingsForm.get('categories')?.enable();
     this.settingsForm.get('numberOfWords')?.enable();
     this.settingsForm.get('revision')?.enable();
   }
 
-  public getTranslations(): Array<string> {
-    return this.dictionaryCategoryLimited.map((word) => word.translation);
+  // Technical:
+
+  private buildDictionaryCategoryLimited(dictionaryCategory: Array<Word>, limit: number): void {
+    while (this.dictionaryCategoryLimited.length < limit) {
+      const randomIndex = this.gameService.getRandomInt(dictionaryCategory.length);
+      const randomWord = dictionaryCategory[randomIndex];
+      if (
+        this.dictionaryCategoryLimited.length === limit - 1
+        && this.randomWordsMemory.length >= limit
+        && this.gameService.isArrayIncluded(this.dictionaryCategoryLimited, this.randomWordsMemory)
+      ) {
+        const newWord = dictionaryCategory.find((word) =>
+          !this.gameService.isWordIncluded(word, this.randomWordsMemory)
+        );
+        if (!!newWord) {
+          this.dictionaryCategoryLimited.push(newWord);
+        } else {
+          // TODO
+          console.log('The game is over -> ask to replay');
+          this.onStop();
+          break;
+        }
+      } else if (!this.gameService.isWordIncluded(randomWord, this.dictionaryCategoryLimited)) {
+        this.dictionaryCategoryLimited.push(randomWord);
+      }
+    }
   }
+
+  private runGame(): void {
+    do {
+      const index = this.gameService.getRandomInt(this.dictionaryCategoryLimited.length);
+      this.randomWord = this.dictionaryCategoryLimited[index];
+    } while (this.gameService.isWordIncluded(this.randomWord, this.randomWordsMemory));
+    this.randomWordsMemory.push(this.randomWord);
+    // TODO: german -> french or french -> german
+    this.gameForm.controls['german'].setValue(this.randomWord.german);
+  }
+
 }
