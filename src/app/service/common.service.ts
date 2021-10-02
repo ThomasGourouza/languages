@@ -15,6 +15,8 @@ export class CommonService {
 
   private _categories: Array<Item>;
   private _numbersOfWords: Array<number>;
+  private _numbersOfOptions: Array<number>;
+  private _numbersOfRounds: Array<number>;
   private _ratings: Array<Item>;
   private _modes: Array<Mode>;
   private _activated$ = new Subject<boolean>();
@@ -28,7 +30,13 @@ export class CommonService {
       { label: 'Conjonction', value: 'conjonction' },
     ];
     this._numbersOfWords = [
-      10, 20, 30, 50, 100
+      10, 20, 30, 50
+    ];
+    this._numbersOfOptions = [
+      3, 5, 10
+    ];
+    this._numbersOfRounds = [
+      5, 10, 20, 30, 50
     ];
     this._ratings = [
       { label: '0', value: 0 },
@@ -50,6 +58,14 @@ export class CommonService {
 
   public get numbersOfWords(): Array<number> {
     return this._numbersOfWords;
+  }
+
+  public get numbersOfOptions(): Array<number> {
+    return this._numbersOfOptions;
+  }
+
+  public get numbersOfRounds(): Array<number> {
+    return this._numbersOfRounds;
   }
 
   public get ratings(): Array<Item> {

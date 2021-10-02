@@ -11,9 +11,21 @@
                                 formControlName="categories"></p-listbox>
                         </div>
                         <div class="col">
-                            Number
+                            Words
                             <br><br>
                             <p-listbox [options]="numbersOfWords" formControlName="numberOfWords">
+                            </p-listbox>
+                        </div>
+                        <div class="col">
+                            Options
+                            <br><br>
+                            <p-listbox [options]="numbersOfOptions" formControlName="numberOfOptions">
+                            </p-listbox>
+                        </div>
+                        <div class="col">
+                            Rounds
+                            <br><br>
+                            <p-listbox [options]="numbersOfRounds" formControlName="numberOfRounds">
                             </p-listbox>
                         </div>
                         <div class="col">
@@ -67,26 +79,25 @@
                                 <input type="text" class="form-control" id="german" formControlName="german" readonly />
                             </div>
                         </div>
-                        <div class="col">
+                        <div *ngIf="!!randomWord" class="col">
                             <div class="form-group">
-                                <label for="translation">Traduction</label>
-                                <select *ngIf="!!randomWord" class="form-control" formControlName="translation">
-                                    <option
-                                        *ngFor="let translation of dictionaryCategoryLimited | select_translation: 5 : randomWord | map: 'translation'"
-                                        [value]="translation">
-                                        {{ translation }}
-                                    </option>
-                                </select>
+                                <label for="translation">Translation</label>
+                                <p-listbox
+                                    [options]="dictionaryCategoryLimited | select_translation: numberOfOptions : randomWord | map: 'translation'"
+                                    formControlName="translation">
+                                </p-listbox>
                             </div>
                         </div>
                         <div class="col">
                             <span *ngIf="!submited; else continue">
                                 <button pButton pRipple label="Check" icon="pi pi-check" type="submit"
-                                    [disabled]="gameForm.invalid" class="p-button-success form-control"></button>
+                                    [disabled]="!isCheckValid()" class="p-button-success form-control"></button>
                             </span>
                             <ng-template #continue>
-                                <button pButton pRipple label="Continue" icon="pi pi-play" (click)="onContinue()"
-                                    class="p-button-primary form-control"></button>
+                                <span *ngIf="numberOfRounds > total">
+                                    <button pButton pRipple label="Continue" icon="pi pi-play" (click)="onContinue()"
+                                        class="p-button-primary form-control"></button>
+                                </span>
                             </ng-template>
                         </div>
                         <div class="col">

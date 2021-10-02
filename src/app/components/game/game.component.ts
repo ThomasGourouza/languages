@@ -16,6 +16,8 @@ export interface Answer {
 })
 export class GameComponent implements OnInit {
 
+  // TODO: choose between local or firebase (in settings tab)
+
   public gameForm!: FormGroup;
   public isCorrect: boolean;
   public submited: boolean;
@@ -30,9 +32,13 @@ export class GameComponent implements OnInit {
   public revisionSelected: boolean;
   public revision: boolean;
   private categoriesSelected!: Array<string>;
-  private numberOfWords!: number;
+  private numberOfWords: number;
+  public numberOfOptions: number;
+  public numberOfRounds: number;
   public categories!: Array<Item>;
   public numbersOfWords!: Array<number>;
+  public numbersOfOptions!: Array<number>;
+  public numbersOfRounds!: Array<number>;
 
   constructor(
     private dictionaryService: DictionaryService,
@@ -46,12 +52,17 @@ export class GameComponent implements OnInit {
     this.submited = false;
     this.points = 0;
     this.total = 0;
+    this.numberOfOptions = 5;
+    this.numberOfWords = 20;
+    this.numberOfRounds = 10;
     this.dictionaryCategoryLimited = [];
   }
 
   public ngOnInit(): void {
     this.categories = this.commonService.categories;
     this.numbersOfWords = this.commonService.numbersOfWords;
+    this.numbersOfOptions = this.commonService.numbersOfOptions;
+    this.numbersOfRounds = this.commonService.numbersOfRounds;
     this.initSettingsForm();
     this.initGameForm();
     this.dictionaryService.words.subscribe((words) => {
@@ -66,28 +77,41 @@ export class GameComponent implements OnInit {
   private initGameForm(): void {
     this.gameForm = new FormGroup({
       german: new FormControl('', Validators.required),
-      translation: new FormControl('', Validators.required)
+      translation: new FormControl('')
     });
   }
 
   private initSettingsForm(): void {
+    // TODO: add number of options
     const initCategoriesSetting = this.categories.map((category) => category.value)
     this.settingsForm = new FormGroup({
       categories: new FormControl(initCategoriesSetting, Validators.required),
-      numberOfWords: new FormControl(20, Validators.required),
+      numberOfWords: new FormControl(this.numberOfWords, Validators.required),
+      numberOfOptions: new FormControl(this.numberOfOptions, Validators.required),
+      numberOfRounds: new FormControl(this.numberOfRounds, Validators.required),
       revision: new FormControl(true)
     });
+  }
+
+  public isCheckValid(): boolean {
+    return !!this.gameForm.value.translation;
   }
 
   public onSettingsSubmit(): void {
     const categoriesControl = this.settingsForm.get('categories');
     const numberOfWordsControl = this.settingsForm.get('numberOfWords');
+    const numberOfOptionsControl = this.settingsForm.get('numberOfOptions');
+    const numberOfRoundsControl = this.settingsForm.get('numberOfRounds');
     const revisionControl = this.settingsForm.get('revision');
     this.categoriesSelected = categoriesControl?.value;
     this.numberOfWords = +numberOfWordsControl?.value;
+    this.numberOfOptions = +numberOfOptionsControl?.value;
+    this.numberOfRounds = +numberOfRoundsControl?.value;
     if (this.categoriesSelected.length > 0 && this.numberOfWords > 0) {
       categoriesControl?.disable();
       numberOfWordsControl?.disable();
+      numberOfOptionsControl?.disable();
+      numberOfRoundsControl?.disable();
       revisionControl?.disable();
       this.gameService.setStart$(true);
       this.revisionSelected = revisionControl?.value;
@@ -119,10 +143,12 @@ export class GameComponent implements OnInit {
   }
 
   public onContinue(): void {
-    this.submited = false;
-    this.revision = this.revisionSelected;
-    this.initGame(this.categoriesSelected, this.numberOfWords);
-    this.gameForm.controls['translation'].setValue('');
+    if (this.total < this.numberOfRounds) {
+      this.submited = false;
+      this.revision = this.revisionSelected;
+      this.initGame(this.categoriesSelected, this.numberOfWords);
+      this.gameForm.controls['translation'].setValue('');
+    }
   }
 
   public onReady(): void {
@@ -137,6 +163,8 @@ export class GameComponent implements OnInit {
     this.randomWordsMemory = [];
     this.settingsForm.get('categories')?.enable();
     this.settingsForm.get('numberOfWords')?.enable();
+    this.settingsForm.get('numberOfOptions')?.enable();
+    this.settingsForm.get('numberOfRounds')?.enable();
     this.settingsForm.get('revision')?.enable();
   }
 
