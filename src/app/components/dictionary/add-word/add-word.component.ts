@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Word } from 'src/app/models/word';
 import { WordUpdate } from 'src/app/models/word-update';
 import { AddWordService } from 'src/app/service/add-word.service';
 import { CommonService, Item } from 'src/app/service/common.service';
 import { DictionaryService } from 'src/app/service/dictionary.service';
+import { SettingsService } from 'src/app/service/settings.service';
 
 @Component({
   selector: 'app-add-word',
@@ -11,6 +13,8 @@ import { DictionaryService } from 'src/app/service/dictionary.service';
 })
 export class AddWordComponent implements OnInit {
 
+  private firebaseSubscription: Subscription;
+  private localSubscription: Subscription;
   public wordDialog!: boolean;
   public submitted!: boolean;
   public word!: Word;
@@ -20,20 +24,21 @@ export class AddWordComponent implements OnInit {
   constructor(
     private addWordService: AddWordService,
     private dictionaryService: DictionaryService,
-    private commonService: CommonService
-  ) { 
+    private commonService: CommonService,
+    private settingsService: SettingsService
+  ) {
     this.categories = this.commonService.categories;
+    this.firebaseSubscription = new Subscription();
+    this.localSubscription = new Subscription();
   }
 
   ngOnInit(): void {
-    this.dictionaryService.words.subscribe((words) => {
-      this.words = words;
-    });
+    this.connection();
     this.addWordService.wordDialog$.subscribe((wordDialog) => {
       this.wordDialog = wordDialog;
     });
     this.addWordService.word$.subscribe((word) => {
-      this.word = word;     
+      this.word = word;
     });
     this.addWordService.submitted$.subscribe((submitted) => {
       this.submitted = submitted;
@@ -64,6 +69,20 @@ export class AddWordComponent implements OnInit {
     }
     this.addWordService.setWordDialog$(false);
     this.addWordService.initWord$();
+  }
+
+  private connection(): void {
+    if (this.settingsService.firebase) {
+      this.localSubscription.unsubscribe();
+      this.firebaseSubscription = this.dictionaryService.words.subscribe((words) => {
+        this.words = words;
+      });
+    } else {
+      this.firebaseSubscription.unsubscribe();
+      this.localSubscription = this.dictionaryService.localWords.subscribe((localWords) => {
+        this.words = localWords;
+      });
+    }
   }
 
 }

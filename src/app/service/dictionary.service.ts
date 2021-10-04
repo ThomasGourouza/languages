@@ -13,6 +13,7 @@ export class DictionaryService {
 
   private _wordsCollection!: AngularFirestoreCollection<Word>;
   private _words!: Observable<Array<Word>>;
+  private _localWords!: Observable<Array<Word>>;
 
   private COLLECTION_NAME: string = 'german';
   private DEACTIVATION_TIME: number = 7;
@@ -23,10 +24,8 @@ export class DictionaryService {
     private messageService: MessageService
   ) {
     this._wordsCollection = this.afs.collection(this.COLLECTION_NAME);
-    // Use when access to firebase:
-    // this._words = this._wordsCollection.valueChanges({ idField: 'id' });
-    // Use when no access to firebase:
-    this._words = from(this.getData());
+    this._words = this._wordsCollection.valueChanges({ idField: 'id' });
+    this._localWords = from(this.getData());
   }
 
   public async getData(): Promise<Array<Word>> {
@@ -35,6 +34,10 @@ export class DictionaryService {
 
   get words(): Observable<Array<Word>> {
     return this._words;
+  }
+
+  get localWords(): Observable<Array<Word>> {
+    return this._localWords;
   }
 
   public addWord(word: WordUpdate, wordExists: boolean): void {

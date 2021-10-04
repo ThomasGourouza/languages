@@ -22,7 +22,7 @@ export class NavigationComponent implements OnInit {
       { label: 'Home', icon: 'pi pi-fw pi-home', command: () => { this.onleavePage('/home'); } },
       { label: 'Dictionary', icon: 'pi pi-fw pi-book', command: () => { this.onleavePage('/dictionary'); } },
       { label: 'Play', icon: 'pi pi-fw pi-play', routerLink: '/game' },
-      { label: 'Settings', icon: 'pi pi-fw pi-cog' }
+      { label: 'Settings', icon: 'pi pi-fw pi-cog', command: () => { this.onleavePage('/settings'); } }
     ];
   }
 

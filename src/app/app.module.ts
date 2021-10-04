@@ -13,6 +13,8 @@ import { GameModule } from './components/game/game.component.module';
 import { NavigationModule } from './components/navigation/navigation.component.module';
 import { MessageService } from 'primeng/api';
 import { HomeModule } from './components/home/home.component.module';
+import { SettingsModule } from './components/settings/settings.component.module';
+import { SettingsService } from './service/settings.service';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,15 @@ import { HomeModule } from './components/home/home.component.module';
     DictionaryModule,
     GameModule,
     HomeModule,
+    SettingsModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent }
 
     ])
   ],
   providers: [
-    MessageService
+    MessageService,
+    SettingsService
   ],
   bootstrap: [AppComponent]
 })

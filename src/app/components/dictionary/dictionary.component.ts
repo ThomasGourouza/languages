@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 import { AddWordService } from 'src/app/service/add-word.service';
 import { CommonService, Item, Mode } from 'src/app/service/common.service';
 import { ExcelService } from 'src/app/service/excel.service';
+import { SettingsService } from 'src/app/service/settings.service';
+import { Subscription } from 'rxjs';
 
 export interface FormFilter {
   german: string;
@@ -21,6 +23,8 @@ export interface FormFilter {
 })
 export class DictionaryComponent implements OnInit {
 
+  private firebaseSubscription: Subscription;
+  private localSubscription: Subscription;
   private words!: Array<Word>;
   public wordsFiltered!: Array<Word>;
   public categories: Array<Item>;
@@ -37,7 +41,8 @@ export class DictionaryComponent implements OnInit {
     private route: ActivatedRoute,
     private addWordService: AddWordService,
     private commonService: CommonService,
-    private excelService: ExcelService
+    private excelService: ExcelService,
+    private settingsService: SettingsService
   ) {
     this.categories = this.commonService.categories;
     this.ratings = this.commonService.ratings;
@@ -45,6 +50,8 @@ export class DictionaryComponent implements OnInit {
     this.mode = this.modes[0];
     this.activated = true;
     this.filterSelected = false;
+    this.firebaseSubscription = new Subscription();
+    this.localSubscription = new Subscription();
   }
 
   ngOnInit() {
@@ -60,31 +67,12 @@ export class DictionaryComponent implements OnInit {
     });
     this.commonService.activated$.subscribe((activated) => {
       this.activated = activated;
-      this.dictionaryService.words.subscribe((words) => {
-        this.initWords(words);
-      });
+      this.connection();
     });
-
-    this.dictionaryService.words.subscribe((words) => {
-      this.initWords(words);
-    });
-
+    this.connection();
     this.formFilter.valueChanges.subscribe((form: FormFilter) => {
       this.onFilter(form.german, form.translation, form.categories, form.ratings);
     });
-  }
-
-  private initWords(words: Array<Word>): void {
-    this.words = this.dictionaryService.manageWord(words, this.activated);
-    this.filterFromForm();
-  }
-
-  private filterFromForm(): void {
-    const german = this.formFilter.get('german')?.value;
-    const translation = this.formFilter.get('translation')?.value;
-    const categories = this.formFilter.get('categories')?.value;
-    const ratings = this.formFilter.get('ratings')?.value;
-    this.onFilter(german, translation, categories, ratings);
   }
 
   public onModeChange(): void {
@@ -173,4 +161,32 @@ export class DictionaryComponent implements OnInit {
       this.onFilter(form.german, form.translation, form.categories, form.ratings);
     });
   }
+
+  private connection(): void {
+    if (this.settingsService.firebase) {
+      this.localSubscription.unsubscribe();
+      this.firebaseSubscription = this.dictionaryService.words.subscribe((words) => {
+        this.initWords(words);
+      });
+    } else {
+      this.firebaseSubscription.unsubscribe();
+      this.localSubscription = this.dictionaryService.localWords.subscribe((localWords) => {
+        this.initWords(localWords);
+      });
+    }
+  }
+
+  private initWords(words: Array<Word>): void {
+    this.words = this.dictionaryService.manageWord(words, this.activated);
+    this.filterFromForm();
+  }
+
+  private filterFromForm(): void {
+    const german = this.formFilter.get('german')?.value;
+    const translation = this.formFilter.get('translation')?.value;
+    const categories = this.formFilter.get('categories')?.value;
+    const ratings = this.formFilter.get('ratings')?.value;
+    this.onFilter(german, translation, categories, ratings);
+  }
+
 }

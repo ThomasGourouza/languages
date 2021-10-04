@@ -47,8 +47,8 @@
                     </div>
                     <br>
                     <div class="d-flex justify-content-center">
-                        <button pButton pRipple label="Start" icon="pi pi-play" type="submit"
-                            [disabled]="settingsForm.invalid || start" class="p-button-success form-control"></button>
+                        <button style="width: 25%;" pButton pRipple label="Start" icon="pi pi-play" type="submit"
+                            [disabled]="settingsForm.invalid || start" class="p-button-primary p-button-outlined form-control"></button>
                         <br>
                     </div>
                 </form>
@@ -63,14 +63,15 @@
                         {{ word.german }} = {{ word.translation }}
                     </p>
                 </div>
+                <br>
                 <div class="row">
                     <div class="col">
                         <button pButton pRipple label="Ready" icon="pi pi-play" (click)="onReady()"
-                            class="p-button-success form-control"></button>
+                            class="p-button-success p-button-outlined form-control"></button>
                     </div>
                     <div class="col">
                         <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
-                            class="p-button-danger form-control"></button>
+                            class="p-button-danger p-button-outlined form-control"></button>
                     </div>
                 </div>
             </p-card>
@@ -103,16 +104,16 @@
                         <div class="col">
                             <span *ngIf="!submited; else continue">
                                 <button pButton pRipple label="Check" icon="pi pi-check" type="submit"
-                                    [disabled]="!isCheckValid()" class="p-button-success form-control"></button>
+                                    [disabled]="!isCheckValid()" class="p-button-success p-button-outlined form-control"></button>
                             </span>
                             <ng-template #continue>
                                 <button pButton pRipple label="Continue" icon="pi pi-play" (click)="onContinue()"
-                                    class="p-button-primary form-control"></button>
+                                    class="p-button-primary p-button-outlined form-control"></button>
                             </ng-template>
                         </div>
                         <div class="col">
                             <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
-                                class="p-button-danger form-control"></button>
+                                class="p-button-danger p-button-outlined form-control"></button>
                         </div>
                     </div>
                 </form>
@@ -128,11 +129,11 @@
                 <div class="row">
                     <div class="col">
                         <button pButton pRipple label="Restart" icon="pi pi-replay" (click)="onRestart()"
-                            class="p-button-success form-control"></button>
+                            class="p-button-primary p-button-outlined form-control"></button>
                     </div>
                     <div class="col">
                         <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
-                            class="p-button-danger form-control"></button>
+                            class="p-button-danger p-button-outlined form-control"></button>
                     </div>
                 </div>
             </p-card>
