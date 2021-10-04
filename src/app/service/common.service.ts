@@ -31,7 +31,7 @@ export class CommonService {
       { label: 'Conjonction', value: 'conjonction' },
     ];
     this._numbersOfWords = [
-      10, 20, 30, 50
+      5, 10, 20, 30
     ];
     this._numbersOfOptions = [
       3, 5, 10

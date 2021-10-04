@@ -21,10 +21,12 @@ export interface Answer {
 export class GameComponent implements OnInit {
 
   // TODO: choose between local or firebase (in settings tab)
+  // TODO: design game + toast + score
 
   public gameForm!: FormGroup;
   public isCorrect: boolean;
   public submited: boolean;
+  public settingsSubmited: boolean;
   public randomWord!: Word;
   public randomWordsMemory!: Array<Word>;
   private words!: Array<Word>;
@@ -61,6 +63,7 @@ export class GameComponent implements OnInit {
     this.total = 0;
     this.dictionaryCategoryLimited = [];
     this.summary = [];
+    this.settingsSubmited = false;
   }
 
   public ngOnInit(): void {
@@ -82,9 +85,43 @@ export class GameComponent implements OnInit {
       this.gameService.numberOfWords = values.numberOfWords;
       this.gameService.numberOfOptions = values.numberOfOptions;
       this.gameService.numberOfRounds = values.numberOfRounds;
-      this.gameService.revision = values.revision;
-      this.gameService.version = values.version;
+      this.gameService.version = !!values.version;
+      this.gameService.revision = !!values.revision;
+      this.adjustNumberOfWordsForm(this.gameService.revision);
     });
+    this.settingsForm.controls['numberOfOptions']?.valueChanges.subscribe((numberOfOptions) => {
+      const numberOfWordsControl = this.settingsForm.get('numberOfWords');
+      if (+numberOfOptions >= +numberOfWordsControl?.value) {
+        this.setControl('numberOfWords', numberOfOptions);
+      } else if (numberOfWordsControl?.disabled) {
+        this.setControl('numberOfWords', 5);
+      }
+    });
+    this.settingsForm.controls['numberOfWords']?.valueChanges.subscribe((numberOfWords) => {
+      const numberOfOptionsControl = this.settingsForm.get('numberOfOptions');
+      if (+numberOfWords < +numberOfOptionsControl?.value) {
+        this.setControl('numberOfOptions', numberOfWords);
+      }
+    });
+  }
+
+  private setControl(controlName: string, value: number): void {
+    const index = (controlName === 'numberOfWords') ? 'numberOfWords' : 'numberOfOptions';
+    const control = this.settingsForm.get(index);
+    this.gameService[index] = value;
+    this[index] = this.gameService[index];
+    control?.setValue(this[index]);
+  }
+
+  private adjustNumberOfWordsForm(revision: boolean): void {
+    const numberOfWordsControl = this.settingsForm.get('numberOfWords');
+    if (!revision && numberOfWordsControl?.enabled && !this.settingsSubmited) {
+      numberOfWordsControl?.disable();
+      this.setControl('numberOfWords', 5);
+    }
+    if (revision && numberOfWordsControl?.disabled) {
+      numberOfWordsControl?.enable();
+    }
   }
 
   private initGameForm(): void {
@@ -99,16 +136,23 @@ export class GameComponent implements OnInit {
     this.numberOfWords = this.gameService.numberOfWords;
     this.numberOfOptions = this.gameService.numberOfOptions;
     this.numberOfRounds = this.gameService.numberOfRounds;
-    this.revision = this.gameService.revision;
+    this.revisionSelected = this.gameService.revision;
     this.version = this.gameService.version;
     this.settingsForm = new FormGroup({
       categories: new FormControl(this.categoriesSelected, Validators.required),
       numberOfWords: new FormControl(this.numberOfWords, Validators.required),
       numberOfOptions: new FormControl(this.numberOfOptions, Validators.required),
       numberOfRounds: new FormControl(this.numberOfRounds, Validators.required),
-      revision: new FormControl(this.revision),
+      revision: new FormControl(this.revisionSelected),
       version: new FormControl(this.version),
     });
+    const numberOfWordsControl = this.settingsForm.get('numberOfWords');
+    if (!this.revisionSelected) {
+      this.gameService.numberOfWords = 5;
+      this.numberOfWords = this.gameService.numberOfWords;
+      numberOfWordsControl?.disable();
+      numberOfWordsControl?.setValue(this.numberOfWords);
+    }
   }
 
   public isCheckValid(): boolean {
@@ -117,17 +161,21 @@ export class GameComponent implements OnInit {
 
   public onSettingsSubmit(): void {
     this.submited = false;
+    this.settingsSubmited = true;
     const categoriesControl = this.settingsForm.get('categories');
-    const numberOfWordsControl = this.settingsForm.get('numberOfWords');
     const numberOfOptionsControl = this.settingsForm.get('numberOfOptions');
     const numberOfRoundsControl = this.settingsForm.get('numberOfRounds');
     const revisionControl = this.settingsForm.get('revision');
     const versionControl = this.settingsForm.get('version');
+    const numberOfWordsControl = this.settingsForm.get('numberOfWords');
+    if (numberOfWordsControl?.enabled) {
+      this.numberOfWords = +numberOfWordsControl?.value;
+      numberOfWordsControl?.disable();
+    }
     this.categoriesSelected = categoriesControl?.value;
-    this.numberOfWords = +numberOfWordsControl?.value;
     this.numberOfOptions = +numberOfOptionsControl?.value;
     this.numberOfRounds = +numberOfRoundsControl?.value;
-    this.version = versionControl?.value;
+    this.version = !!versionControl?.value;
 
     this.wordsForGame = this.words.filter((word) =>
       this.categoriesSelected.includes(word.category)
@@ -137,15 +185,15 @@ export class GameComponent implements OnInit {
       && this.numberOfWords > 0
       && !!this.wordsForGame
       && this.wordsForGame.length >= this.numberOfWords
+      && this.numberOfOptions <= this.numberOfWords
     ) {
       categoriesControl?.disable();
-      numberOfWordsControl?.disable();
       numberOfOptionsControl?.disable();
       numberOfRoundsControl?.disable();
       revisionControl?.disable();
       versionControl?.disable();
       this.gameService.setStart$(true);
-      this.revisionSelected = revisionControl?.value;
+      this.revisionSelected = !!revisionControl?.value;
       this.revision = this.revisionSelected;
       this.runGame();
     } else {
@@ -191,18 +239,19 @@ export class GameComponent implements OnInit {
 
   public onStop(): void {
     this.initResult();
-    this.submited = false;
+    this.settingsSubmited = false;
     this.gameService.setStart$(false);
     this.settingsForm.get('categories')?.enable();
-    this.settingsForm.get('numberOfWords')?.enable();
     this.settingsForm.get('numberOfOptions')?.enable();
     this.settingsForm.get('numberOfRounds')?.enable();
     this.settingsForm.get('revision')?.enable();
     this.settingsForm.get('version')?.enable();
+    this.adjustNumberOfWordsForm(this.revisionSelected);
   }
 
   private initResult(): void {
     this.initGameForm();
+    this.submited = false;
     this.points = 0;
     this.total = 0;
     this.randomWordsMemory = [];

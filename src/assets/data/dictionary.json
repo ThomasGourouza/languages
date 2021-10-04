@@ -1025,14 +1025,6 @@
     },
     {
         "category": "adjective",
-        "german": "vollkommen",
-        "translation": "completely",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
-        "isActive": true
-    },
-    {
-        "category": "adjective",
         "german": "logisch",
         "translation": "logic",
         "numberOfViews": 0,
@@ -1059,14 +1051,6 @@
         "category": "phrase",
         "german": "von meiner Seite aus",
         "translation": "from my side",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
-        "isActive": true
-    },
-    {
-        "category": "adjective",
-        "german": "letztendlich",
-        "translation": "in the end",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3256,14 +3240,6 @@
         "isActive": true
     },
     {
-        "category": "noun",
-        "german": "die Reihenfolge",
-        "translation": "the order",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
-        "isActive": true
-    },
-    {
         "category": "phrase",
         "german": "ich fürchte schon",
         "translation": "I'm afraid so",
@@ -3752,14 +3728,6 @@
         "isActive": true
     },
     {
-        "category": "adjective",
-        "german": "regelmäßig",
-        "translation": "regularly",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
-        "isActive": true
-    },
-    {
         "category": "conjonction",
         "german": "bis nachher",
         "translation": "see you later",
@@ -3915,14 +3883,6 @@
         "category": "adjective",
         "german": "gebißen",
         "translation": "mordu",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
-        "isActive": true
-    },
-    {
-        "category": "verb",
-        "german": "ursprünglich",
-        "translation": "originally",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true

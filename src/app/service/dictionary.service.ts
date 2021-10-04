@@ -24,9 +24,9 @@ export class DictionaryService {
   ) {
     this._wordsCollection = this.afs.collection(this.COLLECTION_NAME);
     // Use when access to firebase:
-    this._words = this._wordsCollection.valueChanges({ idField: 'id' });
+    // this._words = this._wordsCollection.valueChanges({ idField: 'id' });
     // Use when no access to firebase:
-    // this._words = from(this.getData());
+    this._words = from(this.getData());
   }
 
   public async getData(): Promise<Array<Word>> {

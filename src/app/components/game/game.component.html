@@ -13,12 +13,6 @@
                                 formControlName="categories"></p-listbox>
                         </div>
                         <div class="col">
-                            Words
-                            <br><br>
-                            <p-listbox [options]="numbersOfWords" formControlName="numberOfWords">
-                            </p-listbox>
-                        </div>
-                        <div class="col">
                             Options
                             <br><br>
                             <p-listbox [options]="numbersOfOptions" formControlName="numberOfOptions">
@@ -43,6 +37,12 @@
                             <span class=" d-flex justify-content-center">
                                 <p-checkbox formControlName="revision" [binary]="true"></p-checkbox>
                             </span>
+                        </div>
+                        <div class="col">
+                            Words
+                            <br><br>
+                            <p-listbox [options]="numbersOfWords" formControlName="numberOfWords">
+                            </p-listbox>
                         </div>
                     </div>
                     <br>

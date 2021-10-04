@@ -28,7 +28,7 @@ export class GameService {
       .map((category) =>
         category.value.toString()
       );
-    this._numberOfWords = 20;
+    this._numberOfWords = 5;
     this._numberOfOptions = 5;
     this._numberOfRounds = 10;
     this._revision = false;
@@ -104,7 +104,7 @@ export class GameService {
   }
 
   public limitError(): void {
-    const detailMessage = 'The limit for \"Word\" is too high !';
+    const detailMessage = 'Please, change the limit for \"Word\" or the limit for \"Option\".';
     this.messageService.add({ severity: 'warn', summary: 'Warning', detail: detailMessage, life: 3000 });
   }
 
