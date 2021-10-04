@@ -53,7 +53,8 @@ export class AddWordComponent implements OnInit {
       translation: this.word.translation,
       numberOfViews: this.word.numberOfViews,
       numberOfSuccess: this.word.numberOfSuccess,
-      isActive: this.word.isActive
+      isActive: this.word.isActive,
+      deactivationDate: this.word.deactivationDate
     }
     if (!!this.word.id) {
       this.dictionaryService.update(this.word.id, newWord);

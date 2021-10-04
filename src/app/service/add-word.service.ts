@@ -44,7 +44,8 @@ export class AddWordService {
       translation: '',
       numberOfViews: 0,
       numberOfSuccess: 0,
-      isActive: true
+      isActive: true,
+      deactivationDate: null
     });
   }
 

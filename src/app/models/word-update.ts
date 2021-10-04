@@ -5,4 +5,5 @@ export interface WordUpdate {
     numberOfViews?: number;
     numberOfSuccess?: number;
     isActive?: boolean;
+    deactivationDate?: any;
 }

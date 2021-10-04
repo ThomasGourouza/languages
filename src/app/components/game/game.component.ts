@@ -4,6 +4,10 @@ import { Word } from 'src/app/models/word';
 import { CommonService, Item } from 'src/app/service/common.service';
 import { DictionaryService } from 'src/app/service/dictionary.service';
 import { GameService } from 'src/app/service/game.service';
+export interface Summary {
+  word: Word;
+  success: boolean;
+}
 export interface Answer {
   german: string;
   translation: string;
@@ -25,20 +29,23 @@ export class GameComponent implements OnInit {
   public randomWordsMemory!: Array<Word>;
   private words!: Array<Word>;
   public dictionaryCategoryLimited: Array<Word>;
-  public settingsForm!: FormGroup;
+  public wordsForGame!: Array<Word>;
   public start!: boolean;
   public points: number;
   public total: number;
   public revisionSelected: boolean;
-  public revision: boolean;
-  private categoriesSelected!: Array<string>;
-  private numberOfWords: number;
-  public numberOfOptions: number;
-  public numberOfRounds: number;
   public categories!: Array<Item>;
   public numbersOfWords!: Array<number>;
   public numbersOfOptions!: Array<number>;
   public numbersOfRounds!: Array<number>;
+  public summary: Array<Summary>;
+  // setting form
+  public settingsForm!: FormGroup;
+  private categoriesSelected!: Array<string>;
+  private numberOfWords!: number;
+  public numberOfOptions!: number;
+  public numberOfRounds!: number;
+  public revision!: boolean;
 
   constructor(
     private dictionaryService: DictionaryService,
@@ -47,15 +54,12 @@ export class GameComponent implements OnInit {
   ) {
     this.randomWordsMemory = [];
     this.revisionSelected = false;
-    this.revision = false;
     this.isCorrect = false;
     this.submited = false;
     this.points = 0;
     this.total = 0;
-    this.numberOfOptions = 5;
-    this.numberOfWords = 20;
-    this.numberOfRounds = 10;
     this.dictionaryCategoryLimited = [];
+    this.summary = [];
   }
 
   public ngOnInit(): void {
@@ -72,6 +76,13 @@ export class GameComponent implements OnInit {
     this.gameService.start$.subscribe((start) => {
       this.start = start;
     });
+    this.settingsForm.valueChanges.subscribe((values) => {
+      this.gameService.categoriesSelected = values.categories;
+      this.gameService.numberOfWords = values.numberOfWords;
+      this.gameService.numberOfOptions = values.numberOfOptions;
+      this.gameService.numberOfRounds = values.numberOfRounds;
+      this.gameService.revision = values.revision;
+    });
   }
 
   private initGameForm(): void {
@@ -82,14 +93,17 @@ export class GameComponent implements OnInit {
   }
 
   private initSettingsForm(): void {
-    // TODO: add number of options
-    const initCategoriesSetting = this.categories.map((category) => category.value)
+    this.categoriesSelected = this.gameService.categoriesSelected;
+    this.numberOfWords = this.gameService.numberOfWords;
+    this.numberOfOptions = this.gameService.numberOfOptions;
+    this.numberOfRounds = this.gameService.numberOfRounds;
+    this.revision = this.gameService.revision;
     this.settingsForm = new FormGroup({
-      categories: new FormControl(initCategoriesSetting, Validators.required),
+      categories: new FormControl(this.categoriesSelected, Validators.required),
       numberOfWords: new FormControl(this.numberOfWords, Validators.required),
       numberOfOptions: new FormControl(this.numberOfOptions, Validators.required),
       numberOfRounds: new FormControl(this.numberOfRounds, Validators.required),
-      revision: new FormControl(true)
+      revision: new FormControl(this.revision)
     });
   }
 
@@ -107,7 +121,16 @@ export class GameComponent implements OnInit {
     this.numberOfWords = +numberOfWordsControl?.value;
     this.numberOfOptions = +numberOfOptionsControl?.value;
     this.numberOfRounds = +numberOfRoundsControl?.value;
-    if (this.categoriesSelected.length > 0 && this.numberOfWords > 0) {
+
+    this.wordsForGame = this.words.filter((word) =>
+      this.categoriesSelected.includes(word.category)
+    );
+    if (
+      this.categoriesSelected.length > 0
+      && this.numberOfWords > 0
+      && !!this.wordsForGame
+      && this.wordsForGame.length >= this.numberOfWords
+    ) {
       categoriesControl?.disable();
       numberOfWordsControl?.disable();
       numberOfOptionsControl?.disable();
@@ -116,18 +139,10 @@ export class GameComponent implements OnInit {
       this.gameService.setStart$(true);
       this.revisionSelected = revisionControl?.value;
       this.revision = this.revisionSelected;
-      this.initGame(this.categoriesSelected, this.numberOfWords);
-    }
-  }
-
-  private initGame(categories: Array<string>, limit: number): void {
-    const dictionaryCategory = this.words.filter((word) => categories.includes(word.category));
-    if (!!dictionaryCategory && dictionaryCategory.length >= limit) {
-      this.dictionaryCategoryLimited = [];
-      this.buildDictionaryCategoryLimited(dictionaryCategory, limit);
       this.runGame();
     } else {
-      console.log('the limit is too high!');
+      this.dictionaryCategoryLimited = [];
+      this.gameService.limitError();
     }
   }
 
@@ -139,16 +154,26 @@ export class GameComponent implements OnInit {
       this.points++;
       this.isCorrect = true;
     }
+    this.summary.push({
+      word: this.randomWord,
+      success: this.isCorrect
+    });
     this.total++;
+    this.gameService.manageWordInDB(this.randomWord, this.isCorrect);
   }
 
   public onContinue(): void {
     if (this.total < this.numberOfRounds) {
       this.submited = false;
       this.revision = this.revisionSelected;
-      this.initGame(this.categoriesSelected, this.numberOfWords);
       this.gameForm.controls['translation'].setValue('');
+      this.runGame();
     }
+  }
+
+  public onRestart(): void {
+    this.initResult();
+    this.onContinue();
   }
 
   public onReady(): void {
@@ -156,11 +181,8 @@ export class GameComponent implements OnInit {
   }
 
   public onStop(): void {
+    this.initResult();
     this.gameService.setStart$(false);
-    this.initGameForm();
-    this.points = 0;
-    this.total = 0;
-    this.randomWordsMemory = [];
     this.settingsForm.get('categories')?.enable();
     this.settingsForm.get('numberOfWords')?.enable();
     this.settingsForm.get('numberOfOptions')?.enable();
@@ -168,9 +190,19 @@ export class GameComponent implements OnInit {
     this.settingsForm.get('revision')?.enable();
   }
 
+  private initResult(): void {
+    this.initGameForm();
+    this.points = 0;
+    this.total = 0;
+    this.randomWordsMemory = [];
+    this.dictionaryCategoryLimited = [];
+    this.summary = [];
+  }
+
   // Technical:
 
   private buildDictionaryCategoryLimited(dictionaryCategory: Array<Word>, limit: number): void {
+    this.dictionaryCategoryLimited = [];
     while (this.dictionaryCategoryLimited.length < limit) {
       const randomIndex = this.gameService.getRandomInt(dictionaryCategory.length);
       const randomWord = dictionaryCategory[randomIndex];
@@ -185,8 +217,6 @@ export class GameComponent implements OnInit {
         if (!!newWord) {
           this.dictionaryCategoryLimited.push(newWord);
         } else {
-          // TODO
-          console.log('The game is over -> ask to replay');
           this.onStop();
           break;
         }
@@ -197,6 +227,7 @@ export class GameComponent implements OnInit {
   }
 
   private runGame(): void {
+    this.buildDictionaryCategoryLimited(this.wordsForGame, this.numberOfWords);
     do {
       const index = this.gameService.getRandomInt(this.dictionaryCategoryLimited.length);
       this.randomWord = this.dictionaryCategoryLimited[index];

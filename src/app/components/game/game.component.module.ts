@@ -11,6 +11,7 @@ import { CardModule } from 'primeng/card';
 import { GameComponent } from './game.component';
 import { MapPipe } from './pipes/map.pipe';
 import { SelectTranslationPipe } from './pipes/select-translation.pipe';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { SelectTranslationPipe } from './pipes/select-translation.pipe';
         ReactiveFormsModule,
         CheckboxModule,
         CardModule,
-        ListboxModule
+        ListboxModule,
+        ToastModule,
     ],
     exports: [
         GameComponent

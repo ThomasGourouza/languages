@@ -7,4 +7,5 @@ export interface Word {
     numberOfSuccess: number;
     isActive: boolean;
     rating?: number;
+    deactivationDate?: any;
 }

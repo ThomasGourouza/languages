@@ -58,8 +58,6 @@ export class DictionaryComponent implements OnInit {
       this.filterSelected = !!german || !!translation || !!categories || !!ratings;
       this.initFormFilter(german, translation, categories, ratings);
     });
-
-    this.commonService.setModeActive$(true);
     this.commonService.activated$.subscribe((activated) => {
       this.activated = activated;
       this.dictionaryService.words.subscribe((words) => {
@@ -77,11 +75,11 @@ export class DictionaryComponent implements OnInit {
   }
 
   private initWords(words: Array<Word>): void {
-    this.words = words.filter((word) => word.isActive === this.activated);
-    this.words.forEach((word) => {
-      word.rating = (word.numberOfViews > 0) ?
-        Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
-    });
+    this.words = this.dictionaryService.manageWord(words, this.activated);
+    this.filterFromForm();
+  }
+
+  private filterFromForm(): void {
     const german = this.formFilter.get('german')?.value;
     const translation = this.formFilter.get('translation')?.value;
     const categories = this.formFilter.get('categories')?.value;
@@ -136,7 +134,7 @@ export class DictionaryComponent implements OnInit {
       accept: () => {
         const wordId = word.id;
         if (!!wordId) {
-          this.dictionaryService.deleteWord(wordId);
+          this.dictionaryService.deleteWord(wordId, word.german);
         }
       }
     });
@@ -150,7 +148,7 @@ export class DictionaryComponent implements OnInit {
       accept: () => {
         const wordId = word.id;
         if (!!wordId) {
-          this.dictionaryService.deactivateWord(wordId);
+          this.dictionaryService.deactivateWord(wordId, word.german);
         }
       }
     });
@@ -159,7 +157,7 @@ export class DictionaryComponent implements OnInit {
   public activateWord(word: Word): void {
     const wordId = word.id;
     if (!!wordId) {
-      this.dictionaryService.activateWord(wordId);
+      this.dictionaryService.activateWord(wordId, word.german);
     }
   }
 

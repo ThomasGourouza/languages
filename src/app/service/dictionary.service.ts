@@ -15,6 +15,7 @@ export class DictionaryService {
   private _words!: Observable<Array<Word>>;
 
   private COLLECTION_NAME: string = 'german';
+  private DEACTIVATION_TIME: number = 7;
 
   constructor(
     private afs: AngularFirestore,
@@ -22,10 +23,10 @@ export class DictionaryService {
     private messageService: MessageService
   ) {
     this._wordsCollection = this.afs.collection(this.COLLECTION_NAME);
-    // Comment when no access to firebase:
-    // this._words = this._wordsCollection.valueChanges({ idField: 'id' });
-    // Uncomment when no access to firebase:
-    this._words = from(this.getData());
+    // Use when access to firebase:
+    this._words = this._wordsCollection.valueChanges({ idField: 'id' });
+    // Use when no access to firebase:
+    // this._words = from(this.getData());
   }
 
   public async getData(): Promise<Array<Word>> {
@@ -39,53 +40,106 @@ export class DictionaryService {
   public addWord(word: WordUpdate, wordExists: boolean): void {
     if (wordExists) {
       const detailMessage = 'Word ' + word.german + ' already exists';
-      this.messageService.add({ severity: 'danger', summary: 'Error', detail: detailMessage, life: 3000 });
+      this.messageService.add({ severity: 'error', summary: 'Error', detail: detailMessage, life: 3000 });
     } else {
       this.afs.collection(this.COLLECTION_NAME)
         .add(word).then(() => {
           this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word saved', life: 3000 });
         }).catch(() => {
-          this.messageService.add({ severity: 'danger', summary: 'Error', detail: 'Save failure', life: 3000 });
+          this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Save failure', life: 3000 });
         });
     }
   }
 
-  public deleteWord(id: string): void {
+  public deleteWord(id: string, german: string, fromGame?: boolean): void {
     this.afs.collection(this.COLLECTION_NAME).doc(id)
       .delete().then(() => {
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word deleted', life: 3000 });
+        const detailMessage = 'The word \"' + german + '\" has been deleted';
+        const sev = !fromGame ? 'success' : 'info';
+        const sum = !fromGame ? 'Successful' : 'Info';
+        this.messageService.add({ severity: sev, summary: sum, detail: detailMessage, life: 3000 });
       }).catch(() => {
-        this.messageService.add({ severity: 'danger', summary: 'Error', detail: 'Delete failure', life: 3000 });
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Delete failure for ' + '\"' + german + '\"', life: 3000 });
       });
   }
 
-  public activateWord(id: string): void {
-    this.wordActivationControl(id, true);
+  public activateWord(id: string, german: string): void {
+    this.wordActivationControl(id, true, german);
   }
 
-  public deactivateWord(id: string): void {
-    this.wordActivationControl(id, false);
+  public deactivateWord(id: string, german: string): void {
+    this.wordActivationControl(id, false, german);
   }
 
-  private wordActivationControl(id: string, isActiveValue: boolean): void {
-    const wordupdate: WordUpdate = { isActive: isActiveValue };
+  private wordActivationControl(id: string, isActiveValue: boolean, german: string): void {
+    const wordUpdate: WordUpdate = {
+      isActive: isActiveValue,
+      numberOfViews: isActiveValue ? 0 : 100,
+      numberOfSuccess: 0,
+      deactivationDate: isActiveValue ? null : new Date()
+    };
     this.afs.collection(this.COLLECTION_NAME).doc(id)
-      .update(wordupdate).then(() => {
-        const detailMessage = isActiveValue ? 'Word activated' : 'Word deactivated';
-        this.messageService.add({ severity: 'success', summary: 'Successful', detail: detailMessage, life: 3000 });
+      .update(wordUpdate).then(() => {
+        const detailMessage = 'The word \"' + german + '\" has been ' + (isActiveValue ? 'activated' : 'deactivated');
+        this.messageService.add({ severity: 'info', summary: 'Info', detail: detailMessage, life: 3000 });
       }).catch(() => {
-        const detailMessage = isActiveValue ? 'Activation failure' : 'Deactivation failure';
-        this.messageService.add({ severity: 'danger', summary: 'Error', detail: detailMessage, life: 3000 });
+        const detailMessage = (isActiveValue ? 'Activation failure' : 'Deactivation failure') + ' for \"' + german + '\"';
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: detailMessage, life: 3000 });
       });
   }
 
-  public update(id: string, wordupdate: WordUpdate): void {
+  public update(id: string, wordUpdate: WordUpdate): void {
     this.afs.collection(this.COLLECTION_NAME).doc(id)
-      .update(wordupdate).then(() => {
+      .update(wordUpdate).then(() => {
         this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word updated', life: 3000 });
       }).catch(() => {
-        this.messageService.add({ severity: 'danger', summary: 'Error', detail: 'Update failure', life: 3000 });
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Update failure', life: 3000 });
       });
+  }
+
+  public viewWord(id: string, view: number, success: number, isCorrect: boolean): void {
+    const wordUpdate: WordUpdate = {
+      numberOfViews: view + 1,
+      numberOfSuccess: isCorrect ? success + 1 : success
+    };
+    this.afs.collection(this.COLLECTION_NAME).doc(id).update(wordUpdate);
+  }
+
+  public manageWord(words: Array<Word>, activated: boolean): Array<Word> {
+    const activeWords = words.filter((word) => word.isActive === activated);
+    activeWords.forEach((word) => {
+      word.rating = (word.numberOfViews > 0) ?
+        Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
+      if (!word.isActive) {
+        const reactivationDate: Date = word.deactivationDate.toDate();
+        reactivationDate.setDate(reactivationDate.getDate() + this.DEACTIVATION_TIME);
+        const today = new Date();
+        if (
+          reactivationDate.toLocaleDateString() == today.toLocaleDateString()
+          && !!word.id
+        ) {
+          this.activateWord(word.id, word.german);
+        } else {
+          for (let i = 0; i < this.DEACTIVATION_TIME; i++) {
+            const reactivationDateStatus: Date = word.deactivationDate.toDate();
+            reactivationDateStatus.setDate(reactivationDateStatus.getDate() + i);
+            const status = Math.floor(((this.DEACTIVATION_TIME - i) / this.DEACTIVATION_TIME) * 100);
+            if (
+              reactivationDateStatus.toLocaleDateString() == today.toLocaleDateString()
+              && word.numberOfViews !== status
+              && !!word.id
+            ) {
+              const wordUpdate: WordUpdate = {
+                numberOfViews: status
+              };
+              this.afs.collection(this.COLLECTION_NAME).doc(word.id).update(wordUpdate);
+              break;
+            }
+          }
+        }
+      }
+    });
+    return activeWords;
   }
 
 }

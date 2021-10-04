@@ -2,13 +2,15 @@
     <ng-template pTemplate="content">
         <div class="p-field">
             <label for="german">German</label>
-            <input type="text" pInputText id="german" [(ngModel)]="word.german" autofocus required />
+            <input type="text" pInputText id="german" [(ngModel)]="word.german" [autofocus]="!word.id"
+                [disabled]="!!word.id" required />
             <small *ngIf="submitted && !word.german">This field is required.</small>
         </div>
         <br>
         <div class="p-field">
             <label for="translation">Translation</label>
-            <input type="text" pInputText id="translation" [(ngModel)]="word.translation" required />
+            <input type="text" pInputText id="translation" [(ngModel)]="word.translation" [autofocus]="!!word.id"
+                required />
             <small *ngIf="submitted && !word.translation">This field is required.</small>
         </div>
         <br>
@@ -24,6 +26,7 @@
 
     <ng-template pTemplate="footer">
         <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
-        <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveWord()" [disabled]="!word.german || !word.translation || !word.category"></button>
+        <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveWord()"
+            [disabled]="!word.german || !word.translation || !word.category"></button>
     </ng-template>
 </p-dialog>

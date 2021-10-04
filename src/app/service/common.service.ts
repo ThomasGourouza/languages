@@ -22,6 +22,7 @@ export class CommonService {
   private _activated$ = new Subject<boolean>();
 
   constructor() {
+    this.setModeActive$(true);
     this._categories = [
       { label: 'Verb', value: 'verb' },
       { label: 'Adjective', value: 'adjective' },
@@ -36,7 +37,7 @@ export class CommonService {
       3, 5, 10
     ];
     this._numbersOfRounds = [
-      5, 10, 20, 30, 50
+      10, 20, 30, 50, 100
     ];
     this._ratings = [
       { label: '0', value: 0 },
