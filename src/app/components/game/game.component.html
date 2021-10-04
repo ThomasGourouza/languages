@@ -1,4 +1,3 @@
-
 <p-toast></p-toast>
 
 <p-accordion [multiple]="true">
@@ -30,6 +29,13 @@
                             <br><br>
                             <p-listbox [options]="numbersOfRounds" formControlName="numberOfRounds">
                             </p-listbox>
+                        </div>
+                        <div class="col">
+                            Version
+                            <br><br>
+                            <span class=" d-flex justify-content-center">
+                                <p-checkbox formControlName="version" [binary]="true"></p-checkbox>
+                            </span>
                         </div>
                         <div class="col">
                             Revision
@@ -86,7 +92,7 @@
                             <div class="form-group">
                                 <label for="translation">Translation</label>
                                 <p-listbox
-                                    [options]="dictionaryCategoryLimited | select_translation: numberOfOptions : randomWord | map: 'translation'"
+                                    [options]="dictionaryCategoryLimited | select_translation: numberOfOptions : randomWord | map: version ? 'translation' : 'german'"
                                     formControlName="translation">
                                 </p-listbox>
                             </div>
@@ -140,9 +146,16 @@
                 <div *ngIf="!!randomWord && submited && (numberOfRounds > total)" class="d-flex justify-content-center"
                     [ngClass]="{'green': isCorrect, 'red': !isCorrect}">
                     <br>
-                    <p>
-                        {{ randomWord.german }} = {{ randomWord.translation }}
-                    </p>
+                    <div *ngIf="version; else theme">
+                        <p>
+                            {{ randomWord.german }} = {{ randomWord.translation }}
+                        </p>
+                    </div>
+                    <ng-template #theme>
+                        <p>
+                            {{ randomWord.translation }} = {{ randomWord.german }}
+                        </p>
+                    </ng-template>
                 </div>
             </p-card>
         </div>

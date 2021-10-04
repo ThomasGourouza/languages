@@ -17,6 +17,7 @@ export class GameService {
   private _numberOfOptions: number;
   private _numberOfRounds: number;
   private _revision: boolean;
+  private _version: boolean;
 
   constructor(
     private commonService: CommonService,
@@ -31,6 +32,7 @@ export class GameService {
     this._numberOfOptions = 5;
     this._numberOfRounds = 10;
     this._revision = false;
+    this._version = true;
   }
 
   public get start$(): Observable<boolean> {
@@ -91,6 +93,14 @@ export class GameService {
 
   public set revision(revision: boolean) {
     this._revision = revision;
+  }
+
+  public get version(): boolean {
+    return this._version;
+  }
+
+  public set version(version: boolean) {
+    this._version = version;
   }
 
   public limitError(): void {

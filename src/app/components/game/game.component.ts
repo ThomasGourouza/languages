@@ -45,6 +45,7 @@ export class GameComponent implements OnInit {
   private numberOfWords!: number;
   public numberOfOptions!: number;
   public numberOfRounds!: number;
+  public version!: boolean;
   public revision!: boolean;
 
   constructor(
@@ -82,6 +83,7 @@ export class GameComponent implements OnInit {
       this.gameService.numberOfOptions = values.numberOfOptions;
       this.gameService.numberOfRounds = values.numberOfRounds;
       this.gameService.revision = values.revision;
+      this.gameService.version = values.version;
     });
   }
 
@@ -98,12 +100,14 @@ export class GameComponent implements OnInit {
     this.numberOfOptions = this.gameService.numberOfOptions;
     this.numberOfRounds = this.gameService.numberOfRounds;
     this.revision = this.gameService.revision;
+    this.version = this.gameService.version;
     this.settingsForm = new FormGroup({
       categories: new FormControl(this.categoriesSelected, Validators.required),
       numberOfWords: new FormControl(this.numberOfWords, Validators.required),
       numberOfOptions: new FormControl(this.numberOfOptions, Validators.required),
       numberOfRounds: new FormControl(this.numberOfRounds, Validators.required),
-      revision: new FormControl(this.revision)
+      revision: new FormControl(this.revision),
+      version: new FormControl(this.version),
     });
   }
 
@@ -112,15 +116,18 @@ export class GameComponent implements OnInit {
   }
 
   public onSettingsSubmit(): void {
+    this.submited = false;
     const categoriesControl = this.settingsForm.get('categories');
     const numberOfWordsControl = this.settingsForm.get('numberOfWords');
     const numberOfOptionsControl = this.settingsForm.get('numberOfOptions');
     const numberOfRoundsControl = this.settingsForm.get('numberOfRounds');
     const revisionControl = this.settingsForm.get('revision');
+    const versionControl = this.settingsForm.get('version');
     this.categoriesSelected = categoriesControl?.value;
     this.numberOfWords = +numberOfWordsControl?.value;
     this.numberOfOptions = +numberOfOptionsControl?.value;
     this.numberOfRounds = +numberOfRoundsControl?.value;
+    this.version = versionControl?.value;
 
     this.wordsForGame = this.words.filter((word) =>
       this.categoriesSelected.includes(word.category)
@@ -136,6 +143,7 @@ export class GameComponent implements OnInit {
       numberOfOptionsControl?.disable();
       numberOfRoundsControl?.disable();
       revisionControl?.disable();
+      versionControl?.disable();
       this.gameService.setStart$(true);
       this.revisionSelected = revisionControl?.value;
       this.revision = this.revisionSelected;
@@ -149,8 +157,9 @@ export class GameComponent implements OnInit {
   public onGameSubmit(): void {
     this.submited = true;
     this.isCorrect = false;
-    const translation = this.gameForm.value.translation;
-    if (this.randomWord.translation === translation) {
+    const answer = this.gameForm.value.translation;
+    const rightAnswer = this.version ? this.randomWord.translation : this.randomWord.german;
+    if (rightAnswer === answer) {
       this.points++;
       this.isCorrect = true;
     }
@@ -182,12 +191,14 @@ export class GameComponent implements OnInit {
 
   public onStop(): void {
     this.initResult();
+    this.submited = false;
     this.gameService.setStart$(false);
     this.settingsForm.get('categories')?.enable();
     this.settingsForm.get('numberOfWords')?.enable();
     this.settingsForm.get('numberOfOptions')?.enable();
     this.settingsForm.get('numberOfRounds')?.enable();
     this.settingsForm.get('revision')?.enable();
+    this.settingsForm.get('version')?.enable();
   }
 
   private initResult(): void {
@@ -233,8 +244,7 @@ export class GameComponent implements OnInit {
       this.randomWord = this.dictionaryCategoryLimited[index];
     } while (this.gameService.isWordIncluded(this.randomWord, this.randomWordsMemory));
     this.randomWordsMemory.push(this.randomWord);
-    // TODO: german -> french or french -> german
-    this.gameForm.controls['german'].setValue(this.randomWord.german);
+    this.gameForm.controls['german'].setValue(this.version ? this.randomWord.german : this.randomWord.translation);
   }
 
 }
