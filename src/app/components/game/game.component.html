@@ -48,7 +48,8 @@
                     <br>
                     <div class="d-flex justify-content-center">
                         <button style="width: 25%;" pButton pRipple label="Start" icon="pi pi-play" type="submit"
-                            [disabled]="settingsForm.invalid || start" class="p-button-primary p-button-outlined form-control"></button>
+                            [disabled]="settingsForm.invalid || start"
+                            class="p-button-primary p-button-outlined form-control"></button>
                         <br>
                     </div>
                 </form>
@@ -78,65 +79,81 @@
         </div>
     </p-accordionTab>
     <p-accordionTab header="Game" [selected]="start && !revision" [disabled]="!start || revision">
-        <div class="d-flex justify-content-center">
-            <p-card *ngIf="numberOfRounds > total">
-                <form (keyup.enter)="onGameSubmit()" (ngSubmit)="onGameSubmit()" [formGroup]="gameForm"
-                    class="form-group">
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <label for="german">German</label>
-                                <input type="text" class="form-control" id="german" formControlName="german" readonly />
+        <div class="row">
+            <div class="d-flex justify-content-center">
+                <div class="col-6">
+                    <p-card *ngIf="numberOfRounds > total">
+                        <form (keyup.enter)="onGameSubmit()" (ngSubmit)="onGameSubmit()" [formGroup]="gameForm"
+                            class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="german">German</label>
+                                        <p-listbox id="german" [options]="getGerman()" [readonly]="true"
+                                            formControlName="german">
+                                        </p-listbox>
+                                    </div>
+                                </div>
+                                <div *ngIf="dictionaryCategoryLimited.length > 0" class="col">
+                                    <div class="form-group">
+                                        <label for="translation">Translation</label>
+                                        <p-listbox id="translation"
+                                            [options]="dictionaryCategoryLimited | select_translation: numberOfOptions : randomWord | map: version ? 'translation' : 'german'"
+                                            formControlName="translation">
+                                        </p-listbox>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div *ngIf="dictionaryCategoryLimited.length > 0" class="col">
-                            <div class="form-group">
-                                <label for="translation">Translation</label>
-                                <p-listbox
-                                    [options]="dictionaryCategoryLimited | select_translation: numberOfOptions : randomWord | map: version ? 'translation' : 'german'"
-                                    formControlName="translation">
-                                </p-listbox>
+                            <br>
+                            <div class="row">
+                                <div class="col d-flex justify-content-center d-flex align-items-end"
+                                    style="height: 60px;">
+                                    <span *ngIf="!submited; else continue">
+                                        <button pButton pRipple label="Check" icon="pi pi-check" type="submit"
+                                            [disabled]="!isCheckValid()"
+                                            class="p-button-success p-button-outlined form-control"></button>
+                                    </span>
+                                    <ng-template #continue>
+                                        <span>
+                                            <button pButton pRipple label="Continue" icon="pi pi-play"
+                                                (click)="onContinue()"
+                                                class="p-button-primary p-button-outlined form-control"></button>
+                                        </span>
+                                    </ng-template>
+                                </div>
+                                <div class="col d-flex justify-content-center d-flex align-items-end"
+                                    style="height: 60px;">
+                                    <span>
+                                        <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()"
+                                            [disabled]="!start"
+                                            class="p-button-danger p-button-outlined form-control"></button>
+                                    </span>
+                                </div>
                             </div>
+                        </form>
+                    </p-card>
+                    <p-card *ngIf="numberOfRounds === total">
+                        <div *ngIf="numberOfRounds === total">
+                            <p *ngFor="let result of summary">
+                                {{ result.word.german }} = {{ result.word.translation }} : {{ result.success ? 'Success'
+                                :
+                                'Mistake'}}
+                            </p>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <span *ngIf="!submited; else continue">
-                                <button pButton pRipple label="Check" icon="pi pi-check" type="submit"
-                                    [disabled]="!isCheckValid()" class="p-button-success p-button-outlined form-control"></button>
-                            </span>
-                            <ng-template #continue>
-                                <button pButton pRipple label="Continue" icon="pi pi-play" (click)="onContinue()"
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <button pButton pRipple label="Restart" icon="pi pi-replay" (click)="onRestart()"
                                     class="p-button-primary p-button-outlined form-control"></button>
-                            </ng-template>
+                            </div>
+                            <div class="col">
+                                <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()"
+                                    [disabled]="!start" class="p-button-danger p-button-outlined form-control"></button>
+                            </div>
                         </div>
-                        <div class="col">
-                            <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
-                                class="p-button-danger p-button-outlined form-control"></button>
-                        </div>
-                    </div>
-                </form>
-            </p-card>
-            <p-card *ngIf="numberOfRounds === total">
-                <div *ngIf="numberOfRounds === total">
-                    <p *ngFor="let result of summary">
-                        {{ result.word.german }} = {{ result.word.translation }} : {{ result.success ? 'Success' :
-                        'Mistake'}}
-                    </p>
+                    </p-card>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <button pButton pRipple label="Restart" icon="pi pi-replay" (click)="onRestart()"
-                            class="p-button-primary p-button-outlined form-control"></button>
-                    </div>
-                    <div class="col">
-                        <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()" [disabled]="!start"
-                            class="p-button-danger p-button-outlined form-control"></button>
-                    </div>
-                </div>
-            </p-card>
+            </div>
         </div>
         <br>
         <div class="d-flex justify-content-center">

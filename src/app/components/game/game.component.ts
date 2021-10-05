@@ -22,6 +22,8 @@ export interface Answer {
 })
 export class GameComponent implements OnInit, OnDestroy {
 
+  // TODO: new accordion for score and summary
+
   private firebaseSubscription: Subscription;
   private localSubscription: Subscription;
   public gameForm!: FormGroup;
@@ -223,6 +225,14 @@ export class GameComponent implements OnInit, OnDestroy {
       success: this.isCorrect
     });
     this.total++;
+    this.gameService.printScore({
+      version: this.version,
+      success: this.isCorrect,
+      german: this.randomWord.german,
+      translation: this.randomWord.translation,
+      points: this.points,
+      total: this.total
+    });
     this.gameService.manageWordInDB(this.randomWord, this.isCorrect);
   }
 
@@ -315,6 +325,10 @@ export class GameComponent implements OnInit, OnDestroy {
         this.words = localWords;
       });
     }
+  }
+
+  public getGerman(): Array<string> {
+    return [this.gameForm.controls['german'].value];
   }
 
 }

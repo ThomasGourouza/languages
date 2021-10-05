@@ -4,6 +4,14 @@ import { Subject, Observable } from 'rxjs';
 import { Word } from '../models/word';
 import { CommonService } from './common.service';
 import { DictionaryService } from './dictionary.service';
+export interface Score {
+  version: boolean;
+  success: boolean;
+  german: string;
+  translation: string;
+  points: number;
+  total: number;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -128,6 +136,14 @@ export class GameService {
         isCorrect
       );
     }
+  }
+
+  public printScore(score: Score): void {
+    const solution = score.version ? score.german + ' = ' + score.translation : score.translation + ' = ' + score.german;
+    const sc = score.points + '/' + score.total;
+    const sev = score.success ? 'success' : 'error';
+    const sum = score.success ? 'Great! ' : 'Not quite... ';
+    this.messageService.add({ severity: sev, summary: sum + sc, detail: solution, life: 3000 });
   }
 
 }
