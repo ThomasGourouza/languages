@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ConfirmationService } from 'primeng/api';
 import { Word } from 'src/app/models/word';
@@ -21,7 +21,7 @@ export interface FormFilter {
   selector: 'app-dictionary',
   templateUrl: './dictionary.component.html'
 })
-export class DictionaryComponent implements OnInit {
+export class DictionaryComponent implements OnInit, OnDestroy {
 
   private firebaseSubscription: Subscription;
   private localSubscription: Subscription;
@@ -54,7 +54,7 @@ export class DictionaryComponent implements OnInit {
     this.localSubscription = new Subscription();
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.addWordService.setWordDialog$(false);
     this.addWordService.setSubmitted$(false);
     this.route.queryParams.subscribe(params => {
@@ -77,6 +77,11 @@ export class DictionaryComponent implements OnInit {
 
   public onModeChange(): void {
     this.commonService.setModeActive$(this.mode.activated);
+  }
+
+  ngOnDestroy(): void {
+    this.localSubscription.unsubscribe();
+    this.firebaseSubscription.unsubscribe();
   }
 
   public exportAsXLSX(): void {

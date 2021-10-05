@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Word } from 'src/app/models/word';
@@ -20,7 +20,7 @@ export interface Answer {
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
-export class GameComponent implements OnInit {
+export class GameComponent implements OnInit, OnDestroy {
 
   private firebaseSubscription: Subscription;
   private localSubscription: Subscription;
@@ -105,6 +105,11 @@ export class GameComponent implements OnInit {
         this.setControl('numberOfOptions', numberOfWords);
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    this.localSubscription.unsubscribe();
+    this.firebaseSubscription.unsubscribe();
   }
 
   private setControl(controlName: string, value: number): void {

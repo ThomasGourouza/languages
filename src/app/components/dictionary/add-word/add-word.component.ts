@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Word } from 'src/app/models/word';
 import { WordUpdate } from 'src/app/models/word-update';
@@ -11,7 +11,7 @@ import { SettingsService } from 'src/app/service/settings.service';
   selector: 'app-add-word',
   templateUrl: './add-word.component.html'
 })
-export class AddWordComponent implements OnInit {
+export class AddWordComponent implements OnInit, OnDestroy {
 
   private firebaseSubscription: Subscription;
   private localSubscription: Subscription;
@@ -43,6 +43,11 @@ export class AddWordComponent implements OnInit {
     this.addWordService.submitted$.subscribe((submitted) => {
       this.submitted = submitted;
     });
+  }
+
+  ngOnDestroy(): void {
+    this.localSubscription.unsubscribe();
+    this.firebaseSubscription.unsubscribe();
   }
 
   public hideDialog() {
