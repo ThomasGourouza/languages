@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { HomeComponent } from './home.component';
@@ -16,6 +17,7 @@ import { HomeComponent } from './home.component';
         ReactiveFormsModule,
         ButtonModule,
         InputTextModule,
+        CardModule,
         MultiSelectModule
     ],
     exports: [

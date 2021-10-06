@@ -75,7 +75,7 @@
     </p-accordion>
     <p-table [value]="wordsFiltered" [rows]="10" [paginator]="true"
         [globalFilterFields]="['german','translation','category','rating','numberOfViews']" responsiveLayout="scroll"
-        [rowHover]="true" dataKey="id" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowHover]="true" dataKey="id" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} words"
         [rowsPerPageOptions]="[5,10,15,20,50,100]" [showCurrentPageReport]="true">
         <ng-template pTemplate="header">
             <tr>

@@ -208,4 +208,6 @@ deutlich = distinctly
 
 der Betreuer = the supervisor
 
+Vielen Dank fürs bescheid geben  = Thank you for letting me know
+
 Tt74159638520

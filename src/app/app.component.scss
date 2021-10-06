@@ -1,3 +1,11 @@
 .navigation {
-    background-color: white;
+  background-color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+  width: 100%;
 }
