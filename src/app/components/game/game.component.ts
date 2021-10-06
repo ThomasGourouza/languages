@@ -17,12 +17,9 @@ export interface Answer {
 
 @Component({
   selector: 'app-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss']
+  templateUrl: './game.component.html'
 })
 export class GameComponent implements OnInit, OnDestroy {
-
-  // TODO: new accordion for score and summary
 
   private firebaseSubscription: Subscription;
   private localSubscription: Subscription;
@@ -220,10 +217,6 @@ export class GameComponent implements OnInit, OnDestroy {
       this.points++;
       this.isCorrect = true;
     }
-    this.summary.push({
-      word: this.randomWord,
-      success: this.isCorrect
-    });
     this.total++;
     this.gameService.printScore({
       version: this.version,
@@ -232,6 +225,15 @@ export class GameComponent implements OnInit, OnDestroy {
       translation: this.randomWord.translation,
       points: this.points,
       total: this.total
+    });
+    const summaryWord = {...this.randomWord};
+    summaryWord.numberOfViews++;
+    if (this.isCorrect) {
+      summaryWord.numberOfSuccess++;
+    }
+    this.summary.push({
+      word: summaryWord,
+      success: this.isCorrect
     });
     this.gameService.manageWordInDB(this.randomWord, this.isCorrect);
   }

@@ -12,6 +12,7 @@ import { GameComponent } from './game.component';
 import { MapPipe } from './pipes/map.pipe';
 import { SelectTranslationPipe } from './pipes/select-translation.pipe';
 import { ToastModule } from 'primeng/toast';
+import { ResultModule } from './result/result.component.module';
 
 @NgModule({
     declarations: [
@@ -26,13 +27,14 @@ import { ToastModule } from 'primeng/toast';
     imports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         ButtonModule,
         AccordionModule,
-        ReactiveFormsModule,
         CheckboxModule,
         CardModule,
         ListboxModule,
         ToastModule,
+        ResultModule
     ],
     exports: [
         GameComponent

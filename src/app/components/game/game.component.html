@@ -27,14 +27,14 @@
                         <div class="col">
                             Version
                             <br><br>
-                            <span class=" d-flex justify-content-center">
+                            <span class="d-flex justify-content-center">
                                 <p-checkbox formControlName="version" [binary]="true"></p-checkbox>
                             </span>
                         </div>
                         <div class="col">
                             Revision
                             <br><br>
-                            <span class=" d-flex justify-content-center">
+                            <span class="d-flex justify-content-center">
                                 <p-checkbox formControlName="revision" [binary]="true"></p-checkbox>
                             </span>
                         </div>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="col">
                         <button pButton pRipple label="Ready" icon="pi pi-play" (click)="onReady()"
-                            class="p-button-success p-button-outlined form-control"></button>
+                            class="p-button-primary p-button-outlined form-control"></button>
                     </div>
                 </div>
             </p-card>
@@ -89,7 +89,7 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group">
-                                        <label for="german">German</label>
+                                        <label for="german">{{ version ? 'German' : 'Translation' }}</label>
                                         <p-listbox id="german" [options]="getGerman()" [readonly]="true"
                                             formControlName="german">
                                         </p-listbox>
@@ -97,7 +97,7 @@
                                 </div>
                                 <div *ngIf="dictionaryCategoryLimited.length > 0" class="col">
                                     <div class="form-group">
-                                        <label for="translation">Translation</label>
+                                        <label for="translation">{{ version ? 'Translation' : 'German' }}</label>
                                         <p-listbox id="translation"
                                             [options]="dictionaryCategoryLimited | select_translation: numberOfOptions : randomWord | map: version ? 'translation' : 'german'"
                                             [readonly]="submited" formControlName="translation">
@@ -137,65 +137,28 @@
             </div>
         </div>
     </p-accordionTab>
-    <p-accordionTab header="Result" [selected]="start && !revision && (numberOfRounds === total)"
-        [disabled]="!start || revision || summary.length === 0">
+    <p-accordionTab 
+        *ngIf="summary.length > 0" header="Result" 
+        [selected]="start && !revision && (numberOfRounds === total)"
+        [disabled]="!start || summary.length === 0">
         <div class="row">
             <div class="d-flex justify-content-center">
-                <div class="col-6">
-                    <p-card>
-                        <div>
-                            <p *ngFor="let result of summary">
-                                {{ result.word.german }} = {{ result.word.translation }} : {{ result.success ? 'Success' : 'Mistake'}}
-                            </p>
-                        </div>
-                        <br>
-                        <div *ngIf="numberOfRounds === total" class="row">
-                            <div class="col d-flex justify-content-center d-flex align-items-end"
-                                style="height: 60px;">
-                                <span>
-                                    <button pButton pRipple label="Stop" icon="pi pi-ban" (click)="onStop()"
-                                        [disabled]="!start"
-                                        class="p-button-danger p-button-outlined form-control"></button>
-                                </span>
-                            </div>
-                            <div class="col d-flex justify-content-center d-flex align-items-end"
-                                style="height: 60px;">
-                                <span>
-                                    <button pButton pRipple label="Restart" icon="pi pi-replay" (click)="onRestart()"
-                                        class="p-button-primary p-button-outlined form-control"></button>
-                                </span>
-                            </div>
-                        </div>
-                    </p-card>
+                <div class="col-9">
+                    <app-result 
+                        (stopEmitter)="onStop()" 
+                        (restartEmitter)="onRestart()"
+                        [summary]="summary" 
+                        [numberOfRounds]="numberOfRounds" 
+                        [total]="total" 
+                        [start]="start"
+                        [version]="version"
+                    ></app-result>
                 </div>
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="d-flex justify-content-center">
-                <div class="col-6">
-                    <p-card>
-                        <p class="score d-flex justify-content-center">
-                            {{ points }} / {{ total }}
-                        </p>
-                        <div *ngIf="!!randomWord && submited && (numberOfRounds > total)" class="d-flex justify-content-center"
-                            [ngClass]="{'green': isCorrect, 'red': !isCorrect}">
-                            <br>
-                            <div *ngIf="version; else theme">
-                                <p>
-                                    {{ randomWord.german }} = {{ randomWord.translation }}
-                                </p>
-                            </div>
-                            <ng-template #theme>
-                                <p>
-                                    {{ randomWord.translation }} = {{ randomWord.german }}
-                                </p>
-                            </ng-template>
-                        </div>
-                    </p-card>
-                </div>
-            </div>
-        </div>
+    </p-accordionTab>
+    <p-accordionTab *ngIf="summary.length === 0" header="Result" [disabled]="true">
     </p-accordionTab>
 </p-accordion>
 <br>
