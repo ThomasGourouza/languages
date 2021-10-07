@@ -57,20 +57,19 @@
         </div>
     </p-accordionTab>
     <p-accordionTab header="Revision" [selected]="start && revision" [disabled]="!start || !revision">
-        <div class="row">
+        <div *ngIf="start && revision" class="row">
             <div class="d-flex justify-content-center">
                 <div class="col-9">
                     <app-revision 
                         (stopEmitter)="onStop()" 
                         (readyEmitter)="onReady()"
-                        [start]="start"
                         [version]="version"
                         [dictionaryCategoryLimited]="dictionaryCategoryLimited"
                     ></app-revision>
                 </div>
             </div>
+            <br>
         </div>
-        <br>
     </p-accordionTab>
     <p-accordionTab header="Game" [selected]="start && !revision && (numberOfRounds > total)"
         [disabled]="!start || revision || (numberOfRounds <= total)">
