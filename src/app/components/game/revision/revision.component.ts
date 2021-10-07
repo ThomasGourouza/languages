@@ -31,8 +31,6 @@ export class RevisionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.version);
-    
     if (this.version) {
       this.cols.push(
         { field: 'german', header: 'German' },
