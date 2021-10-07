@@ -12,6 +12,7 @@ import { GameComponent } from './game.component';
 import { MapPipe } from './pipes/map.pipe';
 import { SelectTranslationPipe } from './pipes/select-translation.pipe';
 import { ToastModule } from 'primeng/toast';
+import { RevisionModule } from './revision/revision.component.module';
 import { ResultModule } from './result/result.component.module';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { ResultModule } from './result/result.component.module';
         CardModule,
         ListboxModule,
         ToastModule,
+        RevisionModule,
         ResultModule
     ],
     exports: [

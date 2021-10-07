@@ -1,6 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ResultComponent } from './result.component';
+import { RevisionComponent } from './revision.component';
 import { RatingModule } from 'primeng/rating';
 import { TableModule } from 'primeng/table';
 import { ProgressBarModule } from 'primeng/progressbar';
@@ -12,7 +12,7 @@ import { SettingsService } from 'src/app/service/settings.service';
 
 @NgModule({
     declarations: [
-        ResultComponent
+        RevisionComponent
     ],
     imports: [
         CommonModule,
@@ -29,10 +29,10 @@ import { SettingsService } from 'src/app/service/settings.service';
         CommonService
     ],
     exports: [
-        ResultComponent
+        RevisionComponent
     ],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA
     ]
 })
-export class ResultModule { }
+export class RevisionModule { }
