@@ -9,13 +9,13 @@
                         class="p-button-success p-button-outlined form-control" (click)="exportAsXLSX()"></button>
                 </div>
                 <div class="col" *ngIf="activated">
-                    <button pButton pRipple label="New" icon="pi pi-plus"
+                    <button *ngIf="isFirebase()" pButton pRipple label="New" icon="pi pi-plus"
                         class="p-button-primary p-button-outlined form-control" (click)="openNew()"></button>
                 </div>
             </div>
         </ng-template>
         <ng-template pTemplate="right">
-            <div class="col">
+            <div *ngIf="isFirebase()" class="col">
                 <p-selectButton [options]="modes" [(ngModel)]="mode" (ngModelChange)="onModeChange()"
                     optionLabel="icon">
                     <ng-template let-item>
@@ -54,7 +54,7 @@
                                 </span>
                                 &nbsp;
                             </td>
-                            <td>
+                            <td *ngIf="isFirebase()">
                                 <span>
                                     <p-multiSelect defaultLabel="Ratings" display="chip" [options]="ratings"
                                         formControlName="ratings" optionLabel="label" optionValue="value"></p-multiSelect>
@@ -88,13 +88,13 @@
                 <th pSortableColumn="category">
                     Category <p-sortIcon field="category"></p-sortIcon>
                 </th>
-                <th *ngIf="activated" pSortableColumn="rating">
+                <th *ngIf="activated && isFirebase()" pSortableColumn="rating">
                     Rating <p-sortIcon field="rating"></p-sortIcon>
                 </th>
-                <th pSortableColumn="numberOfViews">
+                <th *ngIf="isFirebase()" pSortableColumn="numberOfViews">
                     View <p-sortIcon field="numberOfViews"></p-sortIcon>
                 </th>
-                <th></th>
+                <th *ngIf="isFirebase()"></th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-word>
@@ -102,13 +102,13 @@
                 <td>{{word.german}}</td>
                 <td>{{word.translation}}</td>
                 <td>{{word.category | label}}</td>
-                <td *ngIf="activated">
+                <td *ngIf="activated && isFirebase()">
                     <p-rating [ngModel]="word.rating" [readonly]="true" [cancel]="false"></p-rating>
                 </td>
-                <td>
+                <td *ngIf="isFirebase()">
                     <p-progressBar [value]="word.numberOfViews"></p-progressBar>
                 </td>
-                <td>
+                <td *ngIf="isFirebase()">
                     <span *ngIf="activated">
                         <button pButton pRipple icon="pi pi-pencil"
                             class="p-button-rounded p-button-primary p-button-outlined form-control"

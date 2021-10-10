@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonService, Item } from 'src/app/service/common.service';
+import { SettingsService } from 'src/app/service/settings.service';
 export interface FormQueryParam {
   german?: string;
   translation?: string;
@@ -21,11 +22,16 @@ export class HomeComponent {
 
   constructor(
     private router: Router,
-    private commonService: CommonService
+    private commonService: CommonService,
+    private settingsService: SettingsService
   ) {
     this.initFormFilter();
     this.categories = this.commonService.categories;
     this.ratings = this.commonService.ratings;
+  }
+
+  public isFirebase(): boolean {
+    return this.settingsService.firebase;
   }
 
   private initFormFilter(): void {

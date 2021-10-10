@@ -14,7 +14,7 @@
                         <p-multiSelect defaultLabel="Categories" display="chip" [options]="categories"
                             formControlName="categories" optionLabel="label" optionValue="value"></p-multiSelect>
                     </div>
-                    <div class="col">
+                    <div *ngIf="isFirebase()" class="col">
                         <p-multiSelect defaultLabel="Ratings" display="chip" [options]="ratings" formControlName="ratings"
                             optionLabel="label" optionValue="value"></p-multiSelect>
                     </div>

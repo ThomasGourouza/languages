@@ -1,34 +1,36 @@
 <p-card>
-    <p-table [columns]="cols" [value]="dictionaryCategoryLimited" [paginator]="true" [rows]="10"
-        responsiveLayout="scroll" [rowsPerPageOptions]="numbersOfRounds">
-        <ng-template pTemplate="header" let-columns>
-            <tr>
-                <th *ngFor="let col of columns">
-                    {{ col.header }}
-                </th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-word let-columns="columns">
-            <tr>
-                <td *ngFor="let col of columns">
-                    <div [ngSwitch]="col.field">
-                        <div *ngSwitchCase="'rating'">
-                            <p-rating [ngModel]="getRating(word)" [readonly]="true" [cancel]="false"></p-rating>
+    <div class="card">
+        <p-table [columns]="cols" [value]="dictionaryCategoryLimited" [paginator]="true" [rows]="10"
+            responsiveLayout="scroll" [rowsPerPageOptions]="numbersOfRounds">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th *ngFor="let col of columns">
+                        {{ col.header }}
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-word let-columns="columns">
+                <tr>
+                    <td *ngFor="let col of columns">
+                        <div [ngSwitch]="col.field">
+                            <div *ngSwitchCase="'rating'">
+                                <p-rating [ngModel]="getRating(word)" [readonly]="true" [cancel]="false"></p-rating>
+                            </div>
+                            <div *ngSwitchCase="'category'">
+                                {{ getCategoryLabel(word[col.field]) }}
+                            </div>
+                            <div *ngSwitchCase="'numberOfViews'">
+                                <p-progressBar [value]="word[col.field]"></p-progressBar>
+                            </div>
+                            <div *ngSwitchDefault>
+                                {{ word[col.field] }}
+                            </div>
                         </div>
-                        <div *ngSwitchCase="'category'">
-                            {{ getCategoryLabel(word[col.field]) }}
-                        </div>
-                        <div *ngSwitchCase="'numberOfViews'">
-                            <p-progressBar [value]="word[col.field]"></p-progressBar>
-                        </div>
-                        <div *ngSwitchDefault>
-                            {{ word[col.field] }}
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </ng-template>
-    </p-table>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
     <br>
     <div class="row">
         <div class="col d-flex justify-content-center d-flex align-items-end" style="height: 60px;">

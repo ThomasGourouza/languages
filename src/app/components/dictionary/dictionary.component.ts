@@ -75,6 +75,10 @@ export class DictionaryComponent implements OnInit, OnDestroy {
     });
   }
 
+  public isFirebase(): boolean {
+    return this.settingsService.firebase;
+  }
+
   public onModeChange(): void {
     this.commonService.setModeActive$(this.mode.activated);
   }
