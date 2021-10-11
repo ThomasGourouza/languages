@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 import { MessageService } from 'primeng/api';
+export interface Option {
+  label: string;
+  value: boolean | string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -7,11 +11,51 @@ import { MessageService } from 'primeng/api';
 export class SettingsService {
 
   private _firebase: boolean;
+  private _language: string;
+  private _firebaseOptions: Array<Option>;
+  private _languageOptions: Array<Option>;
 
   constructor(
     private messageService: MessageService
   ) {
     this._firebase = true;
+    this._language = 'german';
+    this._firebaseOptions = [
+      {
+        label: 'Local',
+        value: false
+      },
+      {
+        label: 'Firebase',
+        value: true
+      }
+    ];
+    this._languageOptions = [
+      {
+        label: 'German',
+        value: 'german'
+      },
+      {
+        label: 'Russian',
+        value: 'russian'
+      },
+      {
+        label: 'Italian',
+        value: 'italian'
+      },
+      {
+        label: 'Spanish',
+        value: 'spanish'
+      },
+      {
+        label: 'Japanese',
+        value: 'japanese'
+      },
+      {
+        label: 'Chinese',
+        value: 'chinese'
+      }
+    ];
   }
 
   get firebase(): boolean {
@@ -22,8 +66,29 @@ export class SettingsService {
     this._firebase = firebase;
   }
 
-  public info(): void {
+  get language(): string {
+    return this._language;
+  }
+
+  set language(language: string) {
+    this._language = language;
+  }
+
+  get firebaseOptions(): Array<Option> {
+    return this._firebaseOptions;
+  }
+
+  get languageOptions(): Array<Option> {
+    return this._languageOptions;
+  }
+
+  public infoFirebase(): void {
     const message = 'Connected to ' + (this._firebase ? 'Firebase.' : 'Local.');
+    this.messageService.add({ severity: 'info', summary: 'Info', detail: message, life: 3000 });
+  }
+
+  public infoLanguage(): void {
+    const message = this._languageOptions.find((lang) => lang.value === this._language)?.label + ' selected.';
     this.messageService.add({ severity: 'info', summary: 'Info', detail: message, life: 3000 });
   }
 

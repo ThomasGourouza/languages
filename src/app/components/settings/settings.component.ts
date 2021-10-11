@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { SettingsService } from 'src/app/service/settings.service';
-export interface Option {
-  label: string;
-  value: boolean;
-}
+import { SettingsService, Option } from 'src/app/service/settings.service';
 
 @Component({
   selector: 'app-settings',
@@ -12,29 +8,34 @@ export interface Option {
 })
 export class SettingsComponent implements OnInit {
 
+  public languageForm!: FormGroup;
   public settingsForm!: FormGroup;
-  public options: Array<Option>;
+  public firebaseOptions: Array<Option>;
+  public languageOptions: Array<Option>;
 
   constructor(
     private settingsService: SettingsService
   ) {
-    this.options = [
-      {
-        label: 'Local',
-        value: false
-      },
-      {
-        label: 'Firebase',
-        value: true
-      }
-    ];
+    this.firebaseOptions = this.settingsService.firebaseOptions;
+    this.languageOptions = this.settingsService.languageOptions;
   }
 
   ngOnInit(): void {
     this.initGameForm();
+    this.initLanguageForm();
     this.settingsForm.controls['firebase'].valueChanges.subscribe((firebase) => {
       this.settingsService.firebase = firebase;
-      this.settingsService.info();
+      this.settingsService.infoFirebase();
+    });
+    this.languageForm.controls['language'].valueChanges.subscribe((language) => {
+      this.settingsService.language = language;
+      this.settingsService.infoLanguage();
+    });
+  }
+
+  private initLanguageForm(): void {
+    this.languageForm = new FormGroup({
+      language: new FormControl(this.settingsService.language, Validators.required)
     });
   }
 

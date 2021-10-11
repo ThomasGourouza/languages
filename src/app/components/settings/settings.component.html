@@ -5,20 +5,37 @@
         <h5 style="color: #495057;">Settings</h5>
     </p-toolbar>
     <br>
-    <div class="d-flex justify-content-center">
-        <p-card>
-            <div style="width: 200px;"></div>
-            <form [formGroup]="settingsForm" class="form-group">
-                <div class="row">
-                    <div class="form-group">
-                        <label for="firebase">Connection:</label>
-                        <p-listbox [options]="options" [optionLabel]="'label'" [optionValue]="'value'"
-                            formControlName="firebase">
-                        </p-listbox>
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <p-card>
+                <div style="width: 300px;"></div>
+                <form [formGroup]="languageForm" class="form-group">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="firebase">Language :</label>
+                            <p-listbox [options]="languageOptions" [optionLabel]="'label'" [optionValue]="'value'"
+                                formControlName="language">
+                            </p-listbox>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </p-card>
+                </form>
+            </p-card>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <p-card>
+                <div style="width: 200px;"></div>
+                <form [formGroup]="settingsForm" class="form-group">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="firebase">Connection :</label>
+                            <p-listbox [options]="firebaseOptions" [optionLabel]="'label'" [optionValue]="'value'"
+                                formControlName="firebase">
+                            </p-listbox>
+                        </div>
+                    </div>
+                </form>
+            </p-card>
+        </div>
     </div>
     <br>
     <br>
