@@ -5,6 +5,7 @@ import { MessageService } from 'primeng/api';
 import { from, Observable } from 'rxjs';
 import { Word } from '../models/word';
 import { WordUpdate } from '../models/word-update';
+import { SettingsService } from './settings.service';
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +23,12 @@ export class DictionaryService {
   constructor(
     private afs: AngularFirestore,
     private http: HttpClient,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private settingsService: SettingsService
   ) {
+    this.settingsService.language$.subscribe((lang) => {
+      console.log(lang);
+    });
     this._wordsCollection = this.afs.collection(this.GERMAN_COLLECTION);
     this._words = this._wordsCollection.valueChanges({ idField: 'id' });
     this._localWords = from(this.getData());

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { Observable, Subject } from 'rxjs';
 export interface Option {
   label: string;
   value: boolean | string;
@@ -12,12 +13,14 @@ export class SettingsService {
 
   private _firebase: boolean;
   private _language: string;
+  private _language$ = new Subject<string>();
   private _firebaseOptions: Array<Option>;
   private _languageOptions: Array<Option>;
 
   constructor(
     private messageService: MessageService
   ) {
+    this._language$.next('german');
     this._firebase = true;
     this._language = 'german';
     this._firebaseOptions = [
@@ -80,6 +83,14 @@ export class SettingsService {
 
   get languageOptions(): Array<Option> {
     return this._languageOptions;
+  }
+
+  get language$(): Observable<string> {
+    return this._language$;
+  }
+
+  setLanguage$(lang: string) {
+    this._language$.next(lang);
   }
 
   public infoFirebase(): void {

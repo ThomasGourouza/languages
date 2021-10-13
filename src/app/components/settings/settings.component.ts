@@ -29,6 +29,7 @@ export class SettingsComponent implements OnInit {
     });
     this.languageForm.controls['language'].valueChanges.subscribe((language) => {
       this.settingsService.language = language;
+      this.settingsService.setLanguage$(language);
       this.settingsService.infoLanguage();
     });
   }
