@@ -70,8 +70,8 @@ export class DictionaryComponent implements OnInit, OnDestroy {
 
   private loadWords(): void {
     this.wordSubscription = this.dictionaryService.words.subscribe((words) => {
-      this.words = this.dictionaryService.manageWord(words, this.mode.activated);
       this.firebase = this.settingsService.settingForm.firebase;
+      this.words = this.dictionaryService.manageWord(words, this.firebase ? this.mode.activated : true);
       this.filterFromForm();
     });
   }
