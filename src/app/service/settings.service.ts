@@ -14,6 +14,7 @@ export class SettingsService {
   private _firebase: boolean;
   private _language: string;
   private _language$ = new Subject<string>();
+  private _firebase$ = new Subject<boolean>();
   private _firebaseOptions: Array<Option>;
   private _languageOptions: Array<Option>;
 
@@ -21,6 +22,7 @@ export class SettingsService {
     private messageService: MessageService
   ) {
     this._language$.next('german');
+    this._firebase$.next(false);
     this._firebase = true;
     this._language = 'german';
     this._firebaseOptions = [
@@ -91,6 +93,14 @@ export class SettingsService {
 
   setLanguage$(lang: string) {
     this._language$.next(lang);
+  }
+
+  get firebase$(): Observable<boolean> {
+    return this._firebase$;
+  }
+
+  setFirebase$(string: boolean) {
+    this._firebase$.next(string);
   }
 
   public infoFirebase(): void {

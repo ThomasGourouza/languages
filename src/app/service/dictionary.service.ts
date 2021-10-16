@@ -29,6 +29,9 @@ export class DictionaryService {
     this.settingsService.language$.subscribe((lang) => {
       console.log(lang);
     });
+    this.settingsService.firebase$.subscribe((firebase) => {
+      console.log(firebase);
+    });
     this._wordsCollection = this.afs.collection(this.GERMAN_COLLECTION);
     this._words = this._wordsCollection.valueChanges({ idField: 'id' });
     this._localWords = from(this.getData());
