@@ -31,7 +31,7 @@ export class HomeComponent {
   }
 
   public isFirebase(): boolean {
-    return this.settingsService.firebase;
+    return this.settingsService.settingForm.firebase;
   }
 
   private initFormFilter(): void {

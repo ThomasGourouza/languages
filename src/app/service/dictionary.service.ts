@@ -14,10 +14,9 @@ export class DictionaryService {
 
   private _wordsCollection!: AngularFirestoreCollection<Word>;
   private _words!: Observable<Array<Word>>;
-  private _localWords!: Observable<Array<Word>>;
 
-  private GERMAN_COLLECTION: string = 'russian';
-  private RUSSIAN_COLLECTION: string = 'russian';
+  private COLLECTION!: string;
+  private FIREBASE!: boolean;
   private DEACTIVATION_TIME: number = 7;
 
   constructor(
@@ -26,15 +25,25 @@ export class DictionaryService {
     private messageService: MessageService,
     private settingsService: SettingsService
   ) {
-    this.settingsService.language$.subscribe((lang) => {
-      console.log(lang);
+    this.COLLECTION = this.settingsService.languageInit;
+    this.FIREBASE = this.settingsService.firebaseInit;
+    this.settingsService.language$.subscribe((language) => {
+      this.COLLECTION = language;
+      this.loadWords();
     });
     this.settingsService.firebase$.subscribe((firebase) => {
-      console.log(firebase);
+      this.FIREBASE = firebase;
+      this.loadWords();
     });
-    this._wordsCollection = this.afs.collection(this.GERMAN_COLLECTION);
-    this._words = this._wordsCollection.valueChanges({ idField: 'id' });
-    this._localWords = from(this.getData());
+  }
+
+  private loadWords(): void {
+    if (this.FIREBASE) {
+      this._wordsCollection = this.afs.collection(this.COLLECTION);
+      this._words = this._wordsCollection.valueChanges({ idField: 'id' });
+    } else {
+      this._words = from(this.getData());
+    }
   }
 
   public async getData(): Promise<Array<Word>> {
@@ -45,16 +54,12 @@ export class DictionaryService {
     return this._words;
   }
 
-  get localWords(): Observable<Array<Word>> {
-    return this._localWords;
-  }
-
   public addWord(word: WordUpdate, wordExists: boolean): void {
     if (wordExists) {
       const detailMessage = 'Word ' + word.german + ' already exists';
       this.messageService.add({ severity: 'error', summary: 'Error', detail: detailMessage, life: 3000 });
     } else {
-      this.afs.collection(this.GERMAN_COLLECTION)
+      this.afs.collection(this.COLLECTION)
         .add(word).then(() => {
           this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word saved', life: 3000 });
         }).catch(() => {
@@ -64,7 +69,7 @@ export class DictionaryService {
   }
 
   public deleteWord(id: string, german: string, fromGame?: boolean): void {
-    this.afs.collection(this.GERMAN_COLLECTION).doc(id)
+    this.afs.collection(this.COLLECTION).doc(id)
       .delete().then(() => {
         const detailMessage = 'The word \"' + german + '\" has been deleted';
         const sev = !fromGame ? 'success' : 'info';
@@ -90,7 +95,7 @@ export class DictionaryService {
       numberOfSuccess: 0,
       deactivationDate: isActiveValue ? null : new Date()
     };
-    this.afs.collection(this.GERMAN_COLLECTION).doc(id)
+    this.afs.collection(this.COLLECTION).doc(id)
       .update(wordUpdate).then(() => {
         const detailMessage = 'The word \"' + german + '\" has been ' + (isActiveValue ? 'activated' : 'deactivated');
         this.messageService.add({ severity: 'info', summary: 'Info', detail: detailMessage, life: 3000 });
@@ -101,7 +106,7 @@ export class DictionaryService {
   }
 
   public update(id: string, wordUpdate: WordUpdate): void {
-    this.afs.collection(this.GERMAN_COLLECTION).doc(id)
+    this.afs.collection(this.COLLECTION).doc(id)
       .update(wordUpdate).then(() => {
         this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Word updated', life: 3000 });
       }).catch(() => {
@@ -114,7 +119,7 @@ export class DictionaryService {
       numberOfViews: view + 1,
       numberOfSuccess: isCorrect ? success + 1 : success
     };
-    this.afs.collection(this.GERMAN_COLLECTION).doc(id).update(wordUpdate);
+    this.afs.collection(this.COLLECTION).doc(id).update(wordUpdate);
   }
 
   public manageWord(words: Array<Word>, activated: boolean): Array<Word> {
@@ -144,7 +149,7 @@ export class DictionaryService {
               const wordUpdate: WordUpdate = {
                 numberOfViews: status
               };
-              this.afs.collection(this.GERMAN_COLLECTION).doc(word.id).update(wordUpdate);
+              this.afs.collection(this.COLLECTION).doc(word.id).update(wordUpdate);
               break;
             }
           }

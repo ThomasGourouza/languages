@@ -13,7 +13,7 @@ export class AddWordService {
 
   constructor() {}
 
-  public get wordDialog$(): Observable<boolean> {
+  get wordDialog$(): Observable<boolean> {
     return this._wordDialog$.asObservable();
   }
 
@@ -21,7 +21,7 @@ export class AddWordService {
     this._wordDialog$.next(wordDialog);
   }
 
-  public get submitted$(): Observable<boolean> {
+  get submitted$(): Observable<boolean> {
     return this._submitted$.asObservable();
   }
 
@@ -29,7 +29,7 @@ export class AddWordService {
     this._submitted$.next(submitted);
   }
 
-  public get word$(): Observable<Word> {
+  get word$(): Observable<Word> {
     return this._word$.asObservable();
   }
 

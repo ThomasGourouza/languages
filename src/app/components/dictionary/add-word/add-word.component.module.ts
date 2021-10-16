@@ -6,7 +6,6 @@ import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { AddWordService } from 'src/app/service/add-word.service';
-import { DictionaryService } from 'src/app/service/dictionary.service';
 import { AddWordComponent } from './add-word.component';
 
 @NgModule({
@@ -23,8 +22,7 @@ import { AddWordComponent } from './add-word.component';
         ButtonModule,
     ],
     providers: [
-        AddWordService,
-        DictionaryService
+        AddWordService
     ],
     exports: [
         AddWordComponent

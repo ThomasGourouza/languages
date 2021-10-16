@@ -54,7 +54,7 @@ export class ResultComponent implements OnInit {
       );
     }
     this.cols.push({ field: 'category', header: 'Category' });
-    if (this.settingsService.firebase) {
+    if (this.settingsService.settingForm.firebase) {
       this.cols.push(
         { field: 'rating', header: 'Rating' },
         { field: 'numberOfViews', header: 'Views' }

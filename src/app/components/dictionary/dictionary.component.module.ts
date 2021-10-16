@@ -12,7 +12,6 @@ import { ToastModule } from 'primeng/toast';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ConfirmationService } from 'primeng/api';
 import { TableModule } from 'primeng/table';
-import { DictionaryService } from 'src/app/service/dictionary.service';
 import { AddWordService } from 'src/app/service/add-word.service';
 import { AddWordModule } from './add-word/add-word.component.module';
 import { ProgressBarModule } from 'primeng/progressbar';
@@ -20,6 +19,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { AccordionModule } from 'primeng/accordion';
 import { ExcelService } from 'src/app/service/excel.service';
 import { CategoryLabelPipe } from './pipes/category-label.pipe';
+import { CommonService } from 'src/app/service/common.service';
 
 @NgModule({
     declarations: [
@@ -46,9 +46,9 @@ import { CategoryLabelPipe } from './pipes/category-label.pipe';
     ],
     providers: [
         ConfirmationService,
-        DictionaryService,
+        CommonService,
         AddWordService,
-        ExcelService
+        ExcelService,
     ],
     exports: [
         DictionaryComponent

@@ -4,79 +4,89 @@ import { Observable, Subject } from 'rxjs';
 export interface Option {
   label: string;
   value: boolean | string;
+  disabled: boolean;
+}
+export interface SettingForm {
+  language: string;
+  firebase: boolean;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class SettingsService {
+  private _languageInit: string = 'german';
+  private _firebaseInit: boolean = false;
 
-  private _firebase: boolean;
-  private _language: string;
   private _language$ = new Subject<string>();
   private _firebase$ = new Subject<boolean>();
+  private _settingForm: SettingForm;
   private _firebaseOptions: Array<Option>;
   private _languageOptions: Array<Option>;
 
   constructor(
     private messageService: MessageService
   ) {
-    this._language$.next('german');
-    this._firebase$.next(false);
-    this._firebase = true;
-    this._language = 'german';
+    this._settingForm = {
+      language: this._languageInit,
+      firebase: this._firebaseInit
+    };
     this._firebaseOptions = [
       {
         label: 'Local',
-        value: false
+        value: false,
+        disabled: false
       },
       {
         label: 'Firebase',
-        value: true
+        value: true,
+        disabled: false
       }
     ];
     this._languageOptions = [
       {
         label: 'German',
-        value: 'german'
+        value: 'german',
+        disabled: false
       },
       {
         label: 'Russian',
-        value: 'russian'
+        value: 'russian',
+        disabled: false
       },
       {
         label: 'Italian',
-        value: 'italian'
+        value: 'italian',
+        disabled: false
       },
       {
         label: 'Spanish',
-        value: 'spanish'
+        value: 'spanish',
+        disabled: false
       },
       {
         label: 'Japanese',
-        value: 'japanese'
+        value: 'japanese',
+        disabled: false
       },
       {
         label: 'Chinese',
-        value: 'chinese'
+        value: 'chinese',
+        disabled: false
       }
     ];
   }
 
-  get firebase(): boolean {
-    return this._firebase;
+  get firebaseInit(): boolean {
+    return this._firebaseInit;
   }
 
-  set firebase(firebase: boolean) {
-    this._firebase = firebase;
+  get languageInit(): string {
+    return this._languageInit;
   }
 
-  get language(): string {
-    return this._language;
-  }
-
-  set language(language: string) {
-    this._language = language;
+  get settingForm(): SettingForm {
+    return this._settingForm;
   }
 
   get firebaseOptions(): Array<Option> {
@@ -91,25 +101,34 @@ export class SettingsService {
     return this._language$;
   }
 
-  setLanguage$(lang: string) {
-    this._language$.next(lang);
+  public init$() {
+    this._language$.next(this._languageInit);
+    this._firebase$.next(this._firebaseInit);
+  }
+
+  public setLanguage$(language: string) {
+    this._language$.next(language);
+    this._settingForm.language = language;
+    this.infoLanguage(language);
   }
 
   get firebase$(): Observable<boolean> {
     return this._firebase$;
   }
 
-  setFirebase$(string: boolean) {
-    this._firebase$.next(string);
+  public setFirebase$(firebase: boolean) {
+    this._firebase$.next(firebase);
+    this._settingForm.firebase = firebase;
+    this.infoFirebase(firebase);
   }
 
-  public infoFirebase(): void {
-    const message = 'Connected to ' + (this._firebase ? 'Firebase.' : 'Local.');
+  private infoFirebase(firebase: boolean): void {
+    const message = 'Connected to ' + (firebase ? 'Firebase.' : 'Local.');
     this.messageService.add({ severity: 'info', summary: 'Info', detail: message, life: 3000 });
   }
 
-  public infoLanguage(): void {
-    const message = this._languageOptions.find((lang) => lang.value === this._language)?.label + ' selected.';
+  private infoLanguage(language: string): void {
+    const message = this._languageOptions.find((lang) => lang.value === language)?.label + ' selected.';
     this.messageService.add({ severity: 'info', summary: 'Info', detail: message, life: 3000 });
   }
 

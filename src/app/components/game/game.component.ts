@@ -5,7 +5,6 @@ import { Word } from 'src/app/models/word';
 import { CommonService, Item } from 'src/app/service/common.service';
 import { DictionaryService } from 'src/app/service/dictionary.service';
 import { GameService } from 'src/app/service/game.service';
-import { SettingsService } from 'src/app/service/settings.service';
 export interface Summary {
   word: Word;
   success: boolean;
@@ -21,8 +20,7 @@ export interface Answer {
 })
 export class GameComponent implements OnInit, OnDestroy {
 
-  private firebaseSubscription: Subscription;
-  private localSubscription: Subscription;
+  private wordSubscription: Subscription;
   public gameForm!: FormGroup;
   public isCorrect: boolean;
   public submited: boolean;
@@ -53,8 +51,7 @@ export class GameComponent implements OnInit, OnDestroy {
   constructor(
     private dictionaryService: DictionaryService,
     private commonService: CommonService,
-    private gameService: GameService,
-    private settingsService: SettingsService
+    private gameService: GameService
   ) {
     this.randomWordsMemory = [];
     this.revisionSelected = false;
@@ -65,8 +62,7 @@ export class GameComponent implements OnInit, OnDestroy {
     this.dictionaryCategoryLimited = [];
     this.summary = [];
     this.settingsSubmited = false;
-    this.firebaseSubscription = new Subscription();
-    this.localSubscription = new Subscription();
+    this.wordSubscription = new Subscription();
   }
 
   public ngOnInit(): void {
@@ -76,7 +72,9 @@ export class GameComponent implements OnInit, OnDestroy {
     this.numbersOfRounds = this.commonService.numbersOfRounds;
     this.initSettingsForm();
     this.initGameForm();
-    this.connection();
+    this.wordSubscription = this.dictionaryService.words.subscribe((words) => {
+      this.words = words;
+    });
     this.gameService.setStart$(false);
     this.gameService.start$.subscribe((start) => {
       this.start = start;
@@ -107,8 +105,7 @@ export class GameComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.localSubscription.unsubscribe();
-    this.firebaseSubscription.unsubscribe();
+    this.wordSubscription.unsubscribe();
   }
 
   private setControl(controlName: string, value: number): void {
@@ -313,20 +310,6 @@ export class GameComponent implements OnInit, OnDestroy {
     } while (this.gameService.isWordIncluded(this.randomWord, this.randomWordsMemory));
     this.randomWordsMemory.push(this.randomWord);
     this.gameForm.controls['german'].setValue(this.version ? this.randomWord.german : this.randomWord.translation);
-  }
-
-  private connection(): void {
-    if (this.settingsService.firebase) {
-      this.localSubscription.unsubscribe();
-      this.firebaseSubscription = this.dictionaryService.words.subscribe((words) => {
-        this.words = words;
-      });
-    } else {
-      this.firebaseSubscription.unsubscribe();
-      this.localSubscription = this.dictionaryService.localWords.subscribe((localWords) => {
-        this.words = localWords;
-      });
-    }
   }
 
   public getGerman(): Array<string> {

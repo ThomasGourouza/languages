@@ -4,11 +4,9 @@ import { RevisionComponent } from './revision.component';
 import { RatingModule } from 'primeng/rating';
 import { TableModule } from 'primeng/table';
 import { ProgressBarModule } from 'primeng/progressbar';
-import { CommonService } from 'src/app/service/common.service';
 import { CheckboxModule } from 'primeng/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
-import { SettingsService } from 'src/app/service/settings.service';
 
 @NgModule({
     declarations: [
@@ -23,10 +21,6 @@ import { SettingsService } from 'src/app/service/settings.service';
         CheckboxModule,
         ButtonModule,
         ProgressBarModule,
-    ],
-    providers: [
-        SettingsService,
-        CommonService
     ],
     exports: [
         RevisionComponent

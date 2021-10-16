@@ -7,8 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 import { AddWordService } from 'src/app/service/add-word.service';
 import { CommonService, Item, Mode } from 'src/app/service/common.service';
 import { ExcelService } from 'src/app/service/excel.service';
-import { SettingsService } from 'src/app/service/settings.service';
 import { Subscription } from 'rxjs';
+import { SettingsService } from 'src/app/service/settings.service';
 
 export interface FormFilter {
   german: string;
@@ -23,8 +23,7 @@ export interface FormFilter {
 })
 export class DictionaryComponent implements OnInit, OnDestroy {
 
-  private firebaseSubscription: Subscription;
-  private localSubscription: Subscription;
+  private wordSubscription: Subscription;
   private words!: Array<Word>;
   public wordsFiltered!: Array<Word>;
   public categories: Array<Item>;
@@ -33,25 +32,23 @@ export class DictionaryComponent implements OnInit, OnDestroy {
   public filterSelected: boolean;
   public modes: Array<Mode>;
   public mode: Mode;
-  public activated: boolean;
+  public firebase!: boolean;
 
   constructor(
     private dictionaryService: DictionaryService,
+    private settingsService: SettingsService,
     private confirmationService: ConfirmationService,
     private route: ActivatedRoute,
     private addWordService: AddWordService,
     private commonService: CommonService,
-    private excelService: ExcelService,
-    private settingsService: SettingsService
+    private excelService: ExcelService
   ) {
     this.categories = this.commonService.categories;
     this.ratings = this.commonService.ratings;
     this.modes = this.commonService.modes;
-    this.mode = this.modes[0];
-    this.activated = true;
+    this.mode = this.commonService.mode;
     this.filterSelected = false;
-    this.firebaseSubscription = new Subscription();
-    this.localSubscription = new Subscription();
+    this.wordSubscription = new Subscription();
   }
 
   ngOnInit(): void {
@@ -65,27 +62,27 @@ export class DictionaryComponent implements OnInit, OnDestroy {
       this.filterSelected = !!german || !!translation || !!categories || !!ratings;
       this.initFormFilter(german, translation, categories, ratings);
     });
-    this.commonService.activated$.subscribe((activated) => {
-      this.activated = activated;
-      this.connection();
-    });
-    this.connection();
+    this.loadWords();
     this.formFilter.valueChanges.subscribe((form: FormFilter) => {
       this.onFilter(form.german, form.translation, form.categories, form.ratings);
     });
   }
 
-  public isFirebase(): boolean {
-    return this.settingsService.firebase;
+  private loadWords(): void {
+    this.wordSubscription = this.dictionaryService.words.subscribe((words) => {
+      this.words = this.dictionaryService.manageWord(words, this.mode.activated);
+      this.firebase = this.settingsService.settingForm.firebase;
+      this.filterFromForm();
+    });
   }
 
   public onModeChange(): void {
-    this.commonService.setModeActive$(this.mode.activated);
+    this.commonService.mode = this.mode;
+    this.loadWords();
   }
 
   ngOnDestroy(): void {
-    this.localSubscription.unsubscribe();
-    this.firebaseSubscription.unsubscribe();
+    this.wordSubscription.unsubscribe();
   }
 
   public exportAsXLSX(): void {
@@ -169,25 +166,6 @@ export class DictionaryComponent implements OnInit, OnDestroy {
     this.formFilter.valueChanges.subscribe((form: FormFilter) => {
       this.onFilter(form.german, form.translation, form.categories, form.ratings);
     });
-  }
-
-  private connection(): void {
-    if (this.settingsService.firebase) {
-      this.localSubscription.unsubscribe();
-      this.firebaseSubscription = this.dictionaryService.words.subscribe((words) => {
-        this.initWords(words);
-      });
-    } else {
-      this.firebaseSubscription.unsubscribe();
-      this.localSubscription = this.dictionaryService.localWords.subscribe((localWords) => {
-        this.initWords(localWords);
-      });
-    }
-  }
-
-  private initWords(words: Array<Word>): void {
-    this.words = this.dictionaryService.manageWord(words, this.activated);
-    this.filterFromForm();
   }
 
   private filterFromForm(): void {

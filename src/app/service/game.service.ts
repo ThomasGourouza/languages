@@ -43,7 +43,7 @@ export class GameService {
     this._version = true;
   }
 
-  public get start$(): Observable<boolean> {
+  get start$(): Observable<boolean> {
     return this._start$.asObservable();
   }
 
@@ -63,51 +63,51 @@ export class GameService {
     return array.map((w) => w.german).includes(word.german);
   }
 
-  public get categoriesSelected(): Array<string> {
+  get categoriesSelected(): Array<string> {
     return this._categoriesSelected;
   }
 
-  public set categoriesSelected(categoriesSelected: Array<string>) {
+  set categoriesSelected(categoriesSelected: Array<string>) {
     this._categoriesSelected = categoriesSelected;
   }
 
-  public get numberOfWords(): number {
+  get numberOfWords(): number {
     return this._numberOfWords;
   }
 
-  public set numberOfWords(numberOfWords: number) {
+  set numberOfWords(numberOfWords: number) {
     this._numberOfWords = numberOfWords;
   }
 
-  public get numberOfOptions(): number {
+  get numberOfOptions(): number {
     return this._numberOfOptions;
   }
 
-  public set numberOfOptions(numberOfOptions: number) {
+  set numberOfOptions(numberOfOptions: number) {
     this._numberOfOptions = numberOfOptions;
   }
 
-  public get numberOfRounds(): number {
+  get numberOfRounds(): number {
     return this._numberOfRounds;
   }
 
-  public set numberOfRounds(numberOfRounds: number) {
+  set numberOfRounds(numberOfRounds: number) {
     this._numberOfRounds = numberOfRounds;
   }
 
-  public get revision(): boolean {
+  get revision(): boolean {
     return this._revision;
   }
 
-  public set revision(revision: boolean) {
+  set revision(revision: boolean) {
     this._revision = revision;
   }
 
-  public get version(): boolean {
+  get version(): boolean {
     return this._version;
   }
 
-  public set version(version: boolean) {
+  set version(version: boolean) {
     this._version = version;
   }
 

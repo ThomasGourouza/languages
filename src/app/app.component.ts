@@ -21,8 +21,8 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.menuPosition = this.menuElement.nativeElement.offsetTop
-    this.settingsService.firebase = false;
+    this.menuPosition = this.menuElement.nativeElement.offsetTop;
+    this.settingsService.init$();
   }
 
   @HostListener('window:scroll', ['$event'])

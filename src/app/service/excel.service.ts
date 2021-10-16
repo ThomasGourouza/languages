@@ -14,12 +14,11 @@ export class ExcelService {
   public exportAsExcelFile(words: Array<Word>, excelFileName: string): void {
     const wordsExcel = words.map((word) => {
       return {
-        category: word.category,
         german: word.german,
         translation: word.translation,
-        // remove later:
-        numberOfViews: word.numberOfViews,
+        category: word.category,
         numberOfSuccess: word.numberOfSuccess,
+        numberOfViews: word.numberOfViews,
         isActive: word.isActive,
       };
     });    

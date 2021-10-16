@@ -19,10 +19,9 @@ export class CommonService {
   private _numbersOfRounds: Array<number>;
   private _ratings: Array<Item>;
   private _modes: Array<Mode>;
-  private _activated$ = new Subject<boolean>();
+  private _mode: Mode
 
   constructor() {
-    this.setModeActive$(true);
     this._categories = [
       { label: 'Verb', value: 'verb' },
       { label: 'Adjective', value: 'adjective' },
@@ -51,38 +50,39 @@ export class CommonService {
       { icon: 'pi pi-sun', activated: true },
       { icon: 'pi pi-moon', activated: false }
     ];
+    this._mode = this._modes[0];
   }
 
-  public get categories(): Array<Item> {
+  get mode(): Mode {
+    return this._mode;
+  }
+
+  set mode(mode: Mode) {
+    this._mode = mode;
+  }
+
+  get categories(): Array<Item> {
     return this._categories;
   }
 
-  public get numbersOfWords(): Array<number> {
+  get numbersOfWords(): Array<number> {
     return this._numbersOfWords;
   }
 
-  public get numbersOfOptions(): Array<number> {
+  get numbersOfOptions(): Array<number> {
     return this._numbersOfOptions;
   }
 
-  public get numbersOfRounds(): Array<number> {
+  get numbersOfRounds(): Array<number> {
     return this._numbersOfRounds;
   }
 
-  public get ratings(): Array<Item> {
+  get ratings(): Array<Item> {
     return this._ratings;
   }
 
-  public get modes(): Array<Mode> {
+  get modes(): Array<Mode> {
     return this._modes;
-  }
-
-  public get activated$(): Observable<boolean> {
-    return this._activated$.asObservable();
-  }
-
-  public setModeActive$(activated: boolean): void {
-    this._activated$.next(activated);
   }
 
 }

@@ -15,6 +15,7 @@ import { MessageService } from 'primeng/api';
 import { HomeModule } from './components/home/home.component.module';
 import { SettingsModule } from './components/settings/settings.component.module';
 import { SettingsService } from './service/settings.service';
+import { DictionaryService } from './service/dictionary.service';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SettingsService } from './service/settings.service';
   ],
   providers: [
     MessageService,
+    DictionaryService,
     SettingsService
   ],
   bootstrap: [AppComponent]
