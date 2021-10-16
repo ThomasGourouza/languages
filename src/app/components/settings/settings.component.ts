@@ -25,6 +25,7 @@ export class SettingsComponent implements OnInit {
     this.initLanguageForm();
     this.settingsForm.controls['firebase'].valueChanges.subscribe((firebase) => {
       this.settingsService.firebase = firebase;
+      this.settingsService.setFirebase$(firebase);
       this.settingsService.infoFirebase();
     });
     this.languageForm.controls['language'].valueChanges.subscribe((language) => {
