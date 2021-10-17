@@ -73,7 +73,7 @@ export class GameComponent implements OnInit, OnDestroy {
     this.initSettingsForm();
     this.initGameForm();
     this.wordSubscription = this.dictionaryService.words.subscribe((words) => {
-      this.words = words;
+      this.words = words.filter((word) => word.isActive);
     });
     this.gameService.setStart$(false);
     this.gameService.start$.subscribe((start) => {
@@ -279,6 +279,7 @@ export class GameComponent implements OnInit, OnDestroy {
 
   private buildDictionaryCategoryLimited(dictionaryCategory: Array<Word>, limit: number): void {
     this.dictionaryCategoryLimited = [];
+    let reinitialize = false;
     while (this.dictionaryCategoryLimited.length < limit) {
       const randomIndex = this.gameService.getRandomInt(dictionaryCategory.length);
       const randomWord = dictionaryCategory[randomIndex];
@@ -293,12 +294,16 @@ export class GameComponent implements OnInit, OnDestroy {
         if (!!newWord) {
           this.dictionaryCategoryLimited.push(newWord);
         } else {
-          this.onStop();
+          reinitialize = true;
           break;
         }
       } else if (!this.gameService.isWordIncluded(randomWord, this.dictionaryCategoryLimited)) {
         this.dictionaryCategoryLimited.push(randomWord);
       }
+    }
+    if (reinitialize) {
+      this.randomWordsMemory = [];
+      this.buildDictionaryCategoryLimited(dictionaryCategory, limit);
     }
   }
 
