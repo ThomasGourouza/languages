@@ -339,4 +339,28 @@ berichtet an
 
 berichten = to report
 
+bescheid geben
+
+Spalte = column
+
+gibt es Fragen bebarf ???
+
+unison = tous d'accord
+
+nehme ich mit
+
+ich weiss nicht ob es ausreicht
+ausreichen
+
+ein Schritt zurück
+
+bitte wenden Sie sich an den Support
+
+gemeinsam = ensemble
+
+uninteressant
+
+erstaunlich
+
+
 Tt74159638520
