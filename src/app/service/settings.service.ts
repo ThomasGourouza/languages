@@ -65,13 +65,13 @@ export class SettingsService {
         disabled: false
       },
       {
-        label: 'Japanese',
-        value: 'japanese',
+        label: 'French',
+        value: 'french',
         disabled: false
       },
       {
-        label: 'Chinese',
-        value: 'chinese',
+        label: 'Japanese',
+        value: 'japanese',
         disabled: false
       }
     ];
@@ -130,6 +130,12 @@ export class SettingsService {
   private infoLanguage(language: string): void {
     const message = this._languageOptions.find((lang) => lang.value === language)?.label + ' selected.';
     this.messageService.add({ severity: 'info', summary: 'Info', detail: message, life: 3000 });
+  }
+
+  public getLabel(): string | undefined {
+    return this.languageOptions.find((option) =>
+      option.value === this.settingForm.language
+    )?.label;
   }
 
 }

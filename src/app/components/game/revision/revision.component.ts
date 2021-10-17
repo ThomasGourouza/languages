@@ -33,13 +33,13 @@ export class RevisionComponent implements OnInit {
   ngOnInit(): void {
     if (this.version) {
       this.cols.push(
-        { field: 'german', header: 'German' },
+        { field: 'german', header: this.getLabel() },
         { field: 'translation', header: 'Translation' }
       );
     } else {
       this.cols.push(
         { field: 'translation', header: 'Translation' },
-        { field: 'german', header: 'German' }
+        { field: 'german', header: this.getLabel() }
       );
     }
     this.cols.push({ field: 'category', header: 'Category' });
@@ -68,6 +68,10 @@ export class RevisionComponent implements OnInit {
     return this.commonService.categories.find((category) =>
       category.value === value
     )?.label;
+  }
+
+  private getLabel(): string | undefined {
+    return this.settingsService.getLabel();
   }
 
 }

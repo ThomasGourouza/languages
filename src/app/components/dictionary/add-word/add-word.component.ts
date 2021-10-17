@@ -5,6 +5,7 @@ import { WordUpdate } from 'src/app/models/word-update';
 import { AddWordService } from 'src/app/service/add-word.service';
 import { CommonService, Item } from 'src/app/service/common.service';
 import { DictionaryService } from 'src/app/service/dictionary.service';
+import { SettingsService } from 'src/app/service/settings.service';
 
 @Component({
   selector: 'app-add-word',
@@ -22,7 +23,8 @@ export class AddWordComponent implements OnInit, OnDestroy {
   constructor(
     private addWordService: AddWordService,
     private dictionaryService: DictionaryService,
-    private commonService: CommonService
+    private commonService: CommonService,
+    private settingsService: SettingsService
   ) {
     this.categories = this.commonService.categories;
     this.wordSubscription = new Subscription();
@@ -71,6 +73,10 @@ export class AddWordComponent implements OnInit, OnDestroy {
     }
     this.addWordService.setWordDialog$(false);
     this.addWordService.initWord$();
+  }
+
+  public getLabel(): string | undefined {
+    return this.settingsService.getLabel();
   }
 
 }

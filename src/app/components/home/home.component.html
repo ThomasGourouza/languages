@@ -5,7 +5,7 @@
             <form [formGroup]="formFilter" class="form-group" (ngSubmit)="onSubmit()">
                 <div class="row">
                     <div class="col">
-                        <input pInputText type="text" formControlName="german" placeholder="German" />
+                        <input pInputText type="text" formControlName="german" [placeholder]="getLabel()" />
                     </div>
                     <div class="col">
                         <input pInputText type="text" formControlName="translation" placeholder="Translation" />

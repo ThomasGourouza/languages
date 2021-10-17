@@ -5,6 +5,7 @@ import { Word } from 'src/app/models/word';
 import { CommonService, Item } from 'src/app/service/common.service';
 import { DictionaryService } from 'src/app/service/dictionary.service';
 import { GameService } from 'src/app/service/game.service';
+import { SettingsService } from 'src/app/service/settings.service';
 export interface Summary {
   word: Word;
   success: boolean;
@@ -51,7 +52,8 @@ export class GameComponent implements OnInit, OnDestroy {
   constructor(
     private dictionaryService: DictionaryService,
     private commonService: CommonService,
-    private gameService: GameService
+    private gameService: GameService,
+    private settingsService: SettingsService,
   ) {
     this.randomWordsMemory = [];
     this.revisionSelected = false;
@@ -223,7 +225,7 @@ export class GameComponent implements OnInit, OnDestroy {
       points: this.points,
       total: this.total
     });
-    const summaryWord = {...this.randomWord};
+    const summaryWord = { ...this.randomWord };
     summaryWord.numberOfViews++;
     if (this.isCorrect) {
       summaryWord.numberOfSuccess++;
@@ -319,6 +321,10 @@ export class GameComponent implements OnInit, OnDestroy {
 
   public getGerman(): Array<string> {
     return [this.gameForm.controls['german'].value];
+  }
+
+  public getLabel(): string | undefined {
+    return this.settingsService.getLabel();
   }
 
 }

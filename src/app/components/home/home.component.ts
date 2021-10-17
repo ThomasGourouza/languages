@@ -65,4 +65,8 @@ export class HomeComponent {
     this.router.navigate(['/dictionary'], { queryParams: formQueryParam });
   }
 
+  public getLabel(): string | undefined {
+    return this.settingsService.getLabel();
+  }
+
 }
