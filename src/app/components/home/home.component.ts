@@ -69,4 +69,8 @@ export class HomeComponent {
     return this.settingsService.getLabel();
   }
 
+  public getImgUrl(): string {
+    return '/src/assets/images/flags/' + this.settingsService.settingForm.language + '.jpg';
+  }
+
 }

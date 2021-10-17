@@ -1,29 +1,40 @@
 <br>
 <div class="mx-5">
+    <div class="row">
+        <div class="col">
+            <img src="/src/assets/images/icons/icon.png" alt="Languages">
+        </div>
+        <div class="col-6">
+            <p-card>
+                <form [formGroup]="formFilter" class="form-group" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col">
+                            <input pInputText type="text" formControlName="german" [placeholder]="getLabel()" />
+                        </div>
+                        <div class="col">
+                            <input pInputText type="text" formControlName="translation" placeholder="Translation" />
+                        </div>
+                        <div class="col">
+                            <p-multiSelect defaultLabel="Categories" display="chip" [options]="categories"
+                                formControlName="categories" optionLabel="label" optionValue="value"></p-multiSelect>
+                        </div>
+                        <div *ngIf="isFirebase()" class="col">
+                            <p-multiSelect defaultLabel="Ratings" display="chip" [options]="ratings" formControlName="ratings"
+                                optionLabel="label" optionValue="value"></p-multiSelect>
+                        </div>
+                        <div class="col">
+                            <button pButton pRipple type="submit" icon="pi pi-search" label="Search"
+                                class="p-button-primary p-button-outlined"></button>
+                        </div>
+                    </div>
+                </form>
+            </p-card>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <br><br><br>
     <div class="d-flex justify-content-center">
-        <p-card>
-            <form [formGroup]="formFilter" class="form-group" (ngSubmit)="onSubmit()">
-                <div class="row">
-                    <div class="col">
-                        <input pInputText type="text" formControlName="german" [placeholder]="getLabel()" />
-                    </div>
-                    <div class="col">
-                        <input pInputText type="text" formControlName="translation" placeholder="Translation" />
-                    </div>
-                    <div class="col">
-                        <p-multiSelect defaultLabel="Categories" display="chip" [options]="categories"
-                            formControlName="categories" optionLabel="label" optionValue="value"></p-multiSelect>
-                    </div>
-                    <div *ngIf="isFirebase()" class="col">
-                        <p-multiSelect defaultLabel="Ratings" display="chip" [options]="ratings" formControlName="ratings"
-                            optionLabel="label" optionValue="value"></p-multiSelect>
-                    </div>
-                    <div class="col">
-                        <button pButton pRipple type="submit" icon="pi pi-search" label="Search"
-                            class="p-button-primary p-button-outlined"></button>
-                    </div>
-                </div>
-            </form>
-        </p-card>
+        <img [src]="getImgUrl()" [alt]="getLabel()">
     </div>
 </div>

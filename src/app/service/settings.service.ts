@@ -45,33 +45,63 @@ export class SettingsService {
     ];
     this._languageOptions = [
       {
-        label: 'German',
+        label: 'Deutsch',
         value: 'german',
         disabled: false
       },
       {
-        label: 'Russian',
+        label: 'Русский',
         value: 'russian',
         disabled: false
       },
       {
-        label: 'Italian',
+        label: 'Italiano',
         value: 'italian',
         disabled: false
       },
       {
-        label: 'Spanish',
+        label: 'Español',
         value: 'spanish',
         disabled: false
       },
       {
-        label: 'French',
+        label: 'Português',
+        value: 'portuguese',
+        disabled: false
+      },
+      {
+        label: 'Brezhoneg',
+        value: 'breton',
+        disabled: false
+      },
+      {
+        label: 'Français',
         value: 'french',
         disabled: false
       },
       {
-        label: 'Japanese',
+        label: '日本語',
         value: 'japanese',
+        disabled: false
+      },
+      {
+        label: 'Dansk',
+        value: 'danish',
+        disabled: false
+      },
+      {
+        label: '한국인',
+        value: 'korean',
+        disabled: false
+      },
+      {
+        label: '中国人',
+        value: 'chinese',
+        disabled: false
+      },
+      {
+        label: 'Nederlands',
+        value: 'dutch',
         disabled: false
       }
     ];
