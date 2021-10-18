@@ -1,7 +1,7 @@
 <p-dialog [(visible)]="wordDialog" [style]="{width: '450px'}" header="Word Details" [modal]="true" styleClass="p-fluid">
     <ng-template pTemplate="content">
         <div class="p-field">
-            <label for="german">German</label>
+            <label for="german">{{ getLabel() }}</label>
             <input type="text" pInputText id="german" [(ngModel)]="word.german" [autofocus]="!word.id"
                 [disabled]="!!word.id" required />
             <small *ngIf="submitted && !word.german">This field is required.</small>

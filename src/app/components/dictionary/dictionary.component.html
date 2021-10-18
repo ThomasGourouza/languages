@@ -34,7 +34,7 @@
                             <td>
                                 <span class="p-input-icon-left">
                                     <i class="pi pi-search"></i>
-                                    <input pInputText type="text" formControlName="german" placeholder="German" />
+                                    <input pInputText type="text" formControlName="german" [placeholder]="getLabel()" />
                                 </span>
                                 &nbsp;
                             </td>
@@ -80,7 +80,7 @@
         <ng-template pTemplate="header">
             <tr>
                 <th pSortableColumn="german">
-                    German <p-sortIcon field="german"></p-sortIcon>
+                    {{ getLabel() }} <p-sortIcon field="german"></p-sortIcon>
                 </th>
                 <th pSortableColumn="translation">
                     Translation <p-sortIcon field="translation"></p-sortIcon>

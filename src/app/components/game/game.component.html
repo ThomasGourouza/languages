@@ -82,7 +82,7 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group">
-                                        <label for="german">{{ version ? 'German' : 'Translation' }}</label>
+                                        <label for="german">{{ version ? getLabel() : 'Translation' }}</label>
                                         <p-listbox id="german" [options]="getGerman()" [readonly]="true"
                                             formControlName="german">
                                         </p-listbox>
@@ -90,7 +90,7 @@
                                 </div>
                                 <div *ngIf="dictionaryCategoryLimited.length > 0" class="col">
                                     <div class="form-group">
-                                        <label for="translation">{{ version ? 'Translation' : 'German' }}</label>
+                                        <label for="translation">{{ version ? 'Translation' : getLabel() }}</label>
                                         <p-listbox id="translation"
                                             [options]="dictionaryCategoryLimited | select_translation: numberOfOptions : randomWord | map: version ? 'translation' : 'german'"
                                             [readonly]="submited" formControlName="translation">

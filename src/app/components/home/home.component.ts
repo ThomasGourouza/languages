@@ -65,4 +65,12 @@ export class HomeComponent {
     this.router.navigate(['/dictionary'], { queryParams: formQueryParam });
   }
 
+  public getLabel(): string | undefined {
+    return this.settingsService.getLabel();
+  }
+
+  public getImgUrl(): string {
+    return '/src/assets/images/flags/' + this.settingsService.settingForm.language + '.jpg';
+  }
+
 }

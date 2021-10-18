@@ -176,4 +176,8 @@ export class DictionaryComponent implements OnInit, OnDestroy {
     this.onFilter(german, translation, categories, ratings);
   }
 
+  public getLabel(): string | undefined {
+    return this.settingsService.getLabel();
+  }
+  
 }
