@@ -421,4 +421,16 @@ verzeihen = to forgive
 
 gezwungen = forced
 
+einheitlich = uniforme
+
+freigeben = to release
+
+freigegeben = approved
+
+die Vorgabe = specification
+
+genehmigen = to approve
+
+schalten = to switch
+
 Tt74159638520
