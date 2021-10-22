@@ -433,4 +433,10 @@ genehmigen = to approve
 
 schalten = to switch
 
+glückwunsch, sie haben bestanden
+
+erscheinen
+
+teilweise
+
 Tt74159638520

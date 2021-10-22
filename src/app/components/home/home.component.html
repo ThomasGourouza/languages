@@ -2,14 +2,14 @@
 <div class="mx-5">
     <div class="row">
         <div class="col">
-            <img src="/src/assets/images/icons/icon.png" alt="Languages">
+            <h1>{{ getLanguage() }}</h1>
         </div>
         <div class="col-6">
             <p-card>
                 <form [formGroup]="formFilter" class="form-group" (ngSubmit)="onSubmit()">
                     <div class="row">
                         <div class="col">
-                            <input pInputText type="text" formControlName="german" [placeholder]="getLabel()" />
+                            <input pInputText type="text" formControlName="german" [placeholder]="getLanguage()" />
                         </div>
                         <div class="col">
                             <input pInputText type="text" formControlName="translation" placeholder="Translation" />
@@ -35,6 +35,9 @@
     </div>
     <br><br><br>
     <div class="d-flex justify-content-center">
-        <img [src]="getImgUrl()" [alt]="getLabel()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GDJ-World-Flags-Globe.svg/2093px-GDJ-World-Flags-Globe.svg.png" 
+             alt="flags"
+             width="30%"
+             height="30%">
     </div>
 </div>
