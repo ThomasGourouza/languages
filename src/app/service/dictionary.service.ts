@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { MessageService } from 'primeng/api';
 import { from, Observable } from 'rxjs';
+import { Filterform } from '../components/dictionary/dictionary.component';
 import { Word } from '../models/word';
 import { WordUpdate } from '../models/word-update';
 import { SettingsService } from './settings.service';
@@ -14,6 +15,7 @@ export class DictionaryService {
 
   private _wordsCollection!: AngularFirestoreCollection<Word>;
   private _words!: Observable<Array<Word>>;
+  private _filterform: Filterform;
 
   private COLLECTION!: string;
   private FIREBASE!: boolean;
@@ -35,6 +37,12 @@ export class DictionaryService {
       this.FIREBASE = firebase;
       this.loadWords();
     });
+    this._filterform = {
+      german: '',
+      translation: '',
+      categories: [],
+      ratings: []
+    }
   }
 
   private loadWords(): void {
@@ -44,6 +52,21 @@ export class DictionaryService {
     } else {
       this._words = from(this.getData());
     }
+  }
+
+  get filterform(): Filterform {
+    return this._filterform;
+  }
+
+  set filterform(form: Filterform) {
+    this._filterform = form;
+  }
+
+  public isFilterNotEmpty(): boolean {
+    return this._filterform.categories.length > 0
+        || this._filterform.ratings.length > 0
+        || this._filterform.german != ''
+        || this._filterform.translation != '';
   }
 
   public async getData(): Promise<Array<Word>> {

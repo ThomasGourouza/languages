@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonService, Item } from 'src/app/service/common.service';
+import { DictionaryService } from 'src/app/service/dictionary.service';
 import { SettingsService } from 'src/app/service/settings.service';
 export interface FormQueryParam {
   german?: string;
@@ -23,7 +24,8 @@ export class HomeComponent {
   constructor(
     private router: Router,
     private commonService: CommonService,
-    private settingsService: SettingsService
+    private settingsService: SettingsService,
+    private dictionaryService: DictionaryService
   ) {
     this.initFormFilter();
     this.categories = this.commonService.categories;
@@ -36,10 +38,10 @@ export class HomeComponent {
 
   private initFormFilter(): void {
     this.formFilter = new FormGroup({
-      german: new FormControl(''),
-      translation: new FormControl(''),
-      categories: new FormControl([]),
-      ratings: new FormControl([])
+      german: new FormControl(this.dictionaryService.filterform.german),
+      translation: new FormControl(this.dictionaryService.filterform.translation),
+      categories: new FormControl(this.dictionaryService.filterform.categories),
+      ratings: new FormControl(this.dictionaryService.filterform.ratings)
     });
   }
 

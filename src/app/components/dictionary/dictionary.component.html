@@ -27,7 +27,7 @@
     </p-toolbar>
     <p-accordion>
         <p-accordionTab header="Filter" [selected]="filterSelected">
-            <form [formGroup]="formFilter" class="form-group" (ngSubmit)="resetFilter()">
+            <form [formGroup]="filterForm" class="form-group" (ngSubmit)="resetFilter()">
                 <div class="row">
                     <div class="col d-flex justify-content-center">
                         <tr>

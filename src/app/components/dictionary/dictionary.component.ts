@@ -10,7 +10,7 @@ import { ExcelService } from 'src/app/service/excel.service';
 import { Subscription } from 'rxjs';
 import { SettingsService } from 'src/app/service/settings.service';
 
-export interface FormFilter {
+export interface Filterform {
   german: string;
   translation: string;
   categories: Array<string>;
@@ -28,7 +28,7 @@ export class DictionaryComponent implements OnInit, OnDestroy {
   public wordsFiltered!: Array<Word>;
   public categories: Array<Item>;
   public ratings: Array<Item>;
-  public formFilter!: FormGroup;
+  public filterForm!: FormGroup;
   public filterSelected: boolean;
   public modes: Array<Mode>;
   public mode: Mode;
@@ -60,10 +60,16 @@ export class DictionaryComponent implements OnInit, OnDestroy {
       const categories = params.categories;
       const ratings = params.ratings;
       this.filterSelected = !!german || !!translation || !!categories || !!ratings;
-      this.initFormFilter(german, translation, categories, ratings);
+      this.initFilterform(german, translation, categories, ratings);
     });
     this.loadWords();
-    this.formFilter.valueChanges.subscribe((form: FormFilter) => {
+    this.filterForm.valueChanges.subscribe((form: Filterform) => {
+      this.dictionaryService.filterform = {
+        german: form.german,
+        translation: form.translation,
+        categories: form.categories,
+        ratings: form.ratings
+      };
       this.onFilter(form.german, form.translation, form.categories, form.ratings);
     });
   }
@@ -89,14 +95,24 @@ export class DictionaryComponent implements OnInit, OnDestroy {
     this.excelService.exportAsExcelFile(this.wordsFiltered, 'dictionary');
   }
 
-  private initFormFilter(german: string, translation: string, categories: string, ratings: string): void {
+  private initFilterform(german: string, translation: string, categories: string, ratings: string): void {
     const categoryList = !!categories ? categories.split(',') : [];
     const ratingList = !!ratings ? ratings.split(',').map((r) => +r) : [];
-    this.formFilter = new FormGroup({
-      german: new FormControl(!!german ? german : ''),
-      translation: new FormControl(!!translation ? translation : ''),
-      categories: new FormControl(categoryList),
-      ratings: new FormControl(ratingList)
+    if (this.filterSelected) {
+      this.dictionaryService.filterform = {
+        german: !!german ? german : '',
+        translation: !!translation ? translation : '',
+        categories: categoryList,
+        ratings: ratingList
+      };
+    } else if (this.dictionaryService.isFilterNotEmpty()) {
+      this.filterSelected = true;
+    }
+    this.filterForm = new FormGroup({
+      german: new FormControl(this.dictionaryService.filterform.german),
+      translation: new FormControl(this.dictionaryService.filterform.translation),
+      categories: new FormControl(this.dictionaryService.filterform.categories),
+      ratings: new FormControl(this.dictionaryService.filterform.ratings)
     });
   }
 
@@ -161,18 +177,18 @@ export class DictionaryComponent implements OnInit, OnDestroy {
   }
 
   public resetFilter(): void {
-    this.initFormFilter('', '', '', '');
+    this.initFilterform('', '', '', '');
     this.onFilter('', '', [], []);
-    this.formFilter.valueChanges.subscribe((form: FormFilter) => {
+    this.filterForm.valueChanges.subscribe((form: Filterform) => {
       this.onFilter(form.german, form.translation, form.categories, form.ratings);
     });
   }
 
   private filterFromForm(): void {
-    const german = this.formFilter.get('german')?.value;
-    const translation = this.formFilter.get('translation')?.value;
-    const categories = this.formFilter.get('categories')?.value;
-    const ratings = this.formFilter.get('ratings')?.value;
+    const german = this.filterForm.get('german')?.value;
+    const translation = this.filterForm.get('translation')?.value;
+    const categories = this.filterForm.get('categories')?.value;
+    const ratings = this.filterForm.get('ratings')?.value;
     this.onFilter(german, translation, categories, ratings);
   }
 
