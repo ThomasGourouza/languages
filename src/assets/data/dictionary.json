@@ -9,16 +9,48 @@
     },
     {
         "category": "verb",
-        "german": "halten für",
-        "translation": "to consider",
+        "german": "auf den neuesten Stand bringen",
+        "translation": "to update",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "halten für",
+        "translation": "to consider",
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
         "category": "conjonction",
         "german": "im endeffekt",
         "translation": "du coup",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "es ist geklärt",
+        "translation": "c'est réglé",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "aufwendig",
+        "translation": "laborious",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "verhandeln",
+        "translation": "to negotiate",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -32,9 +64,25 @@
         "isActive": true
     },
     {
+        "category": "noun",
+        "german": "der Bedarf",
+        "translation": "le besoin",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "empfehlen",
         "translation": "to recommend",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "ich kann nicht bis zum Ende bleiben und werde mich daher schon früher ausklinken",
+        "translation": "Je ne peux pas rester jusqu'à la fin et me libérerai donc plus tôt",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -59,8 +107,8 @@
         "category": "verb",
         "german": "wegdrücken",
         "translation": "push away",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -75,6 +123,22 @@
         "category": "verb",
         "german": "verschieben",
         "translation": "to postpone",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "gewählt",
+        "translation": "chosen",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "glückwunsch, sie haben bestanden",
+        "translation": "congratulations, you passed",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -107,8 +171,8 @@
         "category": "verb",
         "german": "versperren",
         "translation": "bloquer",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -123,8 +187,8 @@
         "category": "verb",
         "german": "vorhaben",
         "translation": "intend",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -147,6 +211,14 @@
         "category": "verb",
         "german": "beitreten",
         "translation": "to join",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "Sie dürfen nicht so tun als ob A und B die gleichen Ziele hätten",
+        "translation": "You can't pretend that A and B have the same goals",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -195,6 +267,30 @@
         "category": "verb",
         "german": "berücksichtigen",
         "translation": "to consider",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "wann man versucht es abzurufen",
+        "translation": "when we try to retrieve it",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "loslassen",
+        "translation": "to release",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "das hat Zeit gekostet",
+        "translation": "that took time",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -232,9 +328,25 @@
         "isActive": true
     },
     {
+        "category": "conjonction",
+        "german": "unabhangig davon",
+        "translation": "independently of",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "adjective",
         "german": "abgelehnt",
         "translation": "declined",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "ausliefern",
+        "translation": "to deliver",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -251,6 +363,14 @@
         "category": "verb",
         "german": "fluchen",
         "translation": "to curse",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "bis zu einem gewissen Grad",
+        "translation": "up to a certain degree",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -291,6 +411,14 @@
         "category": "adjective",
         "german": "verweigert",
         "translation": "denied",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "beispielsweise",
+        "translation": "for exemple",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -304,9 +432,49 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "vollkommen egal",
+        "translation": "absolutely not important",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "unterbrechen",
+        "translation": "to interrupt",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "selbstbewusst",
+        "translation": "confident",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "übergreifen",
+        "translation": "chevaucher",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "aufklappen",
         "translation": "to open",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "Gott sei dank",
+        "translation": "Thank God",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -331,8 +499,8 @@
         "category": "verb",
         "german": "zurechtkommen",
         "translation": "se débrouiller",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 4,
+        "numberOfSuccess": 4,
         "isActive": true
     },
     {
@@ -360,9 +528,25 @@
         "isActive": true
     },
     {
+        "category": "noun",
+        "german": "die Abnahme",
+        "translation": "the acceptance",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "abbrechen",
         "translation": "abort",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "optimal",
+        "translation": "optimal",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -379,16 +563,16 @@
         "category": "noun",
         "german": "das Pech",
         "translation": "bad luck",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "reinkommen",
         "translation": "come in",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -424,6 +608,14 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "nach dem",
+        "translation": "en fonction de",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "reingehen",
         "translation": "to go in",
@@ -440,11 +632,19 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "auftreten",
+        "translation": "to occur",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "phrase",
         "german": "ich habe dazu eine Frage an dich",
         "translation": "I have a question for you about it",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -489,8 +689,40 @@
     },
     {
         "category": "verb",
+        "german": "auftauchen",
+        "translation": "to pop up",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
         "german": "mitteilen",
         "translation": "notify",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "freigeben",
+        "translation": "to release",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "(ab)tauchen",
+        "translation": "plonger",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "vollgas",
+        "translation": "à fond",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -507,8 +739,8 @@
         "category": "verb",
         "german": "anschauen",
         "translation": "look at",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -544,11 +776,19 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "die Voransetzung zu klären",
+        "translation": "to clarify the prerequisite",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "adjective",
         "german": "berücksichtigt",
         "translation": "pris en compte",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -592,11 +832,43 @@
         "isActive": true
     },
     {
+        "category": "adjective",
+        "german": "gezwungen",
+        "translation": "forced",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "unterwegs",
+        "translation": "on the way",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "verlassen sich auf",
+        "translation": "to rely on",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "manche Leute",
+        "translation": "some people",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "verbreiten",
         "translation": "to spread",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -643,6 +915,14 @@
         "category": "noun",
         "german": "die Berechtigung",
         "translation": "the authorization",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "holen",
+        "translation": "to fetch",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -723,14 +1003,22 @@
         "category": "verb",
         "german": "rumfragen",
         "translation": "ask around",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
         "category": "conjonction",
         "german": "irgendjemand",
         "translation": "anyone",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "obwohl",
+        "translation": "bien que",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -747,6 +1035,46 @@
         "category": "verb",
         "german": "darstellen",
         "translation": "to represent",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "vorgeschrieben",
+        "translation": "required",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "(ab)speichern",
+        "translation": "to save",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "das Kreuz",
+        "translation": "la croix",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "unterhalb",
+        "translation": "below",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Hass",
+        "translation": "the hate",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -769,6 +1097,22 @@
     },
     {
         "category": "verb",
+        "german": "kostet",
+        "translation": "to cost",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "gemeinsam",
+        "translation": "ensemble",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
         "german": "abnehmen",
         "translation": "lose weight",
         "numberOfViews": 0,
@@ -779,8 +1123,8 @@
         "category": "verb",
         "german": "nachsehen",
         "translation": "to check",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -801,8 +1145,24 @@
     },
     {
         "category": "verb",
+        "german": "aktualisieren",
+        "translation": "to update",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
         "german": "ausklingen",
         "translation": "to end a phone call",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "selbst nach dem was du erlebst hast",
+        "translation": "even after what you have experienced",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -827,6 +1187,14 @@
         "category": "phrase",
         "german": "ich bin nicht damit vertraut",
         "translation": "I am not familiar with it",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "schuldig",
+        "translation": "guilty",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -859,6 +1227,22 @@
         "category": "noun",
         "german": "die Abhängigkeit",
         "translation": "the dependency",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "einbinden",
+        "translation": "to integrate",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "er liest",
+        "translation": "he reads",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -883,8 +1267,8 @@
         "category": "verb",
         "german": "dazu zu holen",
         "translation": "to bring in",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -896,9 +1280,33 @@
         "isActive": true
     },
     {
+        "category": "adjective",
+        "german": "verwendbar",
+        "translation": "usable",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "weiterleiten",
         "translation": "transférer",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "unison",
+        "translation": "tous d'accord",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "(er)zwingen",
+        "translation": "to force",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -907,8 +1315,8 @@
         "category": "conjonction",
         "german": "hinter dir",
         "translation": "behind you",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -952,6 +1360,22 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "abgleichen",
+        "translation": "to compare",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Verfügung",
+        "translation": "la disposition",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "das Vergnügen",
         "translation": "plaisir",
@@ -963,8 +1387,8 @@
         "category": "verb",
         "german": "jemanden auslachen",
         "translation": "se moquer de quelqu'un",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -1000,6 +1424,14 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "versorgen",
+        "translation": "to supply",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "geringe Ambition",
         "translation": "low ambition",
@@ -1019,6 +1451,14 @@
         "category": "verb",
         "german": "vermissen",
         "translation": "to miss",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "vollkommen",
+        "translation": "completely",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1027,6 +1467,14 @@
         "category": "adjective",
         "german": "logisch",
         "translation": "logic",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "bitte wenden Sie sich an den Support",
+        "translation": "please contact support",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1048,9 +1496,41 @@
         "isActive": true
     },
     {
+        "category": "conjonction",
+        "german": "wie auch immer",
+        "translation": "However",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "phrase",
         "german": "von meiner Seite aus",
         "translation": "from my side",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "ausreichen",
+        "translation": "suffire",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "einheitlich",
+        "translation": "uniforme",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "letztendlich",
+        "translation": "in the end",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1067,8 +1547,8 @@
         "category": "verb",
         "german": "abfragen",
         "translation": "Interroger",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -1113,6 +1593,22 @@
     },
     {
         "category": "verb",
+        "german": "zuweisen",
+        "translation": "to assign",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "landersweise",
+        "translation": "country by country",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
         "german": "(aus)reichen",
         "translation": "suffire",
         "numberOfViews": 0,
@@ -1123,6 +1619,14 @@
         "category": "noun",
         "german": "der Eintritt ",
         "translation": "entrance",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "als letztes",
+        "translation": "finally",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1139,6 +1643,14 @@
         "category": "verb",
         "german": "rübergehen",
         "translation": "go over",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "jedenfalls",
+        "translation": "in any case",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1147,6 +1659,14 @@
         "category": "verb",
         "german": "verwechseln",
         "translation": "confondre",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "übersichtlich",
+        "translation": "clear",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1163,8 +1683,8 @@
         "category": "verb",
         "german": "reinwerfen",
         "translation": "throw in",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -1195,8 +1715,8 @@
         "category": "verb",
         "german": "einstellen",
         "translation": "to set",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -1219,6 +1739,14 @@
         "category": "phrase",
         "german": "eins aus Beiden",
         "translation": "one of both",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "der Mittelwert",
+        "translation": "the average",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1259,8 +1787,8 @@
         "category": "verb",
         "german": "bestimmen",
         "translation": "to determine",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -1275,6 +1803,14 @@
         "category": "verb",
         "german": "verkaufen",
         "translation": "to sell",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "angucken",
+        "translation": "to look at",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1304,6 +1840,22 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "hier steht",
+        "translation": "il est écrit ici",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "so bald wie möglich",
+        "translation": "as soon as possible",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "die Verbindung",
         "translation": "the connection",
@@ -1315,8 +1867,8 @@
         "category": "verb",
         "german": "erstellen",
         "translation": "to create",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -1331,8 +1883,8 @@
         "category": "verb",
         "german": "kapieren",
         "translation": "to understand",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -1355,6 +1907,14 @@
         "category": "noun",
         "german": "die Maßnahme",
         "translation": "the measure",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Gewalt",
+        "translation": "the violence",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1387,14 +1947,22 @@
         "category": "verb",
         "german": "übertragen",
         "translation": "to transfer",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "abhängen",
         "translation": "to depend",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "gibt es Fragen Bedarf",
+        "translation": "are there questions needed",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1408,9 +1976,33 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "ich habe angst davor",
+        "translation": "i'm afraid of it",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "die idee dahinter",
         "translation": "The idea behind it",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "(zer)brechen",
+        "translation": "to break",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Zwischenfrage",
+        "translation": "the intermediate question",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1448,6 +2040,14 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "drehen",
+        "translation": "to turn",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "phrase",
         "german": "was mich gewundert hat",
         "translation": "what surprised me",
@@ -1467,6 +2067,14 @@
         "category": "verb",
         "german": "rausziehen",
         "translation": "to pull out",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "manche spielen Schach",
+        "translation": "some play chess",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1475,8 +2083,8 @@
         "category": "noun",
         "german": "die Abfrage",
         "translation": "the query",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -1504,9 +2112,41 @@
         "isActive": true
     },
     {
+        "category": "adjective",
+        "german": "greifbar",
+        "translation": "concrete",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "Sie machen das Leben schwer",
+        "translation": "they make life difficult",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "lediglich",
+        "translation": "only",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "conjonction",
         "german": "regelmäßig",
         "translation": "regularly",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "passt das soweit",
+        "translation": "fits that so far",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1520,9 +2160,41 @@
         "isActive": true
     },
     {
+        "category": "conjonction",
+        "german": "vollstandig",
+        "translation": "completely",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "ausgeliefert",
+        "translation": "delivered",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "bis die Sonne untergeht",
+        "translation": "until the sun goes down",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "bestätigen",
         "translation": "to confirm",
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "der Bedarf",
+        "translation": "the need",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1547,14 +2219,22 @@
         "category": "verb",
         "german": "übernehmen",
         "translation": "to take over",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
         "category": "phrase",
         "german": "so gennante 'blabla'",
         "translation": "so called 'blabla'",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Einleitung",
+        "translation": "the introduction",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1571,8 +2251,8 @@
         "category": "verb",
         "german": "genügen",
         "translation": "suffire",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -1584,9 +2264,33 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "zu dem was ich gesagt habe",
+        "translation": "to what I said",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "dass er aus registry holt",
+        "translation": "that he fetches from registry",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "der Nachgängner",
         "translation": "successor",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "es gibt ohne Ende Plätz",
+        "translation": "there is endless space",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1608,6 +2312,14 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "Vielen Dank fürs bescheid geben ",
+        "translation": "Thank you for letting me know",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "conjonction",
         "german": "jedoch",
         "translation": "however",
@@ -1619,14 +2331,22 @@
         "category": "verb",
         "german": "behandeln",
         "translation": "to treat",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "conjonction",
         "german": "bezüglich (+ gen)",
         "translation": "regarding",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "zusammengebrochen",
+        "translation": "collapsed",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1643,14 +2363,22 @@
         "category": "verb",
         "german": "festlegen",
         "translation": "to determine",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
         "category": "noun",
         "german": "die Darstellung",
         "translation": "la représentation",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "zugeben",
+        "translation": "to admit",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1688,9 +2416,33 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "die Stimmung weiter auf",
+        "translation": "the mood continues to rise",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "markieren",
         "translation": "to mark",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "erstmal",
+        "translation": "for now",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "bezüglich",
+        "translation": "regarding",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1723,16 +2475,16 @@
         "category": "verb",
         "german": "bevorzugen",
         "translation": "to prefer",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "umwandeln",
         "translation": "to convert",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -1752,17 +2504,33 @@
         "isActive": true
     },
     {
+        "category": "conjonction",
+        "german": "trotz alledem",
+        "translation": "in spite of all",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "zugreifen",
         "translation": "to access",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
         "category": "conjonction",
         "german": "nirgendwo",
         "translation": "nowhere",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "der Zufall",
+        "translation": "the coincidence",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1803,14 +2571,38 @@
         "category": "verb",
         "german": "aufwachen",
         "translation": "to wake up",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
         "category": "conjonction",
         "german": "entsprechend",
         "translation": "corresponding",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "wir haben abgemacht",
+        "translation": "we have agreed",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "nichts­des­to­trotz",
+        "translation": "néanmoins",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "gerechtfertigt",
+        "translation": "justifié",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1827,6 +2619,14 @@
         "category": "adjective",
         "german": "weitergeleitet",
         "translation": "forwarded",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "der Eindringling",
+        "translation": "l'intrus",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1859,6 +2659,14 @@
         "category": "verb",
         "german": "beziehen",
         "translation": "move into",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "was auch immer",
+        "translation": "What ever",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -1896,6 +2704,22 @@
         "isActive": true
     },
     {
+        "category": "noun",
+        "german": "die Aufmerksamkeit",
+        "translation": "the attention",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Vorgabe",
+        "translation": "specification",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "erschlagen",
         "translation": "to kill",
@@ -1915,8 +2739,8 @@
         "category": "verb",
         "german": "vorankommen",
         "translation": "to move forward",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -1929,10 +2753,34 @@
     },
     {
         "category": "verb",
-        "german": "ausschalten",
-        "translation": "éteindre",
+        "german": "überprüfen",
+        "translation": "to check",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Schulung",
+        "translation": "the training",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "abschätzen",
+        "translation": "to estimate",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "ausschalten",
+        "translation": "éteindre",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -1947,8 +2795,8 @@
         "category": "verb",
         "german": "aufräumen",
         "translation": "to clean up",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -1976,27 +2824,35 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "verzeihen",
+        "translation": "to forgive",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "phrase",
         "german": "halte ich für ungünstig",
         "translation": "I think it's unfavorable",
         "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "(an)reißen",
         "translation": "déchirer",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "fleißig am machen",
         "translation": "occupé à faire",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2019,24 +2875,24 @@
         "category": "verb",
         "german": "darauf achten",
         "translation": "be careful",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "ausschlafen",
         "translation": "faire la grace matinée",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "adjective",
         "german": "aufwendig",
         "translation": "laborieux",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2049,18 +2905,42 @@
     },
     {
         "category": "verb",
-        "german": "verschwenden",
-        "translation": "gaspiller",
+        "german": "aufwerben",
+        "translation": "recruter",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "so rum",
+        "translation": "this way",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
     },
     {
         "category": "verb",
-        "german": "jemanden aufheitern",
-        "translation": "to cheer up someone",
+        "german": "losarbeiten",
+        "translation": "start working",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "verschwenden",
+        "translation": "gaspiller",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "jemanden aufheitern",
+        "translation": "to cheer up someone",
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -2075,6 +2955,22 @@
         "category": "verb",
         "german": "anbieten",
         "translation": "to offer",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "das Fahrzeug",
+        "translation": "the vehicle",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "zufällig",
+        "translation": "by chance",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2091,6 +2987,14 @@
         "category": "verb",
         "german": "ausfullen",
         "translation": "to complete",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "(be)antworten",
+        "translation": "to answer",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2123,8 +3027,8 @@
         "category": "verb",
         "german": "zunehmen",
         "translation": "prendre du poids",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 3,
+        "numberOfSuccess": 3,
         "isActive": true
     },
     {
@@ -2160,27 +3064,43 @@
         "isActive": true
     },
     {
+        "category": "noun",
+        "german": "selbst Verteidigung",
+        "translation": "self defense",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "wechseln",
+        "translation": "to change",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "sich auswirken (auf)",
         "translation": "to have an effect (on)",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "heilen",
         "translation": "guérir",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "phrase",
         "german": "es ist sowas wie ...",
         "translation": "it is like ...",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2208,6 +3128,14 @@
         "isActive": true
     },
     {
+        "category": "conjonction",
+        "german": "gewiss",
+        "translation": "certainly",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "phrase",
         "german": "Ich hätte es nicht tun sollen",
         "translation": "I shouldn't have done it",
@@ -2227,8 +3155,8 @@
         "category": "verb",
         "german": "rausschmeissen",
         "translation": "to kick out",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2241,8 +3169,32 @@
     },
     {
         "category": "verb",
+        "german": "zurückziehen",
+        "translation": "se désister",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "es auftaucht",
+        "translation": "it pops up",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
         "german": "einrichten",
         "translation": "to set up",
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "vorschreiben",
+        "translation": "préscrire",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2267,8 +3219,8 @@
         "category": "phrase",
         "german": "wo sind die grenze?",
         "translation": "where are the limit?",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2283,6 +3235,14 @@
         "category": "noun",
         "german": "grundsätzliches Problem",
         "translation": "problème fondamental",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "es bringt komplexität mit rein",
+        "translation": "it brings in complexity",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2323,8 +3283,8 @@
         "category": "adjective",
         "german": "eingestellt",
         "translation": "set",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2344,17 +3304,33 @@
         "isActive": true
     },
     {
+        "category": "adjective",
+        "german": "vorsichtig",
+        "translation": "careful",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "in der Lage sein",
         "translation": "être en mesure de",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "conjonction",
         "german": "warum auch immer",
         "translation": "for whatever reason",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Vorlage",
+        "translation": "the template",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2377,8 +3353,24 @@
     },
     {
         "category": "phrase",
+        "german": "so bald ich kann",
+        "translation": "as soon as I can",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
         "german": "wo ich groß geworden bin",
         "translation": "où j'ai grandi",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "selbststandig",
+        "translation": "self-employed",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2387,6 +3379,14 @@
         "category": "verb",
         "german": "mitgeben",
         "translation": "révéler",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "jede stelle",
+        "translation": "every place",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2395,6 +3395,22 @@
         "category": "verb",
         "german": "sich entscheiden",
         "translation": "se décider",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "eingedrängt",
+        "translation": "crowded",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "freigegeben",
+        "translation": "released",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2427,8 +3443,8 @@
         "category": "verb",
         "german": "(ver)schlucken",
         "translation": "to swallow",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2443,6 +3459,22 @@
         "category": "adjective",
         "german": "freigeschaltet",
         "translation": "unlocked",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "festhalten",
+        "translation": "to hold tight",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "genehmigt",
+        "translation": "approved",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2464,6 +3496,14 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "sie läufen Jahre lang durch",
+        "translation": "they go on for years",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "die Anwesenheit",
         "translation": "la présence",
@@ -2472,11 +3512,19 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "Du kannst einem echt leid tun",
+        "translation": "You can be really sorry for you",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "beibelassen",
         "translation": "leave at it is",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -2496,9 +3544,49 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "ich fange von vorne an",
+        "translation": "I start from the beginning",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "bedrohen",
+        "translation": "menacer",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "berichten",
+        "translation": "to report",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "phrase",
         "german": "Ich formuliere nochmals um",
         "translation": "je reformule de nouveau",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "abrufen",
+        "translation": "to retrieve",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "beurteilen",
+        "translation": "to judge",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2536,6 +3624,14 @@
         "isActive": true
     },
     {
+        "category": "conjonction",
+        "german": "insgesammt",
+        "translation": "dans l'ensemble",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "die Vielfalt",
         "translation": "la variété",
@@ -2555,6 +3651,14 @@
         "category": "verb",
         "german": "ausweichen",
         "translation": "esquiver",
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "der Durchschnitt",
+        "translation": "the average",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2576,6 +3680,22 @@
         "isActive": true
     },
     {
+        "category": "adjective",
+        "german": "schmal",
+        "translation": "étroit",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "bedroht",
+        "translation": "menacé",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "die Ansicht",
         "translation": "view",
@@ -2585,10 +3705,18 @@
     },
     {
         "category": "verb",
-        "german": "reintun",
-        "translation": "to put in",
+        "german": "ausleihen",
+        "translation": "emprunter",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "reintun",
+        "translation": "to put in",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2611,8 +3739,8 @@
         "category": "verb",
         "german": "angreifen",
         "translation": "to attack",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2635,8 +3763,8 @@
         "category": "verb",
         "german": "enttäuschen",
         "translation": "to disappoint",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2652,7 +3780,7 @@
         "german": "nachziehen",
         "translation": "make the next move",
         "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2672,6 +3800,14 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "sagst das nicht so leicht fertig",
+        "translation": "don't say it so easily",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "die Notwendigkeit",
         "translation": "nécessité",
@@ -2683,6 +3819,14 @@
         "category": "verb",
         "german": "wegwerfen",
         "translation": "throw away",
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "es hängt von etwas anderes ab",
+        "translation": "it depends on something else",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2699,8 +3843,8 @@
         "category": "verb",
         "german": "absagen",
         "translation": "refuse",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2731,8 +3875,8 @@
         "category": "verb",
         "german": "ersetzen",
         "translation": "to substitute",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2747,8 +3891,8 @@
         "category": "verb",
         "german": "vorbeikommen",
         "translation": "come over",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2771,8 +3915,8 @@
         "category": "verb",
         "german": "verwalten",
         "translation": "to manage",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -2784,9 +3928,25 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "zerstören",
+        "translation": "to destroy",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "adjective",
         "german": "widerlich",
         "translation": "disgusting",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Ergänzung",
+        "translation": "the complement",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2817,8 +3977,24 @@
     },
     {
         "category": "adjective",
+        "german": "ledig",
+        "translation": "single",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "zukünftige",
+        "translation": "future",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
         "german": "zusätzlich",
-        "translation": "additionally",
+        "translation": "en plus",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2835,14 +4011,22 @@
         "category": "verb",
         "german": "eingeben",
         "translation": "to enter",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
         "category": "noun",
         "german": "die Ausrede",
         "translation": "excuse",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "verfugung",
+        "translation": "disposal",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -2875,8 +4059,8 @@
         "category": "verb",
         "german": "wählen",
         "translation": "vote",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -2891,16 +4075,16 @@
         "category": "verb",
         "german": "(ver)messen",
         "translation": "mesurer",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "abhaken",
         "translation": "check off",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -2960,6 +4144,14 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "abtauchen",
+        "translation": "to submerge",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "das Gefühl",
         "translation": "the feeling",
@@ -2993,10 +4185,18 @@
     },
     {
         "category": "verb",
-        "german": "einbinden",
-        "translation": "intégrer",
+        "german": "zurückgreifen",
+        "translation": "se replier sur",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "einbinden",
+        "translation": "intégrer",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3011,16 +4211,16 @@
         "category": "verb",
         "german": "ermutigen",
         "translation": "encourage",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "nachfragen",
         "translation": "demander",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -3035,8 +4235,8 @@
         "category": "verb",
         "german": "ausprobieren",
         "translation": "to try",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3051,6 +4251,14 @@
         "category": "phrase",
         "german": "ich habe nicht damit gerechnet",
         "translation": "I did not expect that",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "erleben",
+        "translation": "to experience",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3080,6 +4288,14 @@
         "isActive": true
     },
     {
+        "category": "noun",
+        "german": "das passen wir demnächst noch an",
+        "translation": "we will adjust that soon",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "vertauschen",
         "translation": "échanger",
@@ -3091,6 +4307,14 @@
         "category": "verb",
         "german": "erfüllen",
         "translation": "fulfill",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "verlängern",
+        "translation": "to extend",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3115,14 +4339,22 @@
         "category": "verb",
         "german": "auslösen",
         "translation": "déclencher",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "noun",
         "german": "der Zugang",
         "translation": "the access",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "es kommt auf etwas anderes an",
+        "translation": "it depends on something else",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3147,14 +4379,22 @@
         "category": "verb",
         "german": "auskennen",
         "translation": "to know about",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "hinholen",
         "translation": "to fetch",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "komplizierter als nötig",
+        "translation": "more complicated than necessary",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3171,8 +4411,8 @@
         "category": "verb",
         "german": "ausdenken",
         "translation": "imagine",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3187,8 +4427,8 @@
         "category": "verb",
         "german": "beleidigen",
         "translation": "to insult",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -3216,11 +4456,27 @@
         "isActive": true
     },
     {
+        "category": "adjective",
+        "german": "erstaunlich",
+        "translation": "amazing",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "zusammenbrechen",
+        "translation": "to collapse",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "auswendig lernen",
         "translation": "apprendre par cœur",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -3237,6 +4493,22 @@
         "translation": "useful",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "kein Rolle spielen",
+        "translation": "to not matter",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Reihenfolge",
+        "translation": "the order",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3288,6 +4560,22 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "bescheid geben",
+        "translation": "to confirm",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "grundsätzlich",
+        "translation": "basically",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "adjective",
         "german": "unbekannt",
         "translation": "inconnu",
@@ -3299,16 +4587,16 @@
         "category": "verb",
         "german": "verwandeln",
         "translation": "to transform",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "abgeben",
         "translation": "rendre",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -3320,11 +4608,19 @@
         "isActive": true
     },
     {
+        "category": "noun",
+        "german": "die Sitzung",
+        "translation": "the meeting",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "ergänzen",
         "translation": "to complete",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3363,8 +4659,8 @@
         "category": "verb",
         "german": "erzeugen",
         "translation": "generate",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3400,6 +4696,14 @@
         "isActive": true
     },
     {
+        "category": "conjonction",
+        "german": "mittlerweile",
+        "translation": "in the meantime",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "adjective",
         "german": "verbunden",
         "translation": "connected",
@@ -3411,6 +4715,14 @@
         "category": "verb",
         "german": "durchschieben",
         "translation": "push through",
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "eins von Beiden",
+        "translation": "one of the two",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3435,8 +4747,8 @@
         "category": "verb",
         "german": "belästigen",
         "translation": "harceler",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3464,19 +4776,27 @@
         "isActive": true
     },
     {
+        "category": "adjective",
+        "german": "berechtigt",
+        "translation": "justifié",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "conjonction",
         "german": "im Verlauf (+ gen)",
         "translation": "au cours de",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "beibringen",
         "translation": "to teach",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3488,9 +4808,25 @@
         "isActive": true
     },
     {
+        "category": "adjective",
+        "german": "bestätigt",
+        "translation": "confirmed",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "phrase",
         "german": "Hört sich alles voll gut an",
         "translation": "Everything sounds good",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "überfüllt",
+        "translation": "crowded",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3552,27 +4888,35 @@
         "isActive": true
     },
     {
-        "category": "verb",
-        "german": "nachdenken",
-        "translation": "réfléchir",
+        "category": "conjonction",
+        "german": "nachdem",
+        "translation": "after",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "wiederum",
+        "translation": "à son tour",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
     },
     {
         "category": "verb",
-        "german": "überprüfen",
-        "translation": "to check",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "german": "nachdenken",
+        "translation": "réfléchir",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "sich benehmen",
         "translation": "to behave",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -3640,6 +4984,14 @@
         "isActive": true
     },
     {
+        "category": "conjonction",
+        "german": "innerhalb + gen",
+        "translation": "within",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "überreden",
         "translation": "persuader",
@@ -3651,6 +5003,14 @@
         "category": "adjective",
         "german": "bedient",
         "translation": "served",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "ein Schritt zurück",
+        "translation": "a step back",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3675,6 +5035,14 @@
         "category": "phrase",
         "german": "ich schätze mal",
         "translation": "I suppose",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "erkenntlich",
+        "translation": "grateful",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3707,6 +5075,22 @@
         "category": "verb",
         "german": "zusagen",
         "translation": "to accept",
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "unser Fall",
+        "translation": "our case",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "im Nachhinein",
+        "translation": "in retrospect",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3723,6 +5107,22 @@
         "category": "adjective",
         "german": "dringend",
         "translation": "urgent",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "aktualisieren",
+        "translation": "to update",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "regelmäßig",
+        "translation": "regularly",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3747,16 +5147,16 @@
         "category": "phrase",
         "german": "neunzig Grad",
         "translation": "90 degrés",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "besiegen",
         "translation": "vaincre",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3779,8 +5179,8 @@
         "category": "conjonction",
         "german": "hiermit",
         "translation": "ci-joint",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3795,6 +5195,14 @@
         "category": "phrase",
         "german": "es ist keine unbekannte Zahl",
         "translation": "it is not an unknown number",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "ich schreibe mal gerade einen Satz zu Ende.",
+        "translation": "I'm just finishing a sentence.",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3827,8 +5235,8 @@
         "category": "verb",
         "german": "ausgleichen",
         "translation": "to balance",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3840,9 +5248,33 @@
         "isActive": true
     },
     {
+        "category": "noun",
+        "german": "die Spalte",
+        "translation": "the column",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "wollte es nur erwähnt haben",
+        "translation": "I just wanted to have mentioned it",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "conjonction",
         "german": "und so weiter und so fort",
         "translation": "and so on and so forth",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "bedürfen",
+        "translation": "to require",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3859,22 +5291,30 @@
         "category": "verb",
         "german": "erfassen",
         "translation": "capture",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "zusammenhängen",
         "translation": "be connected",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "noun",
         "german": "die Tastatur",
         "translation": "the keyboard",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "ohne Ende",
+        "translation": "endless",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3889,8 +5329,32 @@
     },
     {
         "category": "verb",
+        "german": "ursprünglich",
+        "translation": "originally",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
         "german": "weiterleiten (weitergeleitet)",
         "translation": "forward",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "(ver)leihen",
+        "translation": "prêter",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Grundlage",
+        "translation": "the basis",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -3947,8 +5411,8 @@
         "category": "noun",
         "german": "die Rückmeldung",
         "translation": "feedback",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -3968,27 +5432,43 @@
         "isActive": true
     },
     {
-        "category": "verb",
-        "german": "betreffen",
-        "translation": "to affect",
+        "category": "noun",
+        "german": "die Abhängigkeit",
+        "translation": "la dépendance",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
     },
     {
         "category": "phrase",
-        "german": "du kriegst das hin",
-        "translation": "you can do it",
+        "german": "es tritt auf",
+        "translation": "it occurs",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
     },
     {
         "category": "verb",
+        "german": "betreffen",
+        "translation": "to affect",
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "du kriegst das hin",
+        "translation": "you can do it",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "verb",
         "german": "umsetzen",
         "translation": "implement",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -4035,14 +5515,22 @@
         "category": "noun",
         "german": "das Ziel",
         "translation": "the goal",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "noun",
         "german": "der Zweig",
         "translation": "the branch",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "demnächst",
+        "translation": "soon",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4075,6 +5563,14 @@
         "category": "phrase",
         "german": "wenn ich mich nicht irre",
         "translation": "si je ne me trompe pas",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "beantworten",
+        "translation": "to answer",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4115,8 +5611,8 @@
         "category": "verb",
         "german": "verarbeiten",
         "translation": "to process",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -4145,8 +5641,32 @@
     },
     {
         "category": "verb",
+        "german": "zurückziehen",
+        "translation": "to pull back",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "verbauen",
+        "translation": "to block",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
         "german": "sich bezeichnen",
         "translation": "s'identifier",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "der Fall",
+        "translation": "the case",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4155,8 +5675,8 @@
         "category": "verb",
         "german": "auf jemanden zählen",
         "translation": "compter sur qqun",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -4232,6 +5752,14 @@
         "isActive": true
     },
     {
+        "category": "conjonction",
+        "german": "deutlich",
+        "translation": "distinctly",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "(ver)schief gehen",
         "translation": "to go wrong",
@@ -4267,16 +5795,16 @@
         "category": "verb",
         "german": "reinstecken",
         "translation": "to put in",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "vereinfachen",
         "translation": "simplify",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -4299,8 +5827,8 @@
         "category": "verb",
         "german": "trennen",
         "translation": "to separate",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -4323,14 +5851,22 @@
         "category": "verb",
         "german": "heben",
         "translation": "to lift",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "ermitteln",
         "translation": "determine",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "es dauert eine Weile",
+        "translation": "it takes a while",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4339,6 +5875,14 @@
         "category": "noun",
         "german": "die Verschwendung",
         "translation": "le gaspillage",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "mächtig",
+        "translation": "powerful",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4371,14 +5915,22 @@
         "category": "verb",
         "german": "loslegen",
         "translation": "getting started",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "adjective",
         "german": "folgende",
         "translation": "suivant",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "rum spielen",
+        "translation": "to play around",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4411,6 +5963,14 @@
         "category": "adjective",
         "german": "ansprechbar",
         "translation": "open to conversation",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "die Zusammenfassung",
+        "translation": "the summary",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4459,6 +6019,14 @@
         "category": "noun",
         "german": "der Zaun",
         "translation": "the fence",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "mir ist klar geworden",
+        "translation": "it became clear to me",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4528,19 +6096,27 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "schalten",
+        "translation": "to switch",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "phrase",
         "german": "er hat beschlossen",
         "translation": "il a décidé",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "bedienen",
         "translation": "to serve",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -4560,6 +6136,14 @@
         "isActive": true
     },
     {
+        "category": "noun",
+        "german": "die Wut",
+        "translation": "the anger",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "adjective",
         "german": "unnötig",
         "translation": "unnecessary",
@@ -4571,8 +6155,8 @@
         "category": "verb",
         "german": "zulassen",
         "translation": "to allow",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -4587,8 +6171,8 @@
         "category": "verb",
         "german": "erscheinen",
         "translation": "to appear",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -4648,6 +6232,14 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "erfordern",
+        "translation": "to require",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "adjective",
         "german": "gültig",
         "translation": "valid",
@@ -4664,11 +6256,35 @@
         "isActive": true
     },
     {
+        "category": "conjonction",
+        "german": "trotz",
+        "translation": "despite",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "noun",
+        "german": "der Betreuer",
+        "translation": "the supervisor",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "es ist ein gutes Zeichen",
+        "translation": "it's a good sign",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "zu erwähnen",
         "translation": "to mention",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -4683,8 +6299,8 @@
         "category": "verb",
         "german": "vorgeben",
         "translation": "pretend",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -4760,6 +6376,30 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "wir können das loslegen",
+        "translation": "we can get started",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "abhängig von",
+        "translation": "depending on",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "sie halten sich nicht an die regeln",
+        "translation": "they don't obey the rules",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "die Aufwand",
         "translation": "la dépense (énergie, effort)",
@@ -4771,6 +6411,14 @@
         "category": "conjonction",
         "german": "sowohl ... als auch",
         "translation": "as well as",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "sich daran halten",
+        "translation": "to stick to it",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4808,6 +6456,22 @@
         "isActive": true
     },
     {
+        "category": "adjective",
+        "german": "freigegeben",
+        "translation": "approved",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "verurteilen",
+        "translation": "condamner",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "sich beklagen",
         "translation": "se plaindre",
@@ -4819,24 +6483,24 @@
         "category": "noun",
         "german": "der Standpunkt",
         "translation": "point of view",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "erledigen",
         "translation": "to complete",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "sich verständigen",
         "translation": "communicate",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -4880,6 +6544,38 @@
         "isActive": true
     },
     {
+        "category": "verb",
+        "german": "ich weiss nicht ob es ausreicht",
+        "translation": "I don't know if it's enough",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "primär",
+        "translation": "primary",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "verb",
+        "german": "versperren",
+        "translation": "to block",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "etwas dass du ewig suchst",
+        "translation": "something that you are forever looking for",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "phrase",
         "german": "es klingt nach",
         "translation": "it sounds like",
@@ -4904,11 +6600,19 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "sie sind die gleichen in Paris wie in Göttingen",
+        "translation": "they are the same in Paris as in Göttingen",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "ausradieren",
         "translation": "to erase",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -4923,6 +6627,14 @@
         "category": "verb",
         "german": "benachrichtigen",
         "translation": "notifier",
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
+        "isActive": true
+    },
+    {
+        "category": "phrase",
+        "german": "es ist unglaublich langsam",
+        "translation": "it's incredibly slow",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4931,6 +6643,30 @@
         "category": "phrase",
         "german": "ich verabschiede mich",
         "translation": "I say goodbye",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "derzeit",
+        "translation": "currently",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "adjective",
+        "german": "merklich",
+        "translation": "noticeably",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
+        "category": "conjonction",
+        "german": "im Vergleich dazu",
+        "translation": "in comparison to that",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
@@ -4952,11 +6688,19 @@
         "isActive": true
     },
     {
+        "category": "phrase",
+        "german": "es liegt daran",
+        "translation": "it is because",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "verb",
         "german": "sich beschweren",
         "translation": "se plaindre",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     },
     {
@@ -5024,19 +6768,27 @@
         "isActive": true
     },
     {
-        "category": "verb",
-        "german": "reinsziehen",
-        "translation": "pull in",
+        "category": "conjonction",
+        "german": "beziungsweise",
+        "translation": "c'est-à-dire",
         "numberOfViews": 0,
         "numberOfSuccess": 0,
         "isActive": true
     },
     {
         "category": "verb",
+        "german": "reinsziehen",
+        "translation": "pull in",
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
+        "isActive": true
+    },
+    {
+        "category": "verb",
         "german": "erzwingen",
         "translation": "enforce",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
@@ -5064,6 +6816,14 @@
         "isActive": true
     },
     {
+        "category": "adjective",
+        "german": "entsprechend",
+        "translation": "corresponding",
+        "numberOfViews": 0,
+        "numberOfSuccess": 0,
+        "isActive": true
+    },
+    {
         "category": "noun",
         "german": "die Unterscheidung",
         "translation": "la différenciation",
@@ -5083,16 +6843,16 @@
         "category": "verb",
         "german": "genehmigen",
         "translation": "to approve",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 1,
+        "numberOfSuccess": 1,
         "isActive": true
     },
     {
         "category": "verb",
         "german": "ablösen",
         "translation": "détacher",
-        "numberOfViews": 0,
-        "numberOfSuccess": 0,
+        "numberOfViews": 2,
+        "numberOfSuccess": 2,
         "isActive": true
     }
 ]

@@ -103,6 +103,11 @@ export class SettingsService {
         label: 'Nederlands',
         value: 'dutch',
         disabled: false
+      },
+      {
+        label: 'Ελληνικά',
+        value: 'greek',
+        disabled: false
       }
     ];
   }
