@@ -63,7 +63,7 @@ export class AddWordComponent implements OnInit, OnDestroy {
       numberOfViews: this.word.numberOfViews,
       numberOfSuccess: this.word.numberOfSuccess,
       isActive: this.word.isActive,
-      deactivationDate: this.word.deactivationDate
+      deactivationDate: this.word.deactivationDate ? this.word.deactivationDate : null
     }
     if (!!this.word.id) {
       this.dictionaryService.update(this.word.id, newWord);

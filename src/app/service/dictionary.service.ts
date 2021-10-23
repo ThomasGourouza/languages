@@ -139,8 +139,8 @@ export class DictionaryService {
 
   public viewWord(id: string, view: number, success: number, isCorrect: boolean): void {
     const wordUpdate: WordUpdate = {
-      numberOfViews: view + 1,
-      numberOfSuccess: isCorrect ? success + 1 : success
+      numberOfViews: view + 5,
+      numberOfSuccess: isCorrect ? success + 5 : success
     };
     this.afs.collection(this.COLLECTION).doc(id).update(wordUpdate);
   }

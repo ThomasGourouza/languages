@@ -226,9 +226,9 @@ export class GameComponent implements OnInit, OnDestroy {
       total: this.total
     });
     const summaryWord = { ...this.randomWord };
-    summaryWord.numberOfViews++;
+    summaryWord.numberOfViews = +summaryWord.numberOfViews + 5;
     if (this.isCorrect) {
-      summaryWord.numberOfSuccess++;
+      summaryWord.numberOfSuccess = +summaryWord.numberOfSuccess + 5;
     }
     this.summary.push({
       word: summaryWord,
