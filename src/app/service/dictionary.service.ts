@@ -19,7 +19,7 @@ export class DictionaryService {
 
   private COLLECTION!: string;
   private FIREBASE!: boolean;
-  private DEACTIVATION_TIME: number = 7;
+  private DEACTIVATION_TIME: number = 30;
 
   constructor(
     private afs: AngularFirestore,
@@ -64,9 +64,9 @@ export class DictionaryService {
 
   public isFilterNotEmpty(): boolean {
     return this._filterform.categories.length > 0
-        || this._filterform.ratings.length > 0
-        || this._filterform.german != ''
-        || this._filterform.translation != '';
+      || this._filterform.ratings.length > 0
+      || this._filterform.german != ''
+      || this._filterform.translation != '';
   }
 
   public async getData(): Promise<Array<Word>> {
@@ -151,24 +151,16 @@ export class DictionaryService {
       word.rating = (word.numberOfViews > 0) ?
         Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
       if (!word.isActive) {
-        const reactivationDate: Date = word.deactivationDate.toDate();
-        reactivationDate.setDate(reactivationDate.getDate() + this.DEACTIVATION_TIME);
+        const reactivationDate = new Date();
+        reactivationDate.setDate(word.deactivationDate.toDate().getDate() + this.DEACTIVATION_TIME);
         const today = new Date();
-        if (
-          reactivationDate.toLocaleDateString() == today.toLocaleDateString()
-          && !!word.id
-        ) {
-          this.activateWord(word.id, word.german);
-        } else {
+        if (this.compareDate(today, reactivationDate) === -1) {
           for (let i = 0; i < this.DEACTIVATION_TIME; i++) {
-            const reactivationDateStatus: Date = word.deactivationDate.toDate();
-            reactivationDateStatus.setDate(reactivationDateStatus.getDate() + i);
+            const reactivationDateStatus = new Date();
+            reactivationDateStatus.setDate(word.deactivationDate.toDate().getDate() + i);
             const status = Math.floor(((this.DEACTIVATION_TIME - i) / this.DEACTIVATION_TIME) * 100);
-            if (
-              reactivationDateStatus.toLocaleDateString() == today.toLocaleDateString()
-              && word.numberOfViews !== status
-              && !!word.id
-            ) {
+            if (reactivationDateStatus.toLocaleDateString() === today.toLocaleDateString()
+              && word.numberOfViews !== status) {
               const wordUpdate: WordUpdate = {
                 numberOfViews: status
               };
@@ -176,10 +168,37 @@ export class DictionaryService {
               break;
             }
           }
+        } else if (word.numberOfViews !== 0) {
+          const wordUpdate: WordUpdate = {
+            numberOfViews: 0
+          };
+          this.afs.collection(this.COLLECTION).doc(word.id).update(wordUpdate);
         }
       }
     });
     return activeWords;
   }
 
+  private compareDate(date1: Date, date2: Date): number {
+    const yearDiffResult = this.returnResult(date1.getFullYear() - date2.getFullYear());
+    const monthDiffResult = this.returnResult(date1.getMonth() - date2.getMonth());
+    const dayDiffResult = this.returnResult(date1.getDate() - date2.getDate());
+    if ([-1, 1].includes(yearDiffResult)) {
+      return yearDiffResult;
+    }
+    if ([-1, 1].includes(monthDiffResult)) {
+      return monthDiffResult;
+    }
+    return dayDiffResult;
+  }
+
+  private returnResult(comparison: number): number {
+    if (comparison < 0) {
+      return -1;
+    } else if (comparison > 0) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
 }
