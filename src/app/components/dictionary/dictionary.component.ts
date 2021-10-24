@@ -158,7 +158,7 @@ export class DictionaryComponent implements OnInit, OnDestroy {
       accept: () => {
         const wordId = word.id;
         if (!!wordId) {
-          this.dictionaryService.deactivateWord(wordId, word.german);
+          this.dictionaryService.deactivateWord(wordId, word.german, word.rating);
         }
       }
     });

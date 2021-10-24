@@ -104,18 +104,19 @@ export class DictionaryService {
   }
 
   public activateWord(id: string, german: string): void {
-    this.wordActivationControl(id, true, german);
+    this.wordActivationControl(id, true, german, 0);
   }
 
-  public deactivateWord(id: string, german: string): void {
-    this.wordActivationControl(id, false, german);
+  public deactivateWord(id: string, german: string, rating: number | undefined): void {
+    this.wordActivationControl(id, false, german, rating);
   }
 
-  private wordActivationControl(id: string, isActiveValue: boolean, german: string): void {
+  private wordActivationControl(id: string, isActiveValue: boolean, german: string, ratingValue: number | undefined): void {
     const wordUpdate: WordUpdate = {
       isActive: isActiveValue,
       numberOfViews: isActiveValue ? 0 : 100,
       numberOfSuccess: 0,
+      rating: ratingValue,
       deactivationDate: isActiveValue ? null : new Date()
     };
     this.afs.collection(this.COLLECTION).doc(id)
@@ -148,8 +149,6 @@ export class DictionaryService {
   public manageWord(words: Array<Word>, activated: boolean): Array<Word> {
     const activeWords = words.filter((word) => word.isActive === activated);
     activeWords.forEach((word) => {
-      word.rating = (word.numberOfViews > 0) ?
-        Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
       if (!word.isActive) {
         const reactivationDate = new Date();
         reactivationDate.setDate(word.deactivationDate.toDate().getDate() + this.DEACTIVATION_TIME);
@@ -174,6 +173,9 @@ export class DictionaryService {
           };
           this.afs.collection(this.COLLECTION).doc(word.id).update(wordUpdate);
         }
+      } else {
+        word.rating = (word.numberOfViews > 0) ?
+          Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
       }
     });
     return activeWords;

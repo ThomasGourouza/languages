@@ -88,7 +88,7 @@
                 <th pSortableColumn="category">
                     Category <p-sortIcon field="category"></p-sortIcon>
                 </th>
-                <th *ngIf="mode.activated && firebase" pSortableColumn="rating">
+                <th *ngIf="firebase" pSortableColumn="rating">
                     Rating <p-sortIcon field="rating"></p-sortIcon>
                 </th>
                 <th *ngIf="firebase" pSortableColumn="numberOfViews">
@@ -102,7 +102,7 @@
                 <td>{{word.german}}</td>
                 <td>{{word.translation}}</td>
                 <td>{{word.category | label}}</td>
-                <td *ngIf="mode.activated && firebase">
+                <td *ngIf="firebase">
                     <p-rating [ngModel]="word.rating" [readonly]="true" [cancel]="false"></p-rating>
                 </td>
                 <td *ngIf="firebase">
@@ -139,6 +139,5 @@
         </ng-template>
     </p-table>
 </div>
-
 <app-add-word></app-add-word>
 <br>

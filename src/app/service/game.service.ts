@@ -119,15 +119,8 @@ export class GameService {
   public manageWordInDB(word: Word, isCorrect: boolean): void {
     const rating = (word.numberOfViews > 0) ?
       Math.round(5 * (word.numberOfSuccess / word.numberOfViews)) : 0;
-    if (
-      +word.numberOfViews >= 99
-      && !!word.id
-    ) {
-      if (rating === 5) {
-        this.dictionaryService.deleteWord(word.id, word.german, true);
-      } else {
-        this.dictionaryService.deactivateWord(word.id, word.german);
-      }
+    if (+word.numberOfViews >= 99 && !!word.id) {
+      this.dictionaryService.deactivateWord(word.id, word.german, rating);
     } else if (!!word.id) {
       this.dictionaryService.viewWord(
         word.id,
