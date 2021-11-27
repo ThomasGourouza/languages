@@ -69,7 +69,7 @@ export class DictionaryService {
       || this._filterform.translation != '';
   }
 
-  public async getData(): Promise<Array<Word>> {
+  private async getData(): Promise<Array<Word>> {
     return this.http.get<Word[]>('assets/data/dictionary.json').toPromise();
   }
 
