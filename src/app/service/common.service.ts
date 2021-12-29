@@ -27,7 +27,7 @@ export class CommonService {
       { label: 'Adjective', value: 'adjective' },
       { label: 'Noun', value: 'noun' },
       { label: 'Phrase', value: 'phrase' },
-      { label: 'Conjonction', value: 'conjonction' },
+      { label: 'Conjunction', value: 'conjonction' },
     ];
     this._numbersOfWords = [
       5, 10, 20, 30

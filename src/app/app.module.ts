@@ -15,6 +15,7 @@ import { HomeModule } from './components/home/home.component.module';
 import { SettingsModule } from './components/settings/settings.component.module';
 import { SettingsService } from './service/settings.service';
 import { DictionaryService } from './service/dictionary.service';
+import { SwadeshModule } from './components/swadesh/swadesh.component.module';
 const environment = {
   production: false,
   firebase: {
@@ -44,6 +45,7 @@ const environment = {
     DictionaryModule,
     GameModule,
     HomeModule,
+    SwadeshModule,
     SettingsModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent }

@@ -73,10 +73,11 @@
             </form>
         </p-accordionTab>
     </p-accordion>
-    <p-table [value]="wordsFiltered" [rows]="10" [paginator]="true" sortMode="multiple"
-        [globalFilterFields]="['german','translation','category','rating','numberOfViews']" responsiveLayout="scroll"
+    <p-table [value]="wordsFiltered" [rows]="100" [paginator]="true" sortMode="multiple"
+        [scrollable]="true" scrollHeight="650px"
+        [globalFilterFields]="['german','translation','category','rating','numberOfViews']"
         [rowHover]="true" dataKey="id" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} words"
-        [rowsPerPageOptions]="[5,10,15,20,50,100]" [showCurrentPageReport]="true">
+        [rowsPerPageOptions]="[10,50,100,500,1000]" [showCurrentPageReport]="true">
         <ng-template pTemplate="header">
             <tr>
                 <th pSortableColumn="german">
@@ -106,7 +107,9 @@
                     <p-rating [ngModel]="word.rating" [readonly]="true" [cancel]="false"></p-rating>
                 </td>
                 <td *ngIf="firebase">
-                    <p-progressBar [value]="word.numberOfViews"></p-progressBar>
+                    <div class="col-9">
+                        <p-progressBar [value]="word.numberOfViews"></p-progressBar>
+                    </div>
                 </td>
                 <td *ngIf="firebase">
                     <span *ngIf="mode.activated">
