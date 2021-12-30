@@ -30,9 +30,10 @@ export class SwadeshComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.swadeshService.swadeshItems$.subscribe((swadeshItems) =>
-      this.swadeshList = swadeshItems
-    );
+    this.swadeshService.swadeshItems$.subscribe((swadeshItems) => {
+      this.swadeshList = swadeshItems;
+      this.listLoaded = (this.swadeshService.accordionTabSelected === 2);
+    });
   }
 
   public toArray(categories: Map<Category, Array<Subcategory>>): Array<any> {

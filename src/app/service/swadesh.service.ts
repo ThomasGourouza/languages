@@ -4,6 +4,7 @@ import { from, Observable } from 'rxjs';
 import { Category, Subcategory } from '../models/swadesh-categories';
 import { SwadeshItem } from '../models/swadesh-item';
 import { Language, Languages } from '../models/swadesh-languages';
+import { SelectedCategory } from '../models/swadesh-selected-category';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,12 @@ export class SwadeshService {
   private _swadeshItems$!: Observable<Array<SwadeshItem>>;
   private _languages: Array<Language>;
   private _categories: Map<Category, Array<Subcategory>>;
-  public _accordionTabSelected: number;
+  private _accordionTabSelected: number;
+
+  private _selectedConjunctions!: Array<SelectedCategory>;
+  private _selectedAdjectives!: Array<SelectedCategory>;
+  private _selectedNouns!: Array<SelectedCategory>;
+  private _selectedVerbs!: Array<SelectedCategory>;
 
   constructor(
     private http: HttpClient
@@ -98,9 +104,36 @@ export class SwadeshService {
   get accordionTabSelected(): number {
     return this._accordionTabSelected;
   }
-
   set accordionTabSelected(index: number) {
     this._accordionTabSelected = index;
+  }
+
+  get selectedConjunctions(): Array<SelectedCategory> {
+    return this._selectedConjunctions;
+  }
+  set selectedConjunctions(categories: Array<SelectedCategory>) {
+    this._selectedConjunctions = categories;
+  }
+
+  get selectedAdjectives(): Array<SelectedCategory> {
+    return this._selectedAdjectives;
+  }
+  set selectedAdjectives(categories: Array<SelectedCategory>) {
+    this._selectedAdjectives = categories;
+  }
+
+  get selectedNouns(): Array<SelectedCategory> {
+    return this._selectedNouns;
+  }
+  set selectedNouns(categories: Array<SelectedCategory>) {
+    this._selectedNouns = categories;
+  }
+
+  get selectedVerbs(): Array<SelectedCategory> {
+    return this._selectedVerbs;
+  }
+  set selectedVerbs(categories: Array<SelectedCategory>) {
+    this._selectedVerbs = categories;
   }
 
 }

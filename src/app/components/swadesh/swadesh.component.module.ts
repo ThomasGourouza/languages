@@ -19,6 +19,8 @@ import { SortPipe } from './pipes/sort.pipe';
 import { LanguagesSelectionComponent } from './languages-selection/languages-selection.component';
 import { CategoriesSelectionComponent } from './categories-selection/categories-selection.component';
 import { ListComponent } from './list/list.component';
+import { SubcategoriesSelectionComponent } from './categories-selection/subcategories-selection/subcategories-selection.component';
+import { SwadeshService } from 'src/app/service/swadesh.service';
 
 @NgModule({
     declarations: [
@@ -26,7 +28,8 @@ import { ListComponent } from './list/list.component';
         SortPipe,
         LanguagesSelectionComponent,
         CategoriesSelectionComponent,
-        ListComponent
+        ListComponent,
+        SubcategoriesSelectionComponent
     ],
     imports: [
         CommonModule,
@@ -47,6 +50,7 @@ import { ListComponent } from './list/list.component';
         CommonService,
         AddWordService,
         ExcelService,
+        SwadeshService,
         SortPipe
     ],
     exports: [

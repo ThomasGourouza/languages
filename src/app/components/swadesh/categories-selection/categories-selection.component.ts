@@ -29,24 +29,10 @@ export class CategoriesSelectionComponent {
   }
   public categoriesArray!: Array<Item>;
 
-  public onRowSelect(
-    category: SelectedCategory, subcategory: Array<SelectedCategory>, row: SelectedCategory, isSelected: boolean
-  ): void {
-    row.selected = isSelected;
-    if (isSelected || (!isSelected && !subcategory.some((item) => item.selected))) {
-      category.selected = isSelected;
-    }
-    this.categoriesEmitter.emit(this.categoriesArray);
-  }
-
-  public checkboxChange(category: SelectedCategory, subcategory: Array<SelectedCategory>, checked: boolean): void {
-    category.selected = checked;
-    subcategory.forEach((item) => item.selected = checked);
-    this.categoriesEmitter.emit(this.categoriesArray);
-  }
-
-  public getSelected(array: Array<SelectedCategory>): Array<SelectedCategory> {
-    return array.filter((item) => item.selected);
+  public onCategoriesSelect(item: Item): void {
+    const newcategories = this.categoriesArray.filter((cat) => cat.category.name !== item.category.name);
+    newcategories.push(item);
+    this.categoriesEmitter.emit(newcategories);    
   }
 
 }
