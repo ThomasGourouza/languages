@@ -14,10 +14,11 @@ export class SwadeshComponent implements OnInit {
 
   public languages: Array<Language>;
   public categories: Map<Category, Array<Subcategory>>;
-  public categoriesArray: Array<Item>
+  public categoriesArray: Array<Item>;
   public swadeshList: Array<SwadeshItem>;
 
   public tableLoaded = true;
+  public listLoaded = false;
 
   constructor(
     private swadeshService: SwadeshService
@@ -65,6 +66,7 @@ export class SwadeshComponent implements OnInit {
   public onTabEvent(index: number, event: string) {
     if (event === 'open') {
       this.swadeshService.accordionTabSelected = index;
+      this.listLoaded = (index === 2);
     } else {
       this.swadeshService.accordionTabSelected = -1;
     }

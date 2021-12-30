@@ -3,8 +3,7 @@
         <div class="d-flex justify-content-center">
             <div class="col-3 card">
                 <app-languages-selection *ngIf="tableLoaded; else loading" [languages]="languages"
-                    (rowSelect)="onRowSelect($event)"
-                    (languageUp)="onLanguageUp($event)">
+                    (rowSelect)="onRowSelect($event)" (languageUp)="onLanguageUp($event)">
                 </app-languages-selection>
                 <ng-template #loading>
                     <app-languages-selection [languages]="languages">
@@ -15,26 +14,18 @@
     </p-accordionTab>
     <p-accordionTab header="Categories" [selected]="getAccordionTabSelected() === 1">
         <div class="d-flex justify-content-center">
-            <div class="col-9">
-                <app-categories-selection [categories]="categories" (categoriesEmitter)="getCategories($event)"></app-categories-selection>
+            <div class="col-7">
+                <app-categories-selection [categories]="categories" (categoriesEmitter)="getCategories($event)">
+                </app-categories-selection>
             </div>
         </div>
     </p-accordionTab>
-    <p-accordionTab header="Header 4" [selected]="getAccordionTabSelected() === 2">
+    <p-accordionTab header="List" [selected]="getAccordionTabSelected() === 2">
         <div class="d-flex justify-content-center">
             <div class="col-9 row">
-                <div class="col" *ngFor="let category of toArray(categories)">
-                    <ul>
-                        <li>
-                            {{ category.name | titlecase}}
-                            <ul *ngFor="let subcategory of category.value">
-                                <li>
-                                    {{ subcategory | titlecase}}
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <app-list *ngIf="listLoaded" [languages]="languages" [categoriesArray]="categoriesArray"
+                    [swadeshList]="swadeshList">
+                </app-list>
             </div>
         </div>
     </p-accordionTab>

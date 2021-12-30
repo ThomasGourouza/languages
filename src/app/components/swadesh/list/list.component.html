@@ -1,0 +1,22 @@
+<div class="card">
+    <p-table [columns]="columns" [value]="swadeshList" [rows]="207" [paginator]="true" [scrollable]="true"
+        scrollHeight="650px" [rowHover]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} words"
+        [rowsPerPageOptions]="[10,50,100,207]" [showCurrentPageReport]="true" responsiveLayout="scroll">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns" class="d-flex justify-content-center">
+                    {{ col | titlecase }}
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-swadeshItem let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns" class="d-flex justify-content-center">
+                    {{ swadeshItem[col] }}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<br>

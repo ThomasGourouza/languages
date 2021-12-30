@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Category, Subcategory } from 'src/app/models/swadesh-categories';
 import { SelectedCategory } from 'src/app/models/swadesh-selected-category';
 export interface Item {
@@ -10,27 +10,24 @@ export interface Item {
   selector: 'app-categories-selection',
   templateUrl: './categories-selection.component.html'
 })
-export class CategoriesSelectionComponent implements OnInit {
+export class CategoriesSelectionComponent {
 
   @Output() categoriesEmitter = new EventEmitter<Array<Item>>();
-  @Input() categories!: Map<Category, Array<Subcategory>>;
-  public categoriesArray!: Array<Item>;
-
-  ngOnInit(): void {
-    this.categoriesArray = Array.from(this.categories, ([name, value]) => ({ name, value }))
-      .map((item) => {
-        const result: Item = {
-          category: {
-            name: item.name.toString(),
-            selected: true
-          },
-          subcategory: []
-        };
-        item.value.forEach((val) => result.subcategory.push({ name: val.toString(), selected: true }));
-        return result;
-      });
+  @Input() set categories(categoriesMap: Map<Category, Array<Subcategory>>) {
+    this.categoriesArray = Array.from(categoriesMap, ([name, value]) => ({ name, value }))
+      .map((item) => ({
+        category: {
+          name: item.name.toString(),
+          selected: true
+        },
+        subcategory: item.value.map((val) => ({
+          name: val.toString(),
+          selected: true
+        }))
+      }));
     this.categoriesEmitter.emit(this.categoriesArray);
   }
+  public categoriesArray!: Array<Item>;
 
   public onRowSelect(
     category: SelectedCategory, subcategory: Array<SelectedCategory>, row: SelectedCategory, isSelected: boolean

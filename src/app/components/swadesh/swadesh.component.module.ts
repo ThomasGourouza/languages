@@ -18,13 +18,15 @@ import { CommonService } from 'src/app/service/common.service';
 import { SortPipe } from './pipes/sort.pipe';
 import { LanguagesSelectionComponent } from './languages-selection/languages-selection.component';
 import { CategoriesSelectionComponent } from './categories-selection/categories-selection.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
     declarations: [
         SwadeshComponent,
         SortPipe,
         LanguagesSelectionComponent,
-        CategoriesSelectionComponent
+        CategoriesSelectionComponent,
+        ListComponent
     ],
     imports: [
         CommonModule,
@@ -45,6 +47,7 @@ import { CategoriesSelectionComponent } from './categories-selection/categories-
         CommonService,
         AddWordService,
         ExcelService,
+        SortPipe
     ],
     exports: [
         SwadeshComponent
