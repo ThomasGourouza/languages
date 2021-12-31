@@ -11,7 +11,7 @@ export class SubcategoriesSelectionComponent implements OnInit {
 
   @Output() categoriesEmitter = new EventEmitter<Item>();
   @Input() item!: Item;
-  @Input() allChecked!: boolean;
+  @Input() allChecked: boolean | undefined;
 
   public selectedCategory!: boolean;
   public selectedSubcategory!: Array<SelectedCategory>;
@@ -32,7 +32,10 @@ export class SubcategoriesSelectionComponent implements OnInit {
   }
 
   ngOnChanges(changes: { [property: string]: SimpleChange }) {
-    this.onCheckboxChange(changes.allChecked.currentValue);
+    const checked: boolean | undefined = changes.allChecked.currentValue;
+    if (checked !== undefined) {
+      this.onCheckboxChange(checked);
+    }
   }
 
   private refreshSelectedCategories(): void {

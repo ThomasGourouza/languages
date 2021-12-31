@@ -28,15 +28,9 @@ export class CategoriesSelectionComponent {
     this.categoriesEmitter.emit(this.categoriesArray);
   }
   public categoriesArray!: Array<Item>;
-  public allChecked = true;
+  public allChecked: boolean | undefined;
 
   public onAllCheck(checked: boolean): void {
-    this.categoriesArray.forEach((item) => {
-      item.category.selected = checked;
-      item.subcategory.forEach((subItem) => {
-        subItem.selected = checked;
-      });
-    });
     this.allChecked = checked;
   }
 

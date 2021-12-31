@@ -17,8 +17,8 @@ export class SwadeshComponent implements OnInit {
   public categoriesArray: Array<Item>;
   public swadeshList: Array<SwadeshItem>;
 
-  public tableLoaded = true;
-  public listLoaded = false;
+  public tableLoaded: boolean;
+  public listLoaded: boolean;
 
   constructor(
     private swadeshService: SwadeshService
@@ -27,6 +27,8 @@ export class SwadeshComponent implements OnInit {
     this.languages = this.swadeshService.languages;
     this.categoriesArray = [];
     this.swadeshList = [];
+    this.tableLoaded = true;
+    this.listLoaded = false;
   }
 
   ngOnInit(): void {
