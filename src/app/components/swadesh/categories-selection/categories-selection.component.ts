@@ -28,11 +28,22 @@ export class CategoriesSelectionComponent {
     this.categoriesEmitter.emit(this.categoriesArray);
   }
   public categoriesArray!: Array<Item>;
+  public allChecked = true;
+
+  public onAllCheck(checked: boolean): void {
+    this.categoriesArray.forEach((item) => {
+      item.category.selected = checked;
+      item.subcategory.forEach((subItem) => {
+        subItem.selected = checked;
+      });
+    });
+    this.allChecked = checked;
+  }
 
   public onCategoriesSelect(item: Item): void {
     const newcategories = this.categoriesArray.filter((cat) => cat.category.name !== item.category.name);
     newcategories.push(item);
-    this.categoriesEmitter.emit(newcategories);    
+    this.categoriesEmitter.emit(newcategories);
   }
 
 }

@@ -1,10 +1,10 @@
-<p-table [value]="item.subcategory" selectionMode="multiple" [selection]="getSelectedSubcategories()"
-    (onRowSelect)="onRowSelect(item.category, item.subcategory, $event.data, true)"
-    (onRowUnselect)="onRowSelect(item.category, item.subcategory, $event.data, false)" styleClass="p-mt-5"
+<p-table [value]="item.subcategory" selectionMode="multiple" [selection]="selectedSubcategory"
+    (onRowSelect)="onRowSelect($event.data, true)"
+    (onRowUnselect)="onRowSelect($event.data, false)" styleClass="p-mt-5"
     dataKey="name">
     <ng-template pTemplate="caption">
         <p-checkbox [ngModel]="item.category.selected"
-            (onChange)="onCheckboxChange(item.category, item.subcategory, $event.checked)" [binary]="true">
+            (onChange)="onCheckboxChange($event.checked)" [binary]="true">
         </p-checkbox>
         {{ item.category.name | titlecase }}
     </ng-template>

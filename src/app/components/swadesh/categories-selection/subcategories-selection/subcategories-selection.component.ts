@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChange } from '@angular/core';
 import { SelectedCategory } from 'src/app/models/swadesh-selected-category';
 import { SwadeshService } from 'src/app/service/swadesh.service';
 import { Item } from '../categories-selection.component';
@@ -11,6 +11,7 @@ export class SubcategoriesSelectionComponent implements OnInit {
 
   @Output() categoriesEmitter = new EventEmitter<Item>();
   @Input() item!: Item;
+  @Input() allChecked!: boolean;
 
   public selectedCategory!: boolean;
   public selectedSubcategory!: Array<SelectedCategory>;
@@ -30,6 +31,10 @@ export class SubcategoriesSelectionComponent implements OnInit {
     this.refreshSelectedCategories();
   }
 
+  ngOnChanges(changes: { [property: string]: SimpleChange }) {
+    this.onCheckboxChange(changes.allChecked.currentValue);
+  }
+
   private refreshSelectedCategories(): void {
     this.item.subcategory.forEach((subcat) => {
       subcat.selected = (this.selectedSubcategory.map((selected) => selected.name).includes(subcat.name));
@@ -37,33 +42,24 @@ export class SubcategoriesSelectionComponent implements OnInit {
     this.item.category.selected = this.item.subcategory.some((item) => item.selected);
   }
 
-  public getSelectedSubcategories(): Array<SelectedCategory> {
-    return this.selectedSubcategory;
-  }
-
-  public onRowSelect(
-    category: SelectedCategory, subcategory: Array<SelectedCategory>, row: SelectedCategory, isSelected: boolean
-  ): void {
+  public onRowSelect(row: SelectedCategory, isSelected: boolean): void {
     row.selected = isSelected;
-    if (isSelected || (!isSelected && !subcategory.some((item) => item.selected))) {
-      category.selected = isSelected;
+    if (isSelected || (!isSelected && !this.item.subcategory.some((item) => item.selected))) {
+      this.item.category.selected = isSelected;
     }
-    this.emitItem(category, subcategory);
+    this.emitItem();
   }
 
-  public onCheckboxChange(
-    category: SelectedCategory, subcategory: Array<SelectedCategory>, checked: boolean
-  ): void {
-    category.selected = checked;
-    subcategory.forEach((item) => item.selected = checked);
-    this.emitItem(category, subcategory);
+  public onCheckboxChange(checked: boolean): void {
+    this.item.category.selected = checked;
+    this.item.subcategory.forEach((subItem) => subItem.selected = checked);
+    this.emitItem();
   }
 
-  private emitItem(category: SelectedCategory, subcategory: Array<SelectedCategory>): void {
-    const emittedItem: Item = { category, subcategory };
-    this.setCategoriesInService(emittedItem);
+  private emitItem(): void {
+    this.setCategoriesInService(this.item);
     this.selectedSubcategory = this.getCategoriesFromService(this.item.category.name);
-    this.categoriesEmitter.emit(emittedItem);
+    this.categoriesEmitter.emit(this.item);
   }
 
   private getCategoriesFromService(categoryName: string): Array<SelectedCategory> {

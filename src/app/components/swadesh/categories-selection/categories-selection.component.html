@@ -1,7 +1,33 @@
+<div class="d-flex justify-content-center">
+    <div class="card col-6">
+        <p-table>
+            <ng-template pTemplate="caption">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex justify-content-center">
+                            <button pButton pRipple icon="pi pi-check" label="Select all"
+                                class="p-button-rounded p-button-primary p-button-outlined"
+                                (click)="onAllCheck(true)"></button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-flex justify-content-center">
+                            <button pButton pRipple icon="pi pi-times" label="Unselect all"
+                                class="p-button-rounded p-button-danger p-button-outlined"
+                                (click)="onAllCheck(false)"></button>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
+<br>
 <div class="row">
     <div class="col" *ngFor="let item of categoriesArray">
         <div class="card">
-            <app-subcategories-selection [item]="item" (categoriesEmitter)="onCategoriesSelect($event)">
+            <app-subcategories-selection [item]="item" [allChecked]="allChecked"
+                (categoriesEmitter)="onCategoriesSelect($event)">
             </app-subcategories-selection>
         </div>
     </div>
