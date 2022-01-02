@@ -9,6 +9,7 @@ import { CommonService, Item, Mode } from 'src/app/service/common.service';
 import { ExcelService } from 'src/app/service/excel.service';
 import { Subscription } from 'rxjs';
 import { SettingsService } from 'src/app/service/settings.service';
+import { WordUpdate } from 'src/app/models/word-update';
 
 export interface Filterform {
   german: string;
@@ -25,7 +26,7 @@ export class DictionaryComponent implements OnInit, OnDestroy {
 
   private wordSubscription: Subscription;
   private words!: Array<Word>;
-  private allWordsToDownload!: Array<Word>;
+  private allWords!: Array<Word>;
   public wordsFiltered!: Array<Word>;
   public categories: Array<Item>;
   public ratings: Array<Item>;
@@ -78,16 +79,22 @@ export class DictionaryComponent implements OnInit, OnDestroy {
     this.excelService.uploadedWords$.subscribe((words) => {
       if (this.uploadDisabled) {
         this.uploadDisabled = false;
-        console.log(words);
+        words.forEach((word) => {
+          this.saveWord(word);
+        });
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    this.wordSubscription.unsubscribe();
   }
 
   private loadWords(): void {
     this.wordSubscription = this.dictionaryService.words.subscribe((words) => {
       this.firebase = this.settingsService.settingForm.firebase;
+      this.allWords = words;
       this.words = this.dictionaryService.manageWord(words, this.firebase ? this.mode.activated : true);
-      this.allWordsToDownload = words;
       this.filterFromForm();
     });
   }
@@ -97,12 +104,8 @@ export class DictionaryComponent implements OnInit, OnDestroy {
     this.loadWords();
   }
 
-  ngOnDestroy(): void {
-    this.wordSubscription.unsubscribe();
-  }
-
   public onDownloadWords(): void {
-    this.excelService.exportAsExcelFile(this.allWordsToDownload, 'dictionary');
+    this.excelService.exportAsExcelFile(this.allWords, 'dictionary');
   }
 
   public onUploadWords(file: File): void {
@@ -110,6 +113,20 @@ export class DictionaryComponent implements OnInit, OnDestroy {
       this.uploadDisabled = true;
       this.excelService.excelToJSON(file);
     }
+  }
+
+  public saveWord(word: Word) {
+    const newWord: Word = {
+      category: word.category,
+      german: word.german,
+      translation: word.translation,
+      numberOfViews: 0,
+      numberOfSuccess: 0,
+      isActive: true,
+      deactivationDate: null
+    }
+    const wordExists = this.allWords.map((w) => w.german).includes(word.german);
+    this.dictionaryService.addWord(newWord, wordExists);
   }
 
   private initFilterform(german: string, translation: string, categories: string, ratings: string): void {
