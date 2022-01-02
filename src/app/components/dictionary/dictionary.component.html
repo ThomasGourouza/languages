@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col">
                     <button pButton pRipple label="Download" icon="pi pi-file-excel"
-                        class="p-button-success p-button-outlined form-control" (click)="exportAsXLSX()"></button>
+                        class="p-button-success p-button-outlined form-control" (click)="onDownloadWords()"></button>
                 </div>
                 <div class="col" *ngIf="mode.activated">
                     <button *ngIf="firebase" pButton pRipple label="New" icon="pi pi-plus"

@@ -25,6 +25,7 @@ export class DictionaryComponent implements OnInit, OnDestroy {
 
   private wordSubscription: Subscription;
   private words!: Array<Word>;
+  private allWordsToDownload!: Array<Word>;
   public wordsFiltered!: Array<Word>;
   public categories: Array<Item>;
   public ratings: Array<Item>;
@@ -78,6 +79,7 @@ export class DictionaryComponent implements OnInit, OnDestroy {
     this.wordSubscription = this.dictionaryService.words.subscribe((words) => {
       this.firebase = this.settingsService.settingForm.firebase;
       this.words = this.dictionaryService.manageWord(words, this.firebase ? this.mode.activated : true);
+      this.allWordsToDownload = words;
       this.filterFromForm();
     });
   }
@@ -91,8 +93,8 @@ export class DictionaryComponent implements OnInit, OnDestroy {
     this.wordSubscription.unsubscribe();
   }
 
-  public exportAsXLSX(): void {
-    this.excelService.exportAsExcelFile(this.wordsFiltered, 'dictionary');
+  public onDownloadWords(): void {
+    this.excelService.exportAsExcelFile(this.allWordsToDownload, 'dictionary');
   }
 
   private initFilterform(german: string, translation: string, categories: string, ratings: string): void {
