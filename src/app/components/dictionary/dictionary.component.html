@@ -8,8 +8,13 @@
                     <button pButton pRipple label="Download" icon="pi pi-file-excel"
                         class="p-button-success p-button-outlined form-control" (click)="onDownloadWords()"></button>
                 </div>
-                <div class="col" *ngIf="mode.activated">
-                    <button *ngIf="firebase" pButton pRipple label="New" icon="pi pi-plus"
+                <div class="col" *ngIf="firebase">
+                    <p-fileUpload mode="basic" [maxFileSize]="5000000" chooseIcon="pi-file-excel" chooseLabel="Upload"
+                        (onSelect)="onUploadWords($event.currentFiles[0])" [auto]="true" [disabled]="uploadDisabled">
+                    </p-fileUpload>
+                </div>
+                <div class="col" *ngIf="mode.activated && firebase">
+                    <button pButton pRipple label="New" icon="pi pi-plus"
                         class="p-button-primary p-button-outlined form-control" (click)="openNew()"></button>
                 </div>
             </div>
@@ -57,7 +62,8 @@
                             <td *ngIf="firebase">
                                 <span>
                                     <p-multiSelect defaultLabel="Ratings" display="chip" [options]="ratings"
-                                        formControlName="ratings" optionLabel="label" optionValue="value"></p-multiSelect>
+                                        formControlName="ratings" optionLabel="label" optionValue="value">
+                                    </p-multiSelect>
                                 </span>
                                 &nbsp;
                             </td>
@@ -73,9 +79,8 @@
             </form>
         </p-accordionTab>
     </p-accordion>
-    <p-table [value]="wordsFiltered" [rows]="100" [paginator]="true" sortMode="multiple"
-        [scrollable]="true" scrollHeight="650px"
-        [globalFilterFields]="['german','translation','category','rating','numberOfViews']"
+    <p-table [value]="wordsFiltered" [rows]="100" [paginator]="true" sortMode="multiple" [scrollable]="true"
+        scrollHeight="650px" [globalFilterFields]="['german','translation','category','rating','numberOfViews']"
         [rowHover]="true" dataKey="id" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} words"
         [rowsPerPageOptions]="[10,50,100,500,1000]" [showCurrentPageReport]="true" responsiveLayout="scroll">
         <ng-template pTemplate="header">

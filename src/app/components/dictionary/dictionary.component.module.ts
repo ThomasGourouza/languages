@@ -20,6 +20,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { ExcelService } from 'src/app/service/excel.service';
 import { CategoryLabelPipe } from './pipes/category-label.pipe';
 import { CommonService } from 'src/app/service/common.service';
+import { FileUploadModule } from 'primeng/fileupload';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import { CommonService } from 'src/app/service/common.service';
         ProgressBarModule,
         SelectButtonModule,
         AccordionModule,
-        AddWordModule
+        AddWordModule,
+        FileUploadModule
     ],
     providers: [
         ConfirmationService,

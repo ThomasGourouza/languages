@@ -34,6 +34,7 @@ export class DictionaryComponent implements OnInit, OnDestroy {
   public modes: Array<Mode>;
   public mode: Mode;
   public firebase!: boolean;
+  public uploadDisabled: boolean;
 
   constructor(
     private dictionaryService: DictionaryService,
@@ -50,6 +51,7 @@ export class DictionaryComponent implements OnInit, OnDestroy {
     this.mode = this.commonService.mode;
     this.filterSelected = false;
     this.wordSubscription = new Subscription();
+    this.uploadDisabled = false;
   }
 
   ngOnInit(): void {
@@ -73,6 +75,12 @@ export class DictionaryComponent implements OnInit, OnDestroy {
       };
       this.onFilter(form.german, form.translation, form.categories, form.ratings);
     });
+    this.excelService.uploadedWords$.subscribe((words) => {
+      if (this.uploadDisabled) {
+        this.uploadDisabled = false;
+        console.log(words);
+      }
+    });
   }
 
   private loadWords(): void {
@@ -95,6 +103,13 @@ export class DictionaryComponent implements OnInit, OnDestroy {
 
   public onDownloadWords(): void {
     this.excelService.exportAsExcelFile(this.allWordsToDownload, 'dictionary');
+  }
+
+  public onUploadWords(file: File): void {
+    if (!this.uploadDisabled) {
+      this.uploadDisabled = true;
+      this.excelService.excelToJSON(file);
+    }
   }
 
   private initFilterform(german: string, translation: string, categories: string, ratings: string): void {
